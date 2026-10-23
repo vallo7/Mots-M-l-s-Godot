@@ -1,0 +1,15 @@
+{
+ "schemaVersion": 1,
+ "chapters": [
+  "chapter-01.json",
+  "chapter-02.json",
+  "chapter-03.json",
+  "chapter-04.json",
+  "chapter-05.json",
+  "chapter-06.json",
+  "chapter-07.json",
+  "chapter-08.json",
+  "chapter-09.json",
+  "chapter-10.json"
+ ]
+}

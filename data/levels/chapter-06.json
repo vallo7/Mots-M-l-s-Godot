@@ -1,0 +1,2972 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-06",
+ "index": 6,
+ "paletteKey": "history",
+ "theme": {
+  "fr": "Histoire",
+  "en": "History"
+ },
+ "levels": [
+  {
+   "id": "c6-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Antiquité",
+    "en": "Antiquity"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.57,
+    "score": 103,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "RUETAIDALG",
+      "STHCOLONNE",
+      "LEPMPEAEAN",
+      "ILOTORRNTA",
+      "POSNHOEEIT",
+      "NPOLSHMRAH",
+      "OOLYMPIADE",
+      "LRIRLMUIPN",
+      "OCHEVALCSE",
+      "CAPSPARTES"
+     ],
+     "words": [
+      {
+       "display": "ACROPOLE",
+       "letters": "ACROPOLE",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "GLADIATEUR",
+       "letters": "GLADIATEUR",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "PHILOSOPHE",
+       "letters": "PHILOSOPHE",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "OLYMPIADE",
+       "letters": "OLYMPIADE",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "AMPHORE",
+       "letters": "AMPHORE",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "COLONNE",
+       "letters": "COLONNE",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "TEMPLE",
+       "letters": "TEMPLE",
+       "row": 3,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "ESCLAVE",
+       "letters": "ESCLAVE",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "SPARTE",
+       "letters": "SPARTE",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "ATHÈNES",
+       "letters": "ATHENES",
+       "row": 3,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "ARÈNE",
+       "letters": "ARENE",
+       "row": 6,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "LYRE",
+       "letters": "LYRE",
+       "row": 5,
+       "col": 3,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "COLON",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RLDAATRAPS",
+      "OPYITWPAHS",
+      "TSPRHARSIC",
+      "AAIDEECLLI",
+      "IRMPNLOAOP",
+      "DOUASPLVSM",
+      "AHLROMUEOY",
+      "LPORSEMRPL",
+      "GMCAJTNNHO",
+      "DAOHLNSTYA"
+     ],
+     "words": [
+      {
+       "display": "ACROPOLIS",
+       "letters": "ACROPOLIS",
+       "row": 9,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "GLADIATOR",
+       "letters": "GLADIATOR",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "PHILOSOPHY",
+       "letters": "PHILOSOPHY",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "OLYMPICS",
+       "letters": "OLYMPICS",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "AMPHORA",
+       "letters": "AMPHORA",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "COLUMN",
+       "letters": "COLUMN",
+       "row": 3,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "TEMPLE",
+       "letters": "TEMPLE",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "SLAVE",
+       "letters": "SLAVE",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "SPARTA",
+       "letters": "SPARTA",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ATHENS",
+       "letters": "ATHENS",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "ARENA",
+       "letters": "ARENA",
+       "row": 1,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "LYRE",
+       "letters": "LYRE",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "COLUMI",
+       "row": 8,
+       "col": 2,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c6-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Égypte antique",
+    "en": "Ancient Egypt"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.59,
+    "score": 106,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "IROASEODPA",
+      "SCARABEEYO",
+      "XDLGRRESRB",
+      "NTPECMDEAE",
+      "IOYAOAIRML",
+      "HMAMPPMTII",
+      "PBIRHYANDS",
+      "SESMARRTAQ",
+      "AAMVGHYURU",
+      "OUYSEIPESE"
+     ],
+     "words": [
+      {
+       "display": "PYRAMIDE",
+       "letters": "PYRAMIDE",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "PHARAON",
+       "letters": "PHARAON",
+       "row": 9,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "SPHINX",
+       "letters": "SPHINX",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "MOMIE",
+       "letters": "MOMIE",
+       "row": 3,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "display": "SARCOPHAGE",
+       "letters": "SARCOPHAGE",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "PAPYRUS",
+       "letters": "PAPYRUS",
+       "row": 3,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "CLÉOPÂTRE",
+       "letters": "CLEOPATRE",
+       "row": 1,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "OBÉLISQUE",
+       "letters": "OBELISQUE",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "SCARABÉE",
+       "letters": "SCARABEE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TOMBEAU",
+       "letters": "TOMBEAU",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "DÉSERT",
+       "letters": "DESERT",
+       "row": 0,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "RAMSÈS",
+       "letters": "RAMSES",
+       "row": 7,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "NIL",
+       "letters": "NIL",
+       "row": 6,
+       "col": 7,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PYRAMIDA",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "PRAMSESWMH",
+      "BPPRNCDTDP",
+      "TLKSILEBOY",
+      "RSDRLETPHL",
+      "EXGILOAMOG",
+      "SNEIMPNUAO",
+      "EINBYALMRR",
+      "DHCROTRMAE",
+      "DPUFHRAYHI",
+      "ASCARABIPH"
+     ],
+     "words": [
+      {
+       "display": "PYRAMID",
+       "letters": "PYRAMID",
+       "row": 9,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "PHARAOH",
+       "letters": "PHARAOH",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "SPHINX",
+       "letters": "SPHINX",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "MUMMY",
+       "letters": "MUMMY",
+       "row": 4,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "HIEROGLYPH",
+       "letters": "HIEROGLYPH",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "PAPYRUS",
+       "letters": "PAPYRUS",
+       "row": 3,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "CLEOPATRA",
+       "letters": "CLEOPATRA",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "OBELISK",
+       "letters": "OBELISK",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "SCARAB",
+       "letters": "SCARAB",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TOMB",
+       "letters": "TOMB",
+       "row": 3,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "DESERT",
+       "letters": "DESERT",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "RAMSES",
+       "letters": "RAMSES",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "NILE",
+       "letters": "NILE",
+       "row": 6,
+       "col": 2,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "NIL",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c6-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Rome antique",
+    "en": "Ancient Rome"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.61,
+    "score": 108,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "DFORUMHGPS",
+      "ENOIGELACU",
+      "EGECJINREC",
+      "SMEUSTTANH",
+      "ICPDHIHSTA",
+      "LOSENATEUR",
+      "OUOUREECRI",
+      "CNAQUEDGIO",
+      "MOSAIQUEOT",
+      "THERMESRNT"
+     ],
+     "words": [
+      {
+       "display": "COLISÉE",
+       "letters": "COLISEE",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "SÉNATEUR",
+       "letters": "SENATEUR",
+       "row": 5,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "CÉSAR",
+       "letters": "CESAR",
+       "row": 6,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "LÉGION",
+       "letters": "LEGION",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "AQUEDUC",
+       "letters": "AQUEDUC",
+       "row": 8,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "EMPEREUR",
+       "letters": "EMPEREUR",
+       "row": 2,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "TOGE",
+       "letters": "TOGE",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "FORUM",
+       "letters": "FORUM",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CHARIOT",
+       "letters": "CHARIOT",
+       "row": 2,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "MOSAÏQUE",
+       "letters": "MOSAIQUE",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PANTHÉON",
+       "letters": "PANTHEON",
+       "row": 0,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "CENTURION",
+       "letters": "CENTURION",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "THERMES",
+       "letters": "THERMES",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "THER",
+       "row": 3,
+       "col": 5,
+       "direction": "SE"
+      },
+      {
+       "letters": "AQUED",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "SEACDANCOO",
+      "LCSHTABTTM",
+      "AEUAFRAOAO",
+      "QNGRCOGGNS",
+      "UTOIOARREA",
+      "EUIOOREUSI",
+      "DROTANESMC",
+      "UISLESSPAC",
+      "COLOSSEUMR",
+      "TNOEHTNAPE"
+     ],
+     "words": [
+      {
+       "display": "COLOSSEUM",
+       "letters": "COLOSSEUM",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SENATOR",
+       "letters": "SENATOR",
+       "row": 6,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CAESAR",
+       "letters": "CAESAR",
+       "row": 3,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "LEGION",
+       "letters": "LEGION",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "AQUEDUCT",
+       "letters": "AQUEDUCT",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "EMPEROR",
+       "letters": "EMPEROR",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "TOGA",
+       "letters": "TOGA",
+       "row": 1,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "FORUM",
+       "letters": "FORUM",
+       "row": 2,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "CHARIOT",
+       "letters": "CHARIOT",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "MOSAIC",
+       "letters": "MOSAIC",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "PANTHEON",
+       "letters": "PANTHEON",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CENTURION",
+       "letters": "CENTURION",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "BATHS",
+       "letters": "BATHS",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CAES",
+       "row": 0,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "letters": "SENATO",
+       "row": 5,
+       "col": 8,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c6-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Moyen Âge",
+    "en": "Middle Ages"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.59,
+    "score": 113,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "TFEODALITEE",
+      "CREMPARTNNL",
+      "RIILETSEPLA",
+      "OTROUBADOUR",
+      "ILERTSENEMD",
+      "SOLTPUOARIE",
+      "APARCHEMINH",
+      "DEVSMOINIUT",
+      "ERETSANOMRA",
+      "TRHREBMETEC",
+      "FECHATELAIN"
+     ],
+     "words": [
+      {
+       "display": "CATHÉDRALE",
+       "letters": "CATHEDRALE",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "TROUBADOUR",
+       "letters": "TROUBADOUR",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "FÉODALITÉ",
+       "letters": "FEODALITE",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CHEVALERIE",
+       "letters": "CHEVALERIE",
+       "row": 10,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "MÉNESTREL",
+       "letters": "MENESTREL",
+       "row": 4,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CHÂTELAIN",
+       "letters": "CHATELAIN",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ENLUMINURE",
+       "letters": "ENLUMINURE",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "PARCHEMIN",
+       "letters": "PARCHEMIN",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "MONASTÈRE",
+       "letters": "MONASTERE",
+       "row": 8,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CROISADE",
+       "letters": "CROISADE",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "REMPART",
+       "letters": "REMPART",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SERF",
+       "letters": "SERF",
+       "row": 7,
+       "col": 3,
+       "direction": "SW"
+      },
+      {
+       "display": "MOINE",
+       "letters": "MOINE",
+       "row": 9,
+       "col": 6,
+       "direction": "NE"
+      },
+      {
+       "display": "PESTE",
+       "letters": "PESTE",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MOIN",
+       "row": 7,
+       "col": 4,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "AFEUDALSLAN",
+      "CRGGTRAPMAR",
+      "AEGDIRBWARD",
+      "TSYRETSANOM",
+      "HLMSILADUEF",
+      "EDASURCTSCK",
+      "DYRLAVIHCYN",
+      "RUODABUORTO",
+      "ALLERTSNIMM",
+      "LYAEUGALPNI",
+      "PARCHMENTDO"
+     ],
+     "words": [
+      {
+       "display": "CATHEDRAL",
+       "letters": "CATHEDRAL",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "TROUBADOUR",
+       "letters": "TROUBADOUR",
+       "row": 7,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "FEUDALISM",
+       "letters": "FEUDALISM",
+       "row": 4,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "CHIVALRY",
+       "letters": "CHIVALRY",
+       "row": 6,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "MINSTREL",
+       "letters": "MINSTREL",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "MANUSCRIPT",
+       "letters": "MANUSCRIPT",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "PARCHMENT",
+       "letters": "PARCHMENT",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "MONASTERY",
+       "letters": "MONASTERY",
+       "row": 3,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "CRUSADE",
+       "letters": "CRUSADE",
+       "row": 5,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "RAMPART",
+       "letters": "RAMPART",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "SERF",
+       "letters": "SERF",
+       "row": 3,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "MONK",
+       "letters": "MONK",
+       "row": 8,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "PLAGUE",
+       "letters": "PLAGUE",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "DRAWBRIDGE",
+       "letters": "DRAWBRIDGE",
+       "row": 2,
+       "col": 10,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "FEUDAL",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c6-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Grandes découvertes",
+    "en": "Great explorers"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.56,
+    "score": 114,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "CTRAVERSEEN",
+      "AEUQIREMANA",
+      "RUETAGIVANL",
+      "AVTCIOLPXEL",
+      "VTASTROLABE",
+      "EPRRCOLOMBG",
+      "LCONTINENTA",
+      "LELOSSUOBAM",
+      "EHPARGOTRAC",
+      "AEXPEDITION",
+      "AAEQUIPAGEE"
+     ],
+     "words": [
+      {
+       "display": "EXPLORATEUR",
+       "letters": "EXPLORATEUR",
+       "row": 10,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "CARAVELLE",
+       "letters": "CARAVELLE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "NAVIGATEUR",
+       "letters": "NAVIGATEUR",
+       "row": 2,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "COLOMB",
+       "letters": "COLOMB",
+       "row": 5,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "MAGELLAN",
+       "letters": "MAGELLAN",
+       "row": 7,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "ASTROLABE",
+       "letters": "ASTROLABE",
+       "row": 4,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "BOUSSOLE",
+       "letters": "BOUSSOLE",
+       "row": 7,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CONTINENT",
+       "letters": "CONTINENT",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "AMÉRIQUE",
+       "letters": "AMERIQUE",
+       "row": 1,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CARTOGRAPHE",
+       "letters": "CARTOGRAPHE",
+       "row": 8,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "EXPÉDITION",
+       "letters": "EXPEDITION",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ÉQUIPAGE",
+       "letters": "EQUIPAGE",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "TRAVERSÉE",
+       "letters": "TRAVERSEE",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CAP",
+       "letters": "CAP",
+       "row": 3,
+       "col": 3,
+       "direction": "SW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "EXPLO",
+       "row": 3,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "letters": "TRAV",
+       "row": 6,
+       "col": 4,
+       "direction": "NW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "CARAVELCSES",
+      "SNOITIDEPXE",
+      "CNTNYMAGEPB",
+      "ORANRLMWSLA",
+      "LSGAEEEEEOL",
+      "USILVNRRXRO",
+      "MAVLODICTER",
+      "BPAECKCTART",
+      "UMNGSTAANOS",
+      "SOSAILORTOA",
+      "ICEMDISCOVC"
+     ],
+     "words": [
+      {
+       "display": "EXPLORER",
+       "letters": "EXPLORER",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "CARAVEL",
+       "letters": "CARAVEL",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "NAVIGATOR",
+       "letters": "NAVIGATOR",
+       "row": 8,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "COLUMBUS",
+       "letters": "COLUMBUS",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "MAGELLAN",
+       "letters": "MAGELLAN",
+       "row": 10,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "ASTROLABE",
+       "letters": "ASTROLABE",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "COMPASS",
+       "letters": "COMPASS",
+       "row": 10,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "CONTINENT",
+       "letters": "CONTINENT",
+       "row": 10,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "AMERICA",
+       "letters": "AMERICA",
+       "row": 2,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "EXPEDITION",
+       "letters": "EXPEDITION",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "SAILOR",
+       "letters": "SAILOR",
+       "row": 9,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "CREW",
+       "letters": "CREW",
+       "row": 6,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "SEXTANT",
+       "letters": "SEXTANT",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "DISCOVERY",
+       "letters": "DISCOVERY",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MAGE",
+       "row": 2,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "letters": "DISCOV",
+       "row": 10,
+       "col": 4,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c6-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Renaissance",
+    "en": "Renaissance"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.66,
+    "score": 117,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "MECHMPELTEN",
+      "RGEUEEUAINE",
+      "ERCMDRQEAEP",
+      "RENAISSANCE",
+      "UBENCPERAEI",
+      "TNRIIERTTMN",
+      "PEOSSCFCORT",
+      "LTLMPTNIMSU",
+      "UUFEVINCIUR",
+      "CGIIVVINEEE",
+      "SNINVENTEUR"
+     ],
+     "words": [
+      {
+       "display": "RENAISSANCE",
+       "letters": "RENAISSANCE",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "HUMANISME",
+       "letters": "HUMANISME",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "MÉCÈNE",
+       "letters": "MECENE",
+       "row": 5,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "MÉDICIS",
+       "letters": "MEDICIS",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "FLORENCE",
+       "letters": "FLORENCE",
+       "row": 8,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "PEINTURE",
+       "letters": "PEINTURE",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "SCULPTURE",
+       "letters": "SCULPTURE",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "FRESQUE",
+       "letters": "FRESQUE",
+       "row": 6,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "PERSPECTIVE",
+       "letters": "PERSPECTIVE",
+       "row": 0,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "ANATOMIE",
+       "letters": "ANATOMIE",
+       "row": 2,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "VINCI",
+       "letters": "VINCI",
+       "row": 8,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "GUTENBERG",
+       "letters": "GUTENBERG",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "INVENTEUR",
+       "letters": "INVENTEUR",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ART",
+       "letters": "ART",
+       "row": 3,
+       "col": 7,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "VINC",
+       "row": 9,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "letters": "PEIN",
+       "row": 7,
+       "col": 4,
+       "direction": "SW"
+      },
+      {
+       "letters": "VINEE",
+       "row": 9,
+       "col": 5,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "SROTNEVNINR",
+      "PERSPECTIVE",
+      "ANOCSERFMKL",
+      "IAGUTENBERG",
+      "NIOLEONARDO",
+      "TSFPOPERSPE",
+      "ISITYMOTANA",
+      "NAHUMANISMR",
+      "GNORTAPLEON",
+      "VCQECNEROLF",
+      "MEDICIMIDEM"
+     ],
+     "words": [
+      {
+       "display": "RENAISSANCE",
+       "letters": "RENAISSANCE",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "HUMANISM",
+       "letters": "HUMANISM",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PATRON",
+       "letters": "PATRON",
+       "row": 8,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MEDICI",
+       "letters": "MEDICI",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "FLORENCE",
+       "letters": "FLORENCE",
+       "row": 9,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "PAINTING",
+       "letters": "PAINTING",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SCULPTURE",
+       "letters": "SCULPTURE",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "FRESCO",
+       "letters": "FRESCO",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PERSPECTIVE",
+       "letters": "PERSPECTIVE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ANATOMY",
+       "letters": "ANATOMY",
+       "row": 6,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "LEONARDO",
+       "letters": "LEONARDO",
+       "row": 4,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "GUTENBERG",
+       "letters": "GUTENBERG",
+       "row": 3,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "INVENTOR",
+       "letters": "INVENTOR",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "ART",
+       "letters": "ART",
+       "row": 4,
+       "col": 7,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MEDI",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "LEON",
+       "row": 8,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "letters": "PERSPE",
+       "row": 5,
+       "col": 5,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c6-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Révolutions",
+    "en": "Revolutions"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.63,
+    "score": 120,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "GREVOLUTION",
+      "EUTREPURNUO",
+      "EBIRTRNEAAI",
+      "LANLIBEPPET",
+      "BSRILCYUOPA",
+      "MTEBAOOBLAR",
+      "EITEGLTLERA",
+      "SLAREIIIODL",
+      "SLRTIOCQNRC",
+      "AEFERLIUGEE",
+      "APARLEMENTD"
+     ],
+     "words": [
+      {
+       "display": "RÉVOLUTION",
+       "letters": "REVOLUTION",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "BASTILLE",
+       "letters": "BASTILLE",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "LIBERTÉ",
+       "letters": "LIBERTE",
+       "row": 3,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "ÉGALITÉ",
+       "letters": "EGALITE",
+       "row": 7,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "FRATERNITÉ",
+       "letters": "FRATERNITE",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "GUILLOTINE",
+       "letters": "GUILLOTINE",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "NAPOLÉON",
+       "letters": "NAPOLEON",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "DÉCLARATION",
+       "letters": "DECLARATION",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "RÉPUBLIQUE",
+       "letters": "REPUBLIQUE",
+       "row": 1,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "PARLEMENT",
+       "letters": "PARLEMENT",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DRAPEAU",
+       "letters": "DRAPEAU",
+       "row": 7,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "TRICOLORE",
+       "letters": "TRICOLORE",
+       "row": 1,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "CITOYEN",
+       "letters": "CITOYEN",
+       "row": 8,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "ASSEMBLÉE",
+       "letters": "ASSEMBLEE",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ROI",
+       "letters": "ROI",
+       "row": 9,
+       "col": 4,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "LIBE",
+       "row": 3,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "GUIL",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "REPU",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "GNNYSCBGNIK",
+      "AUOTTIAGEPY",
+      "SLIINLSUZAT",
+      "SITLTBTIIRI",
+      "EBAARUILTLN",
+      "MERUIPLLIIR",
+      "BRAQCELOCAE",
+      "LTLEORETVMT",
+      "YYCFLAGINEA",
+      "NOELOPANINR",
+      "MEDAROGEKTF"
+     ],
+     "words": [
+      {
+       "display": "REVOLUTION",
+       "letters": "REVOLUTION",
+       "row": 9,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "BASTILLE",
+       "letters": "BASTILLE",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "LIBERTY",
+       "letters": "LIBERTY",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "EQUALITY",
+       "letters": "EQUALITY",
+       "row": 7,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "FRATERNITY",
+       "letters": "FRATERNITY",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "GUILLOTINE",
+       "letters": "GUILLOTINE",
+       "row": 1,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "NAPOLEON",
+       "letters": "NAPOLEON",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "DECLARATION",
+       "letters": "DECLARATION",
+       "row": 10,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "REPUBLIC",
+       "letters": "REPUBLIC",
+       "row": 7,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "PARLIAMENT",
+       "letters": "PARLIAMENT",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "FLAG",
+       "letters": "FLAG",
+       "row": 8,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "TRICOLOR",
+       "letters": "TRICOLOR",
+       "row": 3,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "CITIZEN",
+       "letters": "CITIZEN",
+       "row": 6,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "ASSEMBLY",
+       "letters": "ASSEMBLY",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "KING",
+       "letters": "KING",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "KIN",
+       "row": 10,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "FLA",
+       "row": 8,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "letters": "GUIL",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c6-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Civilisations",
+    "en": "Civilizations"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.76,
+    "score": 123,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EASGNIKIVDD",
+      "PIUELESEDNA",
+      "HEMROFIENUC",
+      "ETEAYAMOIAA",
+      "NARUTDNARZR",
+      "IZIGGOURATT",
+      "CEEDEMPIREH",
+      "IINCASBOAQA",
+      "EASPERSESUG",
+      "NIBABYLONEE",
+      "SAYAMINCESM"
+     ],
+     "words": [
+      {
+       "display": "AZTÈQUES",
+       "letters": "AZTEQUES",
+       "row": 3,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "MAYAS",
+       "letters": "MAYAS",
+       "row": 10,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "INCAS",
+       "letters": "INCAS",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "VIKINGS",
+       "letters": "VIKINGS",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "MÉSOPOTAMIE",
+       "letters": "MESOPOTAMIE",
+       "row": 10,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "BABYLONE",
+       "letters": "BABYLONE",
+       "row": 9,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PERSES",
+       "letters": "PERSES",
+       "row": 8,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "PHÉNICIENS",
+       "letters": "PHENICIENS",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SUMÉRIENS",
+       "letters": "SUMERIENS",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "CARTHAGE",
+       "letters": "CARTHAGE",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "EMPIRE",
+       "letters": "EMPIRE",
+       "row": 6,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "CUNÉIFORME",
+       "letters": "CUNEIFORME",
+       "row": 2,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "ZIGGOURAT",
+       "letters": "ZIGGOURAT",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ANDES",
+       "letters": "ANDES",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "TROIE",
+       "letters": "TROIE",
+       "row": 5,
+       "col": 9,
+       "direction": "NW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "INCES",
+       "row": 10,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "letters": "MAY",
+       "row": 3,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "letters": "ANDTU",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "AND",
+       "row": 8,
+       "col": 1,
+       "direction": "NE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ISTSCETZACA",
+      "INSSACNIEUG",
+      "TAUMRNTRONP",
+      "AIMATOPOSEM",
+      "RCEMHLITRIB",
+      "UIRAAYYSRFA",
+      "GNIYGBISSOB",
+      "GEAAEAMEURY",
+      "IONNNBDHGML",
+      "ZHSSGNIKIVE",
+      "YPDNAERIPME"
+     ],
+     "words": [
+      {
+       "display": "AZTECS",
+       "letters": "AZTECS",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "MAYANS",
+       "letters": "MAYANS",
+       "row": 4,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "INCAS",
+       "letters": "INCAS",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "VIKINGS",
+       "letters": "VIKINGS",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "MESOPOTAMIA",
+       "letters": "MESOPOTAMIA",
+       "row": 3,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "BABYLON",
+       "letters": "BABYLON",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "PERSIANS",
+       "letters": "PERSIANS",
+       "row": 2,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "PHOENICIANS",
+       "letters": "PHOENICIANS",
+       "row": 10,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "SUMERIANS",
+       "letters": "SUMERIANS",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "CARTHAGE",
+       "letters": "CARTHAGE",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "EMPIRE",
+       "letters": "EMPIRE",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "CUNEIFORM",
+       "letters": "CUNEIFORM",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "ZIGGURAT",
+       "letters": "ZIGGURAT",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ANDES",
+       "letters": "ANDES",
+       "row": 10,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "display": "TROY",
+       "letters": "TROY",
+       "row": 4,
+       "col": 7,
+       "direction": "SE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "AND",
+       "row": 10,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "BABYLEE",
+       "row": 4,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "letters": "SUME",
+       "row": 6,
+       "col": 7,
+       "direction": "SE"
+      },
+      {
+       "letters": "TRO",
+       "row": 2,
+       "col": 6,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c6-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Archéologie",
+    "en": "Archaeology"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.65,
+    "score": 125,
+    "decoys": 5
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "SELLIUOFAEN",
+      "ELUMVESTRSO",
+      "GLNIURSITEI",
+      "IIOGISEMENT",
+      "TAMELLEPFIA",
+      "SVOPINCEAUT",
+      "EUGOLOEHCRA",
+      "VOSSEMENTSD",
+      "IREIRETOPUU",
+      "NTNEMUNOMMD",
+      "ERIOTSIHERP"
+     ],
+     "words": [
+      {
+       "display": "ARCHÉOLOGUE",
+       "letters": "ARCHEOLOGUE",
+       "row": 6,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "FOUILLES",
+       "letters": "FOUILLES",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "VESTIGES",
+       "letters": "VESTIGES",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "RUINES",
+       "letters": "RUINES",
+       "row": 6,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "POTERIE",
+       "letters": "POTERIE",
+       "row": 8,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "OSSEMENTS",
+       "letters": "OSSEMENTS",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DATATION",
+       "letters": "DATATION",
+       "row": 7,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "ARTEFACT",
+       "letters": "ARTEFACT",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "MUSÉE",
+       "letters": "MUSEE",
+       "row": 1,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "TROUVAILLE",
+       "letters": "TROUVAILLE",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "SITE",
+       "letters": "SITE",
+       "row": 2,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "PELLE",
+       "letters": "PELLE",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PINCEAU",
+       "letters": "PINCEAU",
+       "row": 5,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "GISEMENT",
+       "letters": "GISEMENT",
+       "row": 3,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "PRÉHISTOIRE",
+       "letters": "PREHISTOIRE",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "MONUMENT",
+       "letters": "MONUMENT",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "RUIN",
+       "row": 2,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "letters": "OSSE",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "letters": "VEST",
+       "row": 1,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "letters": "MONU",
+       "row": 4,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "letters": "MUS",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RBWLISSOFEY",
+      "RRNYBSIZCGO",
+      "OUORRHTBONE",
+      "TSIOUOELYTA",
+      "CSTTSVOSRNM",
+      "ACASHEDEEEU",
+      "FIVIALANTME",
+      "ILAHRSTOTUS",
+      "TECEUTIBONU",
+      "RRXRUINSPOM",
+      "AOEPYSGUEMR"
+     ],
+     "words": [
+      {
+       "display": "ARCHAEOLOGY",
+       "letters": "ARCHAEOLOGY",
+       "row": 10,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "EXCAVATION",
+       "letters": "EXCAVATION",
+       "row": 10,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "RELICS",
+       "letters": "RELICS",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "RUINS",
+       "letters": "RUINS",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "POTTERY",
+       "letters": "POTTERY",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "BONES",
+       "letters": "BONES",
+       "row": 8,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "DATING",
+       "letters": "DATING",
+       "row": 5,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "ARTIFACT",
+       "letters": "ARTIFACT",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "MUSEUM",
+       "letters": "MUSEUM",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "TREASURE",
+       "letters": "TREASURE",
+       "row": 3,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "SITE",
+       "letters": "SITE",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "SHOVEL",
+       "letters": "SHOVEL",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "BRUSH",
+       "letters": "BRUSH",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "FOSSIL",
+       "letters": "FOSSIL",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "PREHISTORY",
+       "letters": "PREHISTORY",
+       "row": 10,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "MONUMENT",
+       "letters": "MONUMENT",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "RUI",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "letters": "BRUS",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "letters": "BONE",
+       "row": 2,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "letters": "SIZC",
+       "row": 1,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "letters": "SIT",
+       "row": 10,
+       "col": 5,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c6-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Voyage dans le temps",
+    "en": "Time travel"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1,
+    "score": 145,
+    "decoys": 9
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "NMICHRONIQUE",
+      "EIGOLONORHCS",
+      "ILENIOMIRTAP",
+      "RLNQMETTDPMM",
+      "OEEUSPSAYAOE",
+      "TNREEOASNNNT",
+      "SAARVQTIAEAS",
+      "IITAIUILSPRI",
+      "HRINHERITAGE",
+      "CEOTCHEVISSC",
+      "MONARCHIESLL",
+      "EIRTAPICHROE"
+     ],
+     "words": [
+      {
+       "display": "CIVILISATION",
+       "letters": "CIVILISATION",
+       "row": 11,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "CHRONOLOGIE",
+       "letters": "CHRONOLOGIE",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "HISTORIEN",
+       "letters": "HISTORIEN",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "CHRONIQUE",
+       "letters": "CHRONIQUE",
+       "row": 0,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "DYNASTIE",
+       "letters": "DYNASTIE",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "MONARCHIE",
+       "letters": "MONARCHIE",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PATRIMOINE",
+       "letters": "PATRIMOINE",
+       "row": 2,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "CONQUÉRANT",
+       "letters": "CONQUERANT",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "MILLÉNAIRE",
+       "letters": "MILLENAIRE",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "GÉNÉRATION",
+       "letters": "GENERATION",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "HÉRITAGE",
+       "letters": "HERITAGE",
+       "row": 8,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "ARCHIVES",
+       "letters": "ARCHIVES",
+       "row": 11,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "ÉPOQUE",
+       "letters": "EPOQUE",
+       "row": 3,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "SIÈCLE",
+       "letters": "SIECLE",
+       "row": 6,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "PASSÉ",
+       "letters": "PASSE",
+       "row": 7,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "TEMPS",
+       "letters": "TEMPS",
+       "row": 5,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "display": "ÈRE",
+       "letters": "ERE",
+       "row": 8,
+       "col": 11,
+       "direction": "NW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PATRI",
+       "row": 11,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "letters": "PAS",
+       "row": 3,
+       "col": 9,
+       "direction": "NE"
+      },
+      {
+       "letters": "PASS",
+       "row": 7,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "letters": "MONAR",
+       "row": 3,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "letters": "HERITA",
+       "row": 10,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "letters": "TEM",
+       "row": 3,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "letters": "CHRO",
+       "row": 11,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "letters": "SIEC",
+       "row": 7,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "letters": "MONA",
+       "row": 3,
+       "col": 11,
+       "direction": "SW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "YCYGOLONORHC",
+      "TOHHETADMNIE",
+      "SNCRPCRMUVSN",
+      "AQRAOECIITTT",
+      "NUANENHLNIOU",
+      "YENCYTILNMRR",
+      "DROECZVCEOIY",
+      "MOMSAIERLSAP",
+      "PRTTGISTLENC",
+      "OAIOEGATIREH",
+      "DOSRLDTIMMYR",
+      "NOITARENEGEO"
+     ],
+     "words": [
+      {
+       "display": "CIVILIZATION",
+       "letters": "CIVILIZATION",
+       "row": 0,
+       "col": 11,
+       "direction": "SW"
+      },
+      {
+       "display": "CHRONOLOGY",
+       "letters": "CHRONOLOGY",
+       "row": 0,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "HISTORIAN",
+       "letters": "HISTORIAN",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "CHRONICLE",
+       "letters": "CHRONICLE",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "DYNASTY",
+       "letters": "DYNASTY",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "MONARCHY",
+       "letters": "MONARCHY",
+       "row": 7,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "HERITAGE",
+       "letters": "HERITAGE",
+       "row": 9,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "CONQUEROR",
+       "letters": "CONQUEROR",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "MILLENNIUM",
+       "letters": "MILLENNIUM",
+       "row": 10,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "GENERATION",
+       "letters": "GENERATION",
+       "row": 11,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ANCESTOR",
+       "letters": "ANCESTOR",
+       "row": 3,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "ARCHIVES",
+       "letters": "ARCHIVES",
+       "row": 1,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "CENTURY",
+       "letters": "CENTURY",
+       "row": 0,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "PAST",
+       "letters": "PAST",
+       "row": 8,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "TIME",
+       "letters": "TIME",
+       "row": 8,
+       "col": 7,
+       "direction": "SE"
+      },
+      {
+       "display": "DATE",
+       "letters": "DATE",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "LEGACY",
+       "letters": "LEGACY",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MILL",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "letters": "TIMO",
+       "row": 3,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "letters": "TIM",
+       "row": 10,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "letters": "CHRO",
+       "row": 8,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "letters": "CENT",
+       "row": 2,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "letters": "PAS",
+       "row": 7,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "letters": "DATS",
+       "row": 10,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "letters": "PAAE",
+       "row": 2,
+       "col": 4,
+       "direction": "SW"
+      },
+      {
+       "letters": "DAT",
+       "row": 10,
+       "col": 5,
+       "direction": "NE"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

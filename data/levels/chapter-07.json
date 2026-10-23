@@ -1,0 +1,3006 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-07",
+ "index": 7,
+ "paletteKey": "arts",
+ "theme": {
+  "fr": "Arts",
+  "en": "Arts"
+ },
+ "levels": [
+  {
+   "id": "c7-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Instruments",
+    "en": "Instruments"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.59,
+    "score": 103,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "BATTERIEOA",
+      "CLARINETTE",
+      "ADETULFTIN",
+      "NOMASIAEEO",
+      "OOEMHARPEH",
+      "NRLBEGRMEP",
+      "ACCORDEONO",
+      "IBGUITAREX",
+      "PUUREVETEA",
+      "UETTTPOXAS"
+     ],
+     "words": [
+      {
+       "display": "GUITARE",
+       "letters": "GUITARE",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PIANO",
+       "letters": "PIANO",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "VIOLON",
+       "letters": "VIOLON",
+       "row": 8,
+       "col": 5,
+       "direction": "NW"
+      },
+      {
+       "display": "TROMPETTE",
+       "letters": "TROMPETTE",
+       "row": 8,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "FLÛTE",
+       "letters": "FLUTE",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "SAXOPHONE",
+       "letters": "SAXOPHONE",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "HARPE",
+       "letters": "HARPE",
+       "row": 4,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "BATTERIE",
+       "letters": "BATTERIE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ACCORDÉON",
+       "letters": "ACCORDEON",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CLARINETTE",
+       "letters": "CLARINETTE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TAMBOUR",
+       "letters": "TAMBOUR",
+       "row": 2,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "TUBA",
+       "letters": "TUBA",
+       "row": 9,
+       "col": 3,
+       "direction": "NW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SAXOP",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "POIFTRUMPN",
+      "SRTILDCIIN",
+      "TAMBOURINE",
+      "ETXOISTUVS",
+      "NILOIVUEMA",
+      "IURNPTBPHS",
+      "RGOASHARPA",
+      "ANOIDROCCA",
+      "LRIPAOINNO",
+      "CPDTRUMPET"
+     ],
+     "words": [
+      {
+       "display": "GUITAR",
+       "letters": "GUITAR",
+       "row": 6,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "PIANO",
+       "letters": "PIANO",
+       "row": 8,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "VIOLIN",
+       "letters": "VIOLIN",
+       "row": 4,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "TRUMPET",
+       "letters": "TRUMPET",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "FLUTE",
+       "letters": "FLUTE",
+       "row": 0,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "SAXOPHONE",
+       "letters": "SAXOPHONE",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "HARP",
+       "letters": "HARP",
+       "row": 6,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "DRUMS",
+       "letters": "DRUMS",
+       "row": 1,
+       "col": 5,
+       "direction": "SE"
+      },
+      {
+       "display": "ACCORDION",
+       "letters": "ACCORDION",
+       "row": 7,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CLARINET",
+       "letters": "CLARINET",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "TAMBOURINE",
+       "letters": "TAMBOURINE",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TUBA",
+       "letters": "TUBA",
+       "row": 3,
+       "col": 6,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TRUMP",
+       "row": 0,
+       "col": 4,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Peinture",
+    "en": "Painting"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.63,
+    "score": 106,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "RPAYSAGEFR",
+      "LYQTOILEUG",
+      "ORUELUOCSA",
+      "TIARTROPAL",
+      "VERNISSAGE",
+      "ETERTNIEPR",
+      "RELETSAPOI",
+      "PALETTEARE",
+      "CHEVALETTI",
+      "GRNIASUFRE"
+     ],
+     "words": [
+      {
+       "display": "PEINTRE",
+       "letters": "PEINTRE",
+       "row": 5,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "PALETTE",
+       "letters": "PALETTE",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TOILE",
+       "letters": "TOILE",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "CHEVALET",
+       "letters": "CHEVALET",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "AQUARELLE",
+       "letters": "AQUARELLE",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PORTRAIT",
+       "letters": "PORTRAIT",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PAYSAGE",
+       "letters": "PAYSAGE",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "COULEUR",
+       "letters": "COULEUR",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "GALERIE",
+       "letters": "GALERIE",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "FUSAIN",
+       "letters": "FUSAIN",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PASTEL",
+       "letters": "PASTEL",
+       "row": 6,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "VERNISSAGE",
+       "letters": "VERNISSAGE",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "FUSA",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "letters": "PORTR",
+       "row": 5,
+       "col": 8,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ROPALETTEP",
+      "LETSAPLTLN",
+      "RETNIAPEAS",
+      "WATERCOLOR",
+      "CARTISTACL",
+      "PORTEDLPRE",
+      "LRSAVNACAS",
+      "PORTRAITHA",
+      "RYRELLAGCE",
+      "LRASKETCHF"
+     ],
+     "words": [
+      {
+       "display": "PAINTER",
+       "letters": "PAINTER",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "PALETTE",
+       "letters": "PALETTE",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "CANVAS",
+       "letters": "CANVAS",
+       "row": 6,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "EASEL",
+       "letters": "EASEL",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "WATERCOLOR",
+       "letters": "WATERCOLOR",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PORTRAIT",
+       "letters": "PORTRAIT",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "LANDSCAPE",
+       "letters": "LANDSCAPE",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "ARTIST",
+       "letters": "ARTIST",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "GALLERY",
+       "letters": "GALLERY",
+       "row": 8,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CHARCOAL",
+       "letters": "CHARCOAL",
+       "row": 8,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "PASTEL",
+       "letters": "PASTEL",
+       "row": 1,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "SKETCH",
+       "letters": "SKETCH",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PORT",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "PALET",
+       "row": 5,
+       "col": 7,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Cinéma",
+    "en": "Cinema"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.66,
+    "score": 109,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "RUETCEJORP",
+      "CIUUMLEMEO",
+      "OOEETUHEOP",
+      "MICTOCCSSC",
+      "EDRCUIINNO",
+      "DUAARLFEER",
+      "ITNTNLFPPN",
+      "ESCIAEASSR",
+      "PALCGPCUUC",
+      "TACTEURSSO"
+     ],
+     "words": [
+      {
+       "display": "SCÉNARIO",
+       "letters": "SCENARIO",
+       "row": 9,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "ACTEUR",
+       "letters": "ACTEUR",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ACTRICE",
+       "letters": "ACTRICE",
+       "row": 8,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "ÉCRAN",
+       "letters": "ECRAN",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PROJECTEUR",
+       "letters": "PROJECTEUR",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "COMÉDIE",
+       "letters": "COMEDIE",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SUSPENSE",
+       "letters": "SUSPENSE",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "STUDIO",
+       "letters": "STUDIO",
+       "row": 7,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "TOURNAGE",
+       "letters": "TOURNAGE",
+       "row": 2,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "AFFICHE",
+       "letters": "AFFICHE",
+       "row": 7,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "PELLICULE",
+       "letters": "PELLICULE",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "POPCORN",
+       "letters": "POPCORN",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "CLAP",
+       "letters": "CLAP",
+       "row": 8,
+       "col": 3,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ACTEU",
+       "row": 5,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "letters": "SUSPENS",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ESNEPSUSMH",
+      "CCCLAPOCEC",
+      "ROTCEJORPR",
+      "SSTUDIOEOO",
+      "AOPACTRESS",
+      "RPOPCORNTR",
+      "DIRECTMPEM",
+      "NERWECELRT",
+      "SICAMERAIC",
+      "DECOMEDYOF"
+     ],
+     "words": [
+      {
+       "display": "SCREENPLAY",
+       "letters": "SCREENPLAY",
+       "row": 0,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "ACTOR",
+       "letters": "ACTOR",
+       "row": 1,
+       "col": 4,
+       "direction": "SW"
+      },
+      {
+       "display": "ACTRESS",
+       "letters": "ACTRESS",
+       "row": 4,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "CAMERA",
+       "letters": "CAMERA",
+       "row": 8,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PROJECTOR",
+       "letters": "PROJECTOR",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "COMEDY",
+       "letters": "COMEDY",
+       "row": 9,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "SUSPENSE",
+       "letters": "SUSPENSE",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "STUDIO",
+       "letters": "STUDIO",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DIRECTOR",
+       "letters": "DIRECTOR",
+       "row": 9,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "POSTER",
+       "letters": "POSTER",
+       "row": 2,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "FILM",
+       "letters": "FILM",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "POPCORN",
+       "letters": "POPCORN",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CLAP",
+       "letters": "CLAP",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ACT",
+       "row": 4,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "letters": "DIRECT",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Théâtre",
+    "en": "Theatre"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.6,
+    "score": 112,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "PERSONNAGED",
+      "EMUTSOCOFMA",
+      "HREPETITION",
+      "ENTRACTELLE",
+      "QUAEDIRUSII",
+      "ECTESRAQTED",
+      "LNCPIGGSVRE",
+      "OUELAGEAOEM",
+      "RCPCRCDMTSO",
+      "TESESSILUOC",
+      "THEATREMPTU"
+     ],
+     "words": [
+      {
+       "display": "THÉÂTRE",
+       "letters": "THEATRE",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SCÈNE",
+       "letters": "SCENE",
+       "row": 9,
+       "col": 4,
+       "direction": "NW"
+      },
+      {
+       "display": "RIDEAU",
+       "letters": "RIDEAU",
+       "row": 4,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "COULISSES",
+       "letters": "COULISSES",
+       "row": 9,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "COMÉDIEN",
+       "letters": "COMEDIEN",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "TRAGÉDIE",
+       "letters": "TRAGEDIE",
+       "row": 3,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "SPECTATEUR",
+       "letters": "SPECTATEUR",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "PERSONNAGE",
+       "letters": "PERSONNAGE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "RÉPÉTITION",
+       "letters": "REPETITION",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "COSTUME",
+       "letters": "COSTUME",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MASQUE",
+       "letters": "MASQUE",
+       "row": 8,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "RÔLE",
+       "letters": "ROLE",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "MOLIÈRE",
+       "letters": "MOLIERE",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "ENTRACTE",
+       "letters": "ENTRACTE",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SPECT",
+       "row": 5,
+       "col": 4,
+       "direction": "SW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "HAMCURTAINE",
+      "OSEYDEGARTA",
+      "NLGRRTEKHRA",
+      "AHASTCSGOEU",
+      "IKTSCAILRID",
+      "DCSRRRESAMI",
+      "EXKAWAIHWAE",
+      "MHCYMHEPTTN",
+      "OTAANCEHTSC",
+      "CLBAEGSCENE",
+      "PSEMUTSOCRI"
+     ],
+     "words": [
+      {
+       "display": "THEATRE",
+       "letters": "THEATRE",
+       "row": 7,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "SCENE",
+       "letters": "SCENE",
+       "row": 9,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "CURTAIN",
+       "letters": "CURTAIN",
+       "row": 0,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "BACKSTAGE",
+       "letters": "BACKSTAGE",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "COMEDIAN",
+       "letters": "COMEDIAN",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "TRAGEDY",
+       "letters": "TRAGEDY",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "AUDIENCE",
+       "letters": "AUDIENCE",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "CHARACTER",
+       "letters": "CHARACTER",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "REHEARSAL",
+       "letters": "REHEARSAL",
+       "row": 10,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "COSTUME",
+       "letters": "COSTUME",
+       "row": 10,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "MASK",
+       "letters": "MASK",
+       "row": 7,
+       "col": 4,
+       "direction": "NW"
+      },
+      {
+       "display": "SCRIPT",
+       "letters": "SCRIPT",
+       "row": 3,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "PLAYWRIGHT",
+       "letters": "PLAYWRIGHT",
+       "row": 10,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "ROLE",
+       "letters": "ROLE",
+       "row": 2,
+       "col": 9,
+       "direction": "SW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MASE",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Danse",
+    "en": "Dance"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.65,
+    "score": 115,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "OCNEMALFTAS",
+      "CHHTMRSRSBE",
+      "ROZATHALUMW",
+      "TRUAUKTCAAL",
+      "UENPRSEYTSA",
+      "TGNUEESEROV",
+      "ORZTSZLORLU",
+      "EAOALLNPNTF",
+      "MPODANSEUSE",
+      "OHABVSGTAOB",
+      "OETTEUORIPC"
+     ],
+     "words": [
+      {
+       "display": "BALLET",
+       "letters": "BALLET",
+       "row": 9,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "TUTU",
+       "letters": "TUTU",
+       "row": 9,
+       "col": 7,
+       "direction": "NE"
+      },
+      {
+       "display": "VALSE",
+       "letters": "VALSE",
+       "row": 9,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "TANGO",
+       "letters": "TANGO",
+       "row": 2,
+       "col": 4,
+       "direction": "SW"
+      },
+      {
+       "display": "SALSA",
+       "letters": "SALSA",
+       "row": 4,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "FLAMENCO",
+       "letters": "FLAMENCO",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "DANSEUSE",
+       "letters": "DANSEUSE",
+       "row": 8,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "PIROUETTE",
+       "letters": "PIROUETTE",
+       "row": 10,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CHORÉGRAPHE",
+       "letters": "CHOREGRAPHE",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "RYTHME",
+       "letters": "RYTHME",
+       "row": 5,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "COUPLE",
+       "letters": "COUPLE",
+       "row": 10,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "MAZURKA",
+       "letters": "MAZURKA",
+       "row": 8,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "CHAUSSONS",
+       "letters": "CHAUSSONS",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "SAMBA",
+       "letters": "SAMBA",
+       "row": 4,
+       "col": 9,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "VALWE",
+       "row": 5,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "letters": "TUTR",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "COUP",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "SRETIOSAMBA",
+      "EOWLUOASLAS",
+      "TFAAPTMERLR",
+      "TSLOKUTUTLE",
+      "ECNAMROFREP",
+      "UUUEMHUCETP",
+      "ORCEWETZFOI",
+      "RECNADNYACL",
+      "IMETLFACHMS",
+      "PGAATANGORN",
+      "TASAZEAUILA"
+     ],
+     "words": [
+      {
+       "display": "BALLET",
+       "letters": "BALLET",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "TUTU",
+       "letters": "TUTU",
+       "row": 3,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "WALTZ",
+       "letters": "WALTZ",
+       "row": 6,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "TANGO",
+       "letters": "TANGO",
+       "row": 9,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "SALSA",
+       "letters": "SALSA",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "FLAMENCO",
+       "letters": "FLAMENCO",
+       "row": 2,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "DANCER",
+       "letters": "DANCER",
+       "row": 7,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "PIROUETTE",
+       "letters": "PIROUETTE",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "PERFORMANCE",
+       "letters": "PERFORMANCE",
+       "row": 4,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "RHYTHM",
+       "letters": "RHYTHM",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "COUPLE",
+       "letters": "COUPLE",
+       "row": 5,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "MAZURKA",
+       "letters": "MAZURKA",
+       "row": 8,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "SLIPPERS",
+       "letters": "SLIPPERS",
+       "row": 8,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "SAMBA",
+       "letters": "SAMBA",
+       "row": 0,
+       "col": 6,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SAL",
+       "row": 3,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "letters": "TUT",
+       "row": 0,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "letters": "SAM",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Littérature",
+    "en": "Literature"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.76,
+    "score": 118,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "INETWEEEEOE",
+      "EIRIARBILMD",
+      "RATREOIHLEI",
+      "IVICTHEPETT",
+      "AIPSNPUAVAE",
+      "TRAUOAERUPU",
+      "LCHNCTMGOHR",
+      "OECATEEONOC",
+      "VGOMLMOIRRL",
+      "EOUNOUPBRNM",
+      "SRRHVFABLEN"
+     ],
+     "words": [
+      {
+       "display": "ÉCRIVAIN",
+       "letters": "ECRIVAIN",
+       "row": 7,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "ROMAN",
+       "letters": "ROMAN",
+       "row": 8,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "POÈME",
+       "letters": "POEME",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "LIBRAIRIE",
+       "letters": "LIBRAIRIE",
+       "row": 1,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "BIOGRAPHIE",
+       "letters": "BIOGRAPHIE",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "MANUSCRIT",
+       "letters": "MANUSCRIT",
+       "row": 8,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "ÉDITEUR",
+       "letters": "EDITEUR",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "CHAPITRE",
+       "letters": "CHAPITRE",
+       "row": 7,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "NOUVELLE",
+       "letters": "NOUVELLE",
+       "row": 7,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "HUGO",
+       "letters": "HUGO",
+       "row": 10,
+       "col": 3,
+       "direction": "NW"
+      },
+      {
+       "display": "VOLTAIRE",
+       "letters": "VOLTAIRE",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "CONTE",
+       "letters": "CONTE",
+       "row": 6,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "FABLE",
+       "letters": "FABLE",
+       "row": 10,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "MÉTAPHORE",
+       "letters": "METAPHORE",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "METAPHORN",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "letters": "VOLT",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "letters": "CON",
+       "row": 7,
+       "col": 10,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RELLETYROTS",
+      "TMRRYRTEOPR",
+      "NRFOAPSKMRE",
+      "OEARTOAEAAH",
+      "VTBJRSTTILS",
+      "EILPRAKSEFI",
+      "LREAPAPOEML",
+      "TWYHPARGOIB",
+      "ANOVEOOBRBU",
+      "SRETPAHCIRP",
+      "PSNEKCIDALI"
+     ],
+     "words": [
+      {
+       "display": "WRITER",
+       "letters": "WRITER",
+       "row": 7,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "NOVEL",
+       "letters": "NOVEL",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "POEM",
+       "letters": "POEM",
+       "row": 6,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "BOOKSTORE",
+       "letters": "BOOKSTORE",
+       "row": 8,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "BIOGRAPHY",
+       "letters": "BIOGRAPHY",
+       "row": 7,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "PUBLISHER",
+       "letters": "PUBLISHER",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "CHAPTER",
+       "letters": "CHAPTER",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "STORYTELLER",
+       "letters": "STORYTELLER",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "DICKENS",
+       "letters": "DICKENS",
+       "row": 10,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PROSE",
+       "letters": "PROSE",
+       "row": 5,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "FABLE",
+       "letters": "FABLE",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "LIBRARY",
+       "letters": "LIBRARY",
+       "row": 6,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "METAPHOR",
+       "letters": "METAPHOR",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "POETRY",
+       "letters": "POETRY",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "METAP",
+       "row": 6,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "letters": "NOVE",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "LIBRARJ",
+       "row": 10,
+       "col": 9,
+       "direction": "NW"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Architecture",
+    "en": "Architecture"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.64,
+    "score": 121,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ETNEPRAHCID",
+      "ECHAFAUDAGE",
+      "EEVRIETEBFU",
+      "UDCCBSTUEAQ",
+      "QACHACEUTEI",
+      "SNOITADNOFL",
+      "ONUTILATNVI",
+      "MOPEMICOUPS",
+      "OLOCEEAUOTA",
+      "MOLTNRFROEB",
+      "UCEETTEUQAM"
+     ],
+     "words": [
+      {
+       "display": "ARCHITECTE",
+       "letters": "ARCHITECTE",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "BÂTIMENT",
+       "letters": "BATIMENT",
+       "row": 3,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "FAÇADE",
+       "letters": "FACADE",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "COUPOLE",
+       "letters": "COUPOLE",
+       "row": 4,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "VOÛTE",
+       "letters": "VOUTE",
+       "row": 6,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "COLONNADE",
+       "letters": "COLONNADE",
+       "row": 10,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "BASILIQUE",
+       "letters": "BASILIQUE",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "MOSQUÉE",
+       "letters": "MOSQUEE",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "TOUR",
+       "letters": "TOUR",
+       "row": 6,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "ESCALIER",
+       "letters": "ESCALIER",
+       "row": 2,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "FONDATIONS",
+       "letters": "FONDATIONS",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CHARPENTE",
+       "letters": "CHARPENTE",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "MAQUETTE",
+       "letters": "MAQUETTE",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "ÉCHAFAUDAGE",
+       "letters": "ECHAFAUDAGE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BÉTON",
+       "letters": "BETON",
+       "row": 2,
+       "col": 8,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "BET",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "TOUA",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "letters": "COUP",
+       "row": 7,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "letters": "COLO",
+       "row": 8,
+       "col": 3,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "STAIRCASEGC",
+      "RCBLUEPRINT",
+      "CEDACAFROIE",
+      "OTPASTWIIDB",
+      "NIHAOITOALU",
+      "CHDWRALNTOI",
+      "RCEODCNISFL",
+      "ERENTOSRCFD",
+      "TAULLPMYRAI",
+      "EOMOSQUEKCN",
+      "FACAVAULTSG"
+     ],
+     "words": [
+      {
+       "display": "ARCHITECT",
+       "letters": "ARCHITECT",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "BUILDING",
+       "letters": "BUILDING",
+       "row": 3,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "FACADE",
+       "letters": "FACADE",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "DOME",
+       "letters": "DOME",
+       "row": 6,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "VAULT",
+       "letters": "VAULT",
+       "row": 10,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "COLONNADE",
+       "letters": "COLONNADE",
+       "row": 10,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "BASILICA",
+       "letters": "BASILICA",
+       "row": 1,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "MOSQUE",
+       "letters": "MOSQUE",
+       "row": 9,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "TOWER",
+       "letters": "TOWER",
+       "row": 3,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "display": "STAIRCASE",
+       "letters": "STAIRCASE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "FOUNDATION",
+       "letters": "FOUNDATION",
+       "row": 10,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "SCAFFOLDING",
+       "letters": "SCAFFOLDING",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "SKYSCRAPER",
+       "letters": "SKYSCRAPER",
+       "row": 10,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "CONCRETE",
+       "letters": "CONCRETE",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "BLUEPRINT",
+       "letters": "BLUEPRINT",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "DOTP",
+       "row": 5,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "letters": "TOW",
+       "row": 5,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "letters": "FACA",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "STAI",
+       "row": 6,
+       "col": 8,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Opéra",
+    "en": "Opera"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.78,
+    "score": 123,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "MORTTENOREN",
+      "SCNAIRAPNMA",
+      "TTRAZOMEOOS",
+      "NOTYRABRIDO",
+      "LIVREPCATNT",
+      "DSYMPHONIEA",
+      "LIVRETRSTCV",
+      "ASVSOPRARSI",
+      "ORTSEAMSAED",
+      "TRUEOHCRPRA",
+      "ECIRTATNACI"
+     ],
+     "words": [
+      {
+       "display": "OPÉRA",
+       "letters": "OPERA",
+       "row": 0,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "SOPRANO",
+       "letters": "SOPRANO",
+       "row": 6,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "TÉNOR",
+       "letters": "TENOR",
+       "row": 0,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "BARYTON",
+       "letters": "BARYTON",
+       "row": 3,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "CANTATRICE",
+       "letters": "CANTATRICE",
+       "row": 10,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ORCHESTRE",
+       "letters": "ORCHESTRE",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "MAESTRO",
+       "letters": "MAESTRO",
+       "row": 8,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "PARTITION",
+       "letters": "PARTITION",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "LIVRET",
+       "letters": "LIVRET",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ARIA",
+       "letters": "ARIA",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "CHOEUR",
+       "letters": "CHOEUR",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MOZART",
+       "letters": "MOZART",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "SYMPHONIE",
+       "letters": "SYMPHONIE",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CRESCENDO",
+       "letters": "CRESCENDO",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "DIVA",
+       "letters": "DIVA",
+       "row": 8,
+       "col": 10,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SOPRA",
+       "row": 7,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "LIVRE",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "DIV",
+       "row": 5,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "letters": "ARI",
+       "row": 8,
+       "col": 8,
+       "direction": "SE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "YMAOTTERBIL",
+      "OYLIBREOAIP",
+      "CONARPOSRRD",
+      "ORTOEAMAIOI",
+      "CCEMHOEMTTV",
+      "HHNSZPAIOCD",
+      "OEOACDMONUI",
+      "RSRROEPYEDV",
+      "UTRNUENNSNA",
+      "RRNARSNDTON",
+      "LAMAESTROCA"
+     ],
+     "words": [
+      {
+       "display": "OPERA",
+       "letters": "OPERA",
+       "row": 6,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "SOPRANO",
+       "letters": "SOPRANO",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "TENOR",
+       "letters": "TENOR",
+       "row": 3,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "BARITONE",
+       "letters": "BARITONE",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "PRIMADONNA",
+       "letters": "PRIMADONNA",
+       "row": 1,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "ORCHESTRA",
+       "letters": "ORCHESTRA",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "MAESTRO",
+       "letters": "MAESTRO",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "LIBRETTO",
+       "letters": "LIBRETTO",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "ARIA",
+       "letters": "ARIA",
+       "row": 3,
+       "col": 5,
+       "direction": "NW"
+      },
+      {
+       "display": "CHORUS",
+       "letters": "CHORUS",
+       "row": 4,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "MOZART",
+       "letters": "MOZART",
+       "row": 3,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "SYMPHONY",
+       "letters": "SYMPHONY",
+       "row": 8,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "CRESCENDO",
+       "letters": "CRESCENDO",
+       "row": 2,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "DIVA",
+       "letters": "DIVA",
+       "row": 5,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "CONDUCTOR",
+       "letters": "CONDUCTOR",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "LIBRE",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "CHORU",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "DIV",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "letters": "ARI",
+       "row": 3,
+       "col": 7,
+       "direction": "NE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Photographie",
+    "en": "Photography"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.67,
+    "score": 125,
+    "decoys": 5
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "SELFSELFIEE",
+      "PTREPIEDNHG",
+      "RAEXIIPUPCA",
+      "EHNPNAMABIR",
+      "TSZOOERUELD",
+      "OAOSRGGEBCA",
+      "ULMIOALAMLC",
+      "CFQTCAMOTAA",
+      "HUOICHBALIC",
+      "EHLOBJECTIF",
+      "PCFNEMOOZFE"
+     ],
+     "words": [
+      {
+       "display": "PHOTOGRAPHE",
+       "letters": "PHOTOGRAPHE",
+       "row": 10,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "OBJECTIF",
+       "letters": "OBJECTIF",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "FLASH",
+       "letters": "FLASH",
+       "row": 7,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "TRÉPIED",
+       "letters": "TREPIED",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "NÉGATIF",
+       "letters": "NEGATIF",
+       "row": 3,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "CLICHÉ",
+       "letters": "CLICHE",
+       "row": 5,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "ZOOM",
+       "letters": "ZOOM",
+       "row": 10,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "ALBUM",
+       "letters": "ALBUM",
+       "row": 7,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "CAMERA",
+       "letters": "CAMERA",
+       "row": 8,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "EXPOSITION",
+       "letters": "EXPOSITION",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "FOCALE",
+       "letters": "FOCALE",
+       "row": 10,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "RETOUCHE",
+       "letters": "RETOUCHE",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "CADRAGE",
+       "letters": "CADRAGE",
+       "row": 6,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "NUMÉRIQUE",
+       "letters": "NUMERIQUE",
+       "row": 1,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "SELFIE",
+       "letters": "SELFIE",
+       "row": 0,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "PANORAMA",
+       "letters": "PANORAMA",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CLIC",
+       "row": 10,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "letters": "SELF",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "ZOO",
+       "row": 4,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "OBJE",
+       "row": 7,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "letters": "ALBU",
+       "row": 5,
+       "col": 10,
+       "direction": "NW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "BSOERUSOPXE",
+      "LERETOUCHAR",
+      "ALFHSALFOEZ",
+      "AFRAMINGTOT",
+      "RMLPOAZOOMR",
+      "AEAEVITAGEN",
+      "LITRIPODREE",
+      "BFITOHSPANS",
+      "ULGUUNHDPIN",
+      "MEIRAHAUHSE",
+      "NSDESISPYDL"
+     ],
+     "words": [
+      {
+       "display": "PHOTOGRAPHY",
+       "letters": "PHOTOGRAPHY",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "LENS",
+       "letters": "LENS",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "FLASH",
+       "letters": "FLASH",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "TRIPOD",
+       "letters": "TRIPOD",
+       "row": 6,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "NEGATIVE",
+       "letters": "NEGATIVE",
+       "row": 5,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "SNAPSHOT",
+       "letters": "SNAPSHOT",
+       "row": 7,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "ZOOM",
+       "letters": "ZOOM",
+       "row": 4,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "ALBUM",
+       "letters": "ALBUM",
+       "row": 5,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "APERTURE",
+       "letters": "APERTURE",
+       "row": 3,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "EXPOSURE",
+       "letters": "EXPOSURE",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "SHUTTER",
+       "letters": "SHUTTER",
+       "row": 10,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "RETOUCH",
+       "letters": "RETOUCH",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "FRAMING",
+       "letters": "FRAMING",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DIGITAL",
+       "letters": "DIGITAL",
+       "row": 10,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "SELFIE",
+       "letters": "SELFIE",
+       "row": 10,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "PANORAMA",
+       "letters": "PANORAMA",
+       "row": 10,
+       "col": 7,
+       "direction": "NW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ZOO",
+       "row": 2,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "letters": "SELF",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "letters": "FLA",
+       "row": 2,
+       "col": 2,
+       "direction": "W"
+      },
+      {
+       "letters": "RETO",
+       "row": 1,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "letters": "ALB",
+       "row": 2,
+       "col": 0,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c7-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Festival des arts",
+    "en": "Arts festival"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1,
+    "score": 145,
+    "decoys": 10
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "OEUVENADPOET",
+      "SETABORCANTA",
+      "CLOWNTPMCOEE",
+      "SCULPTEURIOF",
+      "DANSETJSOTPE",
+      "ETTENNOIRAMS",
+      "UCMIMENCMRAT",
+      "QETIUSGIAIGI",
+      "RPMVLFLEGPIV",
+      "ISRTALENTSEA",
+      "CEDANHUSINTL",
+      "ILLUSTRATION"
+     ],
+     "words": [
+      {
+       "display": "ILLUSTRATION",
+       "letters": "ILLUSTRATION",
+       "row": 11,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "INSPIRATION",
+       "letters": "INSPIRATION",
+       "row": 11,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "DANSE",
+       "letters": "DANSE",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "POETE",
+       "letters": "POETE",
+       "row": 4,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "MARIONNETTE",
+       "letters": "MARIONNETTE",
+       "row": 5,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "TALENT",
+       "letters": "TALENT",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "SPECTACLE",
+       "letters": "SPECTACLE",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "SCULPTEUR",
+       "letters": "SCULPTEUR",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "MUSICIEN",
+       "letters": "MUSICIEN",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "JONGLEUR",
+       "letters": "JONGLEUR",
+       "row": 4,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "ACROBATE",
+       "letters": "ACROBATE",
+       "row": 1,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "FESTIVAL",
+       "letters": "FESTIVAL",
+       "row": 3,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "CIRQUE",
+       "letters": "CIRQUE",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "CLOWN",
+       "letters": "CLOWN",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "MIME",
+       "letters": "MIME",
+       "row": 6,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "MAGIE",
+       "letters": "MAGIE",
+       "row": 5,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "OEUVRE",
+       "letters": "OEUVRE",
+       "row": 5,
+       "col": 6,
+       "direction": "SW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "DANHU",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "ILLU",
+       "row": 7,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "letters": "MAG",
+       "row": 6,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "letters": "POET",
+       "row": 0,
+       "col": 8,
+       "direction": "E"
+      },
+      {
+       "letters": "ACRO",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "letters": "OEUV",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "FEST",
+       "row": 8,
+       "col": 5,
+       "direction": "SE"
+      },
+      {
+       "letters": "POE",
+       "row": 2,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "letters": "DAN",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "MIM",
+       "row": 6,
+       "col": 4,
+       "direction": "SW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "PDKECLOCLOWN",
+      "LARCLMMIMECO",
+      "UNOITARIPSNI",
+      "CEWRRRTNELAT",
+      "SLTCOIETCAIA",
+      "JGRUTOOANVCR",
+      "RGASPNPBAIIT",
+      "JUGGLERODTSS",
+      "PJOSUTDRCSUU",
+      "OSPECTACLEML",
+      "ILUCSENAOFTL",
+      "AOMAGICPWSLI"
+     ],
+     "words": [
+      {
+       "display": "ILLUSTRATION",
+       "letters": "ILLUSTRATION",
+       "row": 11,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "display": "INSPIRATION",
+       "letters": "INSPIRATION",
+       "row": 2,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "DANCE",
+       "letters": "DANCE",
+       "row": 7,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "TALENT",
+       "letters": "TALENT",
+       "row": 3,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "MARIONETTE",
+       "letters": "MARIONETTE",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "SCULPTOR",
+       "letters": "SCULPTOR",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "MUSICIAN",
+       "letters": "MUSICIAN",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "JUGGLER",
+       "letters": "JUGGLER",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ACROBAT",
+       "letters": "ACROBAT",
+       "row": 10,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "FESTIVAL",
+       "letters": "FESTIVAL",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "SPECTACLE",
+       "letters": "SPECTACLE",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CIRCUS",
+       "letters": "CIRCUS",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "CLOWN",
+       "letters": "CLOWN",
+       "row": 0,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "display": "MIME",
+       "letters": "MIME",
+       "row": 1,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "MAGIC",
+       "letters": "MAGIC",
+       "row": 11,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ARTWORK",
+       "letters": "ARTWORK",
+       "row": 6,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "POET",
+       "letters": "POET",
+       "row": 6,
+       "col": 6,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "DANC",
+       "row": 8,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "letters": "TALE",
+       "row": 3,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "letters": "SCULP",
+       "row": 4,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "JUGGLE",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "letters": "SCUL",
+       "row": 10,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "DAN",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "letters": "CLO",
+       "row": 0,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "letters": "CLOW",
+       "row": 8,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "letters": "POE",
+       "row": 11,
+       "col": 7,
+       "direction": "NE"
+      },
+      {
+       "letters": "POIA",
+       "row": 8,
+       "col": 0,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

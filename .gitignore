@@ -1,0 +1,21 @@
+# Godot
+.godot/
+.import/
+*.translation~
+export_credentials.cfg
+# Builds et rapports
+build/
+reports/
+android/build/
+android/.build_version
+*.apk
+*.aab
+*.keystore
+# Tests : dépendance installée par scripts/ci/install_gdunit4.sh
+addons/gdUnit4/
+# Plugin publicitaire optionnel (voir docs/ADS.md)
+addons/admob/
+# Divers
+*.tmp
+.DS_Store
+Thumbs.db

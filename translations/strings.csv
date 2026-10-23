@@ -1,0 +1,301 @@
+keys,en,fr
+language_fr_short,FR,FR
+language_en_short,EN,EN
+app_name,Mots Mêlés,Mots Mêlés
+loading_tile_letters,MOTSMELES,MOTSMELES
+loading_step_read,Reading levels,Lecture des niveaux
+loading_step_check,Checking grids,Vérification des grilles
+loading_step_progress,Loading your progress,Lecture de ta progression
+loading_step_audio,Loading sounds,Chargement des sons
+loading_step_ready,Ready,Prêt
+loading_progress_description,Loading progress,Progression du chargement
+loading_error_title,Levels could not be loaded,Impossible de charger les niveaux
+loading_error_body,The game data is missing or invalid. Please reinstall the game.,Les données du jeu sont absentes ou invalides. Réinstalle le jeu.
+cd_settings,Settings,Paramètres
+cd_language,Change language,Changer de langue
+cd_monument,Level monument,Monument des niveaux
+cd_back,Back,Retour
+cd_restart,Restart level,Recommencer le niveau
+cd_close,Close,Fermer
+cd_gift,Chapter gift,Cadeau du chapitre
+cd_star_earned,Star earned,Étoile obtenue
+cd_star_missed,Star not earned,Étoile non obtenue
+home_chapter_level,Chapter {0} · Level {1},Chapitre {0} · Niveau {1}
+home_play,Play,Jouer
+home_resume,Resume,Reprendre
+home_all_done_title,All levels completed!,Tous les niveaux sont terminés !
+home_all_done_body,Come back soon for new chapters.,Reviens bientôt pour de nouveaux chapitres.
+home_gift_progress,{0}/{1},{0}/{1}
+home_gift_ready,Your gift is ready!,Ton cadeau est prêt !
+home_gift_open,Claim gift,Récupérer le cadeau
+home_gift_description,Chapter gift: {0} of {1} levels completed,Cadeau du chapitre : {0} niveaux terminés sur {1}
+band_easy,Easy,Facile
+band_medium,Medium,Moyen
+band_hard,Hard,Difficile
+band_final,Final challenge,Défi final
+game_words_label,Words to find,Mots à trouver
+game_word_found_desc,"{0}, found","{0}, trouvé"
+game_word_todo_desc,"{0}, to find","{0}, à trouver"
+game_timer_description,Time {0},Temps {0}
+game_hint,Hint,Indice
+game_hint_more,Get hints,Obtenir des indices
+game_grid_description,"Letter grid, {0} by {0}. Drag across letters to select a word.","Grille de lettres, {0} sur {0}. Fais glisser ton doigt sur les lettres pour sélectionner un mot."
+dialog_quit_title,Leave this game?,Quitter la partie ?
+dialog_quit_body,Your progress is saved. You can resume later.,Ta progression est sauvegardée. Tu pourras reprendre plus tard.
+dialog_quit_confirm,Leave,Quitter
+dialog_stay,Stay,Rester
+dialog_cancel,Cancel,Annuler
+msg_hint_limit,No more hints allowed on this level.,Plus d'indice possible sur ce niveau.
+msg_hint_nothing,Nothing left to reveal.,Rien d'autre à révéler.
+msg_hint_failed,Could not use the hint. Try again.,Impossible d'utiliser l'indice. Réessaie.
+msg_ad_offline,You are offline: no video available.,Tu es hors ligne : aucune vidéo disponible.
+msg_ad_unavailable,No video available right now.,Aucune vidéo disponible pour le moment.
+msg_ad_dismissed,Watch the whole video to earn a hint.,Regarde la vidéo en entier pour gagner un indice.
+msg_ad_duplicate,This reward was already granted.,Cette récompense a déjà été accordée.
+msg_level_completed,Level already completed.,Niveau déjà terminé.
+msg_level_locked,Finish the previous level first.,Termine d'abord le niveau précédent.
+msg_error_generic,Something went wrong. Try again.,Un problème est survenu. Réessaie.
+monument_title,Level monument,Monument des niveaux
+monument_chapter,Chapter {0} · {1},Chapitre {0} · {1}
+monument_status_completed,Completed,Terminé
+monument_status_available,Available,Disponible
+monument_status_locked,Locked,Verrouillé
+monument_level_description,"Level {0}, {1}, {2}, {3}","Niveau {0}, {1}, {2}, {3}"
+monument_grid_size,{0}×{0},{0}×{0}
+monument_gift_pending,Gift at the end of the chapter,Cadeau à la fin du chapitre
+monument_gift_claimed,Gift claimed,Cadeau récupéré
+settings_title,Settings,Paramètres
+settings_language,Language,Langue
+settings_sound,Sound effects,Effets sonores
+settings_haptics,Haptic feedback,Retour haptique
+settings_accessibility,Accessibility,Accessibilité
+settings_reduce_motion,Reduce animations,Réduire les animations
+settings_reduce_motion_hint,Turns off decorative motion.,Désactive les animations décoratives.
+settings_large_text,Larger text,Texte plus grand
+settings_credits,Credits & legal notices,Crédits et mentions légales
+settings_privacy_options,Ad privacy options,Options de confidentialité des pubs
+settings_state_on,On,Activé
+settings_state_off,Off,Désactivé
+credits_title,Credits & legal notices,Crédits et mentions légales
+credits_version,Version {0},Version {0}
+credits_section_game,The game,Le jeu
+credits_game_body,Mots Mêlés is an offline word-search game developed by Vallo Game. Every level is included in the app and no account is needed.,Mots Mêlés est un jeu de mots mêlés hors ligne développé par Vallo Game. Tous les niveaux sont inclus dans l'application et aucun compte n'est nécessaire.
+credits_section_audio,Sounds,Sons
+credits_audio_body,The praise voices were provided by the project owner. The interface sounds were generated for this game.,Les voix de félicitations ont été fournies par l'auteur du projet. Les sons d'interface ont été générés pour ce jeu.
+credits_section_libs,Open-source libraries,Bibliothèques open source
+credits_libs_body,"Godot Engine (MIT License), the Roboto font (SIL Open Font License) and icons derived from Google's Material Icons (Apache License 2.0).","Godot Engine (licence MIT), la police Roboto (SIL Open Font License) et des icônes dérivées des Material Icons de Google (licence Apache 2.0)."
+credits_section_ads,Advertising,Publicité
+credits_ads_body,"This version only shows test ads: Google's official test ad units in the AdMob build, simulated ads otherwise. A consent message may appear depending on your region.","Cette version n'affiche que des publicités de test : les blocs de test officiels de Google dans la version AdMob, des annonces simulées sinon. Un message de consentement peut s'afficher selon ta région."
+credits_section_privacy,Privacy,Confidentialité
+credits_privacy_body,"The game works offline and has no account. Your progress and settings stay on your device. Ads may use an advertising identifier, according to your consent choices.","Le jeu fonctionne hors ligne et n'a pas de compte. Ta progression et tes réglages restent sur ton appareil. Les publicités peuvent utiliser un identifiant publicitaire, selon tes choix de consentement."
+result_title,Level complete!,Niveau terminé !
+result_time,Time,Temps
+result_chapter_done,Chapter complete!,Chapitre terminé !
+result_next,Next level,Niveau suivant
+result_home,Home,Accueil
+result_monument,Monument,Monument
+result_gift_open,Claim your gift,Récupère ton cadeau
+praise_nice,Nice!,Nice!
+praise_great,Great!,Great!
+praise_awesome,Awesome!,Awesome!
+praise_amazing,Amazing!,Amazing!
+praise_insane,Insane!,Insane!
+praise_unreal,Unreal!,Unreal!
+praise_divine,Divine!,Divine!
+praise_legendary,Legendary!,Legendary!
+monument_level_subtitle,{0} · {1},{0} · {1}
+result_level_subtitle,Chapter {0} · Level {1} · {2},Chapitre {0} · Niveau {1} · {2}
+game_hint_description,"{0}, {1}","{0}, {1}"
+hints_count_one,{0} hint,{0} indice
+hints_count_other,{0} hints,{0} indices
+stars_count_one,{0} star,{0} étoile
+stars_count_other,{0} stars,{0} étoiles
+msg_hints_earned_one,+{0} hint,+{0} indice
+msg_hints_earned_other,+{0} hints,+{0} indices
+msg_gift_earned_one,Gift: +{0} hint,Cadeau : +{0} indice
+msg_gift_earned_other,Gift: +{0} hints,Cadeau : +{0} indices
+home_chapter_title,Chapter {0},Chapitre {0}
+home_level_n,Level {0},Niveau {0}
+home_chapter_done,Chapter complete,Chapitre terminé
+home_chapter_locked_hint,Finish the previous chapter to unlock it.,Termine le chapitre précédent pour le débloquer.
+home_chapter_stars,{0}/{1},{0}/{1}
+home_gift_claim,Claim gift,Récupérer le cadeau
+msg_chapter_completed,Chapter already completed.,Chapitre déjà terminé.
+msg_chapter_locked,Finish the previous chapter first.,Termine d'abord le chapitre précédent.
+settings_music,Music,Musique
+result_chapter_progress,Chapter {0} progress,Progression du chapitre {0}
+monument_level_title,{0}-{1}  {2},{0}-{1}  {2}
+monument_level_a11y,"Chapter {0}, level {1}, {2}, {3}","Chapitre {0}, niveau {1}, {2}, {3}"
+language_title,Language,Langue
+language_auto_name,Automatic,Automatique
+language_auto_hint,Follows your phone's language,Suit la langue du téléphone
+language_fr_name,Français,Français
+language_en_name,English,English
+settings_appearance,Appearance,Apparence
+settings_dark_mode,Dark mode,Mode sombre
+settings_dark_mode_hint,Easier on the eyes at night.,Plus doux pour les yeux la nuit.
+help_title,Help,Aide
+help_button_description,Help,Aide
+help_demo_title,See how it works,Vois comment ça marche
+help_howto_title,How to play,Comment jouer
+help_step_1,Find the words of the list hidden in the grid.,Trouve dans la grille les mots de la liste.
+help_step_2,"Slide your finger across the letters of a word. It can run in any of 8 directions, even backwards.","Glisse ton doigt sur les lettres d'un mot. Il peut aller dans 8 directions, même à l'envers."
+help_step_3,Let go: a right word stays colored and is crossed off the list.,Relâche : un bon mot reste coloré et se raye dans la liste.
+help_step_4,Find every word to win the level.,Trouve tous les mots pour gagner le niveau.
+help_stars_title,Stars,Étoiles
+help_stars_intro,Your time decides your stars. There is no countdown: take it easy.,Ton temps décide de tes étoiles. Il n'y a pas de compte à rebours : prends ton temps.
+help_stars_3,Under 1 minute,Moins d'1 minute
+help_stars_2,Under 3 minutes,Moins de 3 minutes
+help_stars_1,3 minutes or more,3 minutes ou plus
+help_hints_title,Hints,Indices
+help_hints_body,A hint lights up the first letter of a word you have not found yet. Each level caps how many hints you can use (2 to 5). You start with 2 hints.,Un indice éclaire la première lettre d'un mot pas encore trouvé. Chaque niveau limite le nombre d'indices (de 2 à 5). Tu démarres avec 2 indices.
+help_rewards_title,Rewards,Récompenses
+help_rewards_intro,Hints are the only currency. Here is how to earn more:,Les indices sont la seule monnaie. Voici comment en gagner :
+help_reward_gift_title,Chapter gift,Cadeau de chapitre
+help_reward_gift_body,"Finish every level of a chapter and claim a gift of 1 to 3 hints, once per chapter.","Termine tous les niveaux d'un chapitre et réclame un cadeau de 1 à 3 indices, une fois par chapitre."
+help_reward_ad_title,Short video,Courte vidéo
+help_reward_ad_body,Out of hints? Watch a short ad to earn 1 hint. The reward only counts if you watch it to the end.,Plus d'indices ? Regarde une courte publicité pour gagner 1 indice. La récompense n'est donnée que si tu vas jusqu'au bout.
+help_reward_daily_title,Daily challenge,Défi du jour
+help_reward_daily_body,"A new grid every day, the same for everyone. Win it for 1 hint, plus 1 more with 3 stars.","Une nouvelle grille chaque jour, la même pour tous. Réussis-la pour 1 indice, et 1 de plus avec 3 étoiles."
+help_reward_streak_title,Streak bonus,Bonus de série
+help_reward_streak_body,"Win the daily challenge several days in a row: 3 days +1 hint, 7 days +2, 14 days +3, 30 days +5.","Réussis le défi du jour plusieurs jours de suite : 3 jours +1 indice, 7 jours +2, 14 jours +3, 30 jours +5."
+help_progress_title,Chapter progress,Progression des chapitres
+help_progress_body,The percentage on a chapter bubble is the share of its possible stars you have earned. Aim for 3 stars on every level!,Le pourcentage sur la bulle d'un chapitre est la part des étoiles possibles que tu as gagnées. Vise les 3 étoiles à chaque niveau !
+home_chapter_percent,{0}%,{0} %
+home_chapter_percent_description,{0} percent of the chapter stars earned,{0} pour cent des étoiles du chapitre gagnées
+daily_title,Daily challenge,Défi du jour
+daily_theme,Theme: {0},Thème : {0}
+daily_size_band,{0}×{0} · {1},{0}×{0} · {1}
+daily_play,Play,Jouer
+daily_resume,Resume,Reprendre
+daily_done,Completed,Terminé
+daily_loading,Preparing today's grid…,Préparation de la grille du jour…
+daily_next_in,Next challenge in {0},Prochain défi dans {0}
+daily_banner_new,New grid · {0}×{0} · {1},Nouvelle grille · {0}×{0} · {1}
+daily_banner_resume,In progress · {0}×{0},En cours · {0}×{0}
+daily_banner_done,Done · next in {0},Terminé · prochain dans {0}
+daily_banner_loading,Preparing today's grid…,Préparation de la grille du jour…
+daily_streak_title,Streak,Série
+daily_streak_days_one,{0} day,{0} jour
+daily_streak_days_other,{0} days,{0} jours
+daily_streak_none,Win today's challenge to start a streak!,Gagne le défi du jour pour lancer une série !
+daily_best,Best: {0},Record : {0}
+daily_week_title,Last 7 days,7 derniers jours
+daily_month_title,Calendar,Calendrier
+daily_rewards_title,Rewards,Récompenses
+daily_rewards_base,"Win the challenge: +1 hint, +1 more with 3 stars.","Gagne le défi : +1 indice, +1 de plus avec 3 étoiles."
+daily_milestone_row,{0} days in a row,{0} jours de suite
+daily_milestone_hints_one,+{0} hint,+{0} indice
+daily_milestone_hints_other,+{0} hints,+{0} indices
+daily_next_milestone,Next bonus in {0} more days,Prochain bonus dans {0} jours
+daily_done_stars,{0} stars in {1},{0} étoiles en {1}
+daily_result_subtitle,Daily challenge · {0},Défi du jour · {0}
+daily_result_rewards,Rewards,Récompenses
+daily_result_total_one,+{0} hint,+{0} indice
+daily_result_total_other,+{0} hints,+{0} indices
+daily_result_base,Challenge won,Défi réussi
+daily_result_stars,3 stars bonus,Bonus 3 étoiles
+daily_result_milestone,{0}-day streak bonus,Bonus de série de {0} jours
+daily_result_streak_one,{0}-day streak,Série de {0} jour
+daily_result_streak_other,{0}-day streak,Série de {0} jours
+daily_result_new_best,New record!,Nouveau record !
+daily_result_back,Daily challenge,Défi du jour
+daily_result_already,Already counted today.,Déjà comptabilisé aujourd'hui.
+msg_daily_done,You already won today's challenge. Come back tomorrow!,Tu as déjà gagné le défi du jour. Reviens demain !
+msg_daily_loading,Today's grid is almost ready…,La grille du jour arrive…
+cd_daily,Daily challenge,Défi du jour
+daily_weekday_short_0,Su,D
+daily_weekday_short_1,Mo,L
+daily_weekday_short_2,Tu,M
+daily_weekday_short_3,We,M
+daily_weekday_short_4,Th,J
+daily_weekday_short_5,Fr,V
+daily_weekday_short_6,Sa,S
+daily_weekday_long_0,Sunday,dimanche
+daily_weekday_long_1,Monday,lundi
+daily_weekday_long_2,Tuesday,mardi
+daily_weekday_long_3,Wednesday,mercredi
+daily_weekday_long_4,Thursday,jeudi
+daily_weekday_long_5,Friday,vendredi
+daily_weekday_long_6,Saturday,samedi
+daily_month_1,January,janvier
+daily_month_2,February,février
+daily_month_3,March,mars
+daily_month_4,April,avril
+daily_month_5,May,mai
+daily_month_6,June,juin
+daily_month_7,July,juillet
+daily_month_8,August,août
+daily_month_9,September,septembre
+daily_month_10,October,octobre
+daily_month_11,November,novembre
+daily_month_12,December,décembre
+daily_date,"{0}, {1} {2}",{0} {2} {1}
+ad_test_badge,TEST AD,ANNONCE DE TEST
+ad_test_rewarded_title,Rewarded ad (simulation),Publicité récompensée (simulation)
+ad_test_return_title,Welcome-back ad (simulation),Publicité de retour (simulation)
+ad_test_rewarded_hint,Watch until the end to earn 1 hint.,Regarde jusqu'au bout pour gagner 1 indice.
+ad_test_return_hint,This is how a welcome-back ad looks.,Voici à quoi ressemble une publicité de retour.
+ad_test_wait,{0} s,{0} s
+ad_test_claim,Claim my hint,Récupérer mon indice
+ad_test_close,Close,Fermer
+ad_test_skip,Close (no reward),Fermer (sans récompense)
+ad_test_banner,Test ad · banner (simulation),Annonce de test · bannière (simulation)
+credits_section_studio,Developer,Développeur
+credits_studio_body,Developed by Vallo Game.,Développé par Vallo Game.
+credits_studio_copyright,© 2026 Vallo Game,© 2026 Vallo Game
+loading_studio,Developed by Vallo Game,Développé par Vallo Game
+cd_trophies,Trophies,Trophées
+trophies_title,Trophies,Trophées
+trophies_summary,{0} / {1} unlocked,{0} / {1} débloqués
+trophy_new,New,Nouveau
+trophy_locked,Locked,Verrouillé
+trophy_progress,{0} / {1},{0} / {1}
+trophy_unlocked_on,Unlocked on {0},Débloqué le {0}
+trophy_unlocked_toast,Trophy unlocked!,Trophée débloqué !
+trophy_tier_0,Common,Commun
+trophy_tier_1,Uncommon,Peu commun
+trophy_tier_2,Rare,Rare
+trophy_tier_3,Epic,Épique
+trophy_tier_4,Legendary,Légendaire
+trophy_tier_5,Mythic,Mythique
+trophy_first_steps_name,First Steps,Premiers pas
+trophy_first_steps_desc,Complete your first level.,Termine ton premier niveau.
+trophy_rising_star_name,Rising Star,Étoile montante
+trophy_rising_star_desc,Earn 3 stars on a single level.,Obtiens 3 étoiles sur un niveau.
+trophy_five_levels_name,Getting Warmed Up,Sur la lancée
+trophy_five_levels_desc,Complete {0} levels.,Termine {0} niveaux.
+trophy_helping_hand_name,Helping Hand,Coup de pouce
+trophy_helping_hand_desc,Use a hint for the first time.,Utilise un indice pour la première fois.
+trophy_chapter_one_name,Chapter Closed,Chapitre bouclé
+trophy_chapter_one_desc,Complete every level of a chapter.,Termine tous les niveaux d'un chapitre.
+trophy_daily_first_name,Daily Habit,Rendez-vous du jour
+trophy_daily_first_desc,Win a daily challenge.,Réussis un défi du jour.
+trophy_gift_opener_name,Gift Opener,Ouvre-cadeaux
+trophy_gift_opener_desc,Claim {0} chapter gifts.,Récupère {0} cadeaux de chapitre.
+trophy_fifty_stars_name,Star Collector,Collectionneur d'étoiles
+trophy_fifty_stars_desc,Collect {0} stars in total.,Récolte {0} étoiles au total.
+trophy_flawless_five_name,Clean Sweep,Sans faute
+trophy_flawless_five_desc,Complete {0} levels with no hint and no wrong selection.,Termine {0} niveaux sans indice ni mauvaise sélection.
+trophy_final_challenge_name,Final Boss,Défi relevé
+trophy_final_challenge_desc,Complete a final challenge without using a hint.,Termine un défi final sans utiliser d'indice.
+trophy_daily_week_name,One Week Strong,Une semaine d'affilée
+trophy_daily_week_desc,Win the daily challenge {0} days in a row.,Réussis le défi du jour {0} jours de suite.
+trophy_perfect_five_name,On a Roll,En pleine série
+trophy_perfect_five_desc,Earn 3 stars on {0} levels in a row.,Obtiens 3 étoiles sur {0} niveaux d'affilée.
+trophy_hundred_stars_name,Starry Sky,Ciel étoilé
+trophy_hundred_stars_desc,Collect {0} stars in total.,Récolte {0} étoiles au total.
+trophy_five_chapters_name,Seasoned Traveler,Grand voyageur
+trophy_five_chapters_desc,Complete {0} chapters.,Termine {0} chapitres.
+trophy_lightning_name,Lightning,Éclair
+trophy_lightning_desc,Complete a grid of 8×8 or larger in under 40 seconds.,Termine une grille d'au moins 8×8 en moins de 40 secondes.
+trophy_daily_fortnight_name,Fortnight Streak,Quinzaine parfaite
+trophy_daily_fortnight_desc,Win the daily challenge {0} days in a row.,Réussis le défi du jour {0} jours de suite.
+trophy_flawless_many_name,Eagle Eye,Œil de lynx
+trophy_flawless_many_desc,Complete {0} levels with no hint and no wrong selection.,Termine {0} niveaux sans indice ni mauvaise sélection.
+trophy_perfect_fifteen_name,Untouchable,Intouchable
+trophy_perfect_fifteen_desc,Earn 3 stars on {0} levels in a row.,Obtiens 3 étoiles sur {0} niveaux d'affilée.
+trophy_ten_chapters_name,Word Master,Maître des mots
+trophy_ten_chapters_desc,Complete {0} chapters.,Termine {0} chapitres.
+trophy_daily_month_name,Daily Legend,Légende du quotidien
+trophy_daily_month_desc,Win the daily challenge {0} days in a row.,Réussis le défi du jour {0} jours de suite.

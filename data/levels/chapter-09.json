@@ -1,0 +1,3128 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-09",
+ "index": 9,
+ "paletteKey": "kitchen",
+ "theme": {
+  "fr": "Gastronomie",
+  "en": "Gastronomy"
+ },
+ "levels": [
+  {
+   "id": "c9-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Légumes",
+    "en": "Vegetables"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.6,
+    "score": 105,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "SCISIVCHSS",
+      "TENIGREBUA",
+      "OETAMOTORE",
+      "HLRCRUTICP",
+      "CAROTTEGUI",
+      "CHAMPIGNON",
+      "MVSIDAROHA",
+      "POIREAUNCR",
+      "BPOIVRONLD",
+      "OOEBROCOLI"
+     ],
+     "words": [
+      {
+       "display": "CAROTTE",
+       "letters": "CAROTTE",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TOMATE",
+       "letters": "TOMATE",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "COURGETTE",
+       "letters": "COURGETTE",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "AUBERGINE",
+       "letters": "AUBERGINE",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "POIVRON",
+       "letters": "POIVRON",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "BROCOLI",
+       "letters": "BROCOLI",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "ÉPINARD",
+       "letters": "EPINARD",
+       "row": 2,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "POIREAU",
+       "letters": "POIREAU",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CHAMPIGNON",
+       "letters": "CHAMPIGNON",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "RADIS",
+       "letters": "RADIS",
+       "row": 6,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "CHOU",
+       "letters": "CHOU",
+       "row": 7,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "OIGNON",
+       "letters": "OIGNON",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CHO",
+       "row": 4,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "CHSS",
+       "row": 0,
+       "col": 6,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "REPPEPZRRE",
+      "ERMZEUCATE",
+      "NIKUCPDNGP",
+      "OLOCSIPGOS",
+      "IOTCSHPEPL",
+      "NCAHXLRIEO",
+      "OCMIATNOAG",
+      "KOONCARROT",
+      "ARTICHOKEM",
+      "EBOHLEEKMN"
+     ],
+     "words": [
+      {
+       "display": "CARROT",
+       "letters": "CARROT",
+       "row": 7,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "TOMATO",
+       "letters": "TOMATO",
+       "row": 8,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "ZUCCHINI",
+       "letters": "ZUCCHINI",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "EGGPLANT",
+       "letters": "EGGPLANT",
+       "row": 1,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "PEPPER",
+       "letters": "PEPPER",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "BROCCOLI",
+       "letters": "BROCCOLI",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "SPINACH",
+       "letters": "SPINACH",
+       "row": 3,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "LEEK",
+       "letters": "LEEK",
+       "row": 9,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "MUSHROOM",
+       "letters": "MUSHROOM",
+       "row": 1,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "RADISH",
+       "letters": "RADISH",
+       "row": 0,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "ARTICHOKE",
+       "letters": "ARTICHOKE",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ONION",
+       "letters": "ONION",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PEPPEE",
+       "row": 0,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "letters": "ZUCC",
+       "row": 0,
+       "col": 6,
+       "direction": "SW"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c9-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Boulangerie",
+    "en": "Bakery"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.64,
+    "score": 108,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "LEETTEUGAB",
+      "EPTERUVELO",
+      "LNITPUFIEU",
+      "LNONEAORZL",
+      "EINSRLIFRA",
+      "CROISSANTN",
+      "ITNOOUPGTG",
+      "FEIAPTARTE",
+      "TPBRIOCHER",
+      "EIHRAUAHCP"
+     ],
+     "words": [
+      {
+       "display": "BOULANGER",
+       "letters": "BOULANGER",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "BAGUETTE",
+       "letters": "BAGUETTE",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CROISSANT",
+       "letters": "CROISSANT",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BRIOCHE",
+       "letters": "BRIOCHE",
+       "row": 8,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PAIN",
+       "letters": "PAIN",
+       "row": 2,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "FARINE",
+       "letters": "FARINE",
+       "row": 2,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "LEVURE",
+       "letters": "LEVURE",
+       "row": 1,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "PÉTRIN",
+       "letters": "PETRIN",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "FOUR",
+       "letters": "FOUR",
+       "row": 4,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "TARTE",
+       "letters": "TARTE",
+       "row": 7,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "CHAUSSON",
+       "letters": "CHAUSSON",
+       "row": 9,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "FICELLE",
+       "letters": "FICELLE",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "GALETTE",
+       "letters": "GALETTE",
+       "row": 6,
+       "col": 7,
+       "direction": "NW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PAI",
+       "row": 7,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "CHAU",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "FPBTCZTERP",
+      "HYCPRETZEL",
+      "GBRIOCHEWG",
+      "UAONIFFUME",
+      "OKFTSAEYRD",
+      "DEBISCUITA",
+      "YRTSAPDOVE",
+      "TYOPNFLOUR",
+      "ISETTEUGAB",
+      "SOEOVENSSE"
+     ],
+     "words": [
+      {
+       "display": "BAKERY",
+       "letters": "BAKERY",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "BAGUETTE",
+       "letters": "BAGUETTE",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CROISSANT",
+       "letters": "CROISSANT",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "BRIOCHE",
+       "letters": "BRIOCHE",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "BREAD",
+       "letters": "BREAD",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "FLOUR",
+       "letters": "FLOUR",
+       "row": 7,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "YEAST",
+       "letters": "YEAST",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "OVEN",
+       "letters": "OVEN",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "DOUGH",
+       "letters": "DOUGH",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "PASTRY",
+       "letters": "PASTRY",
+       "row": 6,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "BISCUIT",
+       "letters": "BISCUIT",
+       "row": 5,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "MUFFIN",
+       "letters": "MUFFIN",
+       "row": 3,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "PRETZEL",
+       "letters": "PRETZEL",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "OVE",
+       "row": 6,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "letters": "PRETZ",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c9-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Fromages",
+    "en": "Cheeses"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.65,
+    "score": 111,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "NRRGRUYERE",
+      "OETEFNEMME",
+      "HRETSNUMFT",
+      "CCAMEMBERT",
+      "ORIOUETNEE",
+      "LRECNAVTIL",
+      "BOCHEDDARC",
+      "ERVEHCMLBA",
+      "ROQUEFORTR",
+      "ALLERAZZOM"
+     ],
+     "words": [
+      {
+       "display": "CAMEMBERT",
+       "letters": "CAMEMBERT",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ROQUEFORT",
+       "letters": "ROQUEFORT",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "COMTÉ",
+       "letters": "COMTE",
+       "row": 5,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "BRIE",
+       "letters": "BRIE",
+       "row": 7,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "CHÈVRE",
+       "letters": "CHEVRE",
+       "row": 7,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "EMMENTAL",
+       "letters": "EMMENTAL",
+       "row": 0,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "MOZZARELLA",
+       "letters": "MOZZARELLA",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "GRUYÈRE",
+       "letters": "GRUYERE",
+       "row": 0,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "REBLOCHON",
+       "letters": "REBLOCHON",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "MUNSTER",
+       "letters": "MUNSTER",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CHEDDAR",
+       "letters": "CHEDDAR",
+       "row": 6,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "FETA",
+       "letters": "FETA",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "RACLETTE",
+       "letters": "RACLETTE",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "FET",
+       "row": 1,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "BRI",
+       "row": 6,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "letters": "EMMEN",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RETSNUMIRB",
+      "PNRRADDEHC",
+      "MOZZARELLA",
+      "APARMESANM",
+      "TROFEUQORE",
+      "EATTOCIREM",
+      "FCADUOGCIB",
+      "ESMGRUYERE",
+      "LATNEMMEBR",
+      "EMACOCIRPT"
+     ],
+     "words": [
+      {
+       "display": "CAMEMBERT",
+       "letters": "CAMEMBERT",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "ROQUEFORT",
+       "letters": "ROQUEFORT",
+       "row": 4,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "BRIE",
+       "letters": "BRIE",
+       "row": 8,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "EMMENTAL",
+       "letters": "EMMENTAL",
+       "row": 8,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "MOZZARELLA",
+       "letters": "MOZZARELLA",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "GRUYERE",
+       "letters": "GRUYERE",
+       "row": 7,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "CHEDDAR",
+       "letters": "CHEDDAR",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "PARMESAN",
+       "letters": "PARMESAN",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "RICOTTA",
+       "letters": "RICOTTA",
+       "row": 5,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "FETA",
+       "letters": "FETA",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "GOUDA",
+       "letters": "GOUDA",
+       "row": 6,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MUNSTER",
+       "letters": "MUNSTER",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MASCARPONE",
+       "letters": "MASCARPONE",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "RICO",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "CAME",
+       "row": 9,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "letters": "BRI",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c9-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Épices",
+    "en": "Spices"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.57,
+    "score": 114,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "VANILLEFREO",
+      "AEGUCTLINAV",
+      "ECIBOULETTE",
+      "TANCRNEASMD",
+      "SNGUITNIOIA",
+      "NNERANNMUKC",
+      "EEMCNAAEIUS",
+      "MLBUDDCRMNU",
+      "ILRMRUPIFIM",
+      "PUEAEANECAP",
+      "CNCRPOIVRES"
+     ],
+     "words": [
+      {
+       "display": "CANNELLE",
+       "letters": "CANNELLE",
+       "row": 7,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "GINGEMBRE",
+       "letters": "GINGEMBRE",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "SAFRAN",
+       "letters": "SAFRAN",
+       "row": 10,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "CURCUMA",
+       "letters": "CURCUMA",
+       "row": 3,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "MUSCADE",
+       "letters": "MUSCADE",
+       "row": 8,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "CUMIN",
+       "letters": "CUMIN",
+       "row": 5,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "PAPRIKA",
+       "letters": "PAPRIKA",
+       "row": 10,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "display": "POIVRE",
+       "letters": "POIVRE",
+       "row": 10,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "CARDAMOME",
+       "letters": "CARDAMOME",
+       "row": 10,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "CORIANDRE",
+       "letters": "CORIANDRE",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "PIMENT",
+       "letters": "PIMENT",
+       "row": 9,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "VANILLE",
+       "letters": "VANILLE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CIBOULETTE",
+       "letters": "CIBOULETTE",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ANIS",
+       "letters": "ANIS",
+       "row": 6,
+       "col": 5,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CANNELLU",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "letters": "PIMENS",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "VANIL",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TNSEKIRPAPA",
+      "IUSAFFRONPC",
+      "ETRNLNEPPAL",
+      "EMEMOTDCRPO",
+      "GEGVEMNDCRV",
+      "NGNIGRAHCIE",
+      "ICICUMINPKS",
+      "GCGEOLRCNAM",
+      "PPHMIDOIOII",
+      "PEPPERCORNC",
+      "ONVANILLAIY"
+     ],
+     "words": [
+      {
+       "display": "CINNAMON",
+       "letters": "CINNAMON",
+       "row": 9,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "GINGER",
+       "letters": "GINGER",
+       "row": 7,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "SAFFRON",
+       "letters": "SAFFRON",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "TURMERIC",
+       "letters": "TURMERIC",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "NUTMEG",
+       "letters": "NUTMEG",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "CUMIN",
+       "letters": "CUMIN",
+       "row": 6,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "PAPRIKA",
+       "letters": "PAPRIKA",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "PEPPERCORN",
+       "letters": "PEPPERCORN",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CARDAMOM",
+       "letters": "CARDAMOM",
+       "row": 1,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "CORIANDER",
+       "letters": "CORIANDER",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "CHILI",
+       "letters": "CHILI",
+       "row": 4,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "VANILLA",
+       "letters": "VANILLA",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "CLOVES",
+       "letters": "CLOVES",
+       "row": 1,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "SALT",
+       "letters": "SALT",
+       "row": 0,
+       "col": 2,
+       "direction": "SE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "GINGE",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "PAPRIK",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "letters": "GING",
+       "row": 5,
+       "col": 4,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c9-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Desserts",
+    "en": "Desserts"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.63,
+    "score": 117,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "FCRTPCUSGME",
+      "BATUALFSAEM",
+      "ERASTAESTRE",
+      "IALIIFUUEIR",
+      "GMOMSOGOANC",
+      "NECASUNMUOC",
+      "ELORETIFORP",
+      "TUHIRIRLFAE",
+      "NXCTISEALCB",
+      "SORBETMNOAH",
+      "IULEESSUOMP"
+     ],
+     "words": [
+      {
+       "display": "CHOCOLAT",
+       "letters": "CHOCOLAT",
+       "row": 8,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "GÂTEAU",
+       "letters": "GATEAU",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "MACARON",
+       "letters": "MACARON",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "PROFITEROLE",
+       "letters": "PROFITEROLE",
+       "row": 6,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "TIRAMISU",
+       "letters": "TIRAMISU",
+       "row": 8,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "CRÈME",
+       "letters": "CREME",
+       "row": 4,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "SORBET",
+       "letters": "SORBET",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BEIGNET",
+       "letters": "BEIGNET",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "FLAN",
+       "letters": "FLAN",
+       "row": 6,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "CLAFOUTIS",
+       "letters": "CLAFOUTIS",
+       "row": 0,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "MOUSSE",
+       "letters": "MOUSSE",
+       "row": 10,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CARAMEL",
+       "letters": "CARAMEL",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "PÂTISSERIE",
+       "letters": "PATISSERIE",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "MERINGUE",
+       "letters": "MERINGUE",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MOUSSS",
+       "row": 5,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "letters": "MERI",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "letters": "FLA",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "letters": "FLOO",
+       "row": 7,
+       "col": 8,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "AFLANCSEMMT",
+      "NBFIDDUPAED",
+      "PUDDINGECRF",
+      "ESSUOMRHAIH",
+      "BITDICOTRNA",
+      "RMCLSCSSOGA",
+      "OARDOUGHNUT",
+      "WRELCARAMEL",
+      "NIAMERINGUB",
+      "ITEBROSBROW",
+      "ELORETIFORP"
+     ],
+     "words": [
+      {
+       "display": "CHOCOLATE",
+       "letters": "CHOCOLATE",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "MACARON",
+       "letters": "MACARON",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "PROFITEROLE",
+       "letters": "PROFITEROLE",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "TIRAMISU",
+       "letters": "TIRAMISU",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "CREAM",
+       "letters": "CREAM",
+       "row": 4,
+       "col": 5,
+       "direction": "NE"
+      },
+      {
+       "display": "SORBET",
+       "letters": "SORBET",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "DOUGHNUT",
+       "letters": "DOUGHNUT",
+       "row": 6,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "PUDDING",
+       "letters": "PUDDING",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CUSTARD",
+       "letters": "CUSTARD",
+       "row": 7,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "display": "MOUSSE",
+       "letters": "MOUSSE",
+       "row": 3,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "CARAMEL",
+       "letters": "CARAMEL",
+       "row": 7,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "MERINGUE",
+       "letters": "MERINGUE",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "BROWNIE",
+       "letters": "BROWNIE",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "FLAN",
+       "letters": "FLAN",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PUDDIFB",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "MERINGUB",
+       "row": 8,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "BROW",
+       "row": 9,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "letters": "CREA",
+       "row": 5,
+       "col": 2,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c9-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Boissons",
+    "en": "Drinks"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.78,
+    "score": 120,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "UERDICTOLLL",
+      "EDDINFUSION",
+      "IASGUIEAMNU",
+      "HELLIETUOBT",
+      "TGAANKUHNAI",
+      "ONICCUPPACS",
+      "OATOATUSDIA",
+      "MRCNFFILEDN",
+      "SOSSERPSELE",
+      "TLIMONAKUAO",
+      "CROPGLACOIA"
+     ],
+     "words": [
+      {
+       "display": "LIMONADE",
+       "letters": "LIMONADE",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "CAFÉ",
+       "letters": "CAFE",
+       "row": 5,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "TISANE",
+       "letters": "TISANE",
+       "row": 3,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "INFUSION",
+       "letters": "INFUSION",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "SMOOTHIE",
+       "letters": "SMOOTHIE",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "CIDRE",
+       "letters": "CIDRE",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "SIROP",
+       "letters": "SIROP",
+       "row": 6,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "ORANGEADE",
+       "letters": "ORANGEADE",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "COCKTAIL",
+       "letters": "COCKTAIL",
+       "row": 7,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "CAPPUCCINO",
+       "letters": "CAPPUCCINO",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ESPRESSO",
+       "letters": "ESPRESSO",
+       "row": 8,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "BOUTEILLE",
+       "letters": "BOUTEILLE",
+       "row": 3,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "GLAÇONS",
+       "letters": "GLACONS",
+       "row": 2,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "LAIT",
+       "letters": "LAIT",
+       "row": 3,
+       "col": 2,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "LIMONA",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "CID",
+       "row": 5,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "letters": "GLACOIA",
+       "row": 10,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "letters": "CAF",
+       "row": 5,
+       "col": 3,
+       "direction": "SE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TPCSTRCNCER",
+      "CZKLEMONADE",
+      "EOLEBTFSPAS",
+      "LCIDERFMPEP",
+      "TIMNSPEOUGR",
+      "TSASFCEOHNE",
+      "OTYTNURTSAS",
+      "BRERKCSHTRS",
+      "CAPPUCCINOO",
+      "EWDNAPOEOIO",
+      "AYSMOOJCANE"
+     ],
+     "words": [
+      {
+       "display": "LEMONADE",
+       "letters": "LEMONADE",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "COFFEE",
+       "letters": "COFFEE",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "TEA",
+       "letters": "TEA",
+       "row": 6,
+       "col": 3,
+       "direction": "SW"
+      },
+      {
+       "display": "INFUSION",
+       "letters": "INFUSION",
+       "row": 3,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "SMOOTHIE",
+       "letters": "SMOOTHIE",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "CIDER",
+       "letters": "CIDER",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SYRUP",
+       "letters": "SYRUP",
+       "row": 5,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "ORANGEADE",
+       "letters": "ORANGEADE",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "COCKTAIL",
+       "letters": "COCKTAIL",
+       "row": 10,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "CAPPUCCINO",
+       "letters": "CAPPUCCINO",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ESPRESSO",
+       "letters": "ESPRESSO",
+       "row": 1,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "BOTTLE",
+       "letters": "BOTTLE",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "STRAW",
+       "letters": "STRAW",
+       "row": 5,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "MILK",
+       "letters": "MILK",
+       "row": 4,
+       "col": 2,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CAPPU",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "letters": "STR",
+       "row": 6,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "STRCN",
+       "row": 0,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "SMOO",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c9-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Petit-déjeuner",
+    "en": "Breakfast"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.68,
+    "score": 122,
+    "decoys": 5
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "UETTELEMOEM",
+      "AGRANOLAISB",
+      "FDEUIYEMHES",
+      "YINDTEAFALL",
+      "ARIAAIROUAB",
+      "ORTNLLFRUEA",
+      "UORAOLENURO",
+      "OPANCCEMOET",
+      "ASTRONATRCB",
+      "TARTHLABUAA",
+      "OEKACNAPONM"
+     ],
+     "words": [
+      {
+       "display": "CÉRÉALES",
+       "letters": "CEREALES",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "CONFITURE",
+       "letters": "CONFITURE",
+       "row": 8,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "TARTINE",
+       "letters": "TARTINE",
+       "row": 8,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "BEURRE",
+       "letters": "BEURRE",
+       "row": 8,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "OEUF",
+       "letters": "OEUF",
+       "row": 6,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "YAOURT",
+       "letters": "YAOURT",
+       "row": 2,
+       "col": 5,
+       "direction": "SE"
+      },
+      {
+       "display": "MIEL",
+       "letters": "MIEL",
+       "row": 0,
+       "col": 7,
+       "direction": "SE"
+      },
+      {
+       "display": "GRANOLA",
+       "letters": "GRANOLA",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "PANCAKE",
+       "letters": "PANCAKE",
+       "row": 10,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "BACON",
+       "letters": "BACON",
+       "row": 9,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "OMELETTE",
+       "letters": "OMELETTE",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "NUTELLA",
+       "letters": "NUTELLA",
+       "row": 10,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "MARMELADE",
+       "letters": "MARMELADE",
+       "row": 10,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "CHOCOLATINE",
+       "letters": "CHOCOLATINE",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "PORRIDGE",
+       "letters": "PORRIDGE",
+       "row": 7,
+       "col": 1,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TART",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "YAOUOA",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "MIE",
+       "row": 2,
+       "col": 7,
+       "direction": "NE"
+      },
+      {
+       "letters": "PANCA",
+       "row": 10,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "letters": "PANC",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RHONEYAEREC",
+      "YOGURTFMAJR",
+      "BUTTCTOASTO",
+      "BLUEBERRIES",
+      "UETTELEMOGO",
+      "TGRANOLAEDW",
+      "TGCEREALLIA",
+      "ESSELFFAWRF",
+      "RONOCABDTRF",
+      "RPANCAKESOL",
+      "NMGGEOCABPE"
+     ],
+     "words": [
+      {
+       "display": "CEREAL",
+       "letters": "CEREAL",
+       "row": 6,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "JAM",
+       "letters": "JAM",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "TOAST",
+       "letters": "TOAST",
+       "row": 2,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "BUTTER",
+       "letters": "BUTTER",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "EGGS",
+       "letters": "EGGS",
+       "row": 4,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "YOGURT",
+       "letters": "YOGURT",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "HONEY",
+       "letters": "HONEY",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "GRANOLA",
+       "letters": "GRANOLA",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "PANCAKES",
+       "letters": "PANCAKES",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "BACON",
+       "letters": "BACON",
+       "row": 8,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "OMELETTE",
+       "letters": "OMELETTE",
+       "row": 4,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "WAFFLES",
+       "letters": "WAFFLES",
+       "row": 7,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "MARMALADE",
+       "letters": "MARMALADE",
+       "row": 1,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "BLUEBERRIES",
+       "letters": "BLUEBERRIES",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PORRIDGE",
+       "letters": "PORRIDGE",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "BUTT",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "EGGM",
+       "row": 10,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "WAFFL",
+       "row": 5,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "letters": "CEREA",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "BACO",
+       "row": 10,
+       "col": 8,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c9-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Ustensiles",
+    "en": "Kitchen tools"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.81,
+    "score": 125,
+    "decoys": 5
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "REIDALASMEC",
+      "FOUESOPOELA",
+      "EMCASSMIXES",
+      "RIETIMRAMOS",
+      "IXRUEHCULPE",
+      "OEENTONNOIR",
+      "SUAETUOCEPO",
+      "SRAPEEHCUOL",
+      "AFOURCHETTE",
+      "PFOUETMARMI",
+      "SFACELUTAPS"
+     ],
+     "words": [
+      {
+       "display": "CASSEROLE",
+       "letters": "CASSEROLE",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "POÊLE",
+       "letters": "POELE",
+       "row": 4,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "COUTEAU",
+       "letters": "COUTEAU",
+       "row": 6,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "FOURCHETTE",
+       "letters": "FOURCHETTE",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LOUCHE",
+       "letters": "LOUCHE",
+       "row": 7,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "SPATULE",
+       "letters": "SPATULE",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "FOUET",
+       "letters": "FOUET",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "PASSOIRE",
+       "letters": "PASSOIRE",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "RÂPE",
+       "letters": "RAPE",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ÉPLUCHEUR",
+       "letters": "EPLUCHEUR",
+       "row": 4,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "MARMITE",
+       "letters": "MARMITE",
+       "row": 3,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "ASSIETTE",
+       "letters": "ASSIETTE",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "MIXEUR",
+       "letters": "MIXEUR",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "ENTONNOIR",
+       "letters": "ENTONNOIR",
+       "row": 5,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "SALADIER",
+       "letters": "SALADIER",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MIXE",
+       "row": 2,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "letters": "FOUE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "CASS",
+       "row": 2,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "MARMI",
+       "row": 9,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "letters": "POEL",
+       "row": 1,
+       "col": 6,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "PEELERNFCUE",
+      "ABALOEOOHTN",
+      "TLKFDTLGOAN",
+      "PENPSAALPPK",
+      "ENINNRLESSS",
+      "CDFDKGCPTKI",
+      "UEERPUAAIRH",
+      "ARPLATELCOW",
+      "SCRSUKLTKFO",
+      "SKILLEOKSPO",
+      "NKAETPTRNHT"
+     ],
+     "words": [
+      {
+       "display": "SAUCEPAN",
+       "letters": "SAUCEPAN",
+       "row": 8,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "SKILLET",
+       "letters": "SKILLET",
+       "row": 4,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "KNIFE",
+       "letters": "KNIFE",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "FORK",
+       "letters": "FORK",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "SPOON",
+       "letters": "SPOON",
+       "row": 4,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "LADLE",
+       "letters": "LADLE",
+       "row": 4,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "SPATULA",
+       "letters": "SPATULA",
+       "row": 4,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "WHISK",
+       "letters": "WHISK",
+       "row": 7,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "COLANDER",
+       "letters": "COLANDER",
+       "row": 0,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "GRATER",
+       "letters": "GRATER",
+       "row": 5,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "PEELER",
+       "letters": "PEELER",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "POT",
+       "letters": "POT",
+       "row": 10,
+       "col": 5,
+       "direction": "NE"
+      },
+      {
+       "display": "PLATE",
+       "letters": "PLATE",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "BLENDER",
+       "letters": "BLENDER",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "CHOPSTICKS",
+       "letters": "CHOPSTICKS",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SKILLE",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "SPO",
+       "row": 9,
+       "col": 8,
+       "direction": "E"
+      },
+      {
+       "letters": "SPATU",
+       "row": 4,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "letters": "SAUCEPTA",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "FOR",
+       "row": 2,
+       "col": 3,
+       "direction": "NE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c9-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Marché",
+    "en": "Market"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.62,
+    "score": 126,
+    "decoys": 6
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "YRPFRUITSEL",
+      "BIOLOGIQUEM",
+      "PRIMEURSGAA",
+      "BESIRPAURER",
+      "OCSPRIMCEIC",
+      "UOOISEHTGRH",
+      "CLNOSAAUAEE",
+      "HTNENLIMMCX",
+      "EEIDTERROIR",
+      "RUETCUDORPS",
+      "ARRECOIPFED"
+     ],
+     "words": [
+      {
+       "display": "MARCHÉ",
+       "letters": "MARCHE",
+       "row": 1,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "MARCHANDER",
+       "letters": "MARCHANDER",
+       "row": 1,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "ÉTAL",
+       "letters": "ETAL",
+       "row": 4,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "LÉGUMES",
+       "letters": "LEGUMES",
+       "row": 0,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "FRUITS",
+       "letters": "FRUITS",
+       "row": 0,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "FROMAGER",
+       "letters": "FROMAGER",
+       "row": 10,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "BOUCHER",
+       "letters": "BOUCHER",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "POISSONNIER",
+       "letters": "POISSONNIER",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PRIMEUR",
+       "letters": "PRIMEUR",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PRIX",
+       "letters": "PRIX",
+       "row": 10,
+       "col": 7,
+       "direction": "NE"
+      },
+      {
+       "display": "ÉPICERIE",
+       "letters": "EPICERIE",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "SAISON",
+       "letters": "SAISON",
+       "row": 2,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "BIOLOGIQUE",
+       "letters": "BIOLOGIQUE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PRODUCTEUR",
+       "letters": "PRODUCTEUR",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "RÉCOLTE",
+       "letters": "RECOLTE",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "TERROIR",
+       "letters": "TERROIR",
+       "row": 8,
+       "col": 4,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PRI",
+       "row": 4,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "MARC",
+       "row": 7,
+       "col": 7,
+       "direction": "NE"
+      },
+      {
+       "letters": "RECO",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "PRIN",
+       "row": 3,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "letters": "ETUI",
+       "row": 7,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "letters": "PRIS",
+       "row": 3,
+       "col": 5,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "MARKYRECORG",
+      "FNNIAGRABOR",
+      "SIOROFPFREE",
+      "UTSEVRAHCTE",
+      "PBAHIRGUNFN",
+      "RUELMCDATRG",
+      "ITSELOHTNUR",
+      "CCRERCNSSIO",
+      "EHGPRICGATC",
+      "VEGETABLESE",
+      "VRMARKETSRR"
+     ],
+     "words": [
+      {
+       "display": "MARKET",
+       "letters": "MARKET",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "MERCHANT",
+       "letters": "MERCHANT",
+       "row": 10,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "STALL",
+       "letters": "STALL",
+       "row": 2,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "VEGETABLES",
+       "letters": "VEGETABLES",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "FRUITS",
+       "letters": "FRUITS",
+       "row": 4,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "FISHMONGER",
+       "letters": "FISHMONGER",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "BUTCHER",
+       "letters": "BUTCHER",
+       "row": 4,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "GREENGROCER",
+       "letters": "GREENGROCER",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "GROCERY",
+       "letters": "GROCERY",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "PRICE",
+       "letters": "PRICE",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SEASON",
+       "letters": "SEASON",
+       "row": 6,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "ORGANIC",
+       "letters": "ORGANIC",
+       "row": 2,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "PRODUCER",
+       "letters": "PRODUCER",
+       "row": 8,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "HARVEST",
+       "letters": "HARVEST",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "FARMER",
+       "letters": "FARMER",
+       "row": 2,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "BARGAIN",
+       "letters": "BARGAIN",
+       "row": 1,
+       "col": 8,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MARK",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "PRIC",
+       "row": 8,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "PRI",
+       "row": 2,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "letters": "SEAS",
+       "row": 10,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "VEGE",
+       "row": 10,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "letters": "STA",
+       "row": 7,
+       "col": 7,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c9-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Grand banquet",
+    "en": "Grand feast"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1,
+    "score": 145,
+    "decoys": 10
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "RBANQSNEAPER",
+      "EAPERITIFRTE",
+      "PNETTUNARESI",
+      "FQRTNEASBIRM",
+      "EUEEEMREDLUO",
+      "REMCIUUNEEEN",
+      "ETPEDFATSMVO",
+      "PALREMTRSMAR",
+      "ARASRESEEOST",
+      "SLTUGNEERSAS",
+      "PIOENTRETBIA",
+      "NGREINISIUCG"
+     ],
+     "words": [
+      {
+       "display": "GASTRONOMIE",
+       "letters": "GASTRONOMIE",
+       "row": 11,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "display": "RESTAURANT",
+       "letters": "RESTAURANT",
+       "row": 10,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "TABLE",
+       "letters": "TABLE",
+       "row": 1,
+       "col": 6,
+       "direction": "SE"
+      },
+      {
+       "display": "REPAS",
+       "letters": "REPAS",
+       "row": 5,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SOMMELIER",
+       "letters": "SOMMELIER",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "BANQUET",
+       "letters": "BANQUET",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "RECETTE",
+       "letters": "RECETTE",
+       "row": 7,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "INGRÉDIENT",
+       "letters": "INGREDIENT",
+       "row": 11,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "CUISINIER",
+       "letters": "CUISINIER",
+       "row": 11,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "PLAT",
+       "letters": "PLAT",
+       "row": 6,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "SAVEURS",
+       "letters": "SAVEURS",
+       "row": 8,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "FESTIN",
+       "letters": "FESTIN",
+       "row": 6,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "display": "MENU",
+       "letters": "MENU",
+       "row": 5,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "ENTRÉE",
+       "letters": "ENTREE",
+       "row": 4,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "DESSERT",
+       "letters": "DESSERT",
+       "row": 4,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "APÉRITIF",
+       "letters": "APERITIF",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "GOURMANDISE",
+       "letters": "GOURMANDISE",
+       "row": 11,
+       "col": 1,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "REPAE",
+       "row": 0,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "letters": "REPFE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "REP",
+       "row": 3,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "letters": "MENT",
+       "row": 7,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "letters": "ENTR",
+       "row": 3,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "letters": "BANQ",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "PLA",
+       "row": 10,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "letters": "MEEE",
+       "row": 4,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "letters": "TAB",
+       "row": 8,
+       "col": 11,
+       "direction": "SW"
+      },
+      {
+       "letters": "ENTRE",
+       "row": 10,
+       "col": 3,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TASTINGDESSE",
+      "NCUISINERATG",
+      "EHLRECIPEEAO",
+      "IOSSFOCFIFRU",
+      "DCDTIOELLNNR",
+      "EOEATKRAEEGT",
+      "RLSRIBVVMMOS",
+      "GASTRONOMYUF",
+      "NTEEEOKROTRE",
+      "IIRRPKDSSQMA",
+      "CETBANQUETES",
+      "ERESTAURANTT"
+     ],
+     "words": [
+      {
+       "display": "GASTRONOMY",
+       "letters": "GASTRONOMY",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "RESTAURANT",
+       "letters": "RESTAURANT",
+       "row": 11,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CHOCOLATIER",
+       "letters": "CHOCOLATIER",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "SOMMELIER",
+       "letters": "SOMMELIER",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "BANQUET",
+       "letters": "BANQUET",
+       "row": 10,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "RECIPE",
+       "letters": "RECIPE",
+       "row": 2,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "INGREDIENT",
+       "letters": "INGREDIENT",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "CUISINE",
+       "letters": "CUISINE",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TASTING",
+       "letters": "TASTING",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "FLAVORS",
+       "letters": "FLAVORS",
+       "row": 3,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "FEAST",
+       "letters": "FEAST",
+       "row": 7,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "MENU",
+       "letters": "MENU",
+       "row": 6,
+       "col": 8,
+       "direction": "NE"
+      },
+      {
+       "display": "STARTER",
+       "letters": "STARTER",
+       "row": 3,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "DESSERT",
+       "letters": "DESSERT",
+       "row": 4,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "APERITIF",
+       "letters": "APERITIF",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "GOURMET",
+       "letters": "GOURMET",
+       "row": 5,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "COOKBOOK",
+       "letters": "COOKBOOK",
+       "row": 2,
+       "col": 5,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "DESSE",
+       "row": 0,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "letters": "FLAVO",
+       "row": 3,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "letters": "GOUR",
+       "row": 1,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "letters": "SOMM",
+       "row": 6,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "letters": "STAR",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "letters": "MEN",
+       "row": 6,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "letters": "RECI",
+       "row": 5,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "letters": "FEA",
+       "row": 3,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "letters": "MELC",
+       "row": 6,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "letters": "FEAS",
+       "row": 3,
+       "col": 7,
+       "direction": "NE"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

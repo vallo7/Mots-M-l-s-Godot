@@ -1,0 +1,2880 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-05",
+ "index": 5,
+ "paletteKey": "lab",
+ "theme": {
+  "fr": "Sciences",
+  "en": "Science"
+ },
+ "levels": [
+  {
+   "id": "c5-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Chimie",
+    "en": "Chemistry"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.62,
+    "score": 101,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "OOVOXYGENE",
+      "EMRTENMNUE",
+      "LCARBONESL",
+      "UNMCTIHGLE",
+      "CREACTIONM",
+      "ETTEVUORPE",
+      "LOARDLHDHN",
+      "ODNIEOLYTT",
+      "MUIDOSZHEE",
+      "SUUEDICARU"
+     ],
+     "words": [
+      {
+       "display": "ÉPROUVETTE",
+       "letters": "EPROUVETTE",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "HYDROGÈNE",
+       "letters": "HYDROGENE",
+       "row": 8,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "MOLÉCULE",
+       "letters": "MOLECULE",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "RÉACTION",
+       "letters": "REACTION",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SOLUTION",
+       "letters": "SOLUTION",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "ÉLÉMENT",
+       "letters": "ELEMENT",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "OXYGÈNE",
+       "letters": "OXYGENE",
+       "row": 0,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "CARBONE",
+       "letters": "CARBONE",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SODIUM",
+       "letters": "SODIUM",
+       "row": 8,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "ACIDE",
+       "letters": "ACIDE",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ATOME",
+       "letters": "ATOME",
+       "row": 4,
+       "col": 3,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "REAC",
+       "row": 6,
+       "col": 3,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TSAGOTDICA",
+      "NSODIUMHOL",
+      "EEELUCELOM",
+      "MCGSUMWIEX",
+      "ETNOITCAER",
+      "LONSRAIITN",
+      "ERTARTOOTO",
+      "LRTBWOIMNM",
+      "YOOXYGENRN",
+      "MNBALHECAZ"
+     ],
+     "words": [
+      {
+       "display": "CHEMISTRY",
+       "letters": "CHEMISTRY",
+       "row": 0,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "MOLECULE",
+       "letters": "MOLECULE",
+       "row": 2,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "REACTION",
+       "letters": "REACTION",
+       "row": 4,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "SOLUTION",
+       "letters": "SOLUTION",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "NITROGEN",
+       "letters": "NITROGEN",
+       "row": 8,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "ELEMENT",
+       "letters": "ELEMENT",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "OXYGEN",
+       "letters": "OXYGEN",
+       "row": 8,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "CARBON",
+       "letters": "CARBON",
+       "row": 4,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "SODIUM",
+       "letters": "SODIUM",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ACID",
+       "letters": "ACID",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ATOM",
+       "letters": "ATOM",
+       "row": 6,
+       "col": 3,
+       "direction": "SW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ATO",
+       "row": 4,
+       "col": 7,
+       "direction": "SE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c5-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Physique",
+    "en": "Physics"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.66,
+    "score": 104,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ONSEUQITPO",
+      "RNORTUENGC",
+      "OECRCNEJRU",
+      "EMSITENGAM",
+      "RNPSCCMSVA",
+      "EIGRENEEIS",
+      "ITOAOTOLTS",
+      "MFENNTIEEE",
+      "UOEEDJOVNS",
+      "LUMIERRNET"
+     ],
+     "words": [
+      {
+       "display": "MAGNÉTISME",
+       "letters": "MAGNETISME",
+       "row": 3,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "GRAVITÉ",
+       "letters": "GRAVITE",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "ÉNERGIE",
+       "letters": "ENERGIE",
+       "row": 5,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "VITESSE",
+       "letters": "VITESSE",
+       "row": 8,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "LUMIÈRE",
+       "letters": "LUMIERE",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ÉLECTRON",
+       "letters": "ELECTRON",
+       "row": 7,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "PROTON",
+       "letters": "PROTON",
+       "row": 4,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "NEUTRON",
+       "letters": "NEUTRON",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "FORCE",
+       "letters": "FORCE",
+       "row": 7,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "MASSE",
+       "letters": "MASSE",
+       "row": 3,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "ONDE",
+       "letters": "ONDE",
+       "row": 6,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "OPTIQUE",
+       "letters": "OPTIQUE",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "LUMIERR",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "AHGILTMASS",
+      "HTEWLRANST",
+      "YTIVARGAER",
+      "ITNEEVNLCO",
+      "YTICOLEVRP",
+      "OENSECTCOT",
+      "LIGHTCISFI",
+      "ENERGYSOGC",
+      "PROTONMAWS",
+      "RNORTUENLK"
+     ],
+     "words": [
+      {
+       "display": "MAGNETISM",
+       "letters": "MAGNETISM",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "GRAVITY",
+       "letters": "GRAVITY",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "ENERGY",
+       "letters": "ENERGY",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "VELOCITY",
+       "letters": "VELOCITY",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ELECTRON",
+       "letters": "ELECTRON",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "PROTON",
+       "letters": "PROTON",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "NEUTRON",
+       "letters": "NEUTRON",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "FORCE",
+       "letters": "FORCE",
+       "row": 6,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "MASS",
+       "letters": "MASS",
+       "row": 0,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "WAVE",
+       "letters": "WAVE",
+       "row": 1,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "LIGHT",
+       "letters": "LIGHT",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "OPTICS",
+       "letters": "OPTICS",
+       "row": 3,
+       "col": 9,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "LIGHA",
+       "row": 0,
+       "col": 4,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c5-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Biologie",
+    "en": "Biology"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.67,
+    "score": 107,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EBUIGIOSLH",
+      "LMATENZYME",
+      "UASCNEIRNR",
+      "LNOITULOVE",
+      "LTSINEYITD",
+      "EESDCARYLI",
+      "CSAEUUGIET",
+      "UMPOSUEREE",
+      "NSOILRNOOE",
+      "ESOTIMEEAE"
+     ],
+     "words": [
+      {
+       "display": "ÉVOLUTION",
+       "letters": "EVOLUTION",
+       "row": 3,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ORGANISME",
+       "letters": "ORGANISME",
+       "row": 8,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "BACTÉRIE",
+       "letters": "BACTERIE",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "CELLULE",
+       "letters": "CELLULE",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ESPÈCE",
+       "letters": "ESPECE",
+       "row": 9,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "ENZYME",
+       "letters": "ENZYME",
+       "row": 1,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "MITOSE",
+       "letters": "MITOSE",
+       "row": 9,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "NOYAU",
+       "letters": "NOYAU",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "VIRUS",
+       "letters": "VIRUS",
+       "row": 3,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "GÈNE",
+       "letters": "GENE",
+       "row": 6,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "ADN",
+       "letters": "ADN",
+       "row": 6,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "TISSU",
+       "letters": "TISSU",
+       "row": 3,
+       "col": 4,
+       "direction": "SW"
+      },
+      {
+       "display": "HÉRÉDITÉ",
+       "letters": "HEREDITE",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "GEN",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ZSALENZYME",
+      "NESISOTIMB",
+      "UIIDRUTLAM",
+      "CCELLERCSE",
+      "LEVOLUTION",
+      "EPGVRENCVE",
+      "USNERAGRAG",
+      "SIMIGNERVB",
+      "RHEREDITYI",
+      "HPOTISSUEO"
+     ],
+     "words": [
+      {
+       "display": "EVOLUTION",
+       "letters": "EVOLUTION",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ORGANISM",
+       "letters": "ORGANISM",
+       "row": 9,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "BACTERIA",
+       "letters": "BACTERIA",
+       "row": 7,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "CELL",
+       "letters": "CELL",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SPECIES",
+       "letters": "SPECIES",
+       "row": 6,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "ENZYME",
+       "letters": "ENZYME",
+       "row": 0,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "MITOSIS",
+       "letters": "MITOSIS",
+       "row": 1,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "NUCLEUS",
+       "letters": "NUCLEUS",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "VIRUS",
+       "letters": "VIRUS",
+       "row": 5,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "GENE",
+       "letters": "GENE",
+       "row": 6,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "DNA",
+       "letters": "DNA",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "TISSUE",
+       "letters": "TISSUE",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "HEREDITY",
+       "letters": "HEREDITY",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "BACTERI",
+       "row": 1,
+       "col": 9,
+       "direction": "SW"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c5-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Corps humain",
+    "en": "Human body"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.69,
+    "score": 110,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "NUUAEPEEEEC",
+      "NOALSIARAEO",
+      "NNIESTOMACE",
+      "AORTVEEFIRU",
+      "NOITARIPSER",
+      "OETTELEUQSE",
+      "MOETSOUCGIO",
+      "URRENELCSUM",
+      "OAUTCIGERRS",
+      "PMIUCNEIIIC",
+      "TRAAYUCRDRC"
+     ],
+     "words": [
+      {
+       "display": "RESPIRATION",
+       "letters": "RESPIRATION",
+       "row": 4,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "CIRCULATION",
+       "letters": "CIRCULATION",
+       "row": 10,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "DIGESTION",
+       "letters": "DIGESTION",
+       "row": 10,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "SQUELETTE",
+       "letters": "SQUELETTE",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "MUSCLE",
+       "letters": "MUSCLE",
+       "row": 7,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "CERVEAU",
+       "letters": "CERVEAU",
+       "row": 6,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "POUMON",
+       "letters": "POUMON",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ESTOMAC",
+       "letters": "ESTOMAC",
+       "row": 2,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "ARTÈRE",
+       "letters": "ARTERE",
+       "row": 8,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "COEUR",
+       "letters": "COEUR",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "FOIE",
+       "letters": "FOIE",
+       "row": 3,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "REIN",
+       "letters": "REIN",
+       "row": 10,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "PEAU",
+       "letters": "PEAU",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "RESP",
+       "row": 3,
+       "col": 2,
+       "direction": "NE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "NOITALUCRIC",
+      "RISMUSCLEOR",
+      "DNANEHSUSEI",
+      "SIGROCSSPLA",
+      "KKGIBAHKIIN",
+      "ISEERMIERVS",
+      "DONTSOILAEG",
+      "NCERXTOETRE",
+      "ERNULSITIQT",
+      "YTPBTTCOOSH",
+      "ISYIRNDNNNK"
+     ],
+     "words": [
+      {
+       "display": "RESPIRATION",
+       "letters": "RESPIRATION",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "CIRCULATION",
+       "letters": "CIRCULATION",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "DIGESTION",
+       "letters": "DIGESTION",
+       "row": 2,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "SKELETON",
+       "letters": "SKELETON",
+       "row": 3,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "MUSCLE",
+       "letters": "MUSCLE",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "BRAIN",
+       "letters": "BRAIN",
+       "row": 4,
+       "col": 4,
+       "direction": "NW"
+      },
+      {
+       "display": "LUNG",
+       "letters": "LUNG",
+       "row": 0,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "display": "STOMACH",
+       "letters": "STOMACH",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "ARTERY",
+       "letters": "ARTERY",
+       "row": 4,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "display": "HEART",
+       "letters": "HEART",
+       "row": 4,
+       "col": 6,
+       "direction": "SE"
+      },
+      {
+       "display": "LIVER",
+       "letters": "LIVER",
+       "row": 3,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "KIDNEY",
+       "letters": "KIDNEY",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SKIN",
+       "letters": "SKIN",
+       "row": 5,
+       "col": 1,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "LUNR",
+       "row": 8,
+       "col": 4,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c5-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Mathématiques",
+    "en": "Mathematics"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.59,
+    "score": 113,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "DNIEMMOSNPA",
+      "BTTAAEIEORL",
+      "ZERADDITION",
+      "NOITAUQETBZ",
+      "TEAELCRECAB",
+      "DRNTRRZTABO",
+      "RRGEOMETRIE",
+      "OALGEBREFLU",
+      "ICEMULOVLIE",
+      "TFRACTIOOTS",
+      "EMULTIPLIER"
+     ],
+     "words": [
+      {
+       "display": "PROBABILITÉ",
+       "letters": "PROBABILITE",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "MULTIPLIER",
+       "letters": "MULTIPLIER",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "GÉOMÉTRIE",
+       "letters": "GEOMETRIE",
+       "row": 6,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ADDITION",
+       "letters": "ADDITION",
+       "row": 2,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "FRACTION",
+       "letters": "FRACTION",
+       "row": 7,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "ALGÈBRE",
+       "letters": "ALGEBRE",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TRIANGLE",
+       "letters": "TRIANGLE",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "ÉQUATION",
+       "letters": "EQUATION",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CERCLE",
+       "letters": "CERCLE",
+       "row": 4,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CARRÉ",
+       "letters": "CARRE",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "SOMME",
+       "letters": "SOMME",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "VOLUME",
+       "letters": "VOLUME",
+       "row": 8,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ZÉRO",
+       "letters": "ZERO",
+       "row": 5,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "DROITE",
+       "letters": "DROITE",
+       "row": 5,
+       "col": 0,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "FRACTIOO",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "ZER",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "PAEPUERRLQE",
+      "RNCMZNBVOLU",
+      "ONEOUIBOALB",
+      "BEOCILNTLYA",
+      "ADDITIONGLB",
+      "BTORTTIVEPO",
+      "INRCLCTMBIR",
+      "LEELGNAIRTP",
+      "ISZEUEURALE",
+      "TRERAUQSFUT",
+      "YRTEMOEGAMI"
+     ],
+     "words": [
+      {
+       "display": "PROBABILITY",
+       "letters": "PROBABILITY",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "GEOMETRY",
+       "letters": "GEOMETRY",
+       "row": 10,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ADDITION",
+       "letters": "ADDITION",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "FRACTION",
+       "letters": "FRACTION",
+       "row": 9,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "ALGEBRA",
+       "letters": "ALGEBRA",
+       "row": 2,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "TRIANGLE",
+       "letters": "TRIANGLE",
+       "row": 7,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "EQUATION",
+       "letters": "EQUATION",
+       "row": 10,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "CIRCLE",
+       "letters": "CIRCLE",
+       "row": 3,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "SQUARE",
+       "letters": "SQUARE",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "TOTAL",
+       "letters": "TOTAL",
+       "row": 5,
+       "col": 5,
+       "direction": "NE"
+      },
+      {
+       "display": "VOLUME",
+       "letters": "VOLUME",
+       "row": 5,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "ZERO",
+       "letters": "ZERO",
+       "row": 8,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "LINE",
+       "letters": "LINE",
+       "row": 3,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "MULTIPLY",
+       "letters": "MULTIPLY",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "VOLU",
+       "row": 1,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "letters": "PROBAB",
+       "row": 7,
+       "col": 10,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c5-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Inventions",
+    "en": "Inventions"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.74,
+    "score": 116,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "PENICILLINE",
+      "LNNIMMAROIL",
+      "ROUEOARURCO",
+      "RHERTCEEACS",
+      "EPLEEHMTDAS",
+      "SEUMUIAAUVU",
+      "ALOIRNCNLNO",
+      "LEPPOELIPCB",
+      "PTMITOIDART",
+      "RIAEIOVRCSE",
+      "TELEPHOOTIA"
+     ],
+     "words": [
+      {
+       "display": "PÉNICILLINE",
+       "letters": "PENICILLINE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "IMPRIMERIE",
+       "letters": "IMPRIMERIE",
+       "row": 9,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "ORDINATEUR",
+       "letters": "ORDINATEUR",
+       "row": 10,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "TÉLÉPHONE",
+       "letters": "TELEPHONE",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "AMPOULE",
+       "letters": "AMPOULE",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "BOUSSOLE",
+       "letters": "BOUSSOLE",
+       "row": 7,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "MACHINE",
+       "letters": "MACHINE",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "MOTEUR",
+       "letters": "MOTEUR",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "ROUE",
+       "letters": "ROUE",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PILE",
+       "letters": "PILE",
+       "row": 7,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "RADIO",
+       "letters": "RADIO",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "LASER",
+       "letters": "LASER",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "VACCIN",
+       "letters": "VACCIN",
+       "row": 5,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "CAMÉRA",
+       "letters": "CAMERA",
+       "row": 6,
+       "col": 6,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TELEPHOOT",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "RAD",
+       "row": 2,
+       "col": 8,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RTCOMPUTERO",
+      "GMTELEPHONE",
+      "CIININGEUCN",
+      "AOAAGIENELI",
+      "MBMLHCNITEH",
+      "EAZPTIGCUEC",
+      "RTARBLICPHA",
+      "ATAIULNAMWM",
+      "RESALIEVOEE",
+      "GRLLBNENCIC",
+      "LYNASSAPMOC"
+     ],
+     "words": [
+      {
+       "display": "PENICILLIN",
+       "letters": "PENICILLIN",
+       "row": 0,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "TELEPHONE",
+       "letters": "TELEPHONE",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "LIGHTBULB",
+       "letters": "LIGHTBULB",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "COMPUTER",
+       "letters": "COMPUTER",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "AIRPLANE",
+       "letters": "AIRPLANE",
+       "row": 8,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "COMPASS",
+       "letters": "COMPASS",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "MACHINE",
+       "letters": "MACHINE",
+       "row": 7,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "ENGINE",
+       "letters": "ENGINE",
+       "row": 3,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "WHEEL",
+       "letters": "WHEEL",
+       "row": 7,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "BATTERY",
+       "letters": "BATTERY",
+       "row": 4,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "GEAR",
+       "letters": "GEAR",
+       "row": 9,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "LASER",
+       "letters": "LASER",
+       "row": 8,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "VACCINE",
+       "letters": "VACCINE",
+       "row": 8,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "CAMERA",
+       "letters": "CAMERA",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "COMPUTEU",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "COMP",
+       "row": 2,
+       "col": 0,
+       "direction": "SE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c5-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Géologie",
+    "en": "Geology"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.71,
+    "score": 119,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "FAILLEFNARI",
+      "GGAVLTOSYEG",
+      "REABLISALHE",
+      "AYAATTSMLCR",
+      "NSVPDCIGAOU",
+      "IEUGIALARRP",
+      "TREMBLEMENT",
+      "ETLASABMNAI",
+      "NCRISTALIBH",
+      "IMAGMSTUMEI",
+      "ELIGRASRRIF"
+     ],
+     "words": [
+      {
+       "display": "TREMBLEMENT",
+       "letters": "TREMBLEMENT",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "STALACTITE",
+       "letters": "STALACTITE",
+       "row": 9,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "ÉRUPTION",
+       "letters": "ERUPTION",
+       "row": 7,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "MINÉRAL",
+       "letters": "MINERAL",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "FOSSILE",
+       "letters": "FOSSILE",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "GRANITE",
+       "letters": "GRANITE",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "BASALTE",
+       "letters": "BASALTE",
+       "row": 7,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "CRISTAL",
+       "letters": "CRISTAL",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "MAGMA",
+       "letters": "MAGMA",
+       "row": 6,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "LAVE",
+       "letters": "LAVE",
+       "row": 2,
+       "col": 4,
+       "direction": "SW"
+      },
+      {
+       "display": "ROCHE",
+       "letters": "ROCHE",
+       "row": 5,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "FAILLE",
+       "letters": "FAILLE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "GEYSER",
+       "letters": "GEYSER",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "ARGILE",
+       "letters": "ARGILE",
+       "row": 10,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "SABLE",
+       "letters": "SABLE",
+       "row": 4,
+       "col": 1,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MAGMS",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "ERUPTI",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "letters": "GEYS",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "YOVDYEBBMNS",
+      "ISTALACTITE",
+      "FSLDSRRNNHR",
+      "OCNAYTOIERU",
+      "SALSLHCLREP",
+      "STTUCQKOAST",
+      "IAAWMUACLYI",
+      "LFVGRANITEO",
+      "EAAASKGORGN",
+      "CTVALEYMKBM",
+      "AEBUQHTRAEA"
+     ],
+     "words": [
+      {
+       "display": "EARTHQUAKE",
+       "letters": "EARTHQUAKE",
+       "row": 0,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "STALACTITE",
+       "letters": "STALACTITE",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ERUPTION",
+       "letters": "ERUPTION",
+       "row": 1,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "MINERAL",
+       "letters": "MINERAL",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "FOSSIL",
+       "letters": "FOSSIL",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "GRANITE",
+       "letters": "GRANITE",
+       "row": 7,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "BASALT",
+       "letters": "BASALT",
+       "row": 0,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "CRYSTAL",
+       "letters": "CRYSTAL",
+       "row": 1,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "MAGMA",
+       "letters": "MAGMA",
+       "row": 6,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "LAVA",
+       "letters": "LAVA",
+       "row": 9,
+       "col": 4,
+       "direction": "NW"
+      },
+      {
+       "display": "ROCK",
+       "letters": "ROCK",
+       "row": 2,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "FAULT",
+       "letters": "FAULT",
+       "row": 7,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "GEYSER",
+       "letters": "GEYSER",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "CLAY",
+       "letters": "CLAY",
+       "row": 3,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "SAND",
+       "letters": "SAND",
+       "row": 5,
+       "col": 0,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "EARTHQ",
+       "row": 10,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "letters": "BASA",
+       "row": 10,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "letters": "LAV",
+       "row": 7,
+       "col": 0,
+       "direction": "SE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c5-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Électricité",
+    "en": "Electricity"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.82,
+    "score": 122,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ECLAIREFCVT",
+      "PTIUCRICGOU",
+      "IIIEOLIEELR",
+      "TVLCOURANTB",
+      "ENNEILOEENI",
+      "NFOUDRERRON",
+      "STECENTRALE",
+      "ICEVROACTIC",
+      "OCONDUCTEUR",
+      "NSACSTSAULL",
+      "LRDBATTERIE"
+     ],
+     "words": [
+      {
+       "display": "ÉLECTRICITÉ",
+       "letters": "ELECTRICITE",
+       "row": 10,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "GÉNÉRATEUR",
+       "letters": "GENERATEUR",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "CONDUCTEUR",
+       "letters": "CONDUCTEUR",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ÉOLIENNE",
+       "letters": "EOLIENNE",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "BATTERIE",
+       "letters": "BATTERIE",
+       "row": 10,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "TURBINE",
+       "letters": "TURBINE",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "CENTRALE",
+       "letters": "CENTRALE",
+       "row": 6,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "COURANT",
+       "letters": "COURANT",
+       "row": 3,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "TENSION",
+       "letters": "TENSION",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "CIRCUIT",
+       "letters": "CIRCUIT",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ÉCLAIR",
+       "letters": "ECLAIR",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "FOUDRE",
+       "letters": "FOUDRE",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "PILE",
+       "letters": "PILE",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "FIL",
+       "letters": "FIL",
+       "row": 0,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "VOLT",
+       "letters": "VOLT",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TENS",
+       "row": 6,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "letters": "VOSL",
+       "row": 7,
+       "col": 3,
+       "direction": "SW"
+      },
+      {
+       "letters": "EOLI",
+       "row": 2,
+       "col": 3,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "AGNINTHGILD",
+      "ELECTRICITY",
+      "CSTNEGATLOV",
+      "BATTERYLOCR",
+      "RPOWERINVTE",
+      "RRIWGMAWTND",
+      "FUSEDTTTLEN",
+      "LCONDUCTORU",
+      "ICIRCUITVRH",
+      "OWREENIBRUT",
+      "CWINDMIUWCI"
+     ],
+     "words": [
+      {
+       "display": "ELECTRICITY",
+       "letters": "ELECTRICITY",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "GENERATOR",
+       "letters": "GENERATOR",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "CONDUCTOR",
+       "letters": "CONDUCTOR",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LIGHTNING",
+       "letters": "LIGHTNING",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "VOLTAGE",
+       "letters": "VOLTAGE",
+       "row": 2,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "CIRCUIT",
+       "letters": "CIRCUIT",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CURRENT",
+       "letters": "CURRENT",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "TURBINE",
+       "letters": "TURBINE",
+       "row": 9,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "BATTERY",
+       "letters": "BATTERY",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "WINDMILL",
+       "letters": "WINDMILL",
+       "row": 9,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "THUNDER",
+       "letters": "THUNDER",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "POWER",
+       "letters": "POWER",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "WIRE",
+       "letters": "WIRE",
+       "row": 5,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "COIL",
+       "letters": "COIL",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "FUSE",
+       "letters": "FUSE",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "WINDMIUW",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "VOLT",
+       "row": 8,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "WIRR",
+       "row": 5,
+       "col": 3,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c5-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Technologie",
+    "en": "Technology"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.69,
+    "score": 124,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "NATERIOMEME",
+      "ADTREPRECEI",
+      "VOOUIIWMRNI",
+      "INBEVXIHAON",
+      "GNOSAEFTNHT",
+      "AERSLLIIUPE",
+      "TELECHARGER",
+      "ESECODEOILN",
+      "UCDONNBGVEE",
+      "RSIRUOSLATT",
+      "EIMPRIMANTE"
+     ],
+     "words": [
+      {
+       "display": "TÉLÉCHARGER",
+       "letters": "TELECHARGER",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ALGORITHME",
+       "letters": "ALGORITHME",
+       "row": 10,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "NAVIGATEUR",
+       "letters": "NAVIGATEUR",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "PROCESSEUR",
+       "letters": "PROCESSEUR",
+       "row": 10,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "IMPRIMANTE",
+       "letters": "IMPRIMANTE",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TÉLÉPHONE",
+       "letters": "TELEPHONE",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "CLAVIER",
+       "letters": "CLAVIER",
+       "row": 6,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "ÉCRAN",
+       "letters": "ECRAN",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "SOURIS",
+       "letters": "SOURIS",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "ROBOT",
+       "letters": "ROBOT",
+       "row": 5,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "DONNÉES",
+       "letters": "DONNEES",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "MÉMOIRE",
+       "letters": "MEMOIRE",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "INTERNET",
+       "letters": "INTERNET",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "PIXEL",
+       "letters": "PIXEL",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "CODE",
+       "letters": "CODE",
+       "row": 7,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "WIFI",
+       "letters": "WIFI",
+       "row": 2,
+       "col": 6,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ECR",
+       "row": 7,
+       "col": 2,
+       "direction": "SW"
+      },
+      {
+       "letters": "NAVIG",
+       "row": 10,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "DONN",
+       "row": 8,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "ROB",
+       "row": 10,
+       "col": 4,
+       "direction": "NE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "JPPRDYAYDPL",
+      "GNIMMARGORP",
+      "MEXMIHOOAOE",
+      "DEEENTCLMCT",
+      "URLMTOGONER",
+      "OCYOEOCNCSM",
+      "LSBSRTIHESA",
+      "COUINEFCGOT",
+      "ROTOEUIEORA",
+      "MHUSTLWTCDD",
+      "MDRAOBYEKGE"
+     ],
+     "words": [
+      {
+       "display": "PROGRAMMING",
+       "letters": "PROGRAMMING",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "TECHNOLOGY",
+       "letters": "TECHNOLOGY",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "ALGORITHM",
+       "letters": "ALGORITHM",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "PROCESSOR",
+       "letters": "PROCESSOR",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "BLUETOOTH",
+       "letters": "BLUETOOTH",
+       "row": 10,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "KEYBOARD",
+       "letters": "KEYBOARD",
+       "row": 10,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "SCREEN",
+       "letters": "SCREEN",
+       "row": 6,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "MOUSE",
+       "letters": "MOUSE",
+       "row": 9,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "ROBOT",
+       "letters": "ROBOT",
+       "row": 8,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "MEMORY",
+       "letters": "MEMORY",
+       "row": 5,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "INTERNET",
+       "letters": "INTERNET",
+       "row": 2,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "PIXEL",
+       "letters": "PIXEL",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "CODE",
+       "letters": "CODE",
+       "row": 7,
+       "col": 7,
+       "direction": "SE"
+      },
+      {
+       "display": "WIFI",
+       "letters": "WIFI",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "DATA",
+       "letters": "DATA",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "CLOUD",
+       "letters": "CLOUD",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "COGE",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "CORA",
+       "row": 3,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "letters": "MEMO",
+       "row": 2,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "letters": "TECH",
+       "row": 3,
+       "col": 10,
+       "direction": "SW"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c5-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Laboratoire",
+    "en": "Laboratory"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1.0,
+    "score": 143,
+    "decoys": 10
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "HCALCULLEOME",
+      "YIABALANCEIX",
+      "PBDONNBONHCP",
+      "OTHERMOMETRE",
+      "TEEVUERPIEOR",
+      "HRHYPOAARESE",
+      "EUQIFITNEICS",
+      "SSIDDTOAPROU",
+      "EEDEHPILXOPL",
+      "TMESURRYEEET",
+      "EDONNEESPHAA",
+      "PFORMULEETAT"
+     ],
+     "words": [
+      {
+       "display": "SCIENTIFIQUE",
+       "letters": "SCIENTIFIQUE",
+       "row": 6,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "LABORATOIRE",
+       "letters": "LABORATOIRE",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "THERMOMÈTRE",
+       "letters": "THERMOMETRE",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "EXPÉRIENCE",
+       "letters": "EXPERIENCE",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "MICROSCOPE",
+       "letters": "MICROSCOPE",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "HYPOTHÈSE",
+       "letters": "HYPOTHESE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "ANALYSE",
+       "letters": "ANALYSE",
+       "row": 5,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "BALANCE",
+       "letters": "BALANCE",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "THÉORIE",
+       "letters": "THEORIE",
+       "row": 11,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "FORMULE",
+       "letters": "FORMULE",
+       "row": 11,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "RÉSULTAT",
+       "letters": "RESULTAT",
+       "row": 4,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "MESURE",
+       "letters": "MESURE",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "PREUVE",
+       "letters": "PREUVE",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CALCUL",
+       "letters": "CALCUL",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DONNÉES",
+       "letters": "DONNEES",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "IDÉE",
+       "letters": "IDEE",
+       "row": 6,
+       "col": 5,
+       "direction": "SW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "DONN",
+       "row": 2,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "HYPO",
+       "row": 5,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "FORM",
+       "row": 6,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "letters": "PREU",
+       "row": 8,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "letters": "EXPE",
+       "row": 0,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "letters": "MESU",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "IDEU",
+       "row": 1,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "letters": "THEO",
+       "row": 3,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "letters": "LABO",
+       "row": 0,
+       "col": 3,
+       "direction": "SW"
+      },
+      {
+       "letters": "IDE",
+       "row": 7,
+       "col": 2,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "BTSITNEICSER",
+      "ALIRRMEASURE",
+      "LUSISYLANAES",
+      "ASEDANALPXSU",
+      "NEHIDPBRPMEL",
+      "CRTSYROEHTAA",
+      "EPOCSORCIMRL",
+      "RDPOUIAYTRCU",
+      "EAYVMSTADHHM",
+      "STHERMOMETER",
+      "EANROSRDATRO",
+      "ATSYFNYPROOF"
+     ],
+     "words": [
+      {
+       "display": "THERMOMETER",
+       "letters": "THERMOMETER",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LABORATORY",
+       "letters": "LABORATORY",
+       "row": 2,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "EXPERIMENT",
+       "letters": "EXPERIMENT",
+       "row": 2,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "MICROSCOPE",
+       "letters": "MICROSCOPE",
+       "row": 6,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "HYPOTHESIS",
+       "letters": "HYPOTHESIS",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "RESEARCHER",
+       "letters": "RESEARCHER",
+       "row": 1,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "DISCOVERY",
+       "letters": "DISCOVERY",
+       "row": 3,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "SCIENTIST",
+       "letters": "SCIENTIST",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ANALYSIS",
+       "letters": "ANALYSIS",
+       "row": 2,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "BALANCE",
+       "letters": "BALANCE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "THEORY",
+       "letters": "THEORY",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "FORMULA",
+       "letters": "FORMULA",
+       "row": 11,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "display": "RESULT",
+       "letters": "RESULT",
+       "row": 5,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "MEASURE",
+       "letters": "MEASURE",
+       "row": 1,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "PROOF",
+       "letters": "PROOF",
+       "row": 11,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "display": "DATA",
+       "letters": "DATA",
+       "row": 7,
+       "col": 1,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "RESUL",
+       "row": 0,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "letters": "PROO",
+       "row": 3,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "letters": "THEO",
+       "row": 7,
+       "col": 8,
+       "direction": "SE"
+      },
+      {
+       "letters": "DAT",
+       "row": 10,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "letters": "ANAL",
+       "row": 3,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "letters": "RESEA",
+       "row": 7,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "DATS",
+       "row": 8,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "FORMU",
+       "row": 11,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "letters": "PRO",
+       "row": 4,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "letters": "DASR",
+       "row": 4,
+       "col": 4,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

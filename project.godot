@@ -1,0 +1,56 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Mots Mêlés"
+config/name_localized={
+"en": "Word Search",
+"fr": "Mots Mêlés"
+}
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.7", "Mobile")
+run/max_fps=60
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/show_image=false
+config/icon="res://assets/branding/app-logo.png"
+config/version="1.2.0"
+
+[autoload]
+
+Feedback="*res://src/app/feedback_controller.gd"
+App="*res://src/app/app.gd"
+
+[display]
+
+window/size/viewport_width=360
+window/size/viewport_height=800
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[gui]
+
+theme/default_font_antialiasing=2
+common/drop_mouse_on_gui_input_disabled=true
+
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+textures/canvas_textures/default_texture_filter=2
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)
+
+[internationalization]
+
+locale/fallback="en"
+locale/translations=PackedStringArray("res://translations/strings.en.translation", "res://translations/strings.fr.translation")

@@ -1,0 +1,176 @@
+class_name GameControllerTest
+extends GdUnitTestSuite
+## Orchestration d'une partie : gestes -> moteur -> sauvegarde, indices, dialogues, victoire.
+
+var _catalog: LevelCatalog
+var _repo: MemoryFakes.MemoryProgress
+var _controller: GameController
+var _events: Dictionary
+
+
+func before_test() -> void:
+	_catalog = Fixtures.stub_catalog()
+	_repo = MemoryFakes.MemoryProgress.new()
+	_repo.state.hint_balance = 2
+	_events = {"found": [], "wrong": 0, "hint": [], "restarted": 0, "victory": [], "leave": 0, "messages": []}
+	_controller = _make_controller()
+
+
+func _make_controller() -> GameController:
+	var use_cases := GameUseCases.new(_catalog, _repo, MemoryFakes.FakeAds.new(), func(from: int, _until: int) -> int: return from)
+	var c := GameController.new(_catalog.levels[0], Language.EN, use_cases, func() -> int: return _repo.read().hint_balance)
+	c.found.connect(func(i: int) -> void: _events["found"].append(i))
+	c.wrong.connect(func() -> void: _events["wrong"] += 1)
+	c.hint_revealed.connect(func(cell: Vector2i) -> void: _events["hint"].append(cell))
+	c.restarted.connect(func() -> void: _events["restarted"] += 1)
+	c.victory.connect(func(r: VictoryResult) -> void: _events["victory"].append(r))
+	c.leave_requested.connect(func() -> void: _events["leave"] += 1)
+	c.message_requested.connect(func(key: String, _q: int, _p: bool) -> void: _events["messages"].append(key))
+	add_child(c)
+	return c
+
+
+func _trace(path: Array[Vector2i]) -> void:
+	_controller.on_selection_start(path[0])
+	_controller.on_selection_change(path)
+	_controller.on_selection_end()
+
+
+func after_test() -> void:
+	if is_instance_valid(_controller):
+		_controller.free()
+
+
+func test_controller_is_ready_with_the_balance_and_no_progress() -> void:
+	assert_bool(_controller.ready_to_play).is_true()
+	assert_int(_controller.hint_balance).is_equal(2)
+	assert_array(_controller.found_word_indices).is_empty()
+	assert_int(_controller.hints_left_on_level).is_equal(3)
+
+
+func test_a_correct_trace_finds_the_word_and_notifies() -> void:
+	_trace(Fixtures.sun())
+	assert_array(_controller.found_word_indices).contains_exactly([0])
+	assert_array(_events["found"]).contains_exactly([0])
+	assert_bool(_controller.solved).is_false()
+	assert_array(_controller.selection).is_empty()
+
+
+func test_a_wrong_trace_notifies_and_changes_nothing() -> void:
+	_trace(Fixtures.cells([Fixtures.cell(0, 0), Fixtures.cell(0, 1)]))
+	assert_int(_events["wrong"]).is_equal(1)
+	assert_array(_controller.found_word_indices).is_empty()
+
+
+func test_a_single_tap_is_ignored() -> void:
+	_controller.on_selection_start(Fixtures.cell(1, 1))
+	_controller.on_selection_end()
+	assert_int(_events["wrong"]).is_equal(0)
+	assert_array(_events["found"]).is_empty()
+
+
+func test_progress_is_saved_after_each_word_and_restored_by_a_new_controller() -> void:
+	_trace(Fixtures.sun())
+	assert_int(_repo.state.in_progress.size()).is_equal(1)
+	_controller.free()
+	_controller = _make_controller()
+	assert_array(_controller.found_word_indices).contains_exactly([0])
+
+
+func test_a_hint_costs_one_and_reveals_the_first_cell() -> void:
+	_controller.on_hint_requested()
+	assert_int(_controller.hint_balance).is_equal(1)
+	assert_array(_events["hint"]).contains_exactly([Fixtures.cell(0, 0)])
+	assert_array(_controller.hint_cells).contains_exactly([Fixtures.cell(0, 0)])
+	assert_int(_controller.hints_left_on_level).is_equal(2)
+
+
+func test_without_balance_the_ad_starts_directly_without_any_confirmation_dialog() -> void:
+	_repo.state.hint_balance = 0
+	_controller.hint_balance = 0
+	var launches := [0]
+	_controller.ad_launching.connect(func() -> void: launches[0] += 1)
+	_controller.on_hint_requested()
+	assert_int(launches[0]).is_equal(1)  # animation du bouton immédiate
+	assert_int(_controller.dialog).is_equal(GameController.Dialog.NONE)  # aucun popup de confirmation
+	await await_millis(int(GameController.AD_LAUNCH_DELAY_SECONDS * 1000.0) + 300)
+	assert_int(_controller.hint_balance).is_equal(1)  # la publicité (simulée) a accordé un indice
+	assert_array(_events["messages"]).contains(["msg_hints_earned"])
+
+
+func test_an_unavailable_ad_never_blocks_the_game() -> void:
+	_repo.state.hint_balance = 0
+	_controller.hint_balance = 0
+	var ads := MemoryFakes.FakeAds.new()
+	ads.reason = UnavailableReason.OFFLINE
+	var use_cases := GameUseCases.new(_catalog, _repo, ads, func(from: int, _until: int) -> int: return from)
+	var offline := GameController.new(_catalog.levels[0], Language.EN, use_cases, func() -> int: return _repo.read().hint_balance)
+	var messages: Array[String] = []
+	offline.message_requested.connect(func(key: String, _q: int, _p: bool) -> void: messages.append(key))
+	add_child(offline)
+	offline.on_hint_requested()
+	await await_millis(int(GameController.AD_LAUNCH_DELAY_SECONDS * 1000.0) + 300)
+	assert_array(messages).contains(["msg_ad_offline"])
+	assert_bool(offline.can_interact()).is_true()
+	offline.free()
+
+
+func test_the_hint_limit_per_level_is_explained() -> void:
+	_repo.state.hint_balance = 9
+	var use_cases := GameUseCases.new(_catalog, _repo, MemoryFakes.FakeAds.new(), func(from: int, _until: int) -> int: return from)
+	var capped := GameController.new(Fixtures.level({"max_hints": 1}), Language.EN, use_cases, func() -> int: return _repo.read().hint_balance)
+	var messages: Array[String] = []
+	capped.message_requested.connect(func(key: String, _q: int, _p: bool) -> void: messages.append(key))
+	add_child(capped)
+	capped.on_hint_requested()
+	capped.on_hint_requested()
+	assert_array(messages).contains(["msg_hint_limit"])
+	capped.free()
+
+
+func test_when_every_remaining_word_is_hinted_nothing_is_left_to_reveal() -> void:
+	_repo.state.hint_balance = 9
+	_controller.on_hint_requested()
+	_controller.on_hint_requested()
+	_controller.on_hint_requested()
+	assert_array(_events["messages"]).contains(["msg_hint_nothing"])
+
+
+func test_back_before_playing_leaves_and_back_during_play_asks_for_confirmation() -> void:
+	_controller.on_back_requested()
+	assert_int(_events["leave"]).is_equal(1)
+	_trace(Fixtures.sun())
+	_controller.on_back_requested()
+	assert_int(_controller.dialog).is_equal(GameController.Dialog.CONFIRM_QUIT)
+	_controller.confirm_quit()
+	assert_int(_events["leave"]).is_equal(2)
+
+
+func test_interaction_is_blocked_while_a_dialog_is_open() -> void:
+	_trace(Fixtures.sun())
+	_controller.on_back_requested()
+	assert_bool(_controller.can_interact()).is_false()
+	_trace(Fixtures.sky())
+	assert_array(_controller.found_word_indices).contains_exactly([0])
+
+
+func test_restart_clears_the_grid_and_the_saved_game_and_is_locked_briefly() -> void:
+	_trace(Fixtures.sun())
+	_controller.on_restart_requested()
+	assert_array(_controller.found_word_indices).is_empty()
+	assert_int(_events["restarted"]).is_equal(1)
+	assert_int(_repo.state.in_progress.size()).is_equal(0)
+	_controller.on_restart_requested()  # double déclenchement immédiat : refusé
+	assert_int(_events["restarted"]).is_equal(1)
+
+
+func test_solving_every_word_ends_in_a_victory_with_stars_and_saved_progress() -> void:
+	_trace(Fixtures.sun())
+	_trace(Fixtures.sky())
+	assert_bool(_controller.solved).is_true()
+	await await_millis(700)
+	assert_int(_events["victory"].size()).is_equal(1)
+	var result: VictoryResult = _events["victory"][0]
+	assert_int(result.stars).is_equal(3)
+	assert_bool(_repo.state.completed.has("c1-l01")).is_true()
+	assert_int(_repo.state.in_progress.size()).is_equal(0)

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "_comment": "Correspondance praise -> fichier audio, par langue. Chemins relatifs à ce dossier. volume : 0.0 à 1.0 (niveaux égalisés d'après la mesure des fichiers fournis ; le volume ne peut qu'atténuer). Le praise est volontairement identique en français et en anglais (décision du projet). Pour des voix françaises : ajouter les fichiers et modifier le bloc « fr ». Une langue sans entrée, ou un fichier absent, joue le son de réussite générique.",
+  "ladder": [
+    "nice",
+    "great",
+    "awesome",
+    "amazing",
+    "insane",
+    "unreal",
+    "divine",
+    "legendary"
+  ],
+  "genericFallback": "SUCCESS_GENERIC",
+  "voices": {
+    "en": {
+      "nice": {
+        "file": "nice.mp3",
+        "volume": 1.0
+      },
+      "great": {
+        "file": "great.mp3",
+        "volume": 0.84
+      },
+      "awesome": {
+        "file": "awesome.mp3",
+        "volume": 0.7
+      },
+      "amazing": {
+        "file": "amazing.mp3",
+        "volume": 0.64
+      },
+      "insane": {
+        "file": "insane.mp3",
+        "volume": 1.0
+      },
+      "unreal": {
+        "file": "unreal.mp3",
+        "volume": 0.56
+      },
+      "divine": {
+        "file": "divine.mp3",
+        "volume": 0.39
+      },
+      "legendary": {
+        "file": "legendary.mp3",
+        "volume": 0.35
+      }
+    },
+    "fr": {
+      "nice": {
+        "file": "nice.mp3",
+        "volume": 1.0
+      },
+      "great": {
+        "file": "great.mp3",
+        "volume": 0.84
+      },
+      "awesome": {
+        "file": "awesome.mp3",
+        "volume": 0.7
+      },
+      "amazing": {
+        "file": "amazing.mp3",
+        "volume": 0.64
+      },
+      "insane": {
+        "file": "insane.mp3",
+        "volume": 1.0
+      },
+      "unreal": {
+        "file": "unreal.mp3",
+        "volume": 0.56
+      },
+      "divine": {
+        "file": "divine.mp3",
+        "volume": 0.39
+      },
+      "legendary": {
+        "file": "legendary.mp3",
+        "volume": 0.35
+      }
+    }
+  }
+}

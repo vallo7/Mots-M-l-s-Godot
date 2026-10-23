@@ -1,0 +1,3054 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-08",
+ "index": 8,
+ "paletteKey": "arena",
+ "theme": {
+  "fr": "Sports",
+  "en": "Sports"
+ },
+ "levels": [
+  {
+   "id": "c8-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Football",
+    "en": "Soccer"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.56,
+    "score": 104,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "AABRENROCS",
+      "RETTONTLGE",
+      "DULTOLLIAM",
+      "STEBAASRRP",
+      "GILSBQBSDE",
+      "DLFTNIUTIN",
+      "RAOFTERAEA",
+      "EOTRLTFDNL",
+      "FGESNEEEGT",
+      "IPENALTIDY"
+     ],
+     "words": [
+      {
+       "display": "FOOTBALL",
+       "letters": "FOOTBALL",
+       "row": 8,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "GARDIEN",
+       "letters": "GARDIEN",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "ATTAQUANT",
+       "letters": "ATTAQUANT",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "DÉFENSEUR",
+       "letters": "DEFENSEUR",
+       "row": 9,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "ARBITRE",
+       "letters": "ARBITRE",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "PENALTY",
+       "letters": "PENALTY",
+       "row": 3,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "CORNER",
+       "letters": "CORNER",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "DRIBBLE",
+       "letters": "DRIBBLE",
+       "row": 7,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "STADE",
+       "letters": "STADE",
+       "row": 4,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "MAILLOT",
+       "letters": "MAILLOT",
+       "row": 2,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "GOAL",
+       "letters": "GOAL",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "SIFFLET",
+       "letters": "SIFFLET",
+       "row": 3,
+       "col": 0,
+       "direction": "SE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PENALT",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "STAD",
+       "row": 8,
+       "col": 3,
+       "direction": "NW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RTEJRECCOS",
+      "ECEPENALTY",
+      "POLJDRASRS",
+      "ERBELTSIHW",
+      "ENBREKIRTS",
+      "KEISIYYNPO",
+      "GRREFEREEC",
+      "ORDYDLSLRC",
+      "AIMUIDATSA",
+      "LZEIMERRDZ"
+     ],
+     "words": [
+      {
+       "display": "SOCCER",
+       "letters": "SOCCER",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "KEEPER",
+       "letters": "KEEPER",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "STRIKER",
+       "letters": "STRIKER",
+       "row": 4,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "MIDFIELDER",
+       "letters": "MIDFIELDER",
+       "row": 9,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "REFEREE",
+       "letters": "REFEREE",
+       "row": 6,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PENALTY",
+       "letters": "PENALTY",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "CORNER",
+       "letters": "CORNER",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "DRIBBLE",
+       "letters": "DRIBBLE",
+       "row": 7,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "STADIUM",
+       "letters": "STADIUM",
+       "row": 8,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "JERSEY",
+       "letters": "JERSEY",
+       "row": 2,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "GOAL",
+       "letters": "GOAL",
+       "row": 6,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "WHISTLE",
+       "letters": "WHISTLE",
+       "row": 3,
+       "col": 9,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "JERS",
+       "row": 0,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "letters": "SOCCAZ",
+       "row": 4,
+       "col": 9,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c8-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Basket-ball",
+    "en": "Basketball"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.75,
+    "score": 107,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "PUNCPANIER",
+      "INDZECRECU",
+      "ASMENEURCE",
+      "DBTEKSABRN",
+      "UALANCERII",
+      "NLEUTCCAEA",
+      "KLELPIRTRR",
+      "TOVIPREELT",
+      "DNOBERCECN",
+      "NNATKRANLE"
+     ],
+     "words": [
+      {
+       "display": "BASKET",
+       "letters": "BASKET",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PANIER",
+       "letters": "PANIER",
+       "row": 0,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "DUNK",
+       "letters": "DUNK",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "REBOND",
+       "letters": "REBOND",
+       "row": 8,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "MENEUR",
+       "letters": "MENEUR",
+       "row": 2,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PIVOT",
+       "letters": "PIVOT",
+       "row": 7,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "TERRAIN",
+       "letters": "TERRAIN",
+       "row": 9,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "CERCEAU",
+       "letters": "CERCEAU",
+       "row": 8,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "LANCER",
+       "letters": "LANCER",
+       "row": 4,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ENTRAÎNEUR",
+       "letters": "ENTRAINEUR",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "TRIPLE",
+       "letters": "TRIPLE",
+       "row": 6,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "BALLON",
+       "letters": "BALLON",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CERCEZD",
+       "row": 1,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "CERC",
+       "row": 8,
+       "col": 8,
+       "direction": "NW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "OAPUYALFNH",
+      "RDYPRTLOOA",
+      "CERUGUARDN",
+      "COTAHCBWUE",
+      "OEAOOHTANC",
+      "ADNUOBERKP",
+      "CERTPHKDCR",
+      "HTDUEASCOB",
+      "TSRHORAAAD",
+      "BDHTRYBRCB"
+     ],
+     "words": [
+      {
+       "display": "BASKETBALL",
+       "letters": "BASKETBALL",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "HOOP",
+       "letters": "HOOP",
+       "row": 3,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "DUNK",
+       "letters": "DUNK",
+       "row": 2,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "REBOUND",
+       "letters": "REBOUND",
+       "row": 5,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "GUARD",
+       "letters": "GUARD",
+       "row": 2,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "CENTER",
+       "letters": "CENTER",
+       "row": 3,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "FORWARD",
+       "letters": "FORWARD",
+       "row": 0,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "COURT",
+       "letters": "COURT",
+       "row": 3,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "display": "SHOOTER",
+       "letters": "SHOOTER",
+       "row": 7,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "COACH",
+       "letters": "COACH",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "LAYUP",
+       "letters": "LAYUP",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "BACKBOARD",
+       "letters": "BACKBOARD",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "COAC",
+       "row": 6,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "letters": "DUEA",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c8-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Natation",
+    "en": "Swimming"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.72,
+    "score": 110,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "BRASSEPISA",
+      "OPISCINEIP",
+      "NRNOITATAN",
+      "NPLWEIGPLC",
+      "EIAEAGIEER",
+      "TRNLULNORA",
+      "CSEMLAPOUW",
+      "ORIOLUOCLL",
+      "SENOEGNOLP",
+      "ERSETTENUL"
+     ],
+     "words": [
+      {
+       "display": "NATATION",
+       "letters": "NATATION",
+       "row": 2,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "PISCINE",
+       "letters": "PISCINE",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CRAWL",
+       "letters": "CRAWL",
+       "row": 3,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "BRASSE",
+       "letters": "BRASSE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PAPILLON",
+       "letters": "PAPILLON",
+       "row": 1,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "PLONGEON",
+       "letters": "PLONGEON",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "LUNETTES",
+       "letters": "LUNETTES",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "BONNET",
+       "letters": "BONNET",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "COULOIR",
+       "letters": "COULOIR",
+       "row": 7,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PLONGEOIR",
+       "letters": "PLONGEOIR",
+       "row": 8,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "PALMES",
+       "letters": "PALMES",
+       "row": 6,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "RELAIS",
+       "letters": "RELAIS",
+       "row": 5,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "EAU",
+       "letters": "EAU",
+       "row": 3,
+       "col": 4,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "RELAI",
+       "row": 7,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "letters": "CRAWI",
+       "row": 6,
+       "col": 0,
+       "direction": "NE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "MWFLIPPERS",
+      "CLWATERKSW",
+      "RMIWSLOOPL",
+      "GABYALERET",
+      "OYLFRETTUB",
+      "GNIMMIWSLR",
+      "GNIVIDRKWS",
+      "LANEPOOCAM",
+      "ELIFEGUARD",
+      "SWIMMERBCC"
+     ],
+     "words": [
+      {
+       "display": "SWIMMING",
+       "letters": "SWIMMING",
+       "row": 5,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "POOL",
+       "letters": "POOL",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CRAWL",
+       "letters": "CRAWL",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "BACKSTROKE",
+       "letters": "BACKSTROKE",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "BUTTERFLY",
+       "letters": "BUTTERFLY",
+       "row": 4,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "DIVING",
+       "letters": "DIVING",
+       "row": 6,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "GOGGLES",
+       "letters": "GOGGLES",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "LANE",
+       "letters": "LANE",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SWIMMER",
+       "letters": "SWIMMER",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "FLIPPERS",
+       "letters": "FLIPPERS",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "RELAY",
+       "letters": "RELAY",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "WATER",
+       "letters": "WATER",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "LIFEGUARD",
+       "letters": "LIFEGUARD",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SWIM",
+       "row": 2,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "POO",
+       "row": 7,
+       "col": 4,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c8-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Athlétisme",
+    "en": "Athletics"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.59,
+    "score": 113,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "SJAVELOTQRE",
+      "TTTHVAEORRO",
+      "NOHTARAMELR",
+      "AOLEVAJICER",
+      "LDECATHLONO",
+      "ERTEMONORHC",
+      "HAIESPOIDST",
+      "DISQUEENRCU",
+      "ITMLEHCREPA",
+      "RUEUGNOLCTS",
+      "RUERUOCYHHO"
+     ],
+     "words": [
+      {
+       "display": "ATHLÉTISME",
+       "letters": "ATHLETISME",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "MARATHON",
+       "letters": "MARATHON",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "SPRINT",
+       "letters": "SPRINT",
+       "row": 9,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "HAIES",
+       "letters": "HAIES",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SAUT",
+       "letters": "SAUT",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "PERCHE",
+       "letters": "PERCHE",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "JAVELOT",
+       "letters": "JAVELOT",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DISQUE",
+       "letters": "DISQUE",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "POIDS",
+       "letters": "POIDS",
+       "row": 6,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "LONGUEUR",
+       "letters": "LONGUEUR",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CHRONOMÈTRE",
+       "letters": "CHRONOMETRE",
+       "row": 5,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "COUREUR",
+       "letters": "COUREUR",
+       "row": 10,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "RECORD",
+       "letters": "RECORD",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "DÉCATHLON",
+       "letters": "DECATHLON",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PERCH",
+       "row": 6,
+       "col": 5,
+       "direction": "SE"
+      },
+      {
+       "letters": "JAVELO",
+       "row": 3,
+       "col": 6,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "HJAVELINSHM",
+      "NVTLDISCUST",
+      "NOHTARAMELN",
+      "POLEVAULTDP",
+      "RREHKGDNRTO",
+      "EHTOTRNOUUD",
+      "NRICUACPSHI",
+      "NHCHSETHMEU",
+      "UCSHROOPUUM",
+      "RNOLHTACEDJ",
+      "LTISPRINTHB"
+     ],
+     "words": [
+      {
+       "display": "ATHLETICS",
+       "letters": "ATHLETICS",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "MARATHON",
+       "letters": "MARATHON",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "SPRINT",
+       "letters": "SPRINT",
+       "row": 10,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "HURDLES",
+       "letters": "HURDLES",
+       "row": 7,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "JUMP",
+       "letters": "JUMP",
+       "row": 9,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "POLEVAULT",
+       "letters": "POLEVAULT",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "JAVELIN",
+       "letters": "JAVELIN",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DISCUS",
+       "letters": "DISCUS",
+       "row": 1,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "SHOTPUT",
+       "letters": "SHOTPUT",
+       "row": 10,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "RUNNER",
+       "letters": "RUNNER",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "RECORD",
+       "letters": "RECORD",
+       "row": 8,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "display": "PODIUM",
+       "letters": "PODIUM",
+       "row": 3,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "DECATHLON",
+       "letters": "DECATHLON",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "HEPTATHLON",
+       "letters": "HEPTATHLON",
+       "row": 10,
+       "col": 9,
+       "direction": "NW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SHOTP",
+       "row": 6,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "letters": "SHOT",
+       "row": 7,
+       "col": 4,
+       "direction": "SW"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c8-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Sports d'hiver",
+    "en": "Winter sports"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.64,
+    "score": 116,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "HNOLHTAIBDR",
+      "AELYTSEERFR",
+      "ERIONITAPBA",
+      "NNPEKCOHMOQ",
+      "SEANLBTOOBU",
+      "AKTTWUICLSE",
+      "CUIOPSGKALT",
+      "EENIBACELET",
+      "LSARQBTYSIE",
+      "EOGCURLINGS",
+      "TREMPLINNHE"
+     ],
+     "words": [
+      {
+       "display": "SNOWBOARD",
+       "letters": "SNOWBOARD",
+       "row": 8,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "LUGE",
+       "letters": "LUGE",
+       "row": 4,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "PATINAGE",
+       "letters": "PATINAGE",
+       "row": 3,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "HOCKEY",
+       "letters": "HOCKEY",
+       "row": 3,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "BIATHLON",
+       "letters": "BIATHLON",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "SLALOM",
+       "letters": "SLALOM",
+       "row": 8,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "BOBSLEIGH",
+       "letters": "BOBSLEIGH",
+       "row": 2,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "CURLING",
+       "letters": "CURLING",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "TREMPLIN",
+       "letters": "TREMPLIN",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SKI",
+       "letters": "SKI",
+       "row": 4,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "FREESTYLE",
+       "letters": "FREESTYLE",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "TÉLÉCABINE",
+       "letters": "TELECABINE",
+       "row": 7,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "RAQUETTES",
+       "letters": "RAQUETTES",
+       "row": 1,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "PATINOIRE",
+       "letters": "PATINOIRE",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TELECA",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "PATIN",
+       "row": 6,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "letters": "HOCKE",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "AOEGULEKCOH",
+      "VLBOBSLEDXH",
+      "AELYTSEERFS",
+      "LBSKATINAEC",
+      "AINAGGOBOTU",
+      "NAYEKCOHBWR",
+      "CTNIHKSOWEL",
+      "HHSNOWBOOOI",
+      "ELIBOMWONSN",
+      "EOGNITAKSTG",
+      "RNSLALOMSKI"
+     ],
+     "words": [
+      {
+       "display": "SNOWBOARD",
+       "letters": "SNOWBOARD",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "LUGE",
+       "letters": "LUGE",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "SKATING",
+       "letters": "SKATING",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "HOCKEY",
+       "letters": "HOCKEY",
+       "row": 5,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "BIATHLON",
+       "letters": "BIATHLON",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "SLALOM",
+       "letters": "SLALOM",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "BOBSLED",
+       "letters": "BOBSLED",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "CURLING",
+       "letters": "CURLING",
+       "row": 3,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "SKI",
+       "letters": "SKI",
+       "row": 10,
+       "col": 8,
+       "direction": "E"
+      },
+      {
+       "display": "FREESTYLE",
+       "letters": "FREESTYLE",
+       "row": 2,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "SNOWMOBILE",
+       "letters": "SNOWMOBILE",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "SNOWSHOES",
+       "letters": "SNOWSHOES",
+       "row": 10,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "TOBOGGAN",
+       "letters": "TOBOGGAN",
+       "row": 4,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "AVALANCHE",
+       "letters": "AVALANCHE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SNOWBO",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "SKATIN",
+       "row": 3,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "HOCKE",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c8-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Sports de combat",
+    "en": "Combat sports"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.78,
+    "score": 119,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "KTCHAMPIONT",
+      "DUAODUJDKAE",
+      "NLTVNNNSTRE",
+      "AIKIDOSAUPT",
+      "KJPPWEMTIMV",
+      "LUEKRINIPKO",
+      "UDEINIEKKAM",
+      "TADVERSAIRE",
+      "TESCRIMEUAE",
+      "EXOBTCEINTU",
+      "ISOAMIRCSEE"
+     ],
+     "words": [
+      {
+       "display": "JUDO",
+       "letters": "JUDO",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "KARATÉ",
+       "letters": "KARATE",
+       "row": 5,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "BOXE",
+       "letters": "BOXE",
+       "row": 9,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "display": "ESCRIME",
+       "letters": "ESCRIME",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LUTTE",
+       "letters": "LUTTE",
+       "row": 5,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "TAEKWONDO",
+       "letters": "TAEKWONDO",
+       "row": 8,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "SUMO",
+       "letters": "SUMO",
+       "row": 2,
+       "col": 7,
+       "direction": "SE"
+      },
+      {
+       "display": "AÏKIDO",
+       "letters": "AIKIDO",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CEINTURE",
+       "letters": "CEINTURE",
+       "row": 8,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "KIMONO",
+       "letters": "KIMONO",
+       "row": 6,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "TATAMI",
+       "letters": "TATAMI",
+       "row": 0,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "ADVERSAIRE",
+       "letters": "ADVERSAIRE",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CHAMPION",
+       "letters": "CHAMPION",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PRISE",
+       "letters": "PRISE",
+       "row": 4,
+       "col": 3,
+       "direction": "SE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ESCRIMA",
+       "row": 10,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "letters": "LUT",
+       "row": 2,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "letters": "JUD",
+       "row": 4,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "letters": "CEINTU",
+       "row": 9,
+       "col": 5,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "KPUNCETOWKP",
+      "IIEFONAEAOE",
+      "CEUEDDTRNMI",
+      "KOSNNNAODUJ",
+      "BPDCOTMKOSO",
+      "OPSIWIITALK",
+      "XONNKRPUNCH",
+      "INOGEIAMNUM",
+      "NEMOAKARATE",
+      "GNILTSERWHA",
+      "CTKTSEGNIRC"
+     ],
+     "words": [
+      {
+       "display": "JUDO",
+       "letters": "JUDO",
+       "row": 3,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "KARATE",
+       "letters": "KARATE",
+       "row": 8,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "RING",
+       "letters": "RING",
+       "row": 10,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "FENCING",
+       "letters": "FENCING",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "WRESTLING",
+       "letters": "WRESTLING",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "TAEKWONDO",
+       "letters": "TAEKWONDO",
+       "row": 9,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "SUMO",
+       "letters": "SUMO",
+       "row": 4,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "AIKIDO",
+       "letters": "AIKIDO",
+       "row": 8,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "KICKBOXING",
+       "letters": "KICKBOXING",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "KIMONO",
+       "letters": "KIMONO",
+       "row": 6,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "display": "TATAMI",
+       "letters": "TATAMI",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "OPPONENT",
+       "letters": "OPPONENT",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "CHAMPION",
+       "letters": "CHAMPION",
+       "row": 10,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "PUNCH",
+       "letters": "PUNCH",
+       "row": 6,
+       "col": 6,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PUNCE",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "SUEU",
+       "row": 3,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "letters": "KIMON",
+       "row": 10,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "letters": "KARAT",
+       "row": 0,
+       "col": 9,
+       "direction": "SW"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c8-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Cyclisme",
+    "en": "Cycling"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.73,
+    "score": 121,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "HRNRELLESEA",
+      "PNOTOLEPMTE",
+      "PUYLEPGSVTN",
+      "ETAEPUIETFI",
+      "DERAILLEURA",
+      "ALHDCOLESEH",
+      "LCOYDCNLPIC",
+      "ENCRYPAAANC",
+      "ITOCPATEHUO",
+      "RMILLESCCAL",
+      "EBLSPLNPEMP"
+     ],
+     "words": [
+      {
+       "display": "CYCLISME",
+       "letters": "CYCLISME",
+       "row": 7,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "RAYON",
+       "letters": "RAYON",
+       "row": 4,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "PÉDALE",
+       "letters": "PEDALE",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "GUIDON",
+       "letters": "GUIDON",
+       "row": 2,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "SELLE",
+       "letters": "SELLE",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CHAÎNE",
+       "letters": "CHAINE",
+       "row": 6,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "DÉRAILLEUR",
+       "letters": "DERAILLEUR",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PELOTON",
+       "letters": "PELOTON",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ÉCHAPPÉE",
+       "letters": "ECHAPPEE",
+       "row": 7,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "ROUE",
+       "letters": "ROUE",
+       "row": 0,
+       "col": 3,
+       "direction": "SW"
+      },
+      {
+       "display": "PNEU",
+       "letters": "PNEU",
+       "row": 7,
+       "col": 5,
+       "direction": "NE"
+      },
+      {
+       "display": "FREIN",
+       "letters": "FREIN",
+       "row": 3,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "BICYCLETTE",
+       "letters": "BICYCLETTE",
+       "row": 10,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "VELODROME",
+       "letters": "VELODROME",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "ÉTAPE",
+       "letters": "ETAPE",
+       "row": 9,
+       "col": 5,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ETAP",
+       "row": 8,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "SEL",
+       "row": 5,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "ECHAP",
+       "row": 10,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "SELL",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "THEGNILCYCC",
+      "IINNSNIAHCK",
+      "PVOHPIWSHKH",
+      "LETTOAYACAE",
+      "CLOEKIBDNIK",
+      "YOLAELDDASA",
+      "CDERAILLEUR",
+      "IRPWHEELINB",
+      "BODTBICYCLE",
+      "BMLADEPEHDU",
+      "LERITNKBOIC"
+     ],
+     "words": [
+      {
+       "display": "CYCLING",
+       "letters": "CYCLING",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "BIKE",
+       "letters": "BIKE",
+       "row": 4,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "PEDAL",
+       "letters": "PEDAL",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "HANDLEBAR",
+       "letters": "HANDLEBAR",
+       "row": 2,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "SADDLE",
+       "letters": "SADDLE",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CHAIN",
+       "letters": "CHAIN",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "DERAILLEUR",
+       "letters": "DERAILLEUR",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "PELOTON",
+       "letters": "PELOTON",
+       "row": 7,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "BREAKAWAY",
+       "letters": "BREAKAWAY",
+       "row": 8,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "WHEEL",
+       "letters": "WHEEL",
+       "row": 7,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "TIRE",
+       "letters": "TIRE",
+       "row": 10,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "BRAKE",
+       "letters": "BRAKE",
+       "row": 7,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "BICYCLE",
+       "letters": "BICYCLE",
+       "row": 8,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "VELODROME",
+       "letters": "VELODROME",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "SPOKE",
+       "letters": "SPOKE",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SADDL",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "letters": "CHA",
+       "row": 1,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "letters": "TIOT",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "letters": "BICYCLP",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c8-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Jeux olympiques",
+    "en": "Olympic Games"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.74,
+    "score": 124,
+    "decoys": 5
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "LNITREBUOCI",
+      "EPREUVEAEAT",
+      "ZNVHRGRRTNN",
+      "NOITAGELEDO",
+      "ORLLEMCMLII",
+      "RBLNONROHDT",
+      "BITNMEMETAC",
+      "VMIESYJYATE",
+      "MEDAILLEHUL",
+      "TAREHCROTRE",
+      "IOLYMPIQUES"
+     ],
+     "words": [
+      {
+       "display": "OLYMPIQUES",
+       "letters": "OLYMPIQUES",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "MÉDAILLE",
+       "letters": "MEDAILLE",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TORCHE",
+       "letters": "TORCHE",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "ATHLÈTE",
+       "letters": "ATHLETE",
+       "row": 7,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "CÉRÉMONIE",
+       "letters": "CEREMONIE",
+       "row": 0,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "ARGENT",
+       "letters": "ARGENT",
+       "row": 1,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "BRONZE",
+       "letters": "BRONZE",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "HYMNE",
+       "letters": "HYMNE",
+       "row": 8,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "DÉLÉGATION",
+       "letters": "DELEGATION",
+       "row": 3,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "VILLAGE",
+       "letters": "VILLAGE",
+       "row": 7,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "SERMENT",
+       "letters": "SERMENT",
+       "row": 7,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "display": "CANDIDATURE",
+       "letters": "CANDIDATURE",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "COUBERTIN",
+       "letters": "COUBERTIN",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ÉPREUVE",
+       "letters": "EPREUVE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SÉLECTION",
+       "letters": "SELECTION",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "VILL",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "letters": "BRON",
+       "row": 5,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "letters": "CERE",
+       "row": 4,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "letters": "OLYM",
+       "row": 9,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "letters": "MEDAI",
+       "row": 6,
+       "col": 4,
+       "direction": "SW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "BSREVLISPEG",
+      "ICOATHNCROT",
+      "YELTVBOICAM",
+      "ERYHIRIPOPE",
+      "EEMLLOTMULH",
+      "ZMPELNCYBAT",
+      "NOITAGELEDN",
+      "ONCEGOLAREA",
+      "RYSOELERTMA",
+      "BOLYMPSAICW",
+      "VDTORCHPNTW"
+     ],
+     "words": [
+      {
+       "display": "OLYMPICS",
+       "letters": "OLYMPICS",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "MEDAL",
+       "letters": "MEDAL",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "TORCH",
+       "letters": "TORCH",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ATHLETE",
+       "letters": "ATHLETE",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "CEREMONY",
+       "letters": "CEREMONY",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "SILVER",
+       "letters": "SILVER",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "BRONZE",
+       "letters": "BRONZE",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ANTHEM",
+       "letters": "ANTHEM",
+       "row": 7,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "DELEGATION",
+       "letters": "DELEGATION",
+       "row": 6,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "VILLAGE",
+       "letters": "VILLAGE",
+       "row": 2,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "OATH",
+       "letters": "OATH",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "COUBERTIN",
+       "letters": "COUBERTIN",
+       "row": 2,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "SELECTION",
+       "letters": "SELECTION",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "GOLD",
+       "letters": "GOLD",
+       "row": 7,
+       "col": 4,
+       "direction": "SW"
+      },
+      {
+       "display": "PARALYMPICS",
+       "letters": "PARALYMPICS",
+       "row": 10,
+       "col": 7,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "OAT",
+       "row": 3,
+       "col": 8,
+       "direction": "NE"
+      },
+      {
+       "letters": "GOL",
+       "row": 7,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "letters": "TORC",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "OLYMP",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "BRON",
+       "row": 2,
+       "col": 5,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c8-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Sports de raquette",
+    "en": "Racket sports"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.73,
+    "score": 126,
+    "decoys": 5
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "SERVICESTLL",
+      "SMASHHNQIIE",
+      "QVAILAOUETO",
+      "NOTNIMDABOT",
+      "CLENFPESRNT",
+      "SALEDILHEEE",
+      "RNITOOBVALU",
+      "ETFBUNMOKLQ",
+      "VNVUBNILEAA",
+      "ETFILAWEOBR",
+      "RAQUETTEIVD"
+     ],
+     "words": [
+      {
+       "display": "TENNIS",
+       "letters": "TENNIS",
+       "row": 6,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "BADMINTON",
+       "letters": "BADMINTON",
+       "row": 3,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "SQUASH",
+       "letters": "SQUASH",
+       "row": 0,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "RAQUETTE",
+       "letters": "RAQUETTE",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "FILET",
+       "letters": "FILET",
+       "row": 7,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "SERVICE",
+       "letters": "SERVICE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "VOLÉE",
+       "letters": "VOLEE",
+       "row": 6,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "SMASH",
+       "letters": "SMASH",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "REVERS",
+       "letters": "REVERS",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "LIFT",
+       "letters": "LIFT",
+       "row": 9,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "BALLE",
+       "letters": "BALLE",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "VOLANT",
+       "letters": "VOLANT",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "WIMBLEDON",
+       "letters": "WIMBLEDON",
+       "row": 9,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "TIEBREAK",
+       "letters": "TIEBREAK",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "CHAMPIONNAT",
+       "letters": "CHAMPIONNAT",
+       "row": 0,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "DOUBLE",
+       "letters": "DOUBLE",
+       "row": 5,
+       "col": 4,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "RAQUETTO",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "letters": "SMA",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "letters": "LITO",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "letters": "LIF",
+       "row": 2,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "letters": "VOL",
+       "row": 10,
+       "col": 9,
+       "direction": "NW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TNDYHSAMSBA",
+      "HOOBEITTTAE",
+      "SHUTTLECOCK",
+      "ASBRNNLNUKA",
+      "UELGNIPORHE",
+      "QREISAMSVAR",
+      "SVSQUAMDONB",
+      "TEKCARBEADE",
+      "WIMBLEDONBI",
+      "PINGPONGLTT",
+      "TNAFOREHAND"
+     ],
+     "words": [
+      {
+       "display": "TENNIS",
+       "letters": "TENNIS",
+       "row": 1,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "BADMINTON",
+       "letters": "BADMINTON",
+       "row": 8,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "SQUASH",
+       "letters": "SQUASH",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "RACKET",
+       "letters": "RACKET",
+       "row": 7,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "LOB",
+       "letters": "LOB",
+       "row": 9,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "SERVE",
+       "letters": "SERVE",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "VOLLEY",
+       "letters": "VOLLEY",
+       "row": 5,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "SMASH",
+       "letters": "SMASH",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "BACKHAND",
+       "letters": "BACKHAND",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "FOREHAND",
+       "letters": "FOREHAND",
+       "row": 10,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "SHUTTLECOCK",
+       "letters": "SHUTTLECOCK",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "WIMBLEDON",
+       "letters": "WIMBLEDON",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TIEBREAK",
+       "letters": "TIEBREAK",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "TOURNAMENT",
+       "letters": "TOURNAMENT",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "DOUBLES",
+       "letters": "DOUBLES",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PINGPONG",
+       "letters": "PINGPONG",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TOUR",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "letters": "SQUA",
+       "row": 6,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "PING",
+       "row": 4,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "letters": "TIEB",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "letters": "SMASI",
+       "row": 5,
+       "col": 7,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c8-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Championnat",
+    "en": "Championship"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1,
+    "score": 146,
+    "decoys": 10
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "GILDEFAITEET",
+      "PEGLIGUEURMN",
+      "TESTRATEGIEE",
+      "ANRPMAHCIONM",
+      "MDEFAPCALTIE",
+      "SUPPORTERCAN",
+      "ERIDTRAATITI",
+      "QAIDOPMACVIA",
+      "UNEPOOMAUTPR",
+      "ICHAMPIONNAT",
+      "PEUQITCATCCN",
+      "EPUOCFINALEE"
+     ],
+     "words": [
+      {
+       "display": "ENTRAÎNEMENT",
+       "letters": "ENTRAINEMENT",
+       "row": 11,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "display": "MATCH",
+       "letters": "MATCH",
+       "row": 7,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "CHAMPIONNAT",
+       "letters": "CHAMPIONNAT",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SUPPORTER",
+       "letters": "SUPPORTER",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PODIUM",
+       "letters": "PODIUM",
+       "row": 9,
+       "col": 5,
+       "direction": "NW"
+      },
+      {
+       "display": "FINALE",
+       "letters": "FINALE",
+       "row": 11,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "VICTOIRE",
+       "letters": "VICTOIRE",
+       "row": 7,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "DÉFAITE",
+       "letters": "DEFAITE",
+       "row": 0,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "TROPHÉE",
+       "letters": "TROPHEE",
+       "row": 5,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "COUPE",
+       "letters": "COUPE",
+       "row": 11,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "PERFORMANCE",
+       "letters": "PERFORMANCE",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "ÉQUIPE",
+       "letters": "EQUIPE",
+       "row": 6,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "CAPITAINE",
+       "letters": "CAPITAINE",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "ENDURANCE",
+       "letters": "ENDURANCE",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "TACTIQUE",
+       "letters": "TACTIQUE",
+       "row": 10,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "STRATÉGIE",
+       "letters": "STRATEGIE",
+       "row": 2,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "LIGUE",
+       "letters": "LIGUE",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PODI",
+       "row": 4,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "letters": "LIGU",
+       "row": 4,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "MATC",
+       "row": 8,
+       "col": 6,
+       "direction": "NE"
+      },
+      {
+       "letters": "TACT",
+       "row": 5,
+       "col": 6,
+       "direction": "SE"
+      },
+      {
+       "letters": "ENTRA",
+       "row": 2,
+       "col": 11,
+       "direction": "SW"
+      },
+      {
+       "letters": "DEFA",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "CHAMP",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "COU",
+       "row": 10,
+       "col": 6,
+       "direction": "NE"
+      },
+      {
+       "letters": "MAT",
+       "row": 4,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "LIG",
+       "row": 0,
+       "col": 2,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "MOMENTUMTPAC",
+      "ERVICTORYAON",
+      "SCITCATAGAOR",
+      "FINACUPEEITE",
+      "FINALISTTERT",
+      "YHPORTFIAJAR",
+      "VENDUUTMRIIO",
+      "ITAEFEDPTSNP",
+      "CHAMPIONSHIP",
+      "TCOMPRPTEANU",
+      "UNOSTANDINGS",
+      "ECNAMROFREPR"
+     ],
+     "words": [
+      {
+       "display": "CHAMPIONSHIP",
+       "letters": "CHAMPIONSHIP",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TRAINING",
+       "letters": "TRAINING",
+       "row": 3,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "COMPETITION",
+       "letters": "COMPETITION",
+       "row": 11,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "SUPPORTER",
+       "letters": "SUPPORTER",
+       "row": 10,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "display": "STANDINGS",
+       "letters": "STANDINGS",
+       "row": 10,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "FINALIST",
+       "letters": "FINALIST",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "VICTORY",
+       "letters": "VICTORY",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "DEFEAT",
+       "letters": "DEFEAT",
+       "row": 7,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "TROPHY",
+       "letters": "TROPHY",
+       "row": 5,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "CUP",
+       "letters": "CUP",
+       "row": 3,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "PERFORMANCE",
+       "letters": "PERFORMANCE",
+       "row": 11,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "TEAM",
+       "letters": "TEAM",
+       "row": 3,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "CAPTAIN",
+       "letters": "CAPTAIN",
+       "row": 1,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "ENDURANCE",
+       "letters": "ENDURANCE",
+       "row": 9,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "TACTICS",
+       "letters": "TACTICS",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "STRATEGY",
+       "letters": "STRATEGY",
+       "row": 8,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "MOMENTUM",
+       "letters": "MOMENTUM",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ENDU",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "TEA",
+       "row": 9,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "letters": "TROP",
+       "row": 10,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "letters": "CAPT",
+       "row": 0,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "letters": "TEAO",
+       "row": 4,
+       "col": 7,
+       "direction": "NE"
+      },
+      {
+       "letters": "FINA",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "TETJ",
+       "row": 2,
+       "col": 6,
+       "direction": "SE"
+      },
+      {
+       "letters": "TEAR",
+       "row": 4,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "letters": "VICT",
+       "row": 6,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "COMP",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

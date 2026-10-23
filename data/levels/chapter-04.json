@@ -1,0 +1,2896 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-04",
+ "index": 4,
+ "paletteKey": "legend",
+ "theme": {
+  "fr": "Légendes",
+  "en": "Legends"
+ },
+ "levels": [
+  {
+   "id": "c4-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Chevaliers",
+    "en": "Knights"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 9,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.56,
+    "score": 96,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ICCVDIEAI",
+      "DRHPOEQRO",
+      "OIECNALTA",
+      "NAVIJRCOC",
+      "JRAFFEAUO",
+      "OMLUHYSRE",
+      "NUIORUQNR",
+      "RREILCUOB",
+      "NEREPEEIY"
+     ],
+     "words": [
+      {
+       "display": "CHEVALIER",
+       "letters": "CHEVALIER",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "ÉPÉE",
+       "letters": "EPEE",
+       "row": 8,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "ARMURE",
+       "letters": "ARMURE",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "BOUCLIER",
+       "letters": "BOUCLIER",
+       "row": 7,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "LANCE",
+       "letters": "LANCE",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "CASQUE",
+       "letters": "CASQUE",
+       "row": 3,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "ÉCUYER",
+       "letters": "ECUYER",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "DONJON",
+       "letters": "DONJON",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "TOURNOI",
+       "letters": "TOURNOI",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "FIER",
+       "letters": "FIER",
+       "row": 4,
+       "col": 4,
+       "direction": "NW"
+      },
+      {
+       "display": "ROI",
+       "letters": "ROI",
+       "row": 6,
+       "col": 4,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "DONJ",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "HNEOSUCAE",
+      "EEORTDTDY",
+      "CDLEIHSBR",
+      "NTKMGUAWL",
+      "AVAIENQAA",
+      "LRNINTUSV",
+      "KKMETGNDI",
+      "NDROWSEEH",
+      "NTIRRVIHC"
+     ],
+     "words": [
+      {
+       "display": "CHIVALRY",
+       "letters": "CHIVALRY",
+       "row": 8,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "DUNGEON",
+       "letters": "DUNGEON",
+       "row": 6,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "KNIGHT",
+       "letters": "KNIGHT",
+       "row": 6,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "SWORD",
+       "letters": "SWORD",
+       "row": 7,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "ARMOR",
+       "letters": "ARMOR",
+       "row": 4,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "SHIELD",
+       "letters": "SHIELD",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "LANCE",
+       "letters": "LANCE",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "HELMET",
+       "letters": "HELMET",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "SQUIRE",
+       "letters": "SQUIRE",
+       "row": 5,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "BANNER",
+       "letters": "BANNER",
+       "row": 2,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "KING",
+       "letters": "KING",
+       "row": 3,
+       "col": 2,
+       "direction": "SE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CHIV",
+       "row": 8,
+       "col": 8,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c4-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Dragons",
+    "en": "Dragons"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 9,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.67,
+    "score": 98,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "SOUFFLETG",
+      "ETEILNTOR",
+      "LNFNRAELI",
+      "LOEENIMOF",
+      "IGVISLAMF",
+      "AAEMIEFCE",
+      "CRSSZSERE",
+      "EDEEMUFOE",
+      "MTRESORSN"
+     ],
+     "words": [
+      {
+       "display": "ÉCAILLES",
+       "letters": "ECAILLES",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "TANIÈRE",
+       "letters": "TANIERE",
+       "row": 1,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "CAVERNE",
+       "letters": "CAVERNE",
+       "row": 6,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "DRAGON",
+       "letters": "DRAGON",
+       "row": 7,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "FLAMME",
+       "letters": "FLAMME",
+       "row": 0,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "TRÉSOR",
+       "letters": "TRESOR",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "GRIFFE",
+       "letters": "GRIFFE",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "SOUFFLE",
+       "letters": "SOUFFLE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "AILES",
+       "letters": "AILES",
+       "row": 2,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "FUMÉE",
+       "letters": "FUMEE",
+       "row": 7,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "FEU",
+       "letters": "FEU",
+       "row": 2,
+       "col": 2,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ECAI",
+       "row": 6,
+       "col": 8,
+       "direction": "NW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "AGNRHRFRO",
+      "GFHRRONFK",
+      "NNTIMOSRS",
+      "EOASGNIWT",
+      "SLEACSTNC",
+      "DNREVACCL",
+      "EDBEMALFA",
+      "TREASUREW",
+      "ERIFEKOMS"
+     ],
+     "words": [
+      {
+       "display": "SCALES",
+       "letters": "SCALES",
+       "row": 3,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "LAIR",
+       "letters": "LAIR",
+       "row": 4,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "CAVERN",
+       "letters": "CAVERN",
+       "row": 5,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "DRAGON",
+       "letters": "DRAGON",
+       "row": 6,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "FLAME",
+       "letters": "FLAME",
+       "row": 6,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "TREASURE",
+       "letters": "TREASURE",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CLAWS",
+       "letters": "CLAWS",
+       "row": 4,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "WINGS",
+       "letters": "WINGS",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "BREATH",
+       "letters": "BREATH",
+       "row": 6,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "SMOKE",
+       "letters": "SMOKE",
+       "row": 8,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "FIRE",
+       "letters": "FIRE",
+       "row": 8,
+       "col": 3,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SMO",
+       "row": 3,
+       "col": 3,
+       "direction": "NE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c4-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Magie",
+    "en": "Magic"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.57,
+    "score": 103,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "VREICROSSO",
+      "GMFLECMOEA",
+      "RALNIJBRNF",
+      "IGEOMPATUL",
+      "MIURIOGIRA",
+      "OCIDHTULOT",
+      "IIEUCIEEES",
+      "RECALOTGRI",
+      "ENCHANTEUR",
+      "MGRCTGETNC"
+     ],
+     "words": [
+      {
+       "display": "SORCIER",
+       "letters": "SORCIER",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "POTION",
+       "letters": "POTION",
+       "row": 3,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "GRIMOIRE",
+       "letters": "GRIMOIRE",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "BAGUETTE",
+       "letters": "BAGUETTE",
+       "row": 2,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "ENCHANTEUR",
+       "letters": "ENCHANTEUR",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SORTILÈGE",
+       "letters": "SORTILEGE",
+       "row": 0,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "MAGICIEN",
+       "letters": "MAGICIEN",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "CHAUDRON",
+       "letters": "CHAUDRON",
+       "row": 9,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "ALCHIMIE",
+       "letters": "ALCHIMIE",
+       "row": 8,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "CRISTAL",
+       "letters": "CRISTAL",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "RUNES",
+       "letters": "RUNES",
+       "row": 4,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "ELFE",
+       "letters": "ELFE",
+       "row": 3,
+       "col": 2,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "RUN",
+       "row": 7,
+       "col": 8,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "YCULATSYRC",
+      "EMPMRKBLOU",
+      "NAECHONCNR",
+      "CGWHQOIAPA",
+      "HIIDCBAUOZ",
+      "ACZRELFLTI",
+      "NIANNLADIW",
+      "TARERECROS",
+      "ENDRTPPONO",
+      "RRUNESDNAW"
+     ],
+     "words": [
+      {
+       "display": "SPELLBOOK",
+       "letters": "SPELLBOOK",
+       "row": 9,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "ENCHANTER",
+       "letters": "ENCHANTER",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SORCERER",
+       "letters": "SORCERER",
+       "row": 7,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "MAGICIAN",
+       "letters": "MAGICIAN",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "CAULDRON",
+       "letters": "CAULDRON",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "ALCHEMY",
+       "letters": "ALCHEMY",
+       "row": 6,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "CRYSTAL",
+       "letters": "CRYSTAL",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "WIZARD",
+       "letters": "WIZARD",
+       "row": 3,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "POTION",
+       "letters": "POTION",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "WAND",
+       "letters": "WAND",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "RUNES",
+       "letters": "RUNES",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ELF",
+       "letters": "ELF",
+       "row": 5,
+       "col": 4,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "WIZARU",
+       "row": 6,
+       "col": 9,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c4-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Créatures",
+    "en": "Creatures"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.68,
+    "score": 106,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ORGOBELING",
+      "FNOFFIRGOE",
+      "OAORCSVETA",
+      "MINOTAUREN",
+      "RTRTMGOUOT",
+      "RNOPOLPAQN",
+      "EOIBLMATUU",
+      "JREAPHENIX",
+      "ELSIRENEUE",
+      "ROGEACMCQE"
+     ],
+     "words": [
+      {
+       "display": "MINOTAURE",
+       "letters": "MINOTAURE",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CENTAURE",
+       "letters": "CENTAURE",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "LICORNE",
+       "letters": "LICORNE",
+       "row": 0,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "GRIFFON",
+       "letters": "GRIFFON",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "GOBELIN",
+       "letters": "GOBELIN",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "VAMPIRE",
+       "letters": "VAMPIRE",
+       "row": 2,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "FANTÔME",
+       "letters": "FANTOME",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "SIRÈNE",
+       "letters": "SIRENE",
+       "row": 8,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PHÉNIX",
+       "letters": "PHENIX",
+       "row": 7,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "GÉANT",
+       "letters": "GEANT",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "TROLL",
+       "letters": "TROLL",
+       "row": 2,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "ORC",
+       "letters": "ORC",
+       "row": 2,
+       "col": 2,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "GEACM",
+       "row": 9,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "GOBEL",
+       "row": 4,
+       "col": 5,
+       "direction": "SW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "MERMAIDTTL",
+      "NIFFIRGLEE",
+      "IDNLLORTOP",
+      "LNROCINUOR",
+      "BEAWTNAIGE",
+      "OLREUALAGC",
+      "GMGRIFUXOH",
+      "PHOENIXRBA",
+      "RELWMPCNLU",
+      "ERIPMAVHIN"
+     ],
+     "words": [
+      {
+       "display": "LEPRECHAUN",
+       "letters": "LEPRECHAUN",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "WEREWOLF",
+       "letters": "WEREWOLF",
+       "row": 8,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "MINOTAUR",
+       "letters": "MINOTAUR",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "UNICORN",
+       "letters": "UNICORN",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "GRIFFIN",
+       "letters": "GRIFFIN",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "GOBLIN",
+       "letters": "GOBLIN",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "VAMPIRE",
+       "letters": "VAMPIRE",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "PHOENIX",
+       "letters": "PHOENIX",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "MERMAID",
+       "letters": "MERMAID",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "GIANT",
+       "letters": "GIANT",
+       "row": 4,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "TROLL",
+       "letters": "TROLL",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ORC",
+       "letters": "ORC",
+       "row": 6,
+       "col": 8,
+       "direction": "SW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "GRIF",
+       "row": 6,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "GOBLI",
+       "row": 5,
+       "col": 8,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c4-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Mythes grecs",
+    "en": "Greek myths"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.71,
+    "score": 111,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "AATTITANDN",
+      "TITAEROLYM",
+      "HEESUDEMEE",
+      "EHTNIRYBAL",
+      "NEHERCULEL",
+      "ASSUEZNLRI",
+      "AOESAGEPAH",
+      "PGOLYMPECC",
+      "DLEERDYHIA",
+      "IOBPNHOHES"
+     ],
+     "words": [
+      {
+       "display": "LABYRINTHE",
+       "letters": "LABYRINTHE",
+       "row": 3,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "HERCULE",
+       "letters": "HERCULE",
+       "row": 4,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ACHILLE",
+       "letters": "ACHILLE",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "POSÉIDON",
+       "letters": "POSEIDON",
+       "row": 7,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "OLYMPE",
+       "letters": "OLYMPE",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ODYSSÉE",
+       "letters": "ODYSSEE",
+       "row": 9,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "ATHÉNA",
+       "letters": "ATHENA",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "MÉDUSE",
+       "letters": "MEDUSE",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PÉGASE",
+       "letters": "PEGASE",
+       "row": 6,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ICARE",
+       "letters": "ICARE",
+       "row": 8,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "TITAN",
+       "letters": "TITAN",
+       "row": 0,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "HYDRE",
+       "letters": "HYDRE",
+       "row": 8,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ZEUS",
+       "letters": "ZEUS",
+       "row": 5,
+       "col": 5,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PEGA",
+       "row": 9,
+       "col": 3,
+       "direction": "NW"
+      },
+      {
+       "letters": "TITAE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "OLYM",
+       "row": 1,
+       "col": 6,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "MEDUOESYSI",
+      "UAHSLEUDHA",
+      "APTUYSSOYS",
+      "NONRMEADDU",
+      "ESIAPLGYRD",
+      "HERCULESAE",
+      "TIYISIPSSM",
+      "ADBURHZEUS",
+      "LOAEHCHYDT",
+      "ANLZNATITL"
+     ],
+     "words": [
+      {
+       "display": "LABYRINTH",
+       "letters": "LABYRINTH",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "HERCULES",
+       "letters": "HERCULES",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ACHILLES",
+       "letters": "ACHILLES",
+       "row": 9,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "POSEIDON",
+       "letters": "POSEIDON",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "OLYMPUS",
+       "letters": "OLYMPUS",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "ODYSSEY",
+       "letters": "ODYSSEY",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "ATHENA",
+       "letters": "ATHENA",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "MEDUSA",
+       "letters": "MEDUSA",
+       "row": 6,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "PEGASUS",
+       "letters": "PEGASUS",
+       "row": 6,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "ICARUS",
+       "letters": "ICARUS",
+       "row": 6,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "TITAN",
+       "letters": "TITAN",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "HYDRA",
+       "letters": "HYDRA",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "ZEUS",
+       "letters": "ZEUS",
+       "row": 7,
+       "col": 6,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MEDU",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "HYD",
+       "row": 8,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "letters": "ZEU",
+       "row": 9,
+       "col": 3,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c4-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Légendes du Nord",
+    "en": "Northern legends"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.82,
+    "score": 115,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EOERHCKERHU",
+      "ISTRAGNAROB",
+      "VALHALLADEG",
+      "ADMJOLNIRLU",
+      "NDRADDNSARE",
+      "IREIRREUGOR",
+      "DDROARNINHR",
+      "NNJFKRUIATI",
+      "AFDEKNRCRKE",
+      "CKRNAIHROJF",
+      "SRNAREDLKEO"
+     ],
+     "words": [
+      {
+       "display": "SCANDINAVIE",
+       "letters": "SCANDINAVIE",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "BERSERKER",
+       "letters": "BERSERKER",
+       "row": 1,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "RAGNAROK",
+       "letters": "RAGNAROK",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "VALHALLA",
+       "letters": "VALHALLA",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "DRAKKAR",
+       "letters": "DRAKKAR",
+       "row": 4,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "MJOLNIR",
+       "letters": "MJOLNIR",
+       "row": 3,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "GUERRIER",
+       "letters": "GUERRIER",
+       "row": 5,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "ODIN",
+       "letters": "ODIN",
+       "row": 1,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "THOR",
+       "letters": "THOR",
+       "row": 7,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "LOKI",
+       "letters": "LOKI",
+       "row": 10,
+       "col": 7,
+       "direction": "NE"
+      },
+      {
+       "display": "RUNE",
+       "letters": "RUNE",
+       "row": 8,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "HACHE",
+       "letters": "HACHE",
+       "row": 6,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "FJORD",
+       "letters": "FJORD",
+       "row": 8,
+       "col": 1,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "RAGNARO",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "FJOR",
+       "row": 9,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "GUERRI",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ICAEIOOLENL",
+      "USNURTKJODO",
+      "NKKOHTENURI",
+      "HRPOLDOAOOA",
+      "RARIRINLOJM",
+      "AVALHALLAFI",
+      "NLOJMSNIDOT",
+      "GIKOLRGGIEA",
+      "AIVANIDNACS",
+      "RAXWARRIORI",
+      "REKRESREBLD"
+     ],
+     "words": [
+      {
+       "display": "SCANDINAVIA",
+       "letters": "SCANDINAVIA",
+       "row": 8,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "BERSERKER",
+       "letters": "BERSERKER",
+       "row": 10,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "RAGNAROK",
+       "letters": "RAGNAROK",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "VALHALLA",
+       "letters": "VALHALLA",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LONGSHIP",
+       "letters": "LONGSHIP",
+       "row": 10,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "MJOLNIR",
+       "letters": "MJOLNIR",
+       "row": 4,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "WARRIOR",
+       "letters": "WARRIOR",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "ODIN",
+       "letters": "ODIN",
+       "row": 6,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "THOR",
+       "letters": "THOR",
+       "row": 1,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "display": "LOKI",
+       "letters": "LOKI",
+       "row": 7,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "RUNE",
+       "letters": "RUNE",
+       "row": 2,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "AXE",
+       "letters": "AXE",
+       "row": 8,
+       "col": 3,
+       "direction": "SW"
+      },
+      {
+       "display": "FJORD",
+       "letters": "FJORD",
+       "row": 5,
+       "col": 9,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MJOL",
+       "row": 6,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "RUNS",
+       "row": 1,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "RAGNARHN",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c4-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Hors-la-loi",
+    "en": "Outlaws"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.8,
+    "score": 119,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "LINEPACSOMM",
+      "SMAHGNITTON",
+      "DHVFIEBFAIA",
+      "NEEDLLLIVBI",
+      "ADNRIEEREOI",
+      "BATNWSCEROR",
+      "BMUAAOEHNOC",
+      "TEROFIOSERA",
+      "LAISHERDVEL",
+      "NDETIDNABHR",
+      "AOREHCRAMSI"
+     ],
+     "words": [
+      {
+       "display": "NOTTINGHAM",
+       "letters": "NOTTINGHAM",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "AVENTURIER",
+       "letters": "AVENTURIER",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "SHERWOOD",
+       "letters": "SHERWOOD",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "MARIANNE",
+       "letters": "MARIANNE",
+       "row": 10,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "TAVERNE",
+       "letters": "TAVERNE",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "BANDIT",
+       "letters": "BANDIT",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "FLÈCHE",
+       "letters": "FLECHE",
+       "row": 2,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "SHÉRIF",
+       "letters": "SHERIF",
+       "row": 7,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "ARCHER",
+       "letters": "ARCHER",
+       "row": 10,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CIBLE",
+       "letters": "CIBLE",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "CAPE",
+       "letters": "CAPE",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "FORÊT",
+       "letters": "FORET",
+       "row": 7,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "LAC",
+       "letters": "LAC",
+       "row": 8,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "ROI",
+       "letters": "ROI",
+       "row": 5,
+       "col": 8,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SHEROO",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "letters": "BANDSL",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "SHER",
+       "row": 8,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "BAND",
+       "row": 6,
+       "col": 0,
+       "direction": "NE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "NMNRUTNEVDA",
+      "FOWEMARIANB",
+      "OITAFDREPAC",
+      "RRATFVICNTT",
+      "EEVTIEIDHAO",
+      "SVEIRNIRWET",
+      "TARGETGOARR",
+      "ATNTHURHFMA",
+      "EIRSSRRLAKE",
+      "KALAAEETNMR",
+      "BISHERWOODV"
+     ],
+     "words": [
+      {
+       "display": "NOTTINGHAM",
+       "letters": "NOTTINGHAM",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "ADVENTURER",
+       "letters": "ADVENTURER",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "SHERWOOD",
+       "letters": "SHERWOOD",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "MARIAN",
+       "letters": "MARIAN",
+       "row": 1,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "TAVERN",
+       "letters": "TAVERN",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "BANDIT",
+       "letters": "BANDIT",
+       "row": 1,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "ARROW",
+       "letters": "ARROW",
+       "row": 9,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "display": "SHERIFF",
+       "letters": "SHERIFF",
+       "row": 8,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "ARCHER",
+       "letters": "ARCHER",
+       "row": 1,
+       "col": 5,
+       "direction": "SE"
+      },
+      {
+       "display": "TARGET",
+       "letters": "TARGET",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CAPE",
+       "letters": "CAPE",
+       "row": 2,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "FOREST",
+       "letters": "FOREST",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "LAKE",
+       "letters": "LAKE",
+       "row": 8,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "display": "KING",
+       "letters": "KING",
+       "row": 9,
+       "col": 0,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ADVENTURNM",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "MARI",
+       "row": 7,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "letters": "TAVERI",
+       "row": 7,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "letters": "LAK",
+       "row": 9,
+       "col": 2,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c4-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Contes sombres",
+    "en": "Dark tales"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.89,
+    "score": 124,
+    "decoys": 6
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "GMEFANTOMEC",
+      "ILTSORCIERE",
+      "ERTCEPSAAER",
+      "QEENGIARAIC",
+      "BALENEBMOTU",
+      "CREPUSCULEE",
+      "EAUNZOMBIMI",
+      "PIQMUTTMCIL",
+      "SGSCELOCRCP",
+      "MOMNIMMBMOZ",
+      "SQUELEHIBOU"
+     ],
+     "words": [
+      {
+       "display": "CRÉPUSCULE",
+       "letters": "CREPUSCULE",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CIMETIÈRE",
+       "letters": "CIMETIERE",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "ARAIGNÉE",
+       "letters": "ARAIGNEE",
+       "row": 3,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "SQUELETTE",
+       "letters": "SQUELETTE",
+       "row": 8,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "SORCIÈRE",
+       "letters": "SORCIERE",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "CERCUEIL",
+       "letters": "CERCUEIL",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "FANTÔME",
+       "letters": "FANTOME",
+       "row": 0,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "SPECTRE",
+       "letters": "SPECTRE",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MOMIE",
+       "letters": "MOMIE",
+       "row": 9,
+       "col": 5,
+       "direction": "NE"
+      },
+      {
+       "display": "ZOMBI",
+       "letters": "ZOMBI",
+       "row": 6,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "BRUME",
+       "letters": "BRUME",
+       "row": 4,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "LUNE",
+       "letters": "LUNE",
+       "row": 8,
+       "col": 5,
+       "direction": "NW"
+      },
+      {
+       "display": "HIBOU",
+       "letters": "HIBOU",
+       "row": 10,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "TOMBE",
+       "letters": "TOMBE",
+       "row": 4,
+       "col": 9,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SQUELE",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "MOMNI",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "ZOMB",
+       "row": 9,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "SPEC",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "ARAIG",
+       "row": 4,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "letters": "TOM",
+       "row": 7,
+       "col": 6,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "NSCMFMUMMYS",
+      "HGOEOSPIDPO",
+      "ORFIBOMOEGR",
+      "RAFBMRNCBNC",
+      "FVIMOCTRNKE",
+      "FENOTELEKSR",
+      "OYWZRRLDFOG",
+      "CANDLELIGHT",
+      "EROOESMPOBY",
+      "EDSODSCSYWR",
+      "ISTOMGTOCML"
+     ],
+     "words": [
+      {
+       "display": "CANDLELIGHT",
+       "letters": "CANDLELIGHT",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "GRAVEYARD",
+       "letters": "GRAVEYARD",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "SKELETON",
+       "letters": "SKELETON",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "SORCERESS",
+       "letters": "SORCERESS",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "COFFIN",
+       "letters": "COFFIN",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "GHOST",
+       "letters": "GHOST",
+       "row": 6,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "SPECTER",
+       "letters": "SPECTER",
+       "row": 0,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "MUMMY",
+       "letters": "MUMMY",
+       "row": 0,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "ZOMBIE",
+       "letters": "ZOMBIE",
+       "row": 6,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "FOG",
+       "letters": "FOG",
+       "row": 6,
+       "col": 8,
+       "direction": "E"
+      },
+      {
+       "display": "MOON",
+       "letters": "MOON",
+       "row": 0,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "OWL",
+       "letters": "OWL",
+       "row": 8,
+       "col": 8,
+       "direction": "SE"
+      },
+      {
+       "display": "TOMB",
+       "letters": "TOMB",
+       "row": 5,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "SPIDER",
+       "letters": "SPIDER",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MOEG",
+       "row": 2,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "letters": "COFFRO",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "MOOA",
+       "row": 10,
+       "col": 4,
+       "direction": "NW"
+      },
+      {
+       "letters": "SORCER",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "letters": "TOM",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "SPID",
+       "row": 1,
+       "col": 5,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c4-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Pirates",
+    "en": "Pirates"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.94,
+    "score": 128,
+    "decoys": 6
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ASROCTSTNAC",
+      "LBHETORFPBC",
+      "MOUSSAILLON",
+      "NUMCCOMIARO",
+      "GCRANECBBAN",
+      "EAELOSSUOBA",
+      "TNLERIASROC",
+      "RIDIPONTDRS",
+      "AELIOVOIADU",
+      "CRHUBNAEGCO",
+      "DTEUQORREPM"
+     ],
+     "words": [
+      {
+       "display": "MOUSSAILLON",
+       "letters": "MOUSSAILLON",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "FLIBUSTIER",
+       "letters": "FLIBUSTIER",
+       "row": 1,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "BOUCANIER",
+       "letters": "BOUCANIER",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "PERROQUET",
+       "letters": "PERROQUET",
+       "row": 10,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ABORDAGE",
+       "letters": "ABORDAGE",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "CORSAIRE",
+       "letters": "CORSAIRE",
+       "row": 6,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "BOUSSOLE",
+       "letters": "BOUSSOLE",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "GALION",
+       "letters": "GALION",
+       "row": 4,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "CANON",
+       "letters": "CANON",
+       "row": 6,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "CARTE",
+       "letters": "CARTE",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "CRÂNE",
+       "letters": "CRANE",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "VOILE",
+       "letters": "VOILE",
+       "row": 8,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "RHUM",
+       "letters": "RHUM",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "MÂT",
+       "letters": "MAT",
+       "row": 3,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "PONT",
+       "letters": "PONT",
+       "row": 7,
+       "col": 4,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CORSA",
+       "row": 0,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "CART",
+       "row": 3,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "letters": "RHU",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "ABOR",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "letters": "MOUS",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "letters": "ABORD",
+       "row": 4,
+       "col": 9,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "AANCCUBMAST",
+      "CSSALTUCAOA",
+      "OCCNLECBRPV",
+      "MNONNACRDEI",
+      "PEPRIVATEER",
+      "AMAQEPNSCCP",
+      "SHIPWRECKED",
+      "SKGALLEONUD",
+      "RUUBOARDING",
+      "IIMLRUMDEYE",
+      "BSAILPILRDB"
+     ],
+     "words": [
+      {
+       "display": "SHIPWRECKED",
+       "letters": "SHIPWRECKED",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "BUCCANEER",
+       "letters": "BUCCANEER",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "PRIVATEER",
+       "letters": "PRIVATEER",
+       "row": 4,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "BOARDING",
+       "letters": "BOARDING",
+       "row": 8,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "GALLEON",
+       "letters": "GALLEON",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PARROT",
+       "letters": "PARROT",
+       "row": 5,
+       "col": 5,
+       "direction": "NE"
+      },
+      {
+       "display": "COMPASS",
+       "letters": "COMPASS",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "CUTLASS",
+       "letters": "CUTLASS",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CANNON",
+       "letters": "CANNON",
+       "row": 3,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MAP",
+       "letters": "MAP",
+       "row": 0,
+       "col": 7,
+       "direction": "SE"
+      },
+      {
+       "display": "SKULL",
+       "letters": "SKULL",
+       "row": 6,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "SAIL",
+       "letters": "SAIL",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "RUM",
+       "letters": "RUM",
+       "row": 9,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "MAST",
+       "letters": "MAST",
+       "row": 0,
+       "col": 7,
+       "direction": "E"
+      },
+      {
+       "display": "DECK",
+       "letters": "DECK",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CANN",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "letters": "SKU",
+       "row": 5,
+       "col": 7,
+       "direction": "SE"
+      },
+      {
+       "letters": "BUCC",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "letters": "DEC",
+       "row": 7,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "letters": "PRIVA",
+       "row": 5,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "letters": "DEYE",
+       "row": 9,
+       "col": 7,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c4-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Royaume enchanté",
+    "en": "Enchanted kingdom"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1.0,
+    "score": 148,
+    "decoys": 10
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ENCHERTPECSL",
+      "PPHPNROYAUME",
+      "ODEACELEGEEG",
+      "PRVAHTIERPME",
+      "EAAPARCHEMIN",
+      "EGLENOOSIVFD",
+      "ROIETNROCODE",
+      "TNEMENNORUOC",
+      "EFRNMTETOTNN",
+      "FORTERESSEJI",
+      "LPRINCESSEOR",
+      "ENORTCOURONP"
+     ],
+     "words": [
+      {
+       "display": "COURONNEMENT",
+       "letters": "COURONNEMENT",
+       "row": 7,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "ENCHANTEMENT",
+       "letters": "ENCHANTEMENT",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "FORTERESSE",
+       "letters": "FORTERESSE",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CHEVALIER",
+       "letters": "CHEVALIER",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PRINCESSE",
+       "letters": "PRINCESSE",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "PARCHEMIN",
+       "letters": "PARCHEMIN",
+       "row": 4,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "LICORNE",
+       "letters": "LICORNE",
+       "row": 2,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "SORCIER",
+       "letters": "SORCIER",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "LÉGENDE",
+       "letters": "LEGENDE",
+       "row": 0,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "ROYAUME",
+       "letters": "ROYAUME",
+       "row": 1,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "DONJON",
+       "letters": "DONJON",
+       "row": 6,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "DRAGON",
+       "letters": "DRAGON",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "ÉPOPÉE",
+       "letters": "EPOPEE",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "TRÔNE",
+       "letters": "TRONE",
+       "row": 11,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "SCEPTRE",
+       "letters": "SCEPTRE",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "ÉPÉE",
+       "letters": "EPEE",
+       "row": 4,
+       "col": 8,
+       "direction": "NE"
+      },
+      {
+       "display": "FÉE",
+       "letters": "FEE",
+       "row": 8,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "ELFE",
+       "letters": "ELFE",
+       "row": 11,
+       "col": 0,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "COURON",
+       "row": 11,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "letters": "FORT",
+       "row": 5,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "letters": "EPER",
+       "row": 0,
+       "col": 4,
+       "direction": "SW"
+      },
+      {
+       "letters": "PRINC",
+       "row": 11,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "letters": "TRON",
+       "row": 3,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "letters": "TRO",
+       "row": 8,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "letters": "EPE",
+       "row": 2,
+       "col": 2,
+       "direction": "NW"
+      },
+      {
+       "letters": "LEGE",
+       "row": 2,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "letters": "ENCH",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "EPAA",
+       "row": 5,
+       "col": 3,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "THRONFAIRYDL",
+      "ITNEMTNAHCNE",
+      "ROWSKINGDOMG",
+      "RMPEETHGINKE",
+      "RNIRPRHTADDN",
+      "EEEPICARFAUD",
+      "THROUNICORNK",
+      "PFLEOECRENGI",
+      "EPARCHMENTEN",
+      "CFORTRESSOOG",
+      "SCDRAGONWSND",
+      "PNYDROWSEPKO"
+     ],
+     "words": [
+      {
+       "display": "ENCHANTMENT",
+       "letters": "ENCHANTMENT",
+       "row": 1,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "CORONATION",
+       "letters": "CORONATION",
+       "row": 10,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "FORTRESS",
+       "letters": "FORTRESS",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "KNIGHT",
+       "letters": "KNIGHT",
+       "row": 3,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "PRINCESS",
+       "letters": "PRINCESS",
+       "row": 3,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "PARCHMENT",
+       "letters": "PARCHMENT",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "UNICORN",
+       "letters": "UNICORN",
+       "row": 6,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "SORCERER",
+       "letters": "SORCERER",
+       "row": 11,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "LEGEND",
+       "letters": "LEGEND",
+       "row": 0,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "KINGDOM",
+       "letters": "KINGDOM",
+       "row": 2,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "DUNGEON",
+       "letters": "DUNGEON",
+       "row": 4,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "DRAGON",
+       "letters": "DRAGON",
+       "row": 10,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "EPIC",
+       "letters": "EPIC",
+       "row": 5,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "THRONE",
+       "letters": "THRONE",
+       "row": 3,
+       "col": 5,
+       "direction": "SE"
+      },
+      {
+       "display": "SCEPTER",
+       "letters": "SCEPTER",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "SWORD",
+       "letters": "SWORD",
+       "row": 11,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "FAIRY",
+       "letters": "FAIRY",
+       "row": 0,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "ELF",
+       "letters": "ELF",
+       "row": 7,
+       "col": 3,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "EPI",
+       "row": 3,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "letters": "KINGDO",
+       "row": 6,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "letters": "SWOR",
+       "row": 2,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "letters": "THRON",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "EPMR",
+       "row": 3,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "letters": "EPKO",
+       "row": 11,
+       "col": 8,
+       "direction": "E"
+      },
+      {
+       "letters": "THRO",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "FAI",
+       "row": 5,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "PRIN",
+       "row": 4,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "SWO",
+       "row": 11,
+       "col": 7,
+       "direction": "NE"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

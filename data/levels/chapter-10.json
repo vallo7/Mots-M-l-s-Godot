@@ -1,0 +1,3178 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-10",
+ "index": 10,
+ "paletteKey": "workshop",
+ "theme": {
+  "fr": "Métiers",
+  "en": "Careers"
+ },
+ "levels": [
+  {
+   "id": "c10-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Santé",
+    "en": "Healthcare"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.61,
+    "score": 106,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EUGNIRESJN",
+      "TSSENSSNEC",
+      "NLOIFSEITL",
+      "EATGICCCSI",
+      "MTURRANEIN",
+      "EIPUMLEDTI",
+      "SPLRIPGENQ",
+      "NOAIEERMEU",
+      "AHCHRLUMDE",
+      "PQSCNIOSQT"
+     ],
+     "words": [
+      {
+       "display": "MÉDECIN",
+       "letters": "MEDECIN",
+       "row": 7,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "INFIRMIER",
+       "letters": "INFIRMIER",
+       "row": 0,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "CHIRURGIEN",
+       "letters": "CHIRURGIEN",
+       "row": 9,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "PHARMACIEN",
+       "letters": "PHARMACIEN",
+       "row": 9,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "DENTISTE",
+       "letters": "DENTISTE",
+       "row": 8,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "HÔPITAL",
+       "letters": "HOPITAL",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "URGENCES",
+       "letters": "URGENCES",
+       "row": 8,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "SCALPEL",
+       "letters": "SCALPEL",
+       "row": 2,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "SERINGUE",
+       "letters": "SERINGUE",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PANSEMENT",
+       "letters": "PANSEMENT",
+       "row": 9,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "CLINIQUE",
+       "letters": "CLINIQUE",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "SOIN",
+       "letters": "SOIN",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SOTU",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "letters": "SCALP",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RTTGCINILC",
+      "ORSYRINGEL",
+      "TEIITEUZPI",
+      "CUCHTRRHLN",
+      "ORAEMNSAAI",
+      "DEMERGENCY",
+      "SURGEONDSK",
+      "RLATIPSOHN",
+      "CBHEGREMEE",
+      "EYPBANDAGE"
+     ],
+     "words": [
+      {
+       "display": "DOCTOR",
+       "letters": "DOCTOR",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "NURSE",
+       "letters": "NURSE",
+       "row": 1,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "SURGEON",
+       "letters": "SURGEON",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PHARMACIST",
+       "letters": "PHARMACIST",
+       "row": 9,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "DENTIST",
+       "letters": "DENTIST",
+       "row": 6,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "HOSPITAL",
+       "letters": "HOSPITAL",
+       "row": 7,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "EMERGENCY",
+       "letters": "EMERGENCY",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SCALPEL",
+       "letters": "SCALPEL",
+       "row": 6,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "SYRINGE",
+       "letters": "SYRINGE",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "BANDAGE",
+       "letters": "BANDAGE",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "CLINIC",
+       "letters": "CLINIC",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "CARE",
+       "letters": "CARE",
+       "row": 5,
+       "col": 8,
+       "direction": "NW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "EMERGE",
+       "row": 8,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "CLINI",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c10-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Artisans",
+    "en": "Craftsmen"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.55,
+    "score": 109,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "CVCUIRLUTH",
+      "RREITOPAFC",
+      "LRAOCUIUOR",
+      "UTAILLEURE",
+      "TREILETAGI",
+      "HBIJOUTIER",
+      "ITOURNEURR",
+      "ETSINEBEOE",
+      "RUENNATANV",
+      "NREISIUNEM"
+     ],
+     "words": [
+      {
+       "display": "MENUISIER",
+       "letters": "MENUISIER",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "FORGERON",
+       "letters": "FORGERON",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "POTIER",
+       "letters": "POTIER",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "TAILLEUR",
+       "letters": "TAILLEUR",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "COUTURIER",
+       "letters": "COUTURIER",
+       "row": 1,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "BIJOUTIER",
+       "letters": "BIJOUTIER",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TANNEUR",
+       "letters": "TANNEUR",
+       "row": 8,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "TOURNEUR",
+       "letters": "TOURNEUR",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LUTHIER",
+       "letters": "LUTHIER",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "CUIR",
+       "letters": "CUIR",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "VERRIER",
+       "letters": "VERRIER",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "ÉBÉNISTE",
+       "letters": "EBENISTE",
+       "row": 7,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "ATELIER",
+       "letters": "ATELIER",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TAIL",
+       "row": 0,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "letters": "CUI",
+       "row": 2,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "letters": "LUTH",
+       "row": 0,
+       "col": 6,
+       "direction": "E"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "EWEJDOOWSS",
+      "LOCKSMITHS",
+      "WEAVERESOE",
+      "OCARPENTER",
+      "RELEWEJOMT",
+      "KEIIOOOWAS",
+      "SREHTAELKM",
+      "HPOTTEROEA",
+      "OILUTHIORE",
+      "PROLIATMOS"
+     ],
+     "words": [
+      {
+       "display": "CARPENTER",
+       "letters": "CARPENTER",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LOOM",
+       "letters": "LOOM",
+       "row": 6,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "POTTER",
+       "letters": "POTTER",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TAILOR",
+       "letters": "TAILOR",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "SEAMSTRESS",
+       "letters": "SEAMSTRESS",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "JEWELER",
+       "letters": "JEWELER",
+       "row": 4,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "SHOEMAKER",
+       "letters": "SHOEMAKER",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "WEAVER",
+       "letters": "WEAVER",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "LUTHIER",
+       "letters": "LUTHIER",
+       "row": 9,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "LOCKSMITH",
+       "letters": "LOCKSMITH",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "WORKSHOP",
+       "letters": "WORKSHOP",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "LEATHER",
+       "letters": "LEATHER",
+       "row": 6,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "WOOD",
+       "letters": "WOOD",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "JEWE",
+       "row": 0,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "letters": "LUTHI",
+       "row": 8,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "WOO",
+       "row": 5,
+       "col": 7,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c10-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Chantier",
+    "en": "Construction"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.71,
+    "score": 112,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "PERCEUSEET",
+      "IQRHGENMSN",
+      "EIMARTEAUE",
+      "LRRNUCMCEM",
+      "LBITENIOTI",
+      "EUQIRBCNEC",
+      "UTREIRTALP",
+      "RUERVUOCLE",
+      "TBULLDOZER",
+      "EREIBMOLPC"
+     ],
+     "words": [
+      {
+       "display": "MAÇON",
+       "letters": "MACON",
+       "row": 1,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "GRUE",
+       "letters": "GRUE",
+       "row": 1,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "BULLDOZER",
+       "letters": "BULLDOZER",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "BRIQUE",
+       "letters": "BRIQUE",
+       "row": 5,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "CIMENT",
+       "letters": "CIMENT",
+       "row": 5,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "PELLETEUSE",
+       "letters": "PELLETEUSE",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "PLÂTRIER",
+       "letters": "PLATRIER",
+       "row": 6,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "MARTEAU",
+       "letters": "MARTEAU",
+       "row": 2,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "CHANTIER",
+       "letters": "CHANTIER",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "PLOMBIER",
+       "letters": "PLOMBIER",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "COUVREUR",
+       "letters": "COUVREUR",
+       "row": 7,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "TRUELLE",
+       "letters": "TRUELLE",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "PERCEUSE",
+       "letters": "PERCEUSE",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CIMEN",
+       "row": 5,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "letters": "BRIQ",
+       "row": 4,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "letters": "PERC",
+       "row": 6,
+       "col": 9,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "REMMAHRAFB",
+      "EXCAVATORN",
+      "RDCEUBRIEC",
+      "EPREEECBZM",
+      "TLMIMKRUOL",
+      "SULALEALDE",
+      "AMNASLNLLW",
+      "LBYCROETLO",
+      "PETIRDNMUR",
+      "RROOFEREBT"
+     ],
+     "words": [
+      {
+       "display": "MASON",
+       "letters": "MASON",
+       "row": 4,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "CRANE",
+       "letters": "CRANE",
+       "row": 3,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "BULLDOZER",
+       "letters": "BULLDOZER",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "CEMENT",
+       "letters": "CEMENT",
+       "row": 2,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "EXCAVATOR",
+       "letters": "EXCAVATOR",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "PLASTERER",
+       "letters": "PLASTERER",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "HAMMER",
+       "letters": "HAMMER",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "BRICKLAYER",
+       "letters": "BRICKLAYER",
+       "row": 0,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "FOREMAN",
+       "letters": "FOREMAN",
+       "row": 0,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "PLUMBER",
+       "letters": "PLUMBER",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "ROOFER",
+       "letters": "ROOFER",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TROWEL",
+       "letters": "TROWEL",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "DRILL",
+       "letters": "DRILL",
+       "row": 2,
+       "col": 1,
+       "direction": "SE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CRA",
+       "row": 2,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "letters": "BULL",
+       "row": 3,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "letters": "DRITE",
+       "row": 8,
+       "col": 5,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c10-l04",
+   "number": 4,
+   "theme": {
+    "fr": "École",
+    "en": "School"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.6,
+    "score": 115,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "NRECREATION",
+      "ERULTABLEAU",
+      "LIVECRAYONA",
+      "BCCCSMCHIEA",
+      "AARODSEVRVE",
+      "TNANGIESNEL",
+      "RTYYARPFBLB",
+      "AITRSVRLOEA",
+      "CNHIEUEUORT",
+      "BETROUSSEMP",
+      "TEXAMENAICE"
+     ],
+     "words": [
+      {
+       "display": "ENSEIGNANT",
+       "letters": "ENSEIGNANT",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "PROFESSEUR",
+       "letters": "PROFESSEUR",
+       "row": 9,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "ÉLÈVE",
+       "letters": "ELEVE",
+       "row": 7,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "CARTABLE",
+       "letters": "CARTABLE",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "TABLEAU",
+       "letters": "TABLEAU",
+       "row": 1,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "CRAYON",
+       "letters": "CRAYON",
+       "row": 2,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "TROUSSE",
+       "letters": "TROUSSE",
+       "row": 9,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "RÉCRÉATION",
+       "letters": "RECREATION",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "CANTINE",
+       "letters": "CANTINE",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "EXAMEN",
+       "letters": "EXAMEN",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DIPLÔME",
+       "letters": "DIPLOME",
+       "row": 4,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "UNIVERSITÉ",
+       "letters": "UNIVERSITE",
+       "row": 1,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "BAC",
+       "letters": "BAC",
+       "row": 1,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "LEÇON",
+       "letters": "LECON",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CRAY",
+       "row": 3,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "letters": "TABLEAA",
+       "row": 8,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "letters": "TROU",
+       "row": 8,
+       "col": 10,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "EOBKCALBBGP",
+      "IROTALUCLAC",
+      "AMOLPIDNABA",
+      "LSOSSCHOCLK",
+      "ISIASNZTKOT",
+      "REHCAETEBON",
+      "ECCNBPFBOHE",
+      "CEXAMEIOACD",
+      "ERASERRORSU",
+      "HOMEWORKDPT",
+      "CANTEENAEOS"
+     ],
+     "words": [
+      {
+       "display": "TEACHER",
+       "letters": "TEACHER",
+       "row": 5,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "PROFESSOR",
+       "letters": "PROFESSOR",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "STUDENT",
+       "letters": "STUDENT",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "SCHOOLBAG",
+       "letters": "SCHOOLBAG",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "BLACKBOARD",
+       "letters": "BLACKBOARD",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "PENCIL",
+       "letters": "PENCIL",
+       "row": 6,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "NOTEBOOK",
+       "letters": "NOTEBOOK",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "RECESS",
+       "letters": "RECESS",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "CANTEEN",
+       "letters": "CANTEEN",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "EXAM",
+       "letters": "EXAM",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DIPLOMA",
+       "letters": "DIPLOMA",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "CALCULATOR",
+       "letters": "CALCULATOR",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "ERASER",
+       "letters": "ERASER",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "HOMEWORK",
+       "letters": "HOMEWORK",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "BLACKBO",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "RECE",
+       "row": 5,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "SCHO",
+       "row": 3,
+       "col": 4,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c10-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Ferme",
+    "en": "Farm"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.71,
+    "score": 118,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "UGORENGIVUM",
+      "AGRICULTEUR",
+      "EAGACHARRUE",
+      "PTRCNMLAMEL",
+      "UOANVSICOCL",
+      "OPNBEERTIFI",
+      "ROGMLMIESOA",
+      "TREGREBUSIL",
+      "GNVIGNERONU",
+      "COGEHCAVNGO",
+      "IDCLREGATOP"
+     ],
+     "words": [
+      {
+       "display": "AGRICULTEUR",
+       "letters": "AGRICULTEUR",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TRACTEUR",
+       "letters": "TRACTEUR",
+       "row": 1,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "MOISSON",
+       "letters": "MOISSON",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "TROUPEAU",
+       "letters": "TROUPEAU",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ÉTABLE",
+       "letters": "ETABLE",
+       "row": 2,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "GRANGE",
+       "letters": "GRANGE",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "POULAILLER",
+       "letters": "POULAILLER",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "BERGER",
+       "letters": "BERGER",
+       "row": 7,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "VACHE",
+       "letters": "VACHE",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "SEMENCE",
+       "letters": "SEMENCE",
+       "row": 4,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "CHARRUE",
+       "letters": "CHARRUE",
+       "row": 2,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "VIGNERON",
+       "letters": "VIGNERON",
+       "row": 8,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "FOIN",
+       "letters": "FOIN",
+       "row": 5,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "POTAGER",
+       "letters": "POTAGER",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "VIGNERO",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "POTAG",
+       "row": 5,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "letters": "GRAN",
+       "row": 0,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "letters": "SEMENC",
+       "row": 4,
+       "col": 5,
+       "direction": "SW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TAAYEDBDEES",
+      "CEAYHRERRSH",
+      "ANTTAESAUTN",
+      "RPRREHUYTEE",
+      "TLAALPOELFT",
+      "AOCCBEHNUIE",
+      "GWRTAHNICEP",
+      "RKCOTSEVILE",
+      "ISERSEHBRDE",
+      "CEHNEHURGEH",
+      "UIWORCERACS"
+     ],
+     "words": [
+      {
+       "display": "AGRICULTURE",
+       "letters": "AGRICULTURE",
+       "row": 10,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "TRACTOR",
+       "letters": "TRACTOR",
+       "row": 2,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "HAY",
+       "letters": "HAY",
+       "row": 3,
+       "col": 5,
+       "direction": "NW"
+      },
+      {
+       "display": "BARN",
+       "letters": "BARN",
+       "row": 5,
+       "col": 4,
+       "direction": "NW"
+      },
+      {
+       "display": "STABLE",
+       "letters": "STABLE",
+       "row": 8,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "HENHOUSE",
+       "letters": "HENHOUSE",
+       "row": 8,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "SHEPHERD",
+       "letters": "SHEPHERD",
+       "row": 7,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "SHEEP",
+       "letters": "SHEEP",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "FIELD",
+       "letters": "FIELD",
+       "row": 4,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "SEED",
+       "letters": "SEED",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "PLOW",
+       "letters": "PLOW",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "VINEYARD",
+       "letters": "VINEYARD",
+       "row": 7,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "SCARECROW",
+       "letters": "SCARECROW",
+       "row": 10,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "LIVESTOCK",
+       "letters": "LIVESTOCK",
+       "row": 7,
+       "col": 9,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "AGRICU",
+       "row": 5,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "TRAC",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "letters": "HENH",
+       "row": 9,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "letters": "TRACT",
+       "row": 4,
+       "col": 0,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c10-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Ville",
+    "en": "City life"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.58,
+    "score": 121,
+    "decoys": 5
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "RRNPMTSOPFC",
+      "UUBPOSTEDAT",
+      "OEEORMDIRCR",
+      "FFCLIAPRATA",
+      "EFNIOIOIVEM",
+      "RUACTRSAEUW",
+      "RALITNTMLRA",
+      "AHUEOYINURY",
+      "CCBRRUEUOBE",
+      "UBMATAXIBCU",
+      "ALAMPADAIRE"
+     ],
+     "words": [
+      {
+       "display": "POMPIER",
+       "letters": "POMPIER",
+       "row": 0,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "POLICIER",
+       "letters": "POLICIER",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "FACTEUR",
+       "letters": "FACTEUR",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "ÉBOUEUR",
+       "letters": "EBOUEUR",
+       "row": 8,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "CHAUFFEUR",
+       "letters": "CHAUFFEUR",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "CONTRÔLEUR",
+       "letters": "CONTROLEUR",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "MAIRIE",
+       "letters": "MAIRIE",
+       "row": 6,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "TRAMWAY",
+       "letters": "TRAMWAY",
+       "row": 1,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "TROTTOIR",
+       "letters": "TROTTOIR",
+       "row": 9,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "CARREFOUR",
+       "letters": "CARREFOUR",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "BOULEVARD",
+       "letters": "BOULEVARD",
+       "row": 9,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "LAMPADAIRE",
+       "letters": "LAMPADAIRE",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "POSTE",
+       "letters": "POSTE",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "AMBULANCE",
+       "letters": "AMBULANCE",
+       "row": 10,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "TAXI",
+       "letters": "TAXI",
+       "row": 9,
+       "col": 4,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "POSTM",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "POSTI",
+       "row": 3,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "letters": "MAIRNY",
+       "row": 2,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "letters": "AMBU",
+       "row": 9,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "letters": "CARR",
+       "row": 0,
+       "col": 10,
+       "direction": "SW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ADRIVERFTRA",
+      "MAILDVSIINC",
+      "AZBRKITRAAA",
+      "YQOFLRREWMM",
+      "ONULADEFCEB",
+      "RALMWWEIACU",
+      "WMEAEATGSIL",
+      "ETVIDILHHLA",
+      "DSANITATION",
+      "IORMSEMEEPC",
+      "SPDAORPRRRE"
+     ],
+     "words": [
+      {
+       "display": "FIREFIGHTER",
+       "letters": "FIREFIGHTER",
+       "row": 0,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "POLICEMAN",
+       "letters": "POLICEMAN",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "POSTMAN",
+       "letters": "POSTMAN",
+       "row": 10,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "SANITATION",
+       "letters": "SANITATION",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "DRIVER",
+       "letters": "DRIVER",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "MAYOR",
+       "letters": "MAYOR",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "TRAM",
+       "letters": "TRAM",
+       "row": 2,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "SIDEWALK",
+       "letters": "SIDEWALK",
+       "row": 9,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "BOULEVARD",
+       "letters": "BOULEVARD",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "STREETLAMP",
+       "letters": "STREETLAMP",
+       "row": 1,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "MAIL",
+       "letters": "MAIL",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "AMBULANCE",
+       "letters": "AMBULANCE",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "CASHIER",
+       "letters": "CASHIER",
+       "row": 4,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "WAITER",
+       "letters": "WAITER",
+       "row": 5,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "ROAD",
+       "letters": "ROAD",
+       "row": 10,
+       "col": 5,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SIDEW",
+       "row": 10,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "MAI",
+       "row": 5,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "letters": "WAIT",
+       "row": 3,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "DRIV",
+       "row": 4,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "letters": "TRA",
+       "row": 0,
+       "col": 8,
+       "direction": "E"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c10-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Secours",
+    "en": "Rescue"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.68,
+    "score": 123,
+    "decoys": 5
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "DEIDNECNIEA",
+      "IRHRADEAUMC",
+      "SEACGLIGBXA",
+      "ATGCNIAUAEY",
+      "UPGANALRNNU",
+      "VOIWTALEMRT",
+      "ECLENERATEA",
+      "TIECSIVBVSY",
+      "ELIASATUYAU",
+      "UECNEGRUACT",
+      "RHASECOURSF"
+     ],
+     "words": [
+      {
+       "display": "SAUVETEUR",
+       "letters": "SAUVETEUR",
+       "row": 2,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SECOURS",
+       "letters": "SECOURS",
+       "row": 10,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "AMBULANCIER",
+       "letters": "AMBULANCIER",
+       "row": 0,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "URGENCE",
+       "letters": "URGENCE",
+       "row": 9,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "BRANCARD",
+       "letters": "BRANCARD",
+       "row": 7,
+       "col": 7,
+       "direction": "NW"
+      },
+      {
+       "display": "HÉLICOPTÈRE",
+       "letters": "HELICOPTERE",
+       "row": 10,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "ALARME",
+       "letters": "ALARME",
+       "row": 1,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "SAUVETAGE",
+       "letters": "SAUVETAGE",
+       "row": 10,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "INCENDIE",
+       "letters": "INCENDIE",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "TUYAU",
+       "letters": "TUYAU",
+       "row": 8,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "CASERNE",
+       "letters": "CASERNE",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "AVALANCHE",
+       "letters": "AVALANCHE",
+       "row": 8,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "RADEAU",
+       "letters": "RADEAU",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "GILET",
+       "letters": "GILET",
+       "row": 2,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "SIRÈNE",
+       "letters": "SIRENE",
+       "row": 8,
+       "col": 4,
+       "direction": "NE"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TUY",
+       "row": 5,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "letters": "CASE",
+       "row": 9,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "letters": "GILE",
+       "row": 4,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "letters": "GIL",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "TUYA",
+       "row": 9,
+       "col": 10,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ARETPOCILEH",
+      "LEVACUATION",
+      "ARHTAOBEFIL",
+      "REUCSEROESF",
+      "MHOSEOCLJLS",
+      "TCIDEMARAPS",
+      "YTEFASVRCSS",
+      "SELOPSERKII",
+      "IREDNOPSERR",
+      "RTLASHELTER",
+      "ESUOHERIFNJ"
+     ],
+     "words": [
+      {
+       "display": "PARAMEDIC",
+       "letters": "PARAMEDIC",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "STRETCHER",
+       "letters": "STRETCHER",
+       "row": 10,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "HELICOPTER",
+       "letters": "HELICOPTER",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "ALARM",
+       "letters": "ALARM",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "RESCUER",
+       "letters": "RESCUER",
+       "row": 3,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "FIREHOUSE",
+       "letters": "FIREHOUSE",
+       "row": 10,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "HOSE",
+       "letters": "HOSE",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SIREN",
+       "letters": "SIREN",
+       "row": 6,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "SAFETY",
+       "letters": "SAFETY",
+       "row": 6,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "LIFEBOAT",
+       "letters": "LIFEBOAT",
+       "row": 2,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "LIFEJACKET",
+       "letters": "LIFEJACKET",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "FLARE",
+       "letters": "FLARE",
+       "row": 3,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "EVACUATION",
+       "letters": "EVACUATION",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "RESPONDER",
+       "letters": "RESPONDER",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "SHELTER",
+       "letters": "SHELTER",
+       "row": 9,
+       "col": 4,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SIRE",
+       "row": 7,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "RESPO",
+       "row": 7,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "SIRRJ",
+       "row": 6,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "letters": "HOS",
+       "row": 9,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "letters": "EVAC",
+       "row": 7,
+       "col": 6,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c10-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Bureau",
+    "en": "Office"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.71,
+    "score": 125,
+    "decoys": 6
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "TETROMBONEE",
+      "EREISSODOST",
+      "CCDGNEGAIUA",
+      "COOIECNRNEG",
+      "OONMRRPUUFE",
+      "MLUTPEUAEAN",
+      "PIYRRTCTRRD",
+      "TSFTRAATCGA",
+      "AANOSITBEAA",
+      "XEMDIRESLUF",
+      "CLASSEURSER"
+     ],
+     "words": [
+      {
+       "display": "SECRÉTAIRE",
+       "letters": "SECRETAIRE",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "COMPTABLE",
+       "letters": "COMPTABLE",
+       "row": 2,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "DIRECTEUR",
+       "letters": "DIRECTEUR",
+       "row": 2,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "RÉUNION",
+       "letters": "REUNION",
+       "row": 6,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "AGENDA",
+       "letters": "AGENDA",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "CLASSEUR",
+       "letters": "CLASSEUR",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "COURRIER",
+       "letters": "COURRIER",
+       "row": 3,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "DOSSIER",
+       "letters": "DOSSIER",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "CONTRAT",
+       "letters": "CONTRAT",
+       "row": 2,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "ENTREPRISE",
+       "letters": "ENTREPRISE",
+       "row": 9,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "AGRAFEUSE",
+       "letters": "AGRAFEUSE",
+       "row": 8,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "TROMBONE",
+       "letters": "TROMBONE",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "STYLO",
+       "letters": "STYLO",
+       "row": 8,
+       "col": 4,
+       "direction": "NW"
+      },
+      {
+       "display": "FACTURE",
+       "letters": "FACTURE",
+       "row": 9,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "FAX",
+       "letters": "FAX",
+       "row": 7,
+       "col": 2,
+       "direction": "SW"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "COMPTA",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "DIRE",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "AGEN",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "REUN",
+       "row": 6,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "letters": "AGRA",
+       "row": 8,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "letters": "TROM",
+       "row": 6,
+       "col": 5,
+       "direction": "SW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "RELPATSKFAX",
+      "SSSCONTASED",
+      "EISEOFOLDER",
+      "DRTECIOVNID",
+      "BPILCREPAPR",
+      "IRTCARTNOCI",
+      "NECNEREFNOC",
+      "DTDTGNITEEM",
+      "ENNAGENDADT",
+      "REGANAMNERE",
+      "ACCOUNTANTY"
+     ],
+     "words": [
+      {
+       "display": "SECRETARY",
+       "letters": "SECRETARY",
+       "row": 2,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "ACCOUNTANT",
+       "letters": "ACCOUNTANT",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "MANAGER",
+       "letters": "MANAGER",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MEETING",
+       "letters": "MEETING",
+       "row": 7,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "AGENDA",
+       "letters": "AGENDA",
+       "row": 8,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "BINDER",
+       "letters": "BINDER",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "STAPLER",
+       "letters": "STAPLER",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "FOLDER",
+       "letters": "FOLDER",
+       "row": 2,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "CONTRACT",
+       "letters": "CONTRACT",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ENTERPRISE",
+       "letters": "ENTERPRISE",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "PAPERCLIP",
+       "letters": "PAPERCLIP",
+       "row": 4,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "INVOICE",
+       "letters": "INVOICE",
+       "row": 3,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "DESK",
+       "letters": "DESK",
+       "row": 3,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "FAX",
+       "letters": "FAX",
+       "row": 0,
+       "col": 8,
+       "direction": "E"
+      },
+      {
+       "display": "CONFERENCE",
+       "letters": "CONFERENCE",
+       "row": 6,
+       "col": 10,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SECR",
+       "row": 1,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "letters": "CONT",
+       "row": 1,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "ACCO",
+       "row": 5,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "letters": "DESA",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "ENTER",
+       "row": 9,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "letters": "DES",
+       "row": 3,
+       "col": 0,
+       "direction": "N"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c10-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Outils",
+    "en": "Tools"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.67,
+    "score": 126,
+    "decoys": 6
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "CTOURNEVISP",
+      "FNBOULONOOU",
+      "IEIRESIUNEM",
+      "SSEPTPDCBLS",
+      "AESCABEAULO",
+      "RTUMRECPREU",
+      "BAEEOTAIIDD",
+      "ABCTFAPNNNU",
+      "RLNRRBECAOR",
+      "AIOEEQUERRE",
+      "BSPPPERABOT"
+     ],
+     "words": [
+      {
+       "display": "TOURNEVIS",
+       "letters": "TOURNEVIS",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ESCABEAU",
+       "letters": "ESCABEAU",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "PINCE",
+       "letters": "PINCE",
+       "row": 5,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "RABOT",
+       "letters": "RABOT",
+       "row": 10,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "BOULON",
+       "letters": "BOULON",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "RONDELLE",
+       "letters": "RONDELLE",
+       "row": 9,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "BURIN",
+       "letters": "BURIN",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "DÉCAPEUR",
+       "letters": "DECAPEUR",
+       "row": 3,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "ÉTABLI",
+       "letters": "ETABLI",
+       "row": 4,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "MÈTRE",
+       "letters": "METRE",
+       "row": 5,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "ÉQUERRE",
+       "letters": "EQUERRE",
+       "row": 9,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "PONCEUSE",
+       "letters": "PONCEUSE",
+       "row": 10,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "SOUDURE",
+       "letters": "SOUDURE",
+       "row": 3,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "ABRASIF",
+       "letters": "ABRASIF",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "PERFORATEUR",
+       "letters": "PERFORATEUR",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "MENUISERIE",
+       "letters": "MENUISERIE",
+       "row": 2,
+       "col": 10,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ETAB",
+       "row": 5,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "letters": "RAB",
+       "row": 8,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "SOUD",
+       "row": 0,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "letters": "PONCE",
+       "row": 0,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "letters": "PINC",
+       "row": 3,
+       "col": 3,
+       "direction": "NW"
+      },
+      {
+       "letters": "PIN",
+       "row": 3,
+       "col": 5,
+       "direction": "NE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "THLIANARBWO",
+      "GREEVOESOOB",
+      "BOPIGDHEERL",
+      "PLSDNHCNERW",
+      "LERAISNAHAA",
+      "ISSUDAELWBS",
+      "EIRTLOBPALP",
+      "RHEPEEKOPEC",
+      "SCREWDRIVER",
+      "WTOOLBOXDHO",
+      "TTUNEKWEEWW"
+     ],
+     "words": [
+      {
+       "display": "SCREWDRIVER",
+       "letters": "SCREWDRIVER",
+       "row": 8,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "SAW",
+       "letters": "SAW",
+       "row": 5,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "PLIERS",
+       "letters": "PLIERS",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "PLANE",
+       "letters": "PLANE",
+       "row": 6,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "BOLT",
+       "letters": "BOLT",
+       "row": 6,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "NUT",
+       "letters": "NUT",
+       "row": 10,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "display": "CHISEL",
+       "letters": "CHISEL",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "NAIL",
+       "letters": "NAIL",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "WORKBENCH",
+       "letters": "WORKBENCH",
+       "row": 10,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "RULER",
+       "letters": "RULER",
+       "row": 4,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "SANDER",
+       "letters": "SANDER",
+       "row": 5,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "WELDING",
+       "letters": "WELDING",
+       "row": 8,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "VISE",
+       "letters": "VISE",
+       "row": 1,
+       "col": 4,
+       "direction": "SW"
+      },
+      {
+       "display": "WRENCH",
+       "letters": "WRENCH",
+       "row": 3,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "TOOLBOX",
+       "letters": "TOOLBOX",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "WHEELBARROW",
+       "letters": "WHEELBARROW",
+       "row": 10,
+       "col": 9,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "BOOS",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "PLANN",
+       "row": 7,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "letters": "PLA",
+       "row": 6,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "WHEE",
+       "row": 5,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "letters": "BOPI",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "BOL",
+       "row": 0,
+       "col": 8,
+       "direction": "SE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c10-l10",
+   "number": 10,
+   "theme": {
+    "fr": "Tous les métiers",
+    "en": "Every career"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1,
+    "score": 146,
+    "decoys": 10
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ASTRLIBRAIRE",
+      "NITRADUCTEUR",
+      "EENCUDARTCEE",
+      "GTIGHEMUMONI",
+      "UEHCEEAACIER",
+      "JARDINIERFRR",
+      "ACEMORILJFPA",
+      "VCNREITEMEEC",
+      "OHTUFEHCUURG",
+      "CSRPILOTERTU",
+      "ARTISANRCLNJ",
+      "TTMECANICIEN"
+     ],
+     "words": [
+      {
+       "display": "ENTREPRENEUR",
+       "letters": "ENTREPRENEUR",
+       "row": 11,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "INGÉNIEUR",
+       "letters": "INGENIEUR",
+       "row": 1,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "PILOTE",
+       "letters": "PILOTE",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "AVOCAT",
+       "letters": "AVOCAT",
+       "row": 6,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "JUGE",
+       "letters": "JUGE",
+       "row": 5,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "MAIRE",
+       "letters": "MAIRE",
+       "row": 3,
+       "col": 8,
+       "direction": "SW"
+      },
+      {
+       "display": "CHEF",
+       "letters": "CHEF",
+       "row": 8,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "TRADUCTEUR",
+       "letters": "TRADUCTEUR",
+       "row": 1,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "ASTRONAUTE",
+       "letters": "ASTRONAUTE",
+       "row": 10,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "COIFFEUR",
+       "letters": "COIFFEUR",
+       "row": 2,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "JARDINIER",
+       "letters": "JARDINIER",
+       "row": 5,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ÉLECTRICIEN",
+       "letters": "ELECTRICIEN",
+       "row": 11,
+       "col": 10,
+       "direction": "NW"
+      },
+      {
+       "display": "MÉCANICIEN",
+       "letters": "MECANICIEN",
+       "row": 11,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "LIBRAIRE",
+       "letters": "LIBRAIRE",
+       "row": 0,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "ARTISAN",
+       "letters": "ARTISAN",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "MÉTIER",
+       "letters": "METIER",
+       "row": 7,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CARRIÈRE",
+       "letters": "CARRIERE",
+       "row": 7,
+       "col": 11,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CHE",
+       "row": 4,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "letters": "TRADU",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "letters": "MECA",
+       "row": 6,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "letters": "ASTR",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "CHEI",
+       "row": 2,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "letters": "ELECT",
+       "row": 5,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "letters": "ENTR",
+       "row": 6,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "letters": "JUG",
+       "row": 10,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "letters": "MAI",
+       "row": 3,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "letters": "CHSR",
+       "row": 7,
+       "col": 1,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ROTALSNARTLJ",
+      "AGLIPPRMURMU",
+      "SMAYORCHEFED",
+      "TPWRTOOLNCCG",
+      "RRYNDFLFEAHE",
+      "ORESSERDRIAH",
+      "NCRESSNEPGNL",
+      "AHEKNSEEEAIA",
+      "UEOTOIEHRRCW",
+      "TOLIPOGCTDAY",
+      "BJOBENBNNRRC",
+      "NAICIRTCELET"
+     ],
+     "words": [
+      {
+       "display": "ENTREPRENEUR",
+       "letters": "ENTREPRENEUR",
+       "row": 11,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "ENGINEER",
+       "letters": "ENGINEER",
+       "row": 11,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "MAYOR",
+       "letters": "MAYOR",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "LAWYER",
+       "letters": "LAWYER",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "JUDGE",
+       "letters": "JUDGE",
+       "row": 0,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "PILOT",
+       "letters": "PILOT",
+       "row": 9,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "CHEF",
+       "letters": "CHEF",
+       "row": 2,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "TRANSLATOR",
+       "letters": "TRANSLATOR",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ASTRONAUT",
+       "letters": "ASTRONAUT",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "HAIRDRESSER",
+       "letters": "HAIRDRESSER",
+       "row": 5,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "GARDENER",
+       "letters": "GARDENER",
+       "row": 1,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "ELECTRICIAN",
+       "letters": "ELECTRICIAN",
+       "row": 11,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "MECHANIC",
+       "letters": "MECHANIC",
+       "row": 1,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "BOOKSELLER",
+       "letters": "BOOKSELLER",
+       "row": 10,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "CAREER",
+       "letters": "CAREER",
+       "row": 10,
+       "col": 11,
+       "direction": "NW"
+      },
+      {
+       "display": "PROFESSION",
+       "letters": "PROFESSION",
+       "row": 1,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "JOB",
+       "letters": "JOB",
+       "row": 10,
+       "col": 1,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "CHE",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "letters": "CHEO",
+       "row": 6,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "letters": "LAWY",
+       "row": 6,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "letters": "GARD",
+       "row": 6,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "letters": "BOOK",
+       "row": 10,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "letters": "CAREE",
+       "row": 3,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "letters": "ENTR",
+       "row": 5,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "letters": "PIL",
+       "row": 1,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "letters": "PROF",
+       "row": 1,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "letters": "MECH",
+       "row": 1,
+       "col": 7,
+       "direction": "SE"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

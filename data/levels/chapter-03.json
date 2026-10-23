@@ -1,0 +1,2696 @@
+{
+ "schemaVersion": 1,
+ "id": "chapter-03",
+ "index": 3,
+ "paletteKey": "cosmos",
+ "theme": {
+  "fr": "Espace",
+  "en": "Space"
+ },
+ "levels": [
+  {
+   "id": "c3-l01",
+   "number": 1,
+   "theme": {
+    "fr": "Système solaire",
+    "en": "Solar system"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 8,
+   "difficulty": {
+    "tier": 3,
+    "ambiguity": 0.56,
+    "score": 88,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ENUTPENS",
+      "VTERSERR",
+      "ESATURNE",
+      "NOUERRET",
+      "ULSRAMLI",
+      "SETENALP",
+      "TIENULEU",
+      "RLUNSIAJ"
+     ],
+     "words": [
+      {
+       "display": "SOLEIL",
+       "letters": "SOLEIL",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "TERRE",
+       "letters": "TERRE",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "MARS",
+       "letters": "MARS",
+       "row": 4,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "VÉNUS",
+       "letters": "VENUS",
+       "row": 1,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "JUPITER",
+       "letters": "JUPITER",
+       "row": 7,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "SATURNE",
+       "letters": "SATURNE",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "URANUS",
+       "letters": "URANUS",
+       "row": 2,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "NEPTUNE",
+       "letters": "NEPTUNE",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "LUNE",
+       "letters": "LUNE",
+       "row": 6,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "PLANÈTES",
+       "letters": "PLANETES",
+       "row": 5,
+       "col": 7,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TERSE",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "LUNS",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "TER",
+       "row": 2,
+       "col": 3,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "JUPITEOD",
+      "SATURNPI",
+      "SUNARUEO",
+      "UJUPITER",
+      "NRSSIPUE",
+      "EHTRAERT",
+      "VAAASNAS",
+      "MARMOONA"
+     ],
+     "words": [
+      {
+       "display": "STAR",
+       "letters": "STAR",
+       "row": 4,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "EARTH",
+       "letters": "EARTH",
+       "row": 5,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "MARS",
+       "letters": "MARS",
+       "row": 7,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "VENUS",
+       "letters": "VENUS",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "JUPITER",
+       "letters": "JUPITER",
+       "row": 3,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SATURN",
+       "letters": "SATURN",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "URANUS",
+       "letters": "URANUS",
+       "row": 2,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "NEPTUNE",
+       "letters": "NEPTUNE",
+       "row": 6,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "MOON",
+       "letters": "MOON",
+       "row": 7,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "ASTEROID",
+       "letters": "ASTEROID",
+       "row": 7,
+       "col": 7,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "JUPITEO",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "MAR",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "URAN",
+       "row": 4,
+       "col": 6,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c3-l02",
+   "number": 2,
+   "theme": {
+    "fr": "Fusée",
+    "en": "Rocket"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 8,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.6,
+    "score": 92,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 3
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "TCOMPTEO",
+      "SNSOOLLO",
+      "NAETOLIP",
+      "RVSEESUF",
+      "AELUSPAC",
+      "DTORBITE",
+      "ATTEVANU",
+      "RELLOCED"
+     ],
+     "words": [
+      {
+       "display": "FUSÉE",
+       "letters": "FUSEE",
+       "row": 3,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "MOTEUR",
+       "letters": "MOTEUR",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "NAVETTE",
+       "letters": "NAVETTE",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "ORBITE",
+       "letters": "ORBITE",
+       "row": 5,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "CAPSULE",
+       "letters": "CAPSULE",
+       "row": 4,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "PILOTE",
+       "letters": "PILOTE",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "RADAR",
+       "letters": "RADAR",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "DÉCOLLER",
+       "letters": "DECOLLER",
+       "row": 7,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "SAS",
+       "letters": "SAS",
+       "row": 1,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "COMPTE",
+       "letters": "COMPTE",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "NAVETT",
+       "row": 6,
+       "col": 6,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TEKCORTP",
+      "HFFOTFIL",
+      "RADARLUA",
+      "ULIPOKSU",
+      "SHUTTLEN",
+      "TIBROUSC",
+      "ELUSPACH",
+      "RDERFSOO"
+     ],
+     "words": [
+      {
+       "display": "ROCKET",
+       "letters": "ROCKET",
+       "row": 0,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "THRUSTER",
+       "letters": "THRUSTER",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "SHUTTLE",
+       "letters": "SHUTTLE",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "ORBIT",
+       "letters": "ORBIT",
+       "row": 5,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "CAPSULE",
+       "letters": "CAPSULE",
+       "row": 6,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "PILOT",
+       "letters": "PILOT",
+       "row": 0,
+       "col": 7,
+       "direction": "SW"
+      },
+      {
+       "display": "RADAR",
+       "letters": "RADAR",
+       "row": 2,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "LIFTOFF",
+       "letters": "LIFTOFF",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "SUIT",
+       "letters": "SUIT",
+       "row": 3,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "LAUNCH",
+       "letters": "LAUNCH",
+       "row": 1,
+       "col": 7,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "PIL",
+       "row": 3,
+       "col": 3,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c3-l03",
+   "number": 3,
+   "theme": {
+    "fr": "Étoiles et galaxies",
+    "en": "Stars and galaxies"
+   },
+   "visualStyle": "STYLE_3",
+   "gridSize": 9,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.56,
+    "score": 97,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "ASIRIUSET",
+      "VCOMETELN",
+      "OQNOIROIE",
+      "NUPUXECOU",
+      "RAPUAQMTO",
+      "ESUELUBEN",
+      "PAICASTRE",
+      "URIRGUASP",
+      "SOMSOCMRR"
+     ],
+     "words": [
+      {
+       "display": "NÉBULEUSE",
+       "letters": "NEBULEUSE",
+       "row": 5,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "SUPERNOVA",
+       "letters": "SUPERNOVA",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "GALAXIE",
+       "letters": "GALAXIE",
+       "row": 7,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "ÉTOILE",
+       "letters": "ETOILE",
+       "row": 5,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "COMÈTE",
+       "letters": "COMETE",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "QUASAR",
+       "letters": "QUASAR",
+       "row": 2,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "PULSAR",
+       "letters": "PULSAR",
+       "row": 3,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "COSMOS",
+       "letters": "COSMOS",
+       "row": 8,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "ASTRE",
+       "letters": "ASTRE",
+       "row": 6,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "ORION",
+       "letters": "ORION",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "SIRIUS",
+       "letters": "SIRIUS",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ORISR",
+       "row": 8,
+       "col": 4,
+       "direction": "NW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "CNQUASARD",
+      "PPBCLTVIS",
+      "LEAOUAOII",
+      "NYPMBRNSR",
+      "OXUEEDRNI",
+      "MALTNUEOU",
+      "ELSXRSPIS",
+      "SAASETURP",
+      "KGRSOMSOC"
+     ],
+     "words": [
+      {
+       "display": "SUPERNOVA",
+       "letters": "SUPERNOVA",
+       "row": 8,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "ASTEROID",
+       "letters": "ASTEROID",
+       "row": 7,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "STARDUST",
+       "letters": "STARDUST",
+       "row": 0,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "GALAXY",
+       "letters": "GALAXY",
+       "row": 8,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "COMET",
+       "letters": "COMET",
+       "row": 1,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "QUASAR",
+       "letters": "QUASAR",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PULSAR",
+       "letters": "PULSAR",
+       "row": 3,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "COSMOS",
+       "letters": "COSMOS",
+       "row": 8,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "ORION",
+       "letters": "ORION",
+       "row": 8,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "SIRIUS",
+       "letters": "SIRIUS",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "NEBULA",
+       "letters": "NEBULA",
+       "row": 5,
+       "col": 4,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "NEBU",
+       "row": 3,
+       "col": 0,
+       "direction": "NE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c3-l04",
+   "number": 4,
+   "theme": {
+    "fr": "Astronautes",
+    "en": "Astronauts"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 9,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.74,
+    "score": 100,
+    "decoys": 1
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "PEUQSACNU",
+      "LQTSEDLHE",
+      "AUUATVUUE",
+      "MISSIONBL",
+      "SPTRVSALG",
+      "OASTATION",
+      "NGAERARTA",
+      "DEAUGTELS",
+      "ESTNAGUNO"
+     ],
+     "words": [
+      {
+       "display": "ÉQUIPAGE",
+       "letters": "EQUIPAGE",
+       "row": 0,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "MISSION",
+       "letters": "MISSION",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "GRAVITÉ",
+       "letters": "GRAVITE",
+       "row": 7,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "STATION",
+       "letters": "STATION",
+       "row": 5,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "HUBLOT",
+       "letters": "HUBLOT",
+       "row": 1,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "CASQUE",
+       "letters": "CASQUE",
+       "row": 0,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "GANTS",
+       "letters": "GANTS",
+       "row": 8,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "SANGLE",
+       "letters": "SANGLE",
+       "row": 7,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "LUNAIRE",
+       "letters": "LUNAIRE",
+       "row": 1,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "display": "SONDE",
+       "letters": "SONDE",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "EAU",
+       "letters": "EAU",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "STAT",
+       "row": 4,
+       "col": 5,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ALHCHSCRC",
+      "CSYGALRRE",
+      "JMTEMLEHB",
+      "NGIRVVWCO",
+      "LLVSOLSTR",
+      "UOARSNFAP",
+      "NVRBTIAHH",
+      "AEGGNIOUA",
+      "RSTATIONT"
+     ],
+     "words": [
+      {
+       "display": "ASTRONAUT",
+       "letters": "ASTRONAUT",
+       "row": 0,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "MISSION",
+       "letters": "MISSION",
+       "row": 2,
+       "col": 1,
+       "direction": "SE"
+      },
+      {
+       "display": "GRAVITY",
+       "letters": "GRAVITY",
+       "row": 7,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "STATION",
+       "letters": "STATION",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "HATCH",
+       "letters": "HATCH",
+       "row": 6,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "HELMET",
+       "letters": "HELMET",
+       "row": 2,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "GLOVES",
+       "letters": "GLOVES",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "LUNAR",
+       "letters": "LUNAR",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "PROBE",
+       "letters": "PROBE",
+       "row": 5,
+       "col": 8,
+       "direction": "N"
+      },
+      {
+       "display": "ROVER",
+       "letters": "ROVER",
+       "row": 5,
+       "col": 3,
+       "direction": "NE"
+      },
+      {
+       "display": "CREW",
+       "letters": "CREW",
+       "row": 0,
+       "col": 6,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "HAT",
+       "row": 6,
+       "col": 8,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c3-l05",
+   "number": 5,
+   "theme": {
+    "fr": "Télescope",
+    "en": "Telescope"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.62,
+    "score": 105,
+    "decoys": 2
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "IEETINEZIS",
+      "OCULAIRELP",
+      "LIPEATRXUE",
+      "RIORIMIANC",
+      "ZEPOCSELET",
+      "ELLITNELTR",
+      "NULZOOMATE",
+      "IMLUMIEREL",
+      "TIELFOCALE",
+      "HELECLIPSE"
+     ],
+     "words": [
+      {
+       "display": "TÉLESCOPE",
+       "letters": "TELESCOPE",
+       "row": 4,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "PARALLAXE",
+       "letters": "PARALLAXE",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "OCULAIRE",
+       "letters": "OCULAIRE",
+       "row": 1,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "LENTILLE",
+       "letters": "LENTILLE",
+       "row": 5,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "LUMIÈRE",
+       "letters": "LUMIERE",
+       "row": 7,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "SPECTRE",
+       "letters": "SPECTRE",
+       "row": 0,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "ÉCLIPSE",
+       "letters": "ECLIPSE",
+       "row": 9,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "ZÉNITH",
+       "letters": "ZENITH",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "FOCALE",
+       "letters": "FOCALE",
+       "row": 8,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "MIROIR",
+       "letters": "MIROIR",
+       "row": 3,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "LUNETTE",
+       "letters": "LUNETTE",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "ZOOM",
+       "letters": "ZOOM",
+       "row": 6,
+       "col": 3,
+       "direction": "E"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "ZENITE",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "LUMIE",
+       "row": 5,
+       "col": 1,
+       "direction": "S"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "SPECTELAOV",
+      "NECEIPEYEG",
+      "ESPILCEPMM",
+      "LLZOOMRAUE",
+      "LIOMCOMRCN",
+      "IGPZRSTAUT",
+      "GHTRSCELNL",
+      "HTINEZRLEP",
+      "OMCPLIEAET",
+      "ASSUCOFXTT"
+     ],
+     "words": [
+      {
+       "display": "TELESCOPE",
+       "letters": "TELESCOPE",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "display": "PARALLAX",
+       "letters": "PARALLAX",
+       "row": 2,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "EYEPIECE",
+       "letters": "EYEPIECE",
+       "row": 1,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "SPECTRUM",
+       "letters": "SPECTRUM",
+       "row": 9,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "ECLIPSE",
+       "letters": "ECLIPSE",
+       "row": 2,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "ZENITH",
+       "letters": "ZENITH",
+       "row": 7,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "MIRROR",
+       "letters": "MIRROR",
+       "row": 8,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "LENS",
+       "letters": "LENS",
+       "row": 3,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "LIGHT",
+       "letters": "LIGHT",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "FOCUS",
+       "letters": "FOCUS",
+       "row": 9,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "ZOOM",
+       "letters": "ZOOM",
+       "row": 3,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "OPTICS",
+       "letters": "OPTICS",
+       "row": 4,
+       "col": 2,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SPECT",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "LIGHO",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c3-l06",
+   "number": 6,
+   "theme": {
+    "fr": "Satellites",
+    "en": "Satellites"
+   },
+   "visualStyle": "STYLE_1",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.81,
+    "score": 109,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EELULACODE",
+      "RTSTORBITE",
+      "INIULELDEU",
+      "ANGLPNLALB",
+      "LENULNTRES",
+      "OPANNEAUCO",
+      "SILNRTTEON",
+      "OTORLNLAMD",
+      "EPEITATSSE",
+      "AEUILLETAS"
+     ],
+     "words": [
+      {
+       "display": "SATELLITE",
+       "letters": "SATELLITE",
+       "row": 8,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "TÉLÉCOMS",
+       "letters": "TELECOMS",
+       "row": 1,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "ANTENNE",
+       "letters": "ANTENNE",
+       "row": 8,
+       "col": 5,
+       "direction": "N"
+      },
+      {
+       "display": "SIGNAL",
+       "letters": "SIGNAL",
+       "row": 1,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "PANNEAU",
+       "letters": "PANNEAU",
+       "row": 5,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SOLAIRE",
+       "letters": "SOLAIRE",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "ORBITE",
+       "letters": "ORBITE",
+       "row": 1,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "TERRE",
+       "letters": "TERRE",
+       "row": 4,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "display": "LUNE",
+       "letters": "LUNE",
+       "row": 4,
+       "col": 4,
+       "direction": "W"
+      },
+      {
+       "display": "CODE",
+       "letters": "CODE",
+       "row": 0,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "RADIO",
+       "letters": "RADIO",
+       "row": 4,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "SONDE",
+       "letters": "SONDE",
+       "row": 4,
+       "col": 9,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "LUTU",
+       "row": 3,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "letters": "LULA",
+       "row": 0,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "letters": "SATELLIUE",
+       "row": 9,
+       "col": 9,
+       "direction": "W"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "ININNETNAM",
+      "AKOARADIOL",
+      "IEAMSEDOCS",
+      "MSNOOSNGER",
+      "EITCLIAOOT",
+      "BGEEAGAOEP",
+      "ONNLRNSRAM",
+      "RANENAOBRC",
+      "PSATELLITE",
+      "CMELEAATHT"
+     ],
+     "words": [
+      {
+       "display": "SATELLITE",
+       "letters": "SATELLITE",
+       "row": 8,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "ANTENNA",
+       "letters": "ANTENNA",
+       "row": 2,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "SIGNAL",
+       "letters": "SIGNAL",
+       "row": 3,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "PANEL",
+       "letters": "PANEL",
+       "row": 8,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "SOLAR",
+       "letters": "SOLAR",
+       "row": 2,
+       "col": 4,
+       "direction": "S"
+      },
+      {
+       "display": "ORBIT",
+       "letters": "ORBIT",
+       "row": 5,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "TELECOM",
+       "letters": "TELECOM",
+       "row": 8,
+       "col": 3,
+       "direction": "N"
+      },
+      {
+       "display": "EARTH",
+       "letters": "EARTH",
+       "row": 5,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "MOON",
+       "letters": "MOON",
+       "row": 0,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "display": "CODE",
+       "letters": "CODE",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "RADIO",
+       "letters": "RADIO",
+       "row": 1,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "PROBE",
+       "letters": "PROBE",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "SIGNA",
+       "row": 3,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "letters": "SOLA",
+       "row": 6,
+       "col": 6,
+       "direction": "S"
+      },
+      {
+       "letters": "ANTENN",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c3-l07",
+   "number": 7,
+   "theme": {
+    "fr": "Mission Mars",
+    "en": "Mars mission"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 10,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.88,
+    "score": 114,
+    "decoys": 3
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EXPEDITION",
+      "TROVERAOAR",
+      "EEERETARCH",
+      "PNRIRRETTA",
+      "MYAESRONTB",
+      "ETSCOSOCII",
+      "TEFVLYULRT",
+      "DEEINOLOCA",
+      "IORAINVVPT",
+      "AECALGTEMP"
+     ],
+     "words": [
+      {
+       "display": "EXPÉDITION",
+       "letters": "EXPEDITION",
+       "row": 0,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "POUSSIÈRE",
+       "letters": "POUSSIERE",
+       "row": 8,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "COLONIE",
+       "letters": "COLONIE",
+       "row": 7,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "CRATÈRE",
+       "letters": "CRATERE",
+       "row": 2,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "VOLCAN",
+       "letters": "VOLCAN",
+       "row": 8,
+       "col": 6,
+       "direction": "NW"
+      },
+      {
+       "display": "TEMPÊTE",
+       "letters": "TEMPETE",
+       "row": 6,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "display": "DÉSERT",
+       "letters": "DESERT",
+       "row": 7,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "display": "ATTERRIR",
+       "letters": "ATTERRIR",
+       "row": 3,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "HABITAT",
+       "letters": "HABITAT",
+       "row": 2,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "CANYON",
+       "letters": "CANYON",
+       "row": 9,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "display": "ROVER",
+       "letters": "ROVER",
+       "row": 1,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "GLACE",
+       "letters": "GLACE",
+       "row": 9,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "FER",
+       "letters": "FER",
+       "row": 6,
+       "col": 2,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TEMP",
+       "row": 9,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "letters": "VOLC",
+       "row": 8,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "letters": "ROVE",
+       "row": 4,
+       "col": 5,
+       "direction": "SW"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "NRNVNRNODC",
+      "YNOLOCOTUO",
+      "VNEVILAVSC",
+      "DOECTTCETA",
+      "ERGNIDNALN",
+      "SIABDIAMNY",
+      "EDARETARCO",
+      "RHAEPSTORN",
+      "EYOHXRCTTL",
+      "RDESERTSER"
+     ],
+     "words": [
+      {
+       "display": "EXPEDITION",
+       "letters": "EXPEDITION",
+       "row": 9,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "COLONY",
+       "letters": "COLONY",
+       "row": 1,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "CRATER",
+       "letters": "CRATER",
+       "row": 6,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "VOLCANO",
+       "letters": "VOLCANO",
+       "row": 0,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "CANYON",
+       "letters": "CANYON",
+       "row": 2,
+       "col": 9,
+       "direction": "S"
+      },
+      {
+       "display": "DESERT",
+       "letters": "DESERT",
+       "row": 9,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "HABITAT",
+       "letters": "HABITAT",
+       "row": 7,
+       "col": 1,
+       "direction": "NE"
+      },
+      {
+       "display": "LANDING",
+       "letters": "LANDING",
+       "row": 4,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "STORM",
+       "letters": "STORM",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "DUST",
+       "letters": "DUST",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "ROVER",
+       "letters": "ROVER",
+       "row": 0,
+       "col": 5,
+       "direction": "SW"
+      },
+      {
+       "display": "ICE",
+       "letters": "ICE",
+       "row": 4,
+       "col": 4,
+       "direction": "NW"
+      },
+      {
+       "display": "IRON",
+       "letters": "IRON",
+       "row": 5,
+       "col": 1,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "STOR",
+       "row": 7,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "letters": "DESER",
+       "row": 3,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "ROV",
+       "row": 0,
+       "col": 5,
+       "direction": "SE"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c3-l08",
+   "number": 8,
+   "theme": {
+    "fr": "Univers",
+    "en": "Universe"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.9,
+    "score": 119,
+    "decoys": 4
+   },
+   "hints": {
+    "maxPerLevel": 4
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "TMATIEQNGOM",
+      "EMPOEDNORDN",
+      "MAREIMEZAIS",
+      "PTINFINIVEV",
+      "SINGULARITE",
+      "IECAPSEOTEN",
+      "GRAVNOEHAIE",
+      "RELATIVITER",
+      "RIRALUGNISG",
+      "VIDETROUOAI",
+      "EXPANSIONRE"
+     ],
+     "words": [
+      {
+       "display": "SINGULARITÉ",
+       "letters": "SINGULARITE",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "GRAVITATION",
+       "letters": "GRAVITATION",
+       "row": 0,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "display": "RELATIVITÉ",
+       "letters": "RELATIVITE",
+       "row": 7,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "EXPANSION",
+       "letters": "EXPANSION",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "HORIZON",
+       "letters": "HORIZON",
+       "row": 6,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "MATIÈRE",
+       "letters": "MATIERE",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "display": "ÉNERGIE",
+       "letters": "ENERGIE",
+       "row": 4,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "ESPACE",
+       "letters": "ESPACE",
+       "row": 5,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "INFINI",
+       "letters": "INFINI",
+       "row": 3,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "TEMPS",
+       "letters": "TEMPS",
+       "row": 0,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "display": "VIDE",
+       "letters": "VIDE",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TROU",
+       "letters": "TROU",
+       "row": 9,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "ONDE",
+       "letters": "ONDE",
+       "row": 1,
+       "col": 7,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MATIEQN",
+       "row": 0,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "letters": "SINGULARI",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "letters": "GRAV",
+       "row": 6,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "TRO",
+       "row": 3,
+       "col": 1,
+       "direction": "NE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "TYNOISNAPXE",
+      "DTTIVITALER",
+      "AINFINITYXS",
+      "EVOHAGOAMPV",
+      "TIZVOUHSAAA",
+      "TTIMALRCTNY",
+      "AARANAEETSG",
+      "MLOWORTMENR",
+      "GEHANITIFOE",
+      "GRAVITATION",
+      "ASAECYMTEEE"
+     ],
+     "words": [
+      {
+       "display": "SINGULARITY",
+       "letters": "SINGULARITY",
+       "row": 0,
+       "col": 5,
+       "direction": "S"
+      },
+      {
+       "display": "GRAVITATION",
+       "letters": "GRAVITATION",
+       "row": 9,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "RELATIVITY",
+       "letters": "RELATIVITY",
+       "row": 9,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "EXPANSION",
+       "letters": "EXPANSION",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "HORIZON",
+       "letters": "HORIZON",
+       "row": 8,
+       "col": 2,
+       "direction": "N"
+      },
+      {
+       "display": "MATTER",
+       "letters": "MATTER",
+       "row": 10,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "ENERGY",
+       "letters": "ENERGY",
+       "row": 10,
+       "col": 10,
+       "direction": "N"
+      },
+      {
+       "display": "SPACE",
+       "letters": "SPACE",
+       "row": 2,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "display": "INFINITY",
+       "letters": "INFINITY",
+       "row": 2,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "TIME",
+       "letters": "TIME",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "VOID",
+       "letters": "VOID",
+       "row": 4,
+       "col": 3,
+       "direction": "NW"
+      },
+      {
+       "display": "HOLE",
+       "letters": "HOLE",
+       "row": 3,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "WAVE",
+       "letters": "WAVE",
+       "row": 7,
+       "col": 3,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MATTEF",
+       "row": 3,
+       "col": 8,
+       "direction": "S"
+      },
+      {
+       "letters": "MATTEA",
+       "row": 7,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "RELATIVIT",
+       "row": 1,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "EXPANS",
+       "row": 1,
+       "col": 9,
+       "direction": "S"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c3-l09",
+   "number": 9,
+   "theme": {
+    "fr": "Exploration",
+    "en": "Exploration"
+   },
+   "visualStyle": "STYLE_2",
+   "gridSize": 11,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 0.9,
+    "score": 124,
+    "decoys": 6
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "CEIRTEMELET",
+      "IEPDEMELETR",
+      "LDNHOCAMERA",
+      "VNSDONNEEAJ",
+      "NOLLITNAHCE",
+      "ASYAOQOECLC",
+      "EULAMVTCETT",
+      "EENFGCRRNSO",
+      "ROLASERUAVI",
+      "SUOHCEUESCR",
+      "XESIALERRME"
+     ],
+     "words": [
+      {
+       "display": "TRAJECTOIRE",
+       "letters": "TRAJECTOIRE",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "ÉCHANTILLON",
+       "letters": "ECHANTILLON",
+       "row": 4,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "TÉLÉMÉTRIE",
+       "letters": "TELEMETRIE",
+       "row": 0,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "VOYAGEUR",
+       "letters": "VOYAGEUR",
+       "row": 3,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "DONNÉES",
+       "letters": "DONNEES",
+       "row": 1,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "SURVOL",
+       "letters": "SURVOL",
+       "row": 9,
+       "col": 8,
+       "direction": "NW"
+      },
+      {
+       "display": "CAMÉRA",
+       "letters": "CAMERA",
+       "row": 2,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "CARTE",
+       "letters": "CARTE",
+       "row": 4,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "display": "RELAIS",
+       "letters": "RELAIS",
+       "row": 10,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "display": "LASER",
+       "letters": "LASER",
+       "row": 8,
+       "col": 2,
+       "direction": "E"
+      },
+      {
+       "display": "PHOTO",
+       "letters": "PHOTO",
+       "row": 1,
+       "col": 2,
+       "direction": "SE"
+      },
+      {
+       "display": "FLUX",
+       "letters": "FLUX",
+       "row": 7,
+       "col": 3,
+       "direction": "SW"
+      },
+      {
+       "display": "ÉCHO",
+       "letters": "ECHO",
+       "row": 9,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "SONDE",
+       "letters": "SONDE",
+       "row": 5,
+       "col": 1,
+       "direction": "N"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "DONNEE",
+       "row": 3,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "letters": "TELEME",
+       "row": 1,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "letters": "RELAI",
+       "row": 8,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "letters": "CART",
+       "row": 9,
+       "col": 9,
+       "direction": "NW"
+      },
+      {
+       "letters": "SON",
+       "row": 9,
+       "col": 0,
+       "direction": "NE"
+      },
+      {
+       "letters": "ECH",
+       "row": 6,
+       "col": 8,
+       "direction": "N"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "EEJREMACPOV",
+      "REGAYOVYPOR",
+      "CAMERAUOYNT",
+      "OIEBORPASCE",
+      "NPHOTOGDTCL",
+      "TFARCECAPSE",
+      "TTELEMETRYM",
+      "VRFAJLLABAE",
+      "SALSAEAYRLT",
+      "OHCERELYVRJ",
+      "MCCRTFLUXYT"
+     ],
+     "words": [
+      {
+       "display": "TRAJECTORY",
+       "letters": "TRAJECTORY",
+       "row": 10,
+       "col": 4,
+       "direction": "N"
+      },
+      {
+       "display": "SPACECRAFT",
+       "letters": "SPACECRAFT",
+       "row": 5,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "TELEMETRY",
+       "letters": "TELEMETRY",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "VOYAGER",
+       "letters": "VOYAGER",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "DATA",
+       "letters": "DATA",
+       "row": 4,
+       "col": 7,
+       "direction": "S"
+      },
+      {
+       "display": "FLYBY",
+       "letters": "FLYBY",
+       "row": 10,
+       "col": 5,
+       "direction": "NE"
+      },
+      {
+       "display": "CAMERA",
+       "letters": "CAMERA",
+       "row": 2,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "CHART",
+       "letters": "CHART",
+       "row": 10,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "RELAY",
+       "letters": "RELAY",
+       "row": 5,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "display": "LASER",
+       "letters": "LASER",
+       "row": 6,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "PHOTO",
+       "letters": "PHOTO",
+       "row": 4,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "FLUX",
+       "letters": "FLUX",
+       "row": 10,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "ECHO",
+       "letters": "ECHO",
+       "row": 9,
+       "col": 3,
+       "direction": "W"
+      },
+      {
+       "display": "PROBE",
+       "letters": "PROBE",
+       "row": 3,
+       "col": 6,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "VOYAGE",
+       "row": 0,
+       "col": 10,
+       "direction": "SW"
+      },
+      {
+       "letters": "REL",
+       "row": 9,
+       "col": 4,
+       "direction": "NE"
+      },
+      {
+       "letters": "LAS",
+       "row": 8,
+       "col": 2,
+       "direction": "W"
+      },
+      {
+       "letters": "CAMERJ",
+       "row": 0,
+       "col": 7,
+       "direction": "W"
+      },
+      {
+       "letters": "TELEMETJT",
+       "row": 2,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "letters": "ECSO",
+       "row": 5,
+       "col": 10,
+       "direction": "NW"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c3-l10",
+   "number": 10,
+   "theme": {
+    "fr": "La Voie lactée",
+    "en": "The Milky Way"
+   },
+   "visualStyle": "FINAL",
+   "gridSize": 12,
+   "difficulty": {
+    "tier": 4,
+    "ambiguity": 1.0,
+    "score": 144,
+    "decoys": 9
+   },
+   "hints": {
+    "maxPerLevel": 5
+   },
+   "variants": {
+    "fr": {
+     "grid": [
+      "EAVONREPUSME",
+      "NANBSOLEILTX",
+      "NNESUELUBENO",
+      "ANNEAUXEMOCP",
+      "TERREETOILEL",
+      "EAUVTECSRAMA",
+      "RGRAVITATION",
+      "RASTRONAUTEE",
+      "LEPOCSELETTT",
+      "EUEIXALAGOEE",
+      "LUNREORBITER",
+      "MARETILLETAS"
+     ],
+     "words": [
+      {
+       "display": "OBSERVATOIRE",
+       "letters": "OBSERVATOIRE",
+       "row": 0,
+       "col": 3,
+       "direction": "S"
+      },
+      {
+       "display": "ASTRONAUTE",
+       "letters": "ASTRONAUTE",
+       "row": 7,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "EXOPLANÈTE",
+       "letters": "EXOPLANETE",
+       "row": 0,
+       "col": 11,
+       "direction": "S"
+      },
+      {
+       "display": "GRAVITATION",
+       "letters": "GRAVITATION",
+       "row": 6,
+       "col": 1,
+       "direction": "E"
+      },
+      {
+       "display": "SATELLITE",
+       "letters": "SATELLITE",
+       "row": 11,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "TÉLESCOPE",
+       "letters": "TELESCOPE",
+       "row": 8,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "NÉBULEUSE",
+       "letters": "NEBULEUSE",
+       "row": 2,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "display": "SUPERNOVA",
+       "letters": "SUPERNOVA",
+       "row": 0,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "ANNEAUX",
+       "letters": "ANNEAUX",
+       "row": 3,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "TERRE",
+       "letters": "TERRE",
+       "row": 4,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "display": "GALAXIE",
+       "letters": "GALAXIE",
+       "row": 9,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "COMÈTE",
+       "letters": "COMETE",
+       "row": 5,
+       "col": 6,
+       "direction": "NE"
+      },
+      {
+       "display": "ÉTOILE",
+       "letters": "ETOILE",
+       "row": 4,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "ORBITE",
+       "letters": "ORBITE",
+       "row": 10,
+       "col": 5,
+       "direction": "E"
+      },
+      {
+       "display": "SOLEIL",
+       "letters": "SOLEIL",
+       "row": 1,
+       "col": 4,
+       "direction": "E"
+      },
+      {
+       "display": "LUNE",
+       "letters": "LUNE",
+       "row": 8,
+       "col": 0,
+       "direction": "SE"
+      },
+      {
+       "display": "MARS",
+       "letters": "MARS",
+       "row": 5,
+       "col": 10,
+       "direction": "W"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "TERR",
+       "row": 4,
+       "col": 0,
+       "direction": "S"
+      },
+      {
+       "letters": "ETOIL",
+       "row": 7,
+       "col": 11,
+       "direction": "SW"
+      },
+      {
+       "letters": "SATE",
+       "row": 7,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "letters": "ANNE",
+       "row": 3,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "MAR",
+       "row": 11,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "LUN",
+       "row": 10,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "COME",
+       "row": 3,
+       "col": 10,
+       "direction": "W"
+      },
+      {
+       "letters": "ANNEA",
+       "row": 1,
+       "col": 1,
+       "direction": "S"
+      },
+      {
+       "letters": "TER",
+       "row": 8,
+       "col": 9,
+       "direction": "SE"
+      }
+     ]
+    },
+    "en": {
+     "grid": [
+      "EYAWYKLIMMOC",
+      "TESGNIREALBR",
+      "ATTIDIORETSA",
+      "VEREPOCSELET",
+      "RNOITATIVARG",
+      "EANSUPERNOVA",
+      "SLANOOMSEEAL",
+      "BPUIEOORBITP",
+      "OOTGOACAUROO",
+      "YXALAGRMLTRX",
+      "TETILLETASYE",
+      "MILKYWALHAMV"
+     ],
+     "words": [
+      {
+       "display": "OBSERVATORY",
+       "letters": "OBSERVATORY",
+       "row": 0,
+       "col": 10,
+       "direction": "S"
+      },
+      {
+       "display": "ASTRONAUT",
+       "letters": "ASTRONAUT",
+       "row": 0,
+       "col": 2,
+       "direction": "S"
+      },
+      {
+       "display": "EXOPLANET",
+       "letters": "EXOPLANET",
+       "row": 10,
+       "col": 1,
+       "direction": "N"
+      },
+      {
+       "display": "GRAVITATION",
+       "letters": "GRAVITATION",
+       "row": 4,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "SATELLITE",
+       "letters": "SATELLITE",
+       "row": 10,
+       "col": 9,
+       "direction": "W"
+      },
+      {
+       "display": "TELESCOPE",
+       "letters": "TELESCOPE",
+       "row": 3,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "SUPERNOVA",
+       "letters": "SUPERNOVA",
+       "row": 5,
+       "col": 3,
+       "direction": "E"
+      },
+      {
+       "display": "ASTEROID",
+       "letters": "ASTEROID",
+       "row": 2,
+       "col": 11,
+       "direction": "W"
+      },
+      {
+       "display": "MILKYWAY",
+       "letters": "MILKYWAY",
+       "row": 0,
+       "col": 8,
+       "direction": "W"
+      },
+      {
+       "display": "GALAXY",
+       "letters": "GALAXY",
+       "row": 9,
+       "col": 5,
+       "direction": "W"
+      },
+      {
+       "display": "COMET",
+       "letters": "COMET",
+       "row": 8,
+       "col": 6,
+       "direction": "N"
+      },
+      {
+       "display": "ORBIT",
+       "letters": "ORBIT",
+       "row": 7,
+       "col": 6,
+       "direction": "E"
+      },
+      {
+       "display": "EARTH",
+       "letters": "EARTH",
+       "row": 7,
+       "col": 4,
+       "direction": "SE"
+      },
+      {
+       "display": "MOON",
+       "letters": "MOON",
+       "row": 6,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "MARS",
+       "letters": "MARS",
+       "row": 9,
+       "col": 7,
+       "direction": "N"
+      },
+      {
+       "display": "RINGS",
+       "letters": "RINGS",
+       "row": 1,
+       "col": 6,
+       "direction": "W"
+      },
+      {
+       "display": "NEBULA",
+       "letters": "NEBULA",
+       "row": 5,
+       "col": 8,
+       "direction": "S"
+      }
+     ],
+     "decoys": [
+      {
+       "letters": "MILKYWA",
+       "row": 11,
+       "col": 0,
+       "direction": "E"
+      },
+      {
+       "letters": "ASTR",
+       "row": 11,
+       "col": 9,
+       "direction": "N"
+      },
+      {
+       "letters": "MAR",
+       "row": 0,
+       "col": 9,
+       "direction": "SW"
+      },
+      {
+       "letters": "OBSERVAT",
+       "row": 8,
+       "col": 0,
+       "direction": "N"
+      },
+      {
+       "letters": "EXOPL",
+       "row": 10,
+       "col": 11,
+       "direction": "N"
+      },
+      {
+       "letters": "RIN",
+       "row": 3,
+       "col": 2,
+       "direction": "NE"
+      },
+      {
+       "letters": "GALA",
+       "row": 8,
+       "col": 3,
+       "direction": "SE"
+      },
+      {
+       "letters": "MOO",
+       "row": 6,
+       "col": 6,
+       "direction": "SW"
+      },
+      {
+       "letters": "COM",
+       "row": 0,
+       "col": 11,
+       "direction": "W"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
