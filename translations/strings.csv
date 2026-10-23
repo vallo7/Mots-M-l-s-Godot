@@ -299,6 +299,3 @@ trophy_ten_chapters_name,Word Master,Maître des mots
 trophy_ten_chapters_desc,Complete {0} chapters.,Termine {0} chapitres.
 trophy_daily_month_name,Daily Legend,Légende du quotidien
 trophy_daily_month_desc,Win the daily challenge {0} days in a row.,Réussis le défi du jour {0} jours de suite.
-credits_ads_source_admob,Active ad source: Google AdMob (real Google test ad units).,Source des annonces active : Google AdMob (vrais blocs de test de Google).
-credits_ads_source_simulated,Active ad source: simulated test ads (no Google SDK in this build).,Source des annonces active : annonces de test simulées (pas de SDK Google dans ce build).
-credits_ads_source_none,Active ad source: none in this build.,Source des annonces active : aucune dans ce build.

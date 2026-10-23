@@ -112,26 +112,44 @@ func start() -> void:
 	_finish_startup(sequence.catalog)
 
 
-## Choix du fournisseur de publicités :
-##  1. build Android « AdMob » (Gradle + plugin, caractéristique d'export `admob`) : vraies annonces de TEST de Google ;
-##  2. sinon, build de debug (éditeur, APK sans Gradle — la configuration par défaut) : annonces de test SIMULÉES, pour que
-##     tout le parcours (bannière, récompense d'un indice, annonce de retour) fonctionne et se teste sans SDK ;
+## Fournisseurs de publicités possibles (voir `choose_ad_backend`).
+enum AdBackend { NONE, SIMULATED, ADMOB }
+
+## Nom du plugin natif enregistré par la bibliothèque Android d'AdMob (présent seulement dans un build Gradle qui l'embarque).
+const ADMOB_SINGLETON := "PoingGodotAdMob"
+const ADMOB_PROVIDER_SCRIPT := "res://src/ads/admob_ad_provider.gd"
+
+
+## Choix du fournisseur de publicités (fonction pure, testée) :
+##  1. Android + plugin natif AdMob présent dans l'APK + script du fournisseur présent : vraies annonces de TEST de Google ;
+##  2. sinon, build de debug : annonces de test SIMULÉES (tout le parcours se teste sans SDK) ;
 ##  3. sinon (build de release sans plugin) : aucune publicité.
-## Le SDK Google est une bibliothèque Android que Godot n'embarque que dans un build Gradle : sans Gradle, aucune vraie
-## annonce n'est possible (voir docs/ADS.md).
+## Le plugin natif n'existe que dans un build Gradle qui embarque le SDK Google : on le détecte donc à l'exécution
+## (`Engine.has_singleton`), ce qui évite d'utiliser un SDK absent de l'APK.
+## Piège évité : `ResourceLoader.exists("res://addons/admob/plugin.cfg")` renvoie TOUJOURS faux (un .cfg n'est pas une
+## ressource, et il n'est pas exporté) ; l'ancien test empêchait donc de choisir le vrai AdMob, même dans le build Gradle.
+static func choose_ad_backend(on_android: bool, admob_native_present: bool, admob_script_present: bool, debug_build: bool) -> int:
+	if on_android and admob_native_present and admob_script_present:
+		return AdBackend.ADMOB
+	if debug_build:
+		return AdBackend.SIMULATED
+	return AdBackend.NONE
+
+
 func _create_ads() -> AdProvider:
-	var real_ads := OS.get_name() == "Android" and OS.has_feature("admob") \
-		and ResourceLoader.exists("res://addons/admob/plugin.cfg") and ResourceLoader.exists("res://src/ads/admob_ad_provider.gd")
-	var provider: AdProvider
-	if real_ads:
-		var script: GDScript = load("res://src/ads/admob_ad_provider.gd")
-		provider = script.new(get_tree())
-	elif OS.is_debug_build():
-		provider = SimulatedAdProvider.new(get_tree())
-	else:
-		provider = AdProvider.new()
-	print("Publicités : fournisseur « %s »" % provider.provider_id())  # visible dans logcat
-	return provider
+	var backend := choose_ad_backend(
+		OS.get_name() == "Android", Engine.has_singleton(ADMOB_SINGLETON),
+		ResourceLoader.exists(ADMOB_PROVIDER_SCRIPT), OS.is_debug_build()
+	)
+	match backend:
+		AdBackend.ADMOB:
+			var script: GDScript = load(ADMOB_PROVIDER_SCRIPT)
+			print("Publicités : vraies annonces de test Google (AdMob)")
+			return script.new(get_tree())
+		AdBackend.SIMULATED:
+			print("Publicités : annonces de test simulées")
+			return SimulatedAdProvider.new(get_tree())
+	return AdProvider.new()
 
 
 ## Consentement puis initialisation des annonces ; n'arrête jamais le jeu (en arrière-plan de l'écran d'accueil).

@@ -16,10 +16,6 @@ var _banner_layer: CanvasLayer
 var _showing := false
 
 
-func provider_id() -> String:
-	return "simulated"
-
-
 func _init(tree: SceneTree) -> void:
 	_tree = tree
 

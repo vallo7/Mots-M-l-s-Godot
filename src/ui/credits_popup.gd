@@ -36,10 +36,7 @@ static func open(parent: Node) -> PopupHost:
 		heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		section.add_child(heading)
-		var body_text := Strings.t(pair[1])
-		if pair[1] == "credits_ads_body" and App.ads != null:
-			body_text += "\n\n" + Strings.t("credits_ads_source_%s" % App.ads.provider_id())
-		var body := Wg.label(body_text, 14.0, Wg.Weight.BOLD, Wg.INK_MUTED)
+		var body := Wg.label(Strings.t(pair[1]), 14.0, Wg.Weight.BOLD, Wg.INK_MUTED)
 		body.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		section.add_child(body)

@@ -11,7 +11,6 @@ Automatisé (CI) : plus de 200 tests, compilation de tous les scripts, validatio
 - [ ] Redémarrage (mélange 1,3 s, verrou de saisie), retour avec confirmation, reprise après fermeture de l'appli.
 - [ ] Victoire : étoiles selon le temps (< 1 min : 3, < 3 min : 2), praise voix FR/EN, progression de chapitre, cadeau, bandeau « Trophée débloqué » éventuel.
 - [ ] Trophées : bouton sous les bulles de chapitre (pastille « nouveau »), grille de 3 colonnes, fiche au toucher (verrouillé : avancement ; débloqué : date), étiquettes « Nouveau », bandeau en jeu, trophées rétroactifs après mise à jour.
-- [ ] Publicités (APK AdMob de la CI) : Crédits > « Source des annonces active : Google AdMob » ; bannière « Test Ad » en jeu, annonce récompensée (+1 indice une seule fois), annonce de retour, hors ligne sans blocage.
 - [ ] Écran de chargement : aucun conseil, barre en bas, mention « Développé par Vallo Game » discrète.
 - [ ] Navigation : transitions de page fluides (accueil ↔ jeu ↔ victoire ↔ niveaux) ; popups centrés et complets (réglages visibles en entier).
 - [ ] Monument : barre du haut = progression du chapitre en cours, défilement, niveaux terminés / disponible / verrouillés, messages.

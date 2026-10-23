@@ -2,14 +2,29 @@
 
 ## 1.2.1
 
-- **Installation de l'APK** : signature de debug **stable** (clé versionnée `scripts/ci/debug-signing.p12`, plus de nouvelle clé à
-  chaque build : une version s'installe par-dessus la précédente) ; **32 bits (armeabi-v7a) ajouté** en plus de arm64-v8a, pour les
-  téléphones 32 bits ; la CI **vérifie l'APK** avant de le publier (`scripts/ci/verify_apk.sh` : signature valide, nom de paquet,
-  architectures).
-- **Vraies annonces de test Google par défaut** : l'APK principal de la CI est le build Gradle + AdMob ; la CI contrôle que le
-  SDK Google Mobile Ads et l'identifiant d'application de test sont dans l'APK. L'APK sans Gradle (annonces simulées) devient
-  optionnel (case « light »). L'écran Crédits affiche la source d'annonces active.
-- Le contrôle `generate_levels.py --check` passe dans un job parallèle (ne retarde plus l'APK).
+**Correctif : l'APK de la CI ne s'installait pas**
+- **Signature instable** : chaque exécution du workflow fabriquait une nouvelle clé de debug ; un APK ne pouvait donc jamais
+  remplacer le précédent (Android : « application non installée, conflit avec un package existant »). La clé est maintenant
+  versionnée (`ci/debug.keystore.b64`, clé de debug sans valeur secrète) et chargée par `scripts/ci/prepare_signing.sh`.
+- **Code de version** : `scripts/ci/set_android_version.py` fixe `version/code` à max(dépôt, numéro d'exécution) pour ce build :
+  il ne baisse jamais (Android refuse un code inférieur à celui installé).
+- **Manifeste de l'export sans Gradle** : Godot 4.7.2 réécrit l'attribut `authorities` de *tous* les `<provider>` du modèle en
+  `<package>.fileprovider` (`export_plugin.cpp`) ; le modèle en contient deux (FileProvider, androidx.startup), d'où deux
+  fournisseurs de contenu à la même autorité. `scripts/ci/apk_tool.py fix-authorities` rend l'autorité unique (même longueur),
+  réaligne et re-signe. Le build Gradle n'est pas concerné (fusion de manifestes d'Android).
+- **Contrôle automatique** : `apk_tool.py check` fait échouer la CI si l'APK n'est pas signé (v2/v3), si deux providers partagent une
+  autorité, si le package ou le code de version est faux, ou (build AdMob) si le SDK Google, le plugin ou l'identifiant
+  d'application de TEST sont absents.
+
+**Correctif : les vraies annonces de test n'étaient jamais choisies**
+- `App._create_ads` testait `ResourceLoader.exists("res://addons/admob/plugin.cfg")`, toujours faux (un `.cfg` n'est pas une
+  ressource et n'est pas exporté) : même le build Gradle retombait sur les annonces simulées. Le choix repose maintenant sur le plugin
+  natif présent dans l'APK (`Engine.has_singleton("PoingGodotAdMob")`), dans une fonction pure testée (`choose_ad_backend`).
+
+**Build**
+- Le job `build` de la CI produit désormais l'APK Gradle + AdMob (vraies annonces de test Google) à chaque exécution ; l'APK sans
+  Gradle devient un APK de dépannage (*Run workflow*, case « light »).
+- Version 1.2.1 (code 4 dans le dépôt, croissant en CI). 225 tests GdUnit4 (6 de plus : choix du fournisseur de publicités).
 
 ## 1.2.0
 

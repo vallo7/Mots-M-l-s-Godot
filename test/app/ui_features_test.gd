@@ -128,15 +128,6 @@ func test_no_page_transition_fades_anything() -> void:
 
 
 # --- Publicités de test simulées
-func test_each_ad_provider_announces_its_source_and_the_credits_can_say_so() -> void:
-	assert_str(AdProvider.new().provider_id()).is_equal("none")
-	assert_str(SimulatedAdProvider.new(get_tree()).provider_id()).is_equal("simulated")
-	for language in [Language.EN, Language.FR]:
-		Strings.set_language(language)
-		for id in ["none", "simulated", "admob"]:
-			assert_str(Strings.t("credits_ads_source_%s" % id)).is_not_equal("credits_ads_source_%s" % id)
-
-
 func test_simulated_ads_are_always_available_and_the_reward_needs_the_full_view() -> void:
 	var provider := SimulatedAdProvider.new(get_tree())
 	assert_bool(await provider.start()).is_true()
