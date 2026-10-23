@@ -1,0 +1,153 @@
+name: android
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      light:
+        description: "Construire aussi l'APK léger (sans Gradle, annonces SIMULÉES) : dépannage uniquement"
+        type: boolean
+        default: false
+
+env:
+  GODOT_VERSION: "4.7.2"
+  GDUNIT_VERSION: "6.1.3"
+  ANDROID_PACKAGE: "com.motsmeles.game"
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Contrôles et tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Contrôles de dépôt et de niveaux (Python)
+        run: |
+          python3 scripts/check_repo.py
+          python3 scripts/validate_levels.py
+          python3 scripts/generate_levels.py --check
+      - name: Cache Godot
+        uses: actions/cache@v4
+        with:
+          path: ~/godot
+          key: godot-${{ env.GODOT_VERSION }}-editor
+      - name: Installer Godot
+        run: scripts/ci/setup_godot.sh
+      - name: Installer GdUnit4
+        run: scripts/ci/install_gdunit4.sh
+      - name: Installer le plugin AdMob (le fournisseur de publicités est compilé contre sa vraie API)
+        run: scripts/ci/install_admob.sh
+      - name: Compilation de tous les scripts + tests GdUnit4
+        run: scripts/ci/run_tests.sh
+      - name: Rapports de tests
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapports-gdunit4
+          path: reports/
+          if-no-files-found: ignore
+
+  # APK PRINCIPAL : build Gradle + plugin AdMob = vraies annonces de TEST de Google (bannière, récompensée, retour).
+  # Signé avec la clé de debug STABLE du dépôt (ci/debug.keystore.b64) : chaque APK peut remplacer le précédent.
+  build:
+    name: "APK de debug (Gradle + AdMob, vraies annonces de test Google)"
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Cache Godot et modèles d'export
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/godot
+            ~/.local/share/godot/export_templates
+          key: godot-${{ env.GODOT_VERSION }}-editor-templates
+      - name: Installer Godot et ses modèles d'export
+        run: scripts/ci/setup_godot.sh --templates
+      - name: SDK Android (plateforme 36, build-tools 36.1.0, NDK 29)
+        run: |
+          yes | "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" "platform-tools" "platforms;android-36" "build-tools;36.1.0" "ndk;29.0.14206865"
+      - name: Réglages d'éditeur Android
+        run: scripts/ci/configure_editor_android.sh
+      - name: Plugin AdMob (annonces de test Google) et modèle de build Gradle Android
+        run: |
+          scripts/ci/install_admob.sh --android
+          scripts/ci/install_android_template.sh
+      - name: Clé de signature de debug stable
+        run: sh scripts/ci/prepare_signing.sh
+      - name: Code de version Android (croît à chaque exécution)
+        run: python3 scripts/ci/set_android_version.py
+      - name: Importer et exporter l'APK (préréglage « Android AdMob »)
+        run: |
+          mkdir -p build
+          ~/godot/godot --headless --path . --import || true
+          ~/godot/godot --headless --path . --export-debug "Android AdMob" build/mots-meles-debug.apk
+      - name: Vérifier l'APK (signature, manifeste, version, SDK et identifiants de test AdMob)
+        run: |
+          python3 scripts/ci/apk_tool.py info build/mots-meles-debug.apk
+          python3 scripts/ci/apk_tool.py check build/mots-meles-debug.apk --package "$ANDROID_PACKAGE" --min-version-code "${GITHUB_RUN_NUMBER}" --expect-admob
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mots-meles-debug-apk
+          path: build/mots-meles-debug.apk
+          if-no-files-found: error
+
+  # Optionnel (Run workflow > « light ») : APK sans Gradle, plus rapide, annonces SIMULÉES. Dépannage uniquement.
+  # L'export Godot 4.7.2 sans Gradle écrit deux autorités de provider identiques dans le manifeste : apk_tool.py les rend uniques.
+  build-light:
+    name: APK léger (sans Gradle, annonces de test simulées)
+    needs: test
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.light }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Cache Godot et modèles d'export
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/godot
+            ~/.local/share/godot/export_templates
+          key: godot-${{ env.GODOT_VERSION }}-editor-templates
+      - name: Installer Godot et ses modèles d'export
+        run: scripts/ci/setup_godot.sh --templates
+      - name: SDK Android (platform-tools et build-tools suffisent sans Gradle)
+        run: |
+          yes | "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" "platform-tools" "platforms;android-36" "build-tools;36.1.0"
+      - name: Réglages d'éditeur Android
+        run: scripts/ci/configure_editor_android.sh
+      - name: Clé de signature de debug stable
+        run: sh scripts/ci/prepare_signing.sh
+      - name: Code de version Android (croît à chaque exécution)
+        run: python3 scripts/ci/set_android_version.py
+      - name: Importer et exporter l'APK (préréglage « Android », modèle d'export précompilé)
+        run: |
+          mkdir -p build
+          ~/godot/godot --headless --path . --import || true
+          ~/godot/godot --headless --path . --export-debug "Android" build/mots-meles-light-debug.apk
+      - name: Réparer les autorités de provider en double, réaligner et re-signer
+        run: python3 scripts/ci/apk_tool.py fix-authorities build/mots-meles-light-debug.apk
+      - name: Vérifier l'APK (signature, manifeste, version)
+        run: |
+          python3 scripts/ci/apk_tool.py info build/mots-meles-light-debug.apk
+          python3 scripts/ci/apk_tool.py check build/mots-meles-light-debug.apk --package "$ANDROID_PACKAGE" --min-version-code "${GITHUB_RUN_NUMBER}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mots-meles-light-debug-apk
+          path: build/mots-meles-light-debug.apk
+          if-no-files-found: error
