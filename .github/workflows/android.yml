@@ -1,0 +1,151 @@
+name: android
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      light:
+        description: "Construire aussi l'APK léger (sans Gradle, annonces de test simulées)"
+        type: boolean
+        default: false
+
+env:
+  GODOT_VERSION: "4.7.2"
+  GDUNIT_VERSION: "6.1.3"
+
+jobs:
+  test:
+    name: Contrôles et tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Contrôles de dépôt et de niveaux (Python)
+        run: |
+          python3 scripts/check_repo.py
+          python3 scripts/validate_levels.py
+      - name: Cache Godot
+        uses: actions/cache@v4
+        with:
+          path: ~/godot
+          key: godot-${{ env.GODOT_VERSION }}-editor
+      - name: Installer Godot
+        run: scripts/ci/setup_godot.sh
+      - name: Installer GdUnit4
+        run: scripts/ci/install_gdunit4.sh
+      - name: Installer le plugin AdMob (le fournisseur de publicités est compilé contre sa vraie API)
+        run: scripts/ci/install_admob.sh
+      - name: Compilation de tous les scripts + tests GdUnit4
+        run: scripts/ci/run_tests.sh
+      - name: Rapports de tests
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapports-gdunit4
+          path: reports/
+          if-no-files-found: ignore
+
+  # Preuve que data/levels vient bien du générateur (régénère les 100 niveaux : plusieurs minutes). En parallèle : ne retarde pas l'APK.
+  levels-check:
+    name: Niveaux identiques au générateur
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/generate_levels.py --check
+
+  # APK PRINCIPAL : Gradle + plugin AdMob = vraies annonces de test de Google (bannière, récompensée, annonce de retour).
+  # La clé de signature de debug est versionnée (scripts/ci/debug-signing.p12) : tous les APK ont la même signature, donc
+  # une nouvelle version s'installe par-dessus la précédente sans désinstaller.
+  build:
+    name: APK de debug (Gradle + AdMob, vraies annonces de test Google)
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Cache Godot et modèles d'export
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/godot
+            ~/.local/share/godot/export_templates
+          key: godot-${{ env.GODOT_VERSION }}-editor-templates
+      - name: Installer Godot et ses modèles d'export
+        run: scripts/ci/setup_godot.sh --templates
+      - name: SDK Android (plateforme 36, build-tools 36.1.0, NDK 29)
+        run: |
+          yes | "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" "platform-tools" "platforms;android-36" "build-tools;36.1.0" "ndk;29.0.14206865"
+      - name: Réglages d'éditeur Android
+        run: scripts/ci/configure_editor_android.sh
+      - name: Plugin AdMob (annonces de test Google) et modèle de build Gradle Android
+        run: |
+          scripts/ci/install_admob.sh --android
+          scripts/ci/install_android_template.sh
+      - name: Clé de signature de debug (celle du dépôt ; créée si elle manque)
+        run: |
+          if [ ! -f scripts/ci/debug-signing.p12 ]; then
+            keytool -genkeypair -keystore scripts/ci/debug-signing.p12 -storetype PKCS12 -alias androiddebugkey -keyalg RSA -keysize 2048 \
+              -validity 36500 -storepass android -keypass android -dname "CN=Mots Meles Debug,O=Vallo Game,C=CM"
+          fi
+      - name: Importer et exporter l'APK (préréglage « Android AdMob »)
+        env:
+          GODOT_ANDROID_KEYSTORE_DEBUG_PATH: ${{ github.workspace }}/scripts/ci/debug-signing.p12
+          GODOT_ANDROID_KEYSTORE_DEBUG_USER: androiddebugkey
+          GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
+        run: |
+          mkdir -p build
+          ~/godot/godot --headless --path . --import || true
+          ~/godot/godot --headless --path . --export-debug "Android AdMob" build/mots-meles-debug.apk
+      - name: Vérifier l'APK (signature, paquet, architectures, vrai SDK Google Mobile Ads)
+        run: scripts/ci/verify_apk.sh build/mots-meles-debug.apk --ads
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mots-meles-debug-apk
+          path: build/mots-meles-debug.apk
+
+  # Optionnel (Run workflow, case « light ») : APK sans Gradle, annonces de test SIMULÉES. Plus rapide, mais sans SDK Google.
+  build-light:
+    name: APK léger (sans Gradle, annonces simulées)
+    needs: test
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.light }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Cache Godot et modèles d'export
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/godot
+            ~/.local/share/godot/export_templates
+          key: godot-${{ env.GODOT_VERSION }}-editor-templates
+      - name: Installer Godot et ses modèles d'export
+        run: scripts/ci/setup_godot.sh --templates
+      - name: SDK Android (platform-tools et build-tools suffisent sans Gradle)
+        run: |
+          yes | "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" "platform-tools" "platforms;android-36" "build-tools;36.1.0"
+      - name: Réglages d'éditeur Android
+        run: scripts/ci/configure_editor_android.sh
+      - name: Importer et exporter l'APK (préréglage « Android », modèle d'export précompilé)
+        env:
+          GODOT_ANDROID_KEYSTORE_DEBUG_PATH: ${{ github.workspace }}/scripts/ci/debug-signing.p12
+          GODOT_ANDROID_KEYSTORE_DEBUG_USER: androiddebugkey
+          GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
+        run: |
+          mkdir -p build
+          ~/godot/godot --headless --path . --import || true
+          ~/godot/godot --headless --path . --export-debug "Android" build/mots-meles-light-debug.apk
+      - name: Vérifier l'APK
+        run: scripts/ci/verify_apk.sh build/mots-meles-light-debug.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mots-meles-light-debug-apk
+          path: build/mots-meles-light-debug.apk
