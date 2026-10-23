@@ -30,6 +30,10 @@ var _rewarded_error: int = UnavailableReason.NOT_LOADED
 var _banner: AdView
 
 
+func provider_id() -> String:
+	return "admob"
+
+
 func _init(tree: SceneTree) -> void:
 	_tree = tree
 	var config: Variant = JsonUtil.parse_object(FileAccess.get_file_as_string("res://data/ads_config.json"))

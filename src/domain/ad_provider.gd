@@ -4,6 +4,11 @@ extends RefCounted
 ## Interface : surchargée par les implémentations.
 
 
+## Identifiant du fournisseur actif : « none », « simulated » (annonces de test simulées) ou « admob » (vrai SDK Google).
+func provider_id() -> String:
+	return "none"
+
+
 ## UnavailableReason.NONE = une publicité récompensée est prête ; sinon la raison.
 func rewarded_unavailable_reason() -> int:
 	return UnavailableReason.NOT_LOADED

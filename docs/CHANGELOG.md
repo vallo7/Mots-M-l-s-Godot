@@ -1,5 +1,16 @@
 # Journal des modifications
 
+## 1.2.1
+
+- **Installation de l'APK** : signature de debug **stable** (clé versionnée `scripts/ci/debug-signing.p12`, plus de nouvelle clé à
+  chaque build : une version s'installe par-dessus la précédente) ; **32 bits (armeabi-v7a) ajouté** en plus de arm64-v8a, pour les
+  téléphones 32 bits ; la CI **vérifie l'APK** avant de le publier (`scripts/ci/verify_apk.sh` : signature valide, nom de paquet,
+  architectures).
+- **Vraies annonces de test Google par défaut** : l'APK principal de la CI est le build Gradle + AdMob ; la CI contrôle que le
+  SDK Google Mobile Ads et l'identifiant d'application de test sont dans l'APK. L'APK sans Gradle (annonces simulées) devient
+  optionnel (case « light »). L'écran Crédits affiche la source d'annonces active.
+- Le contrôle `generate_levels.py --check` passe dans un job parallèle (ne retarde plus l'APK).
+
 ## 1.2.0
 
 **Contenu**

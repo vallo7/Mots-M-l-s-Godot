@@ -21,7 +21,7 @@ run/max_fps=60
 boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/show_image=false
 config/icon="res://assets/branding/app-logo.png"
-config/version="1.2.0"
+config/version="1.2.1"
 
 [autoload]
 

@@ -1,8 +1,9 @@
 # Publicités
 
-**Statut (1.2.0)** : le projet se construit **sans Gradle** (préréglage « Android », modèle d'export précompilé de Godot). Dans ce
-mode les annonces de test sont **simulées** (`SimulatedAdProvider`). Les **vraies annonces de test de Google** sont conservées en
-option dans un second préréglage, « Android AdMob » (Gradle + plugin).
+**Statut (1.2.1)** : l'APK principal construit par la CI (artefact `mots-meles-debug-apk`) est un build **Gradle + plugin AdMob** :
+il affiche les **vraies annonces de test de Google**. La CI le prouve à chaque build (`scripts/ci/verify_apk.sh --ads` : signature
+valide, SDK Google Mobile Ads et identifiant d'application de test présents dans l'APK). Le préréglage « Android » (sans Gradle,
+export local hors ligne) affiche à la place des annonces de test **simulées** ; l'écran Crédits indique la source active.
 
 ## Pourquoi pas de vraies annonces Google sans Gradle
 
@@ -13,12 +14,12 @@ réelles passent donc par le préréglage Gradle.
 
 ## Les deux configurations
 
-| | Préréglage « Android » (défaut) | Préréglage « Android AdMob » (optionnel) |
+| | Préréglage « Android » (export local hors ligne) | Préréglage « Android AdMob » (CI, APK principal) |
 |---|---|---|
 | Gradle | non | oui |
 | Plugin AdMob | non installé | installé (`install_admob.sh --android`) |
 | Annonces | **simulées** (debug), aucune (release) | **vraies annonces de test Google** |
-| CI | job `build` (à chaque push) | job `build-admob` (*Run workflow*, case « admob ») |
+| CI | job `build-light` (*Run workflow*, case « light ») | job `build` (à chaque push) |
 | Caractéristique d'export | — | `admob` (voir ci-dessous) |
 
 Choix du fournisseur (`App._create_ads`) : build Android avec la caractéristique d'export `admob` **et** plugin présent → vrai
@@ -42,12 +43,14 @@ annonce de retour, hors ligne) sans SDK ; `test/visual/shot_ads.gd` en produit d
 
 ## Obtenir l'APK avec les vraies annonces de test Google
 
-- **Par la CI** : onglet *Actions* > *android* > *Run workflow*, cocher « admob ». Le job `build-admob` installe le plugin
-  (version 5.1.0 épinglée), le modèle de build Gradle, puis exporte le préréglage « Android AdMob » (artefact
-  `mots-meles-admob-debug-apk`).
+- **Par la CI** (cas normal) : chaque push, ou *Actions* > *android* > *Run workflow*. Le job `build` installe le plugin (version
+  5.1.0 épinglée), le modèle de build Gradle, exporte « Android AdMob » puis vérifie l'APK (artefact `mots-meles-debug-apk`).
+  Gradle et ses bibliothèques sont téléchargés **par la CI** : la machine de développement n'a besoin d'aucun accès à internet.
 - **En local** : `scripts/ci/install_admob.sh --android` (plugin dans `addons/admob`, activé dans `project.godot`, bibliothèques
   Android pour Godot 4.7.2), *Projet > Installer le modèle de build Android*, puis exporter « Android AdMob ».
   L'identifiant d'application de test de Google est celui par défaut du plugin.
+- Vérification vérifiable à la main : écran Crédits > « Source des annonces active : Google AdMob » ; les annonces réelles de test
+  portent la mention « Test Ad » de Google (les simulées sont marquées « simulation »).
 - Le job de tests installe toujours le plugin (sans Gradle) pour que `admob_ad_provider.gd` et `admob_consent.gd` soient
   compilés contre la **vraie API** du plugin.
 

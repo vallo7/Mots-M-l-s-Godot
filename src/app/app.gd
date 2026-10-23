@@ -122,12 +122,16 @@ func start() -> void:
 func _create_ads() -> AdProvider:
 	var real_ads := OS.get_name() == "Android" and OS.has_feature("admob") \
 		and ResourceLoader.exists("res://addons/admob/plugin.cfg") and ResourceLoader.exists("res://src/ads/admob_ad_provider.gd")
+	var provider: AdProvider
 	if real_ads:
 		var script: GDScript = load("res://src/ads/admob_ad_provider.gd")
-		return script.new(get_tree())
-	if OS.is_debug_build():
-		return SimulatedAdProvider.new(get_tree())
-	return AdProvider.new()
+		provider = script.new(get_tree())
+	elif OS.is_debug_build():
+		provider = SimulatedAdProvider.new(get_tree())
+	else:
+		provider = AdProvider.new()
+	print("Publicités : fournisseur « %s »" % provider.provider_id())  # visible dans logcat
+	return provider
 
 
 ## Consentement puis initialisation des annonces ; n'arrête jamais le jeu (en arrière-plan de l'écran d'accueil).

@@ -19,7 +19,7 @@ static func open(parent: Node) -> PopupHost:
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	list.add_child(name_label)
-	var version := Wg.label(Strings.t("credits_version", [str(ProjectSettings.get_setting("application/config/version", "1.2.0"))]), 16.0, Wg.Weight.EXTRABOLD, Wg.INK_MUTED)
+	var version := Wg.label(Strings.t("credits_version", [str(ProjectSettings.get_setting("application/config/version", "1.2.1"))]), 16.0, Wg.Weight.EXTRABOLD, Wg.INK_MUTED)
 	version.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	version.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	list.add_child(version)
@@ -36,7 +36,10 @@ static func open(parent: Node) -> PopupHost:
 		heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		section.add_child(heading)
-		var body := Wg.label(Strings.t(pair[1]), 14.0, Wg.Weight.BOLD, Wg.INK_MUTED)
+		var body_text := Strings.t(pair[1])
+		if pair[1] == "credits_ads_body" and App.ads != null:
+			body_text += "\n\n" + Strings.t("credits_ads_source_%s" % App.ads.provider_id())
+		var body := Wg.label(body_text, 14.0, Wg.Weight.BOLD, Wg.INK_MUTED)
 		body.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		section.add_child(body)

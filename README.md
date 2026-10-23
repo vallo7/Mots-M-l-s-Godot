@@ -21,12 +21,13 @@ Jeu de mots mêlés hors ligne (FR / EN), Android, portrait. Portage du projet K
 2. Lancer (F5) : la scène principale est `scenes/main.tscn`. Sur ordinateur, la fenêtre peut être redimensionnée ;
    la mise en page de référence est 360 × 800 dp.
 3. Export Android : *Projet > Exporter* avec le préréglage « Android » (déjà configuré : `com.motsmeles.game`,
-   arm64-v8a, **sans Gradle** : modèle d'export précompilé, version 1.2.0 / code 3, écran de démarrage Android blanc).
+   arm64-v8a + armeabi-v7a, **sans Gradle** : modèle d'export précompilé, version 1.2.1 / code 4, écran de démarrage Android blanc).
    Il faut que les modèles d'export de Godot 4.7.2, le SDK Android (platform-tools, build-tools), le JDK et la clé de debug
    soient configurés dans les *Paramètres de l'éditeur* ; aucun modèle de build Gradle n'est nécessaire.
-   - **Préréglage « Android »** (par défaut) : un build de debug affiche des **publicités de test simulées** (bannière, annonce
-     récompensée, annonce de retour) ; un build de release n'affiche aucune publicité.
-   - **Préréglage « Android AdMob »** (Gradle + plugin, annonces de test Google réelles) : voir `docs/ADS.md`.
+   - **Préréglage « Android »** (export local hors ligne) : un build de debug affiche des **publicités de test simulées**
+     (bannière, annonce récompensée, annonce de retour) ; un build de release n'affiche aucune publicité.
+   - **Préréglage « Android AdMob »** (Gradle + plugin, **vraies annonces de test Google**) : c'est celui que construit la CI ;
+     voir `docs/ADS.md`.
    Ou laisser la CI faire tout cela (ci-dessous).
 
 ## Tests et contrôles
@@ -35,15 +36,21 @@ Jeu de mots mêlés hors ligne (FR / EN), Android, portrait. Portage du projet K
 scripts/ci/setup_godot.sh                 # télécharge Godot 4.7.2 (sans écran) dans ~/godot
 scripts/ci/install_gdunit4.sh             # installe GdUnit4 6.1.3 (non versionné) et l'active
 scripts/ci/install_admob.sh               # installe le plugin AdMob 5.1.0 (non versionné) : le fournisseur de publicités est alors compilé
-scripts/ci/run_tests.sh                   # compile tous les scripts + 219 tests GdUnit4
+scripts/ci/run_tests.sh                   # compile tous les scripts + 220 tests GdUnit4
 godot --headless --path . -s res://scripts/check_daily.gd -- --days=800   # valide 800 jours de défis du jour (2 langues)
 python3 scripts/check_repo.py             # identifiants de test, traductions, clés utilisées
 python3 scripts/validate_levels.py        # validation des niveaux (miroir Python du validateur)
 ```
 
-La CI (`.github/workflows/android.yml`) enchaîne : contrôles Python → tests → APK de debug sans Gradle (artefact téléchargeable).
-Un lancement manuel (*Run workflow*, case « admob ») produit en plus l'APK AdMob (Gradle, vraies annonces de test Google).
-Note : `generate_levels.py --check` régénère les 100 niveaux (plusieurs minutes) pour prouver que les JSON viennent du générateur.
+La CI (`.github/workflows/android.yml`) enchaîne : contrôles Python → tests → **APK de debug Gradle + AdMob** (vraies annonces de
+test Google), vérifié automatiquement (signature, paquet, architectures, SDK Google présent), artefact `mots-meles-debug-apk`.
+Un lancement manuel avec la case « light » produit en plus l'APK sans Gradle (annonces simulées). Un job parallèle vérifie
+que `data/levels` vient du générateur (plusieurs minutes, sans retarder l'APK).
+
+**Installer l'APK** : télécharger l'artefact (un zip), l'extraire, ouvrir `mots-meles-debug.apk`, autoriser « sources inconnues ».
+L'APK est signé par la clé de debug du dépôt (`scripts/ci/debug-signing.p12`) : toutes les versions suivantes s'installent par-dessus.
+Si une ancienne version signée autrement est installée (`Application non installée`), la désinstaller une fois. Cette clé ne
+sert **qu'aux tests** : une publication sur le Play Store demandera une clé de release privée.
 
 ## Organisation
 
@@ -57,7 +64,7 @@ Note : `generate_levels.py --check` régénère les 100 niveaux (plusieurs minut
 | `src/ads` | Intégration AdMob **optionnelle** (chargée seulement si le plugin est installé). |
 | `data/levels` | Niveaux JSON (inchangés par rapport à l'app d'origine). |
 | `translations` | `strings.csv` (EN/FR) importé par Godot. |
-| `test` | 219 tests GdUnit4 + captures d'écran automatisées (`test/visual`). |
+| `test` | 220 tests GdUnit4 + captures d'écran automatisées (`test/visual`). |
 | `docs` | Architecture, design system, migration, publicité, performance, QA. |
 
 ## Licences
