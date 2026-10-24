@@ -13,14 +13,22 @@ const LOCKED_ICON := "ic_trophy_locked"
 
 var id: String
 var metric: String
+## Objectif à atteindre : l'objectif d'origine (`base_target`) multiplié par `factor` (×2 ou ×3 selon le trophée),
+## plafonné à `cap` quand le contenu du jeu ne permettrait pas d'aller plus loin (0 = pas de plafond).
 var target: int
 var tier: int
+var base_target: int
+var factor: int
 
 
-func _init(p_id: String, p_metric: String, p_target: int, p_tier: int) -> void:
+func _init(p_id: String, p_metric: String, p_base_target: int, p_tier: int, p_factor: int = 1, p_cap: int = 0) -> void:
 	id = p_id
 	metric = p_metric
-	target = p_target
+	base_target = p_base_target
+	factor = maxi(p_factor, 1)
+	target = base_target * factor
+	if p_cap > 0:
+		target = mini(target, p_cap)
 	tier = p_tier
 
 

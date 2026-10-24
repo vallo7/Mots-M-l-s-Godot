@@ -84,6 +84,11 @@ static func tilt_from_bottom(node: Control, scale_factor: float, rotation_degree
 	node.offset_transform_rotation = deg_to_rad(rotation_degrees)
 
 
+## Marge d'un bouton avec la zone sûre : la marge actuelle de l'écran, relevée à Wg.EDGE_GAP si elle était plus petite.
+static func edge(current: float) -> int:
+	return int(ceilf(maxf(current, Wg.EDGE_GAP)))
+
+
 ## Calcule la hauteur sûre en haut/bas (encoches, barres système) en unités de la fenêtre de référence.
 static func safe_insets(viewport: Viewport) -> Vector4:
 	var window_size := Vector2(DisplayServer.window_get_size())

@@ -169,15 +169,22 @@ func _ready() -> void:
 		var gift := WgButton.create(Strings.t("result_gift_open"), WgButton.Kind.PRIMARY, "", true)
 		gift.sound = Sound.GIFT
 		gift.haptic = HapticEffect.SUCCESS
-		gift.activated.connect(func() -> void: App.claim_gift(result.chapter_index))
+		gift.activated.connect(func() -> void:
+			var amount := App.claim_gift(result.chapter_index)
+			if amount > 0 and App.double_reward_available() and is_instance_valid(gift):
+				# Le cadeau est ouvert : le bouton laisse place à l'offre « doubler », au choix du joueur.
+				var offer := _make_double_button(amount)
+				gift.get_parent().add_child(offer)
+				gift.get_parent().move_child(offer, gift.get_index() + 1)
+				gift.visible = false)
 		body.add_child(gift)
 
 	# Ruban de titre à cheval sur le bord haut de la carte
 	_card_wrap = card_holder
-	var ribbon := RibbonBanner.create(Strings.t("result_title"), "pink", 62.0)
+	var ribbon := BannerImage.create(Strings.t("result_title"), "red", 64.0)
 	ribbon.anchor_left = 0.05
 	ribbon.anchor_right = 0.95
-	ribbon.offset_bottom = 62.0
+	ribbon.offset_bottom = 64.0
 	card_holder.add_child(ribbon)
 
 	column.add_child(_expander())
@@ -310,6 +317,9 @@ func _build_daily_rewards() -> Control:
 			lines.append(Strings.t("daily_result_milestone", [completion.milestone_days]) + "  +%d" % completion.milestone_hints)
 		for line in lines:
 			column.add_child(Wg.label(line, 14.0, Wg.Weight.BOLD, Color(1, 1, 1, 0.9)))
+		if completion.total_hints() > 0 and App.double_reward_available():
+			column.add_child(_gap(8.0))
+			column.add_child(_make_double_button(completion.total_hints()))
 	if completion != null and completion.streak > 0:
 		column.add_child(_gap(4.0))
 		var streak_row := HBoxContainer.new()
@@ -323,6 +333,17 @@ func _build_daily_rewards() -> Control:
 		streak_row.add_child(Wg.label(streak_text, 16.0, Wg.Weight.EXTRABOLD, Wg.WHITE))
 		column.add_child(streak_row)
 	return column
+
+
+## « Doubler » : une publicité récompensée (choisie par le joueur) donne `amount` indices de plus. Le bouton disparaît une fois la
+## récompense reçue ; si la pub est fermée trop tôt, il reste pour un nouvel essai.
+func _make_double_button(amount: int) -> WgButton:
+	var button := WgButton.create(Strings.t("result_double", [amount]), WgButton.Kind.PRIMARY, "ic_play", true)
+	button.activated.connect(func() -> void:
+		var granted: bool = await App.double_reward(amount)
+		if granted and is_instance_valid(button):
+			button.queue_free())
+	return button
 
 
 func _build_buttons() -> Control:

@@ -3,5 +3,6 @@
   "app_id": "ca-app-pub-3940256099942544~3347511713",
   "banner_unit_id": "ca-app-pub-3940256099942544/6300978111",
   "app_open_unit_id": "ca-app-pub-3940256099942544/9257395921",
-  "rewarded_unit_id": "ca-app-pub-3940256099942544/5224354917"
+  "rewarded_unit_id": "ca-app-pub-3940256099942544/5224354917",
+  "interstitial_unit_id": "ca-app-pub-3940256099942544/1033173712"
 }

@@ -2,12 +2,12 @@ class_name HomeScreen
 extends Control
 ## Accueil : un carrousel de chapitres que l'on fait glisser. Toucher le chapitre en cours ouvre directement son
 ## niveau en cours ; un chapitre verrouillé ou terminé répond par un court message (un niveau gagné ne se rejoue
-## jamais). En haut : réglages à gauche, solde d'indices au centre, menu des niveaux à droite. Sous le carrousel : le bouton
-## des trophées, puis la bannière du défi du jour.
+## jamais). En haut : réglages à gauche, solde d'indices au centre, menu des niveaux à droite. Juste dessous : la bulle du
+## défi du jour, au-dessus du carrousel. Sous le carrousel : le bouton des trophées.
 
-## Hauteur maximale d'une carte de chapitre (dp) : plus courte que la pleine hauteur d'avant.
-const CARD_MAX_HEIGHT := 468.0
-const CARD_MIN_HEIGHT := 330.0
+## Hauteur maximale d'une carte de chapitre (dp) : plus courte que la pleine hauteur d'avant (468).
+const CARD_MAX_HEIGHT := 420.0
+const CARD_MIN_HEIGHT := 316.0
 
 var _pager: ChapterPager
 var _pager_holder: VBoxContainer
@@ -51,9 +51,9 @@ func _ready() -> void:
 	margin.add_child(column)
 
 	var top := MarginContainer.new()
-	top.add_theme_constant_override("margin_left", 10)
-	top.add_theme_constant_override("margin_right", 10)
-	top.add_theme_constant_override("margin_top", 4)
+	top.add_theme_constant_override("margin_left", UiKit.edge(10))
+	top.add_theme_constant_override("margin_right", UiKit.edge(10))
+	top.add_theme_constant_override("margin_top", UiKit.edge(4))
 	top.add_theme_constant_override("margin_bottom", 4)
 	top.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var row := HBoxContainer.new()
@@ -92,6 +92,19 @@ func _ready() -> void:
 	_top_row = top
 	column.add_child(top)
 
+	# Défi du jour : la bulle est au-dessus du carrousel de chapitres
+	var banner_holder := MarginContainer.new()
+	banner_holder.add_theme_constant_override("margin_left", 18)
+	banner_holder.add_theme_constant_override("margin_right", 18)
+	banner_holder.add_theme_constant_override("margin_top", 4)
+	banner_holder.add_theme_constant_override("margin_bottom", 4)
+	banner_holder.mouse_filter = Control.MOUSE_FILTER_PASS
+	_daily_banner = DailyBanner.create(App.daily_model())
+	_daily_banner.activated.connect(App.open_daily)
+	banner_holder.add_child(_daily_banner)
+	_banner_holder = banner_holder
+	column.add_child(banner_holder)
+
 	# Carrousel : des cartes plus courtes qu'avant (hauteur plafonnée), centrées dans l'espace disponible.
 	_pager_holder = VBoxContainer.new()
 	_pager_holder.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -118,17 +131,6 @@ func _ready() -> void:
 	trophy_holder.add_child(_trophy_entry)
 	_trophy_holder = trophy_holder
 	column.add_child(trophy_holder)
-	column.add_child(_gap(10.0))
-	# Défi du jour : bannière sous le carrousel
-	var banner_holder := MarginContainer.new()
-	banner_holder.add_theme_constant_override("margin_left", 18)
-	banner_holder.add_theme_constant_override("margin_right", 18)
-	banner_holder.mouse_filter = Control.MOUSE_FILTER_PASS
-	_daily_banner = DailyBanner.create(App.daily_model())
-	_daily_banner.activated.connect(App.open_daily)
-	banner_holder.add_child(_daily_banner)
-	_banner_holder = banner_holder
-	column.add_child(banner_holder)
 	column.add_child(_gap(16.0))
 
 	_build_pages(home, home.start_page)
@@ -144,9 +146,28 @@ func _fit_pager() -> void:
 		_pager.custom_minimum_size.y = wanted
 
 
-## Pour la chorégraphie de transition : barre du haut, carrousel, trophées, défi du jour.
+## Pour la chorégraphie de transition : barre du haut, défi du jour, carrousel, trophées.
 func transition_groups() -> Array:
-	return [[_top_row, "top"], [_pager_holder, "center"], [_trophy_holder, "bottom"], [_banner_holder, "bottom"]]
+	return [[_top_row, "top"], [_banner_holder, "top"], [_pager_holder, "center"], [_trophy_holder, "bottom"]]
+
+
+## Cadeau récupéré : si une pub récompensée est prête, le joueur peut choisir de le doubler (jamais imposé).
+func _on_gift_claimed(amount: int) -> void:
+	if amount <= 0 or not App.double_reward_available():
+		return
+	var holder: Array = [null]  # les lambdas copient les variables locales : on passe par un tableau
+	var close := func() -> void:
+		var host: PopupHost = holder[0]
+		if is_instance_valid(host):
+			host.close()
+	holder[0] = ConfirmPopup.open(
+		self, Strings.t("home_double_title"), Strings.n("home_double_body", amount),
+		Strings.t("home_double_yes"), Strings.t("home_double_no"),
+		func() -> void:
+			close.call()
+			App.double_reward(amount),
+		close, "yellow", WgButton.Kind.PRIMARY
+	)
 
 
 func _on_daily_changed() -> void:
@@ -167,7 +188,7 @@ func _build_pages(home: HomeModel, start_page: int) -> void:
 	for card in home.chapters:
 		var view := ChapterCardView.create(card, App.language)
 		view.activated.connect(func() -> void: App.open_chapter(card.index))
-		view.claim_pressed.connect(func() -> void: App.claim_gift(card.index))
+		view.claim_pressed.connect(func() -> void: _on_gift_claimed(App.claim_gift(card.index)))
 		_cards.append(view)
 		# Chaque carte est enveloppée : le carrousel incline l'enveloppe, la carte garde sa pression « gelée ».
 		var wrapper := Control.new()

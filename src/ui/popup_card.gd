@@ -1,6 +1,6 @@
 class_name PopupCard
 extends Control
-## Carte de popup : ruban en titre à cheval sur le bord haut, bouton fermer rose dans le coin, contenu en colonne
+## Carte de popup : bannière (image) en titre à cheval sur le bord haut, bouton fermer rose dans le coin, contenu en colonne
 ## (`body`). Positionnée, dimensionnée et animée par PopupHost. `container_color` blanc par défaut (violet pour la victoire).
 ## Hauteur fixe autour du corps (marges + ruban) : voir CHROME_HEIGHT.
 
@@ -42,7 +42,7 @@ static func create(title: String, ribbon: String, closable: bool = true, close_d
 	card.body.add_theme_constant_override("separation", 0)
 	panel.add_child(card.body)
 
-	var ribbon_node := RibbonBanner.create(title, ribbon)
+	var ribbon_node := BannerImage.create(title, ribbon, 58.0)
 	ribbon_node.anchor_left = 0.07
 	ribbon_node.anchor_right = 0.93
 	ribbon_node.offset_bottom = 58.0

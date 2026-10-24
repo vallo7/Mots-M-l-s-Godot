@@ -35,9 +35,9 @@ func _ready() -> void:
 	var bar := ScreenTopBar.create(Strings.t("help_title"))
 	bar.back_pressed.connect(App.on_back)
 	var bar_margin := MarginContainer.new()
-	bar_margin.add_theme_constant_override("margin_left", 8)
-	bar_margin.add_theme_constant_override("margin_right", 8)
-	bar_margin.add_theme_constant_override("margin_top", 4)
+	bar_margin.add_theme_constant_override("margin_left", UiKit.edge(8))
+	bar_margin.add_theme_constant_override("margin_right", UiKit.edge(8))
+	bar_margin.add_theme_constant_override("margin_top", UiKit.edge(4))
 	bar_margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	bar_margin.add_child(bar)
 	_top = bar_margin

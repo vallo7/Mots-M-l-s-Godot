@@ -3,7 +3,9 @@ extends RefCounted
 ## Règles de progression : fonctions pures, idempotentes quand c'est nécessaire.
 ## Chaque transformation renvoie un nouvel état (l'état reçu n'est jamais modifié).
 
-const INITIAL_FREE_HINTS := 2
+## Le joueur commence sans indice : il en gagne (cadeaux de chapitre, défi du jour, publicité récompensée) ou en reçoit un
+## seul, offert par la cinématique du niveau 4 du chapitre 1 (voir TutorialRules).
+const INITIAL_FREE_HINTS := 0
 const REWARDED_MIN := 1
 const REWARDED_MAX := 1
 const GIFT_MIN := 1
@@ -11,7 +13,7 @@ const GIFT_MAX := 3
 const REMEMBERED_REWARD_IDS := 32
 
 
-## Premier lancement : exactement 2 indices gratuits, une seule fois.
+## Premier lancement : INITIAL_FREE_HINTS indices gratuits (aucun), enregistré une seule fois.
 static func initialize(state: ProgressState) -> ProgressState:
 	if state.initial_hints_granted:
 		return state
@@ -167,6 +169,19 @@ static func spend_hint(state: ProgressState) -> ProgressState:
 	var next := state.copy()
 	next.hint_balance -= 1
 	return next
+
+
+
+## « Doubler la récompense » : `amount` indices de plus, accordés une seule fois par publicité regardée (même anti-doublon).
+static func grant_bonus_hints(state: ProgressState, reward_id: String, amount: int) -> RewardGrant:
+	if amount <= 0 or reward_id.strip_edges().is_empty() or state.granted_reward_ids.has(reward_id):
+		return null
+	var next := state.copy()
+	next.hint_balance += amount
+	next.granted_reward_ids.append(reward_id)
+	while next.granted_reward_ids.size() > REMEMBERED_REWARD_IDS:
+		next.granted_reward_ids.remove_at(0)
+	return RewardGrant.new(next, amount)
 
 
 ## Récompense publicitaire confirmée par le SDK. `reward_id` identifie *cette* diffusion : un

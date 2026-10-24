@@ -4,10 +4,18 @@ extends AudioManager
 ## saturation) et musique d'ambiance en boucle sans coupure (boucle de l'import OGG, échantillon près).
 ## Un fichier absent n'est jamais une erreur : le praise retombe sur le son de réussite générique.
 
-const MUSIC_PATH := "res://assets/audio/music/music_c_music_box_dream.ogg"
-## Gain maximal de la musique (curseur à fond) : au volume par défaut du curseur (0,6) on retrouve ≈ 0,32,
-## le niveau historique « fond sonore » qui laisse les effets et les praises audibles.
-const MUSIC_MAX_GAIN := 0.9
+const MUSIC_PATH := "res://assets/audio/music/music_background.ogg"
+## Gain maximal de la musique (curseur à fond). Le fichier est normalisé à -20 LUFS (boucle sans couture, voir
+## docs/AUDIO.md) ; au curseur par défaut (0,6) le gain vaut 0,55 × 0,36 ≈ 0,2 (-14 dB), soit ≈ -34 LUFS : environ 9 dB sous
+## les effets sonores à leur volume par défaut (60 %) — une ambiance de fond qui n'écrase jamais les effets ni les voix.
+const MUSIC_MAX_GAIN := 0.55
+## Atténuation de la musique (bus « Music ») pendant les voix de félicitations et les jingles de victoire.
+const DUCK_DB := -7.0
+const DUCK_ATTACK_SECONDS := 0.12
+const DUCK_RELEASE_SECONDS := 0.9
+const DUCK_JINGLE_SECONDS := 1.4
+## Sons qui font baisser la musique le temps de leur diffusion.
+const DUCKING_SOUNDS: Array[int] = [Sound.SUCCESS_GENERIC, Sound.GIFT, Sound.VICTORY]
 const SFX_BUS := &"SFX"
 const MUSIC_BUS := &"Music"
 const POLYPHONY := 4
@@ -21,6 +29,7 @@ var _music_enabled := true
 var _music_volume := AppSettings.DEFAULT_MUSIC_VOLUME
 var _app_in_background := false
 var _loaded := false
+var _duck_tween: Tween
 
 
 func _ready() -> void:
@@ -82,6 +91,8 @@ func play(sound: int) -> void:
 	var player: AudioStreamPlayer = _sound_players.get(sound)
 	if player != null:
 		player.play()
+		if DUCKING_SOUNDS.has(sound):
+			duck_music(DUCK_JINGLE_SECONDS)
 
 
 func play_praise(praise: int, language: int) -> void:
@@ -93,6 +104,22 @@ func play_praise(praise: int, language: int) -> void:
 	_praise_player.stream = stream
 	_praise_player.volume_db = linear_to_db(voice.volume)
 	_praise_player.play()
+	duck_music(stream.get_length())
+
+
+## Fait baisser la musique (bus « Music ») le temps de `hold_seconds`, puis la rend en douceur : une voix ou un jingle reste
+## toujours bien audible, sans couper l'ambiance. Un nouvel appel pendant l'atténuation la prolonge sans à-coup.
+func duck_music(hold_seconds: float) -> void:
+	var bus := AudioServer.get_bus_index(MUSIC_BUS)
+	if bus < 0 or not is_inside_tree() or _music_player == null or not _music_player.playing:
+		return
+	if _duck_tween != null and _duck_tween.is_valid():
+		_duck_tween.kill()
+	var set_db := func(db: float) -> void: AudioServer.set_bus_volume_db(bus, db)
+	_duck_tween = create_tween()
+	_duck_tween.tween_method(set_db, AudioServer.get_bus_volume_db(bus), DUCK_DB, DUCK_ATTACK_SECONDS)
+	_duck_tween.tween_interval(maxf(hold_seconds, 0.0))
+	_duck_tween.tween_method(set_db, DUCK_DB, 0.0, DUCK_RELEASE_SECONDS)
 
 
 func set_sound_effects_enabled(enabled: bool) -> void:

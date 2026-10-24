@@ -170,9 +170,9 @@ func _gap(height: float) -> Control:
 
 func _top_bar(current_chapter: int, fraction: float) -> Control:
 	var margin := MarginContainer.new()
-	margin.add_theme_constant_override("margin_left", 10)
-	margin.add_theme_constant_override("margin_right", 10)
-	margin.add_theme_constant_override("margin_top", 6)
+	margin.add_theme_constant_override("margin_left", UiKit.edge(10))
+	margin.add_theme_constant_override("margin_right", UiKit.edge(10))
+	margin.add_theme_constant_override("margin_top", UiKit.edge(6))
 	margin.add_theme_constant_override("margin_bottom", 6)
 	margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var row := HBoxContainer.new()

@@ -1,0 +1,24 @@
+{
+  "_comment": "Réglages du rythme des publicités (aucun code à toucher pour les ajuster). Toutes les valeurs sont bornées au chargement (AdPolicyConfig). Voir docs/ADS.md, section « Système de revenus ».",
+  "interstitial": {
+    "enabled": true,
+    "probability": 0.3333,
+    "min_levels_completed": 4,
+    "min_seconds_between_full_screen_ads": 90,
+    "max_per_hour": 12,
+    "quiet_seconds_after_rewarded": 120,
+    "fatigue_rewarded_count": 3,
+    "fatigue_factor": 0.5
+  },
+  "rewarded": {
+    "double_reward_enabled": true
+  },
+  "loading": {
+    "retry_delays_seconds": [4, 10, 30, 60, 120],
+    "max_consecutive_failures": 8,
+    "interstitial_ttl_minutes": 50
+  },
+  "content": {
+    "max_ad_content_rating": "PG"
+  }
+}

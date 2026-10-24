@@ -23,7 +23,7 @@ const LIGHTNING_LEVELS := "lightning_levels"
 
 ## « Éclair » : une grille d'au moins `LIGHTNING_MIN_GRID` cases de côté résolue en moins de `LIGHTNING_BELOW_MS`.
 const LIGHTNING_MIN_GRID := 8
-const LIGHTNING_BELOW_MS := 40_000
+const LIGHTNING_BELOW_MS := 30_000
 
 
 

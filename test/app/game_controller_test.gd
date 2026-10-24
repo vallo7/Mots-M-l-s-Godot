@@ -174,3 +174,39 @@ func test_solving_every_word_ends_in_a_victory_with_stars_and_saved_progress() -
 	assert_int(result.stars).is_equal(3)
 	assert_bool(_repo.state.completed.has("c1-l01")).is_true()
 	assert_int(_repo.state.in_progress.size()).is_equal(0)
+
+
+# ---- Tutoriels
+func test_the_first_level_of_chapter_one_asks_for_the_hand_tutorial_until_it_is_solved() -> void:
+	assert_bool(_controller.wants_move_tutorial()).is_true()
+	assert_array(_controller.remaining_word_indices(2)).contains_exactly([0, 1])
+	_trace(Fixtures.sun())
+	assert_array(_controller.remaining_word_indices(2)).contains_exactly([1])  # on passe au tracé suivant
+	_trace(Fixtures.sky())
+	assert_bool(_controller.wants_move_tutorial()).is_false()
+
+
+func test_other_levels_have_no_hand_tutorial_and_no_hint_intro() -> void:
+	var use_cases := GameUseCases.new(_catalog, _repo, MemoryFakes.FakeAds.new(), func(from: int, _until: int) -> int: return from)
+	var second := GameController.new(_catalog.levels[1], Language.EN, use_cases, func() -> int: return _repo.read().hint_balance)
+	add_child(second)
+	assert_bool(second.wants_move_tutorial()).is_false()
+	assert_bool(second.begin_hint_intro()).is_false()
+	second.free()
+
+
+func test_arriving_at_level_four_for_the_first_time_offers_one_hint_once() -> void:
+	_repo.state.hint_balance = 0
+	var use_cases := GameUseCases.new(_catalog, _repo, MemoryFakes.FakeAds.new(), func(from: int, _until: int) -> int: return from)
+	var fourth := GameController.new(_catalog.levels[3], Language.EN, use_cases, func() -> int: return _repo.read().hint_balance)
+	add_child(fourth)
+	assert_bool(fourth.begin_hint_intro()).is_true()
+	assert_int(fourth.hint_balance).is_equal(1)
+	assert_int(_repo.state.hint_balance).is_equal(1)
+	assert_bool(fourth.begin_hint_intro()).is_false()  # une seule fois par partie…
+	fourth.free()
+	var again := GameController.new(_catalog.levels[3], Language.EN, use_cases, func() -> int: return _repo.read().hint_balance)
+	add_child(again)
+	assert_bool(again.begin_hint_intro()).is_false()  # …et jamais plus (mémorisé dans la sauvegarde)
+	assert_int(_repo.state.hint_balance).is_equal(1)
+	again.free()

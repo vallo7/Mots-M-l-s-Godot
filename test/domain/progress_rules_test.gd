@@ -22,12 +22,29 @@ func _same(a: ProgressState, b: ProgressState) -> void:
 
 
 # --- indices initiaux
-func test_first_launch_grants_exactly_two_hints_once() -> void:
+func test_first_launch_starts_with_no_hint_and_is_recorded_once() -> void:
 	var once := ProgressRules.initialize(ProgressState.new())
-	assert_int(once.hint_balance).is_equal(2)
+	assert_int(ProgressRules.INITIAL_FREE_HINTS).is_equal(0)
+	assert_int(once.hint_balance).is_equal(0)
 	assert_bool(once.initial_hints_granted).is_true()
 	_same(once, ProgressRules.initialize(once))
-	assert_int(ProgressRules.initialize(ProgressRules.initialize(once)).hint_balance).is_equal(2)
+	assert_int(ProgressRules.initialize(ProgressRules.initialize(once)).hint_balance).is_equal(0)
+
+
+func test_an_existing_save_keeps_its_hints_when_the_start_gift_is_removed() -> void:
+	var existing := ProgressState.new()
+	existing.initial_hints_granted = true
+	existing.hint_balance = 2
+	assert_int(ProgressRules.initialize(existing).hint_balance).is_equal(2)
+
+
+func test_bonus_hints_are_granted_once_per_ad() -> void:
+	var grant := ProgressRules.grant_bonus_hints(ProgressState.new(), "ad-7", 3)
+	assert_int(grant.amount).is_equal(3)
+	assert_int(grant.state.hint_balance).is_equal(3)
+	assert_object(ProgressRules.grant_bonus_hints(grant.state, "ad-7", 3)).is_null()  # même diffusion : rien de plus
+	assert_object(ProgressRules.grant_bonus_hints(ProgressState.new(), "", 3)).is_null()
+	assert_object(ProgressRules.grant_bonus_hints(ProgressState.new(), "ad-8", 0)).is_null()
 
 
 func test_hint_spend_never_goes_below_zero() -> void:

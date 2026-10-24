@@ -48,8 +48,14 @@ func _ready() -> void:
 
 	var top := ScreenTopBar.create(Strings.t("trophies_title"))
 	top.back_pressed.connect(App.on_back)
-	_top_bar_node = top
-	column.add_child(top)
+	var top_margin := MarginContainer.new()  # le bouton retour ne touche plus la zone sûre
+	top_margin.add_theme_constant_override("margin_left", UiKit.edge(0))
+	top_margin.add_theme_constant_override("margin_right", UiKit.edge(0))
+	top_margin.add_theme_constant_override("margin_top", UiKit.edge(0))
+	top_margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	top_margin.add_child(top)
+	_top_bar_node = top_margin
+	column.add_child(top_margin)
 
 	var total := TrophyCatalog.all().size()
 	var unlocked := TrophyRules.unlocked_count(state)

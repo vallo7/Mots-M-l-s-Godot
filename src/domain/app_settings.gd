@@ -7,7 +7,8 @@ const NONE := -1
 
 var language: int = NONE
 const DEFAULT_MUSIC_VOLUME := 0.6
-const DEFAULT_SFX_VOLUME := 1.0
+## Effets sonores à 60 % par défaut : la musique d'ambiance (réglée plus bas encore) reste bien en retrait.
+const DEFAULT_SFX_VOLUME := 0.6
 
 ## Volume des effets sonores (clics, mots trouvés, victoire, voix de félicitations), de 0 (muet) à 1.
 var sfx_volume := DEFAULT_SFX_VOLUME

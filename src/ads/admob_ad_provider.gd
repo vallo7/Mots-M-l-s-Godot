@@ -8,6 +8,7 @@ extends AdProvider
 
 signal _rewarded_finished(result: RewardedAdResult)
 signal _return_finished(shown: bool)
+signal _interstitial_finished(shown: bool)
 signal _sdk_ready()
 
 ## Une annonce d'ouverture expire au bout de 4 h : on ne l'affiche jamais périmée.
@@ -16,13 +17,20 @@ const APP_OPEN_TTL_MS := 4 * 60 * 60 * 1000
 var _banner_id: String
 var _app_open_id: String
 var _rewarded_id: String
+var _interstitial_id: String
+var _policy: AdPolicyConfig
 var _consent := AdMobConsent.new()
 var _tree: SceneTree
 var _rewarded: RewardedAd
 var _app_open: AppOpenAd
+var _interstitial: InterstitialAd
 var _app_open_loaded_at: int = 0
+var _interstitial_loaded_at: int = 0
 var _loading_rewarded := false
 var _loading_app_open := false
+var _loading_interstitial := false
+## Échecs de chargement de suite, par format : espacent les nouveaux essais (délais croissants, voir AdPolicyConfig).
+var _failures: Dictionary = {}
 var _initialized := false
 var _can_request_ads := false
 var _full_screen_showing := false
@@ -30,13 +38,15 @@ var _rewarded_error: int = UnavailableReason.NOT_LOADED
 var _banner: AdView
 
 
-func _init(tree: SceneTree) -> void:
+func _init(tree: SceneTree, policy: AdPolicyConfig = null) -> void:
 	_tree = tree
+	_policy = policy if policy != null else AdPolicyConfig.load_file()
 	var config: Variant = JsonUtil.parse_object(FileAccess.get_file_as_string("res://data/ads_config.json"))
 	var cfg: Dictionary = config if config != null else {}
 	_banner_id = JsonUtil.get_string(cfg, "banner_unit_id")
 	_app_open_id = JsonUtil.get_string(cfg, "app_open_unit_id")
 	_rewarded_id = JsonUtil.get_string(cfg, "rewarded_unit_id")
+	_interstitial_id = JsonUtil.get_string(cfg, "interstitial_unit_id")
 
 
 ## Consentement puis initialisation du SDK. Asynchrone. Renvoie true si les annonces sont autorisées.
@@ -53,6 +63,11 @@ func start() -> bool:
 ## Garde-fou : on n'attend jamais plus de 10 s (le jeu ne dépend pas des annonces).
 func _initialize_sdk() -> void:
 	var done := [false]
+	# Public « tout public » : contenu publicitaire plafonné (réglable dans data/ads_policy.json). Aucun marquage « enfants » :
+	# il ferait chuter les revenus et ne correspond pas à un jeu tout public (voir docs/ADS.md avant de publier).
+	var request_configuration := RequestConfiguration.new()
+	request_configuration.max_ad_content_rating = _policy.max_ad_content_rating
+	MobileAds.set_request_configuration(request_configuration)
 	var listener := OnInitializationCompleteListener.new()
 	listener.on_initialization_complete = func(_status: InitializationStatus) -> void:
 		if not done[0]:
@@ -74,6 +89,22 @@ func prefetch() -> void:
 		return
 	_load_rewarded()
 	_load_app_open()
+	_load_interstitial()
+
+
+## Après un échec : nouvel essai avec un délai croissant (4 s, 10 s, 30 s, 1 min, 2 min…), abandonné après trop d'échecs de
+## suite (hors ligne durable) ; une demande réelle (indice, niveau suivant) relance alors un chargement.
+func _retry_later(kind: StringName) -> void:
+	var failures: int = int(_failures.get(kind, 0)) + 1
+	_failures[kind] = failures
+	if failures > _policy.max_consecutive_failures:
+		return
+	await _tree.create_timer(_policy.retry_delay(failures)).timeout
+	prefetch()
+
+
+func _loaded_ok(kind: StringName) -> void:
+	_failures[kind] = 0
 
 
 func _load_rewarded() -> void:
@@ -85,10 +116,12 @@ func _load_rewarded() -> void:
 		_rewarded = ad
 		_loading_rewarded = false
 		_rewarded_error = UnavailableReason.NONE
+		_loaded_ok(&"rewarded")
 	callback.on_ad_failed_to_load = func(error: LoadAdError) -> void:
 		_rewarded = null
 		_loading_rewarded = false
 		_rewarded_error = _classify(error)
+		_retry_later(&"rewarded")
 	RewardedAdLoader.new().load(_rewarded_id, AdRequest.new(), callback)
 
 
@@ -101,10 +134,37 @@ func _load_app_open() -> void:
 		_app_open = ad
 		_app_open_loaded_at = Time.get_ticks_msec()
 		_loading_app_open = false
+		_loaded_ok(&"app_open")
 	callback.on_ad_failed_to_load = func(_error: LoadAdError) -> void:
 		_app_open = null
 		_loading_app_open = false
+		_retry_later(&"app_open")
 	AppOpenAdLoader.new().load(_app_open_id, AdRequest.new(), callback)
+
+
+func _load_interstitial() -> void:
+	if _interstitial != null and _is_interstitial_expired():
+		_interstitial.destroy()  # périmée : on la remplace avant qu'elle ne puisse être affichée
+		_interstitial = null
+	if _loading_interstitial or _interstitial != null or _interstitial_id.is_empty():
+		return
+	_loading_interstitial = true
+	var callback := InterstitialAdLoadCallback.new()
+	callback.on_ad_loaded = func(ad: InterstitialAd) -> void:
+		_interstitial = ad
+		_interstitial_loaded_at = Time.get_ticks_msec()
+		_loading_interstitial = false
+		_loaded_ok(&"interstitial")
+	callback.on_ad_failed_to_load = func(_error: LoadAdError) -> void:
+		_interstitial = null
+		_loading_interstitial = false
+		_retry_later(&"interstitial")
+	InterstitialAdLoader.new().load(_interstitial_id, AdRequest.new(), callback)
+
+
+## Une interstitielle expire au bout d'une heure : on la renouvelle avant (délai de la configuration, 50 min par défaut).
+func _is_interstitial_expired() -> bool:
+	return Time.get_ticks_msec() - _interstitial_loaded_at >= _policy.interstitial_ttl_minutes * 60 * 1000
 
 
 func _is_app_open_expired() -> bool:
@@ -173,6 +233,30 @@ func show_return_ad_if_ready() -> bool:
 	_full_screen_showing = true
 	ad.show()
 	return await _return_finished
+
+
+func interstitial_ready() -> bool:
+	return _can_request_ads and _initialized and _interstitial != null and not _is_interstitial_expired() and not _full_screen_showing
+
+
+func show_interstitial_if_ready() -> bool:
+	if not interstitial_ready():
+		prefetch()  # pas prête (hors ligne, pas d'annonce, périmée) : le jeu continue, on prépare la suivante
+		return false
+	var ad := _interstitial
+	_interstitial = null
+	var finish := func(shown: bool) -> void:
+		_full_screen_showing = false
+		ad.destroy()
+		prefetch()  # la suivante se charge pendant que le joueur joue
+		_interstitial_finished.emit(shown)
+	var content := FullScreenContentCallback.new()
+	content.on_ad_dismissed_full_screen_content = func() -> void: finish.call(true)
+	content.on_ad_failed_to_show_full_screen_content = func(_error: AdError) -> void: finish.call(false)
+	ad.full_screen_content_callback = content
+	_full_screen_showing = true
+	ad.show()
+	return await _interstitial_finished
 
 
 func is_full_screen_ad_showing() -> bool:

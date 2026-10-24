@@ -1,5 +1,41 @@
 # Journal des modifications
 
+## 1.3.0
+
+**Publicités et revenus** (détail : `docs/ADS.md`)
+- **Interstitielle au passage au niveau suivant** : une chance sur trois, tirée au hasard à chaque fois. Garde-fous : aucune avant
+  4 niveaux terminés, jamais deux annonces plein écran à moins de 90 s, pas juste après une récompensée, probabilité réduite pour
+  le joueur qui regarde déjà beaucoup de récompensées, 12 par heure au plus ; pas d'annonce prête = le jeu continue sans attendre.
+- **Système de rythme** réglable sans code (`data/ads_policy.json`, `AdPolicyConfig`, `AdPacing`, `InterstitialPolicy`), préchargement de
+  l'interstitielle avec nouveaux essais à délais croissants (aussi pour la récompensée et l'annonce d'ouverture), renouvellement avant
+  l'expiration d'une heure, contenu publicitaire plafonné à PG (tout public). Identifiant de test `interstitial_unit_id` ajouté.
+- **« Doubler la récompense »** (pub récompensée, au choix) : cadeau de chapitre (écran de victoire et accueil) et indices du défi du jour.
+- L'annonce de retour respecte aussi l'écart minimal entre annonces plein écran.
+
+**Indices et tutoriels**
+- Le joueur commence avec **0 indice** (les sauvegardes existantes gardent leur solde).
+- **Tutoriel de prise en main** (niveau 1 du chapitre 1) : après un micro-délai, le gant montre les tracés en boucle, un mot après l'autre
+  (le joueur trace, puis on passe au suivant), sans texte. Le gant est celui de l'écran de chargement.
+- **Cinématique de l'indice** (première arrivée au niveau 4 du chapitre 1) : écran assombri autour du bouton Indice, gant qui invite à
+  le toucher, petite carte explicative, **1 indice offert une seule fois** (mémorisé dans la sauvegarde, sans changer le schéma).
+
+**Trophées** : objectifs multipliés par 2 ou 3 selon le trophée (les plus faciles ×3, les plus rares ×2), « Éclair » en moins de 30 s
+au lieu de 40 ; textes FR/EN adaptés. Un objectif ne dépasse jamais le contenu du jeu (10 chapitres, 100 niveaux, 300 étoiles) :
+« Maître des mots » reste à 10 chapitres, « Grand voyageur » à 8. Les trophées déjà débloqués le restent.
+
+**Interface**
+- Bannières des popups remplacées par les trois images fournies (bleu : réglages, langue, crédits ; jaune : trophées ; rouge :
+  victoire et confirmations), titre ajusté à la bande.
+- Accueil : plus de bannière sur les bulles de chapitre (« Chapitre N » en simple texte sur la bulle), bulles plus courtes, bulle du défi
+  du jour **au-dessus** des bulles de chapitre.
+- Les boutons ne touchent plus la zone sûre d'Android : marge minimale de 12 dp (`Wg.EDGE_GAP`, `UiKit.edge`) sur l'accueil, le jeu,
+  l'aide, le défi du jour, les niveaux, les trophées (qui n'avait aucune marge) et les popups ; les écrans déjà assez larges sont inchangés.
+
+**Audio** : nouvelle musique de fond (boucle sans couture, normalisée, volume bas), atténuation pendant les voix et jingles, effets
+sonores à 60 % par défaut (détail : `docs/AUDIO.md`).
+
+**Tests** : 262 tests GdUnit4 (37 de plus : rythme des pubs, tutoriels, trophées, bannières, marges).
+
 ## 1.2.1
 
 **Correctif : l'APK de la CI ne s'installait pas**

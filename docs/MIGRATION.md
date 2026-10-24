@@ -46,7 +46,7 @@ Le domaine n'a pas été « réinventé » : fonctions, noms et règles sont por
   tous les scripts contrôlée (`scripts/check_scripts.gd`).
 - Rendu réel de **tous les écrans** avec Godot 4.7.2 (Vulkan logiciel) : chargement, accueil, monument, réglages,
   crédits, jeu (repos, tracé, mot trouvé, erreur, indice), victoire. Captures reproductibles : `test/visual`.
-- Démarrage à froid de la vraie scène principale : progression créée (2 indices offerts), aucune erreur.
+- Démarrage à froid de la vraie scène principale : progression créée (aucun indice au départ), aucune erreur.
 - Charge de la grille 12×12 dans le pire cas (mélange + mot trouvé) : dessin des effets **< 4 ms** de script.
 
 ## 4. Ce qui n'a PAS pu être vérifié ici (à tester sur appareil)

@@ -12,7 +12,7 @@ var _language: ChoiceRow
 
 static func open_settings(parent: Node) -> SettingsPopup:
 	var host := SettingsPopup.new()
-	var card := PopupCard.create(Strings.t("settings_title"), "yellow", true, Strings.t("cd_close"))
+	var card := PopupCard.create(Strings.t("settings_title"), "blue", true, Strings.t("cd_close"))
 	var scroll := ScrollContainer.new()
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_NEVER

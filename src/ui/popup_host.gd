@@ -13,7 +13,8 @@ extends Control
 signal dismissed()
 signal closed()
 
-const SIDE_MARGIN := 20.0
+## 24 : le bouton fermer dépasse de 10 dp du bord de la carte, il reste ainsi à 14 dp de la zone sûre.
+const SIDE_MARGIN := 24.0
 const VERTICAL_MARGIN := 16.0
 const MAX_CARD_WIDTH := 420.0
 const INTRO_SCALE := 0.86

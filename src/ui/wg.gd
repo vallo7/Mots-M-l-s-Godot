@@ -51,6 +51,9 @@ const TEAL_DARK := Color8(0x0E, 0x9F, 0x8B)
 const ERROR := RED
 
 # Espacements, rayons, tailles tactiles
+## Écart minimal entre un bouton et la zone sûre d'Android (barre d'état, encoche, gestes) : un bouton ne la touche jamais.
+## Les écrans dont les boutons sont déjà plus loin ne changent pas (voir UiKit.edge).
+const EDGE_GAP := 12.0
 const SP_XS := 4.0
 const SP_SM := 8.0
 const SP_MD := 16.0

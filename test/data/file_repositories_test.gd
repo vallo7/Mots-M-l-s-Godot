@@ -26,9 +26,16 @@ func _clean() -> void:
 		dir.remove(file_name)
 
 
+## Première ouverture + 2 indices gagnés (le jeu commence sans indice).
+func _with_two_hints(s: ProgressState) -> ProgressState:
+	var n := ProgressRules.initialize(s)
+	n.hint_balance += 2
+	return n
+
+
 func test_progress_is_persisted_and_reloaded() -> void:
 	var repo := FileProgressRepository.new(_progress_path)
-	repo.update(func(s: ProgressState) -> ProgressState: return ProgressRules.initialize(s))
+	repo.update(_with_two_hints)
 	repo.update(func(s: ProgressState) -> ProgressState: return ProgressRules.complete_level(s, "c1-l01", 3, 42_000, Praise.GREAT))
 	var reloaded := FileProgressRepository.new(_progress_path)
 	assert_int(reloaded.read().hint_balance).is_equal(2)
@@ -44,7 +51,7 @@ func test_a_fresh_repository_starts_from_the_initial_state() -> void:
 
 func test_a_corrupt_file_is_kept_aside_and_the_backup_is_restored() -> void:
 	var repo := FileProgressRepository.new(_progress_path)
-	repo.update(func(s: ProgressState) -> ProgressState: return ProgressRules.initialize(s))
+	repo.update(_with_two_hints)
 	var file := FileAccess.open(_progress_path, FileAccess.WRITE)
 	file.store_string("{ceci n'est pas du json")
 	file.close()
@@ -100,8 +107,13 @@ func test_legacy_music_switch_becomes_a_volume() -> void:
 
 func test_the_volume_curve_is_silent_at_zero_and_monotonic() -> void:
 	assert_float(GodotAudioManager.music_gain(0.0)).is_equal(0.0)
-	assert_float(GodotAudioManager.music_gain(0.6)).is_between(0.28, 0.36)
+	assert_float(GodotAudioManager.music_gain(AppSettings.DEFAULT_MUSIC_VOLUME)).is_between(0.17, 0.23)  # ≈ -14 dB : musique de fond
 	assert_float(GodotAudioManager.music_gain(1.0)).is_greater(GodotAudioManager.music_gain(0.6))
+	# Aux réglages par défaut, la musique (fichier à -20 LUFS) reste au moins 6 dB sous un effet typique (« correct » : -17,4 LUFS).
+	var music_db := -20.0 + linear_to_db(GodotAudioManager.music_gain(AppSettings.DEFAULT_MUSIC_VOLUME))
+	var sfx_db := -17.4 + linear_to_db(GodotAudioManager.sfx_gain(AppSettings.DEFAULT_SFX_VOLUME))
+	assert_float(sfx_db - music_db).is_greater(6.0)
+	assert_float(AppSettings.DEFAULT_SFX_VOLUME).is_equal_approx(0.6, 0.001)
 
 
 func test_settings_are_persisted_and_a_garbage_file_gives_defaults() -> void:

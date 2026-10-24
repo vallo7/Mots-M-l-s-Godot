@@ -8,14 +8,16 @@ var _progress: ProgressRepository
 var _ads: AdProvider
 var _random: Callable  ## (from, until_exclusive) -> int
 var _clock: Callable  ## () -> secondes Unix (date de déblocage des trophées) ; horloge système par défaut
+var _pacing: AdPacing  ## espacement des annonces plein écran (optionnel : les tests s'en passent)
 
 
-func _init(catalog: LevelCatalog, progress: ProgressRepository, ads: AdProvider, random: Callable, clock: Callable = Callable()) -> void:
+func _init(catalog: LevelCatalog, progress: ProgressRepository, ads: AdProvider, random: Callable, clock: Callable = Callable(), pacing: AdPacing = null) -> void:
 	_catalog = catalog
 	_progress = progress
 	_ads = ads
 	_random = random
 	_clock = clock
+	_pacing = pacing
 
 
 func _now() -> int:
@@ -176,19 +178,46 @@ func claim_gift(chapter_index: int) -> int:
 	return amount[0] if after != null else 0
 
 
+## Cinématique de l'indice (niveau 4 du chapitre 1) : la toute première fois, offre 1 indice et mémorise que la cinématique a
+## été vue, dans la même écriture atomique. Renvoie true si la cinématique doit se lancer (sauvegarde réussie).
+func begin_hint_intro(level: Level) -> bool:
+	var due := [false]
+	var after := _progress.update(func(s: ProgressState) -> ProgressState:
+		if not TutorialRules.hint_intro_due(s, level):
+			return s
+		due[0] = true
+		return TutorialRules.begin_hint_intro(s))
+	return due[0] and after != null
+
+
 ## Publicité récompensée : la récompense (1 indice) n'est accordée qu'après confirmation du SDK.
 ## Asynchrone : à appeler avec `await`.
 func watch_rewarded_ad() -> RewardOutcome:
+	var grant_one := func(s: ProgressState, reward_id: String) -> RewardGrant:
+		return ProgressRules.grant_rewarded_hints(s, reward_id, _random)
+	return await _watch_rewarded(grant_one)
+
+
+## « Doubler la récompense » : une publicité récompensée donne `amount` indices de plus (cadeau de chapitre, défi du jour).
+func watch_rewarded_bonus(amount: int) -> RewardOutcome:
+	var grant_bonus := func(s: ProgressState, reward_id: String) -> RewardGrant:
+		return ProgressRules.grant_bonus_hints(s, reward_id, amount)
+	return await _watch_rewarded(grant_bonus)
+
+
+func _watch_rewarded(grant_fn: Callable) -> RewardOutcome:
 	var reason := _ads.rewarded_unavailable_reason()
 	if reason != UnavailableReason.NONE:
 		return RewardOutcome.new(RewardOutcome.Kind.UNAVAILABLE, 0, reason)
 	@warning_ignore("redundant_await")  # AdProvider est l'interface : l'implémentation AdMob est asynchrone
 	var result: RewardedAdResult = await _ads.show_rewarded()
+	if _pacing != null and result.kind != RewardedAdResult.Kind.UNAVAILABLE:
+		_pacing.record(AdPacing.Kind.REWARDED, Time.get_ticks_msec())  # espace les interstitielles qui suivent
 	match result.kind:
 		RewardedAdResult.Kind.REWARDED:
 			var granted := [0]
 			var after := _progress.update(func(s: ProgressState) -> ProgressState:
-				var grant := ProgressRules.grant_rewarded_hints(s, result.reward_id, _random)
+				var grant: RewardGrant = grant_fn.call(s, result.reward_id)
 				granted[0] = grant.amount if grant != null else 0
 				return grant.state if grant != null else s)
 			if after == null:

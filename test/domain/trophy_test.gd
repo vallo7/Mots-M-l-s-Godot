@@ -59,6 +59,39 @@ func test_every_trophy_has_a_name_and_a_description_in_both_languages_and_its_ic
 		assert_str(Strings.t(Trophy.tier_key(tier))).is_not_equal(Trophy.tier_key(tier))
 
 
+func test_every_objective_was_made_harder_by_two_or_three_and_stays_reachable() -> void:
+	var multiplied := 0
+	for trophy in TrophyCatalog.all():
+		assert_int(trophy.factor).is_between(1, 3)
+		assert_int(trophy.target).is_greater_equal(trophy.base_target)
+		if trophy.target > trophy.base_target:
+			multiplied += 1
+		# Atteignable avec le contenu actuel : 10 chapitres de 10 niveaux = 100 niveaux, 300 étoiles
+		match trophy.metric:
+			TrophyRules.CHAPTERS:
+				assert_int(trophy.target).is_less_equal(10)
+			TrophyRules.LEVELS:
+				assert_int(trophy.target).is_less_equal(100)
+			TrophyRules.STARS:
+				assert_int(trophy.target).is_less_equal(300)
+			TrophyRules.GIFTS:
+				assert_int(trophy.target).is_less_equal(10)
+	assert_int(multiplied).is_equal(19)  # tous sauf « Maître des mots » (10 chapitres : déjà le maximum)
+	assert_int(TrophyCatalog.by_id("first_steps").target).is_equal(3)
+	assert_int(TrophyCatalog.by_id("fifty_stars").target).is_equal(150)
+	assert_int(TrophyCatalog.by_id("daily_month").target).is_equal(60)
+	assert_int(TrophyCatalog.by_id("five_chapters").target).is_equal(8)
+	assert_int(TrophyCatalog.by_id("ten_chapters").target).is_equal(10)
+
+
+func test_objectives_grow_with_rarity_inside_each_family() -> void:
+	var last_by_metric := {}
+	for trophy in TrophyCatalog.all():
+		if last_by_metric.has(trophy.metric):
+			assert_int(trophy.target).is_greater(int(last_by_metric[trophy.metric]))
+		last_by_metric[trophy.metric] = trophy.target
+
+
 func test_a_trophy_can_be_found_by_its_id() -> void:
 	assert_str(TrophyCatalog.by_id("first_steps").id).is_equal("first_steps")
 	assert_object(TrophyCatalog.by_id("nope")).is_null()
@@ -71,19 +104,22 @@ func test_a_fresh_save_unlocks_nothing() -> void:
 	assert_int(TrophyRules.unlocked_count(state)).is_equal(0)
 
 
-func test_first_level_unlocks_first_steps_and_a_three_star_level_unlocks_rising_star() -> void:
-	var state := _complete(ProgressState.new(), "c1-l01", 2)
+func test_three_levels_unlock_first_steps_and_three_three_star_levels_unlock_rising_star() -> void:
+	var state := _complete(_complete(ProgressState.new(), "c1-l01", 2), "c1-l02", 2)
+	assert_bool(TrophyRules.evaluate(_catalog, state, _NOW) == state).is_true()  # 2 niveaux : rien (objectif : 3)
+	state = _complete(state, "c1-l03", 3)
 	var next := TrophyRules.evaluate(_catalog, state, _NOW)
 	assert_bool(next.trophies.has("first_steps")).is_true()
-	assert_bool(next.trophies.has("rising_star")).is_false()
+	assert_bool(next.trophies.has("rising_star")).is_false()  # un seul niveau à 3 étoiles (objectif : 3)
 	assert_int(int(next.trophies["first_steps"])).is_equal(_NOW)
-	next = TrophyRules.evaluate(_catalog, _complete(next, "c1-l02", 3), _NOW + 5)
+	next = _complete(_complete(next, "c1-l04", 3), "c1-l05", 3)
+	next = TrophyRules.evaluate(_catalog, next, _NOW + 5)
 	assert_bool(next.trophies.has("rising_star")).is_true()
 	assert_int(int(next.trophies["first_steps"])).is_equal(_NOW)  # une date de déblocage ne change jamais
 
 
 func test_evaluate_does_not_touch_the_state_it_receives_and_is_idempotent() -> void:
-	var state := _complete(ProgressState.new(), "c1-l01")
+	var state := _all_levels_of_chapters(ProgressState.new(), 1)
 	var next := TrophyRules.evaluate(_catalog, state, _NOW)
 	assert_bool(state.trophies.is_empty()).is_true()
 	assert_bool(TrophyRules.evaluate(_catalog, next, _NOW + 99) == next).is_true()
@@ -100,33 +136,34 @@ func test_counters_derived_from_the_progression() -> void:
 
 
 func test_existing_players_get_their_trophies_retroactively() -> void:
-	var state := _all_levels_of_chapters(ProgressState.new(), 4, 3)
+	var state := _all_levels_of_chapters(ProgressState.new(), 6, 3)  # 60 niveaux, 180 étoiles, 6 chapitres
 	var next := TrophyRules.evaluate(_catalog, state, _NOW)
-	for id in ["first_steps", "rising_star", "five_levels", "chapter_one", "fifty_stars", "perfect_five", "hundred_stars"]:
+	for id in ["first_steps", "rising_star", "five_levels", "chapter_one", "fifty_stars", "perfect_five"]:
 		assert_bool(next.trophies.has(id)).is_true()
-	assert_bool(next.trophies.has("five_chapters")).is_false()
+	assert_bool(next.trophies.has("hundred_stars")).is_false()  # 200 étoiles
+	assert_bool(next.trophies.has("five_chapters")).is_false()  # 8 chapitres
 	assert_array(TrophyRules.newly_unlocked(state, next)).contains(["first_steps", "chapter_one"])
 
 
 func test_progress_is_capped_at_the_target() -> void:
-	var state := _all_levels_of_chapters(ProgressState.new(), 1)
+	var state := _all_levels_of_chapters(ProgressState.new(), 2)
 	var five := TrophyCatalog.by_id("five_levels")
-	assert_int(TrophyRules.progress_of(five, _catalog, state)).is_equal(5)
+	assert_int(TrophyRules.progress_of(five, _catalog, state)).is_equal(15)  # 20 niveaux terminés, objectif 15
 	var chapters := TrophyCatalog.by_id("five_chapters")
-	assert_int(TrophyRules.progress_of(chapters, _catalog, state)).is_equal(1)
+	assert_int(TrophyRules.progress_of(chapters, _catalog, state)).is_equal(2)
 
 
 func test_recording_a_flawless_level_a_lightning_level_and_a_final_without_hint() -> void:
-	var state := TrophyRules.record_level(ProgressState.new(), 9, 30_000, 0, 0, true)
+	var state := TrophyRules.record_level(ProgressState.new(), 9, 25_000, 0, 0, true)
 	assert_int(TrophyRules.metric_value(TrophyRules.FLAWLESS_LEVELS, null, state)).is_equal(1)
 	assert_int(TrophyRules.metric_value(TrophyRules.LIGHTNING_LEVELS, null, state)).is_equal(1)
 	assert_int(TrophyRules.metric_value(TrophyRules.FINAL_NO_HINT, null, state)).is_equal(1)
 	# Un indice ou une erreur : pas sans faute ; trop lent ou petite grille : pas d'éclair ; indice : pas de défi sans indice
-	var worse := TrophyRules.record_level(ProgressState.new(), 6, 30_000, 1, 2, true)
+	var worse := TrophyRules.record_level(ProgressState.new(), 6, 25_000, 1, 2, true)
 	assert_int(TrophyRules.metric_value(TrophyRules.FLAWLESS_LEVELS, null, worse)).is_equal(0)
 	assert_int(TrophyRules.metric_value(TrophyRules.LIGHTNING_LEVELS, null, worse)).is_equal(0)
 	assert_int(TrophyRules.metric_value(TrophyRules.FINAL_NO_HINT, null, worse)).is_equal(0)
-	var slow := TrophyRules.record_level(ProgressState.new(), 10, 40_000, 0, 0)
+	var slow := TrophyRules.record_level(ProgressState.new(), 10, 30_000, 0, 0)  # 30 s pile : pas « en moins de 30 s »
 	assert_int(TrophyRules.metric_value(TrophyRules.LIGHTNING_LEVELS, null, slow)).is_equal(0)
 
 
@@ -139,7 +176,7 @@ func test_best_perfect_streak_is_remembered_after_the_current_streak_resets() ->
 
 
 func test_unseen_trophies_are_listed_until_marked_seen() -> void:
-	var state := TrophyRules.evaluate(_catalog, _complete(ProgressState.new(), "c1-l01"), _NOW)
+	var state := TrophyRules.evaluate(_catalog, _complete(_complete(_complete(ProgressState.new(), "c1-l01"), "c1-l02"), "c1-l03"), _NOW)
 	assert_array(TrophyRules.unseen_ids(state)).contains_exactly(["first_steps", "rising_star"])
 	var seen := TrophyRules.mark_all_seen(state)
 	assert_array(TrophyRules.unseen_ids(seen)).is_empty()
@@ -149,7 +186,7 @@ func test_unseen_trophies_are_listed_until_marked_seen() -> void:
 
 # ---- Sauvegarde
 func test_trophies_stats_and_seen_ids_survive_a_save_and_reload() -> void:
-	var state := TrophyRules.evaluate(_catalog, _complete(ProgressState.new(), "c1-l01"), _NOW)
+	var state := TrophyRules.evaluate(_catalog, _all_levels_of_chapters(ProgressState.new(), 1), _NOW)
 	state = TrophyRules.record_hint(state)
 	state = TrophyRules.mark_all_seen(state)
 	var back := ProgressJson.decode(ProgressJson.encode(state)).value as ProgressState
@@ -176,6 +213,8 @@ func test_completing_a_level_unlocks_trophies_and_persists_them() -> void:
 	var clock := Fixtures.FakeClock.new()
 	var repo := MemoryFakes.MemoryProgress.new()
 	var uc := GameUseCases.new(_catalog, repo, MemoryFakes.FakeAds.new(), _low, func() -> int: return _NOW)
+	# Deux niveaux déjà gagnés avec 3 étoiles : la victoire de c1-l01 est la troisième (objectif de « Premiers pas » et d'« Étoile montante »).
+	repo.state = _complete(_complete(ProgressState.new(), "c1-l09"), "c1-l10")
 	var session := GameSession.new(_catalog.levels[0], Language.EN, clock.callable())
 	session.submit(Fixtures.sun())
 	clock.now += 20_000
@@ -207,16 +246,17 @@ func test_a_wrong_selection_means_the_level_is_not_flawless() -> void:
 func test_using_a_hint_counts_and_unlocks_helping_hand() -> void:
 	var repo := MemoryFakes.MemoryProgress.new()
 	repo.state.hint_balance = 2
+	repo.state.stats[TrophyRules.HINTS_USED] = 2  # « Coup de pouce » : 3 indices utilisés
 	var uc := GameUseCases.new(_catalog, repo, MemoryFakes.FakeAds.new(), _low, func() -> int: return _NOW)
 	var session := GameSession.new(_catalog.levels[0], Language.EN, Fixtures.FakeClock.new().callable())
 	uc.use_hint(session)
 	assert_bool(repo.state.trophies.has("helping_hand")).is_true()
-	assert_int(TrophyRules.metric_value(TrophyRules.HINTS_USED, _catalog, repo.state)).is_equal(1)
+	assert_int(TrophyRules.metric_value(TrophyRules.HINTS_USED, _catalog, repo.state)).is_equal(3)
 
 
 func test_sync_unlocks_what_the_progression_already_earned_without_changing_dates() -> void:
 	var repo := MemoryFakes.MemoryProgress.new()
-	repo.state = _all_levels_of_chapters(ProgressState.new(), 1)
+	repo.state = _all_levels_of_chapters(ProgressState.new(), 2)
 	var uc := GameUseCases.new(_catalog, repo, MemoryFakes.FakeAds.new(), _low, func() -> int: return _NOW)
 	uc.sync_trophies()
 	assert_bool(repo.state.trophies.has("chapter_one")).is_true()
@@ -229,7 +269,8 @@ func test_sync_unlocks_what_the_progression_already_earned_without_changing_date
 
 func test_marking_trophies_seen_persists() -> void:
 	var repo := MemoryFakes.MemoryProgress.new()
-	repo.state = TrophyRules.evaluate(_catalog, _complete(ProgressState.new(), "c1-l01"), _NOW)
+	repo.state = TrophyRules.evaluate(_catalog, _all_levels_of_chapters(ProgressState.new(), 1), _NOW)
+	assert_array(TrophyRules.unseen_ids(repo.state)).is_not_empty()
 	var uc := GameUseCases.new(_catalog, repo, MemoryFakes.FakeAds.new(), _low)
 	uc.mark_trophies_seen()
 	assert_array(TrophyRules.unseen_ids(repo.state)).is_empty()

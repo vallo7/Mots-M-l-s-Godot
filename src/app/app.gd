@@ -47,6 +47,9 @@ var level_repository: LevelRepository = AssetLevelRepository.new()
 var progress_repository: ProgressRepository
 var settings_repository: SettingsRepository
 var ads: AdProvider = AdProvider.new()
+## Rythme des publicités (data/ads_policy.json) et mémoire des annonces plein écran déjà vues (voir docs/ADS.md).
+var ad_policy: AdPolicyConfig = AdPolicyConfig.load_file()
+var ad_pacing := AdPacing.new()
 var audio: GodotAudioManager
 var haptics: GodotHapticsManager
 
@@ -91,7 +94,7 @@ func start() -> void:
 	var sequence := StartupSequence.new(
 		get_tree(), level_repository,
 		func() -> void:
-			progress_repository.update(func(s: ProgressState) -> ProgressState: return ProgressRules.initialize(s)),  # 2 indices offerts, une seule fois
+			progress_repository.update(func(s: ProgressState) -> ProgressState: return ProgressRules.initialize(s)),  # enregistre le premier lancement (aucun indice au départ)
 		func() -> void: audio.preload_all(),
 		startup_minimum_ms
 	)
@@ -145,7 +148,7 @@ func _create_ads() -> AdProvider:
 		AdBackend.ADMOB:
 			var script: GDScript = load(ADMOB_PROVIDER_SCRIPT)
 			print("Publicités : vraies annonces de test Google (AdMob)")
-			return script.new(get_tree())
+			return script.new(get_tree(), ad_policy)
 		AdBackend.SIMULATED:
 			print("Publicités : annonces de test simulées")
 			return SimulatedAdProvider.new(get_tree())
@@ -167,7 +170,7 @@ func _finish_startup(loaded: LevelCatalog) -> void:
 	progress = progress_repository.read()
 	var current_settings := settings_repository.read()
 	_apply_settings(current_settings)
-	_use_cases = GameUseCases.new(catalog, progress_repository, ads, func(from: int, until: int) -> int: return _rng.randi_range(from, until - 1))
+	_use_cases = GameUseCases.new(catalog, progress_repository, ads, func(from: int, until: int) -> int: return _rng.randi_range(from, until - 1), Callable(), ad_pacing)
 	# Trophées déjà mérités (mise à jour d'une sauvegarde existante) : attribués en silence, signalés dans le menu (« Nouveau »).
 	_use_cases.sync_trophies()
 	progress = progress_repository.read()
@@ -470,12 +473,38 @@ func open_level(level_id: String) -> void:
 			show_message("msg_level_locked")
 
 
+## Bouton « niveau suivant » de l'écran de victoire. Une fois sur trois environ (tirage au hasard à chaque fois, voir
+## InterstitialPolicy), une interstitielle s'affiche avant le niveau : moment naturel, choisi par le joueur lui-même.
 func play_next_after(result: VictoryResult) -> void:
+	if busy:
+		return
 	var next := catalog.level_by_id(result.next_level_id) if not result.next_level_id.is_empty() else null
-	if next != null:
-		_launch_level(next)
-	else:
+	if next == null:
 		go_home()
+		return
+	if _interstitial_due():
+		busy = true  # un second appui pendant la publicité ne lance rien
+		await _show_interstitial()
+		busy = false
+	_launch_level(next)
+
+
+## Vrai quand le tirage et les garde-fous autorisent une interstitielle ET qu'une annonce est prête (sinon on ne fait pas attendre).
+func _interstitial_due() -> bool:
+	if not ads_enabled:
+		return false
+	var now := Time.get_ticks_msec()
+	var roll := _rng.randf()
+	if not InterstitialPolicy.should_show(ad_policy, ad_pacing, progress.completed.size(), now, roll):
+		return false
+	return ads.interstitial_ready()
+
+
+func _show_interstitial() -> void:
+	@warning_ignore("redundant_await")  # AdProvider est l'interface : l'implémentation AdMob est asynchrone
+	var shown: bool = await ads.show_interstitial_if_ready()
+	if shown:
+		ad_pacing.record(AdPacing.Kind.INTERSTITIAL, Time.get_ticks_msec())
 
 
 func _launch_level(level: Level) -> void:
@@ -518,15 +547,46 @@ func _close_game() -> void:
 
 
 # ---- Trophée de chapitre
-func claim_gift(chapter_index: int) -> void:
+## Renvoie le nombre d'indices reçus (0 si rien n'était réclamable).
+func claim_gift(chapter_index: int) -> int:
 	if _use_cases == null:
-		return
+		return 0
 	var amount := _use_cases.claim_gift(chapter_index)
 	if amount > 0:
 		audio.play(Sound.GIFT)
 		haptics.perform(HapticEffect.SUCCESS)
 		show_message("msg_gift_earned", amount, true)
 	_refresh_progress()
+	return amount
+
+
+# ---- « Doubler la récompense » (publicité récompensée, au choix du joueur)
+## Vrai quand l'offre peut être proposée : annonces actives, fonction activée, une récompensée prête.
+func double_reward_available() -> bool:
+	return _use_cases != null and ad_policy.double_reward_enabled and ads_enabled and ads.rewarded_unavailable_reason() == UnavailableReason.NONE
+
+
+## Regarde une publicité récompensée pour recevoir `amount` indices de plus. Renvoie true si la récompense est accordée.
+func double_reward(amount: int) -> bool:
+	if _use_cases == null or amount <= 0 or busy:
+		return false
+	busy = true
+	var outcome: RewardOutcome = await _use_cases.watch_rewarded_bonus(amount)
+	busy = false
+	match outcome.kind:
+		RewardOutcome.Kind.GRANTED:
+			audio.play(Sound.PROGRESS_UP)
+			haptics.perform(HapticEffect.SUCCESS)
+			show_message("msg_hints_earned", outcome.amount, true)
+			_refresh_progress()
+			return true
+		RewardOutcome.Kind.DISMISSED:
+			show_message("msg_ad_dismissed")
+		RewardOutcome.Kind.DUPLICATE:
+			show_message("msg_ad_duplicate")
+		_:
+			show_message("msg_ad_offline" if outcome.reason == UnavailableReason.OFFLINE else "msg_ad_unavailable")
+	return false
 
 
 # ---- Messages
@@ -564,7 +624,9 @@ func on_app_started() -> void:
 	moment.is_resolving_win = current_route().kind == ScreenRoute.Kind.RESULT
 	moment.is_sensitive_action_pending = busy
 	var since_last := ReturnAdPolicy.NEVER if _last_return_ad_at < 0 else now - _last_return_ad_at
-	var show := ads_enabled and ReturnAdPolicy.should_show(
+	var since_any := ad_pacing.since_last_full_screen(now)
+	var spaced_enough := since_any == AdPacing.NEVER or since_any >= ad_policy.min_seconds_between_full_screen_ads * 1000
+	var show := ads_enabled and spaced_enough and ReturnAdPolicy.should_show(
 		now - stopped_at, since_last, _stopped_while_ad_showing, _session_started, moment
 	)
 	_stopped_while_ad_showing = false
@@ -575,6 +637,7 @@ func on_app_started() -> void:
 	var shown: bool = await ads.show_return_ad_if_ready()
 	if shown:
 		_last_return_ad_at = Time.get_ticks_msec()
+		ad_pacing.record(AdPacing.Kind.RETURN, _last_return_ad_at)
 
 
 func on_app_stopped() -> void:

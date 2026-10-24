@@ -45,6 +45,7 @@ var _session: GameSession
 var _resumed := false
 var _closed := false
 var _hint_busy := false
+var _hint_intro_started := false
 var _ad_busy := false
 var _victory_failed := false
 var _last_restart_at: int = -1_000_000
@@ -175,6 +176,35 @@ func _win() -> void:
 		await get_tree().create_timer(RETRY_DELAY_SECONDS).timeout
 	_victory_failed = true
 	message_requested.emit("msg_error_generic", 0, false)
+
+
+# ---- Tutoriels (voir TutorialRules)
+## Prise en main : le niveau 1 du chapitre 1 sert de tutoriel (un gant montre les tracés, un par un).
+func wants_move_tutorial() -> bool:
+	return TutorialRules.is_first_level(level) and not solved
+
+
+## Mots restant à trouver, dans l'ordre de la liste (le tutoriel les montre l'un après l'autre).
+func remaining_word_indices(word_count: int) -> Array[int]:
+	var remaining: Array[int] = []
+	for i in range(word_count):
+		if not found_word_indices.has(i):
+			remaining.append(i)
+	return remaining
+
+
+## Cinématique de l'indice : vrai (et un indice offert, une seule fois) la toute première fois que le joueur arrive au
+## niveau 4 du chapitre 1. L'écran affiche alors le gant qui invite à toucher « Indice ».
+func begin_hint_intro() -> bool:
+	if _hint_intro_started or solved or _closed or not TutorialRules.is_hint_intro_level(level):
+		return false
+	_hint_intro_started = true
+	if not _use_cases.begin_hint_intro(level):
+		return false
+	hint_balance = _read_hint_balance.call()
+	changed.emit()
+	progress_changed.emit()
+	return true
 
 
 # ---- Indices

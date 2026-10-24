@@ -148,7 +148,7 @@ help_stars_3,Under 1 minute,Moins d'1 minute
 help_stars_2,Under 3 minutes,Moins de 3 minutes
 help_stars_1,3 minutes or more,3 minutes ou plus
 help_hints_title,Hints,Indices
-help_hints_body,A hint lights up the first letter of a word you have not found yet. Each level caps how many hints you can use (2 to 5). You start with 2 hints.,Un indice éclaire la première lettre d'un mot pas encore trouvé. Chaque niveau limite le nombre d'indices (de 2 à 5). Tu démarres avec 2 indices.
+help_hints_body,A hint lights up the first letter of a word you have not found yet. Each level caps how many hints you can use (2 to 5). You start with none: earn them with chapter gifts and daily challenges, or by watching a short ad.,Un indice éclaire la première lettre d'un mot pas encore trouvé. Chaque niveau limite le nombre d'indices (de 2 à 5). Tu démarres sans indice : gagne-en avec les cadeaux de chapitre et les défis du jour, ou en regardant une courte pub.
 help_rewards_title,Rewards,Récompenses
 help_rewards_intro,Hints are the only currency. Here is how to earn more:,Les indices sont la seule monnaie. Voici comment en gagner :
 help_reward_gift_title,Chapter gift,Cadeau de chapitre
@@ -260,17 +260,17 @@ trophy_tier_3,Epic,Épique
 trophy_tier_4,Legendary,Légendaire
 trophy_tier_5,Mythic,Mythique
 trophy_first_steps_name,First Steps,Premiers pas
-trophy_first_steps_desc,Complete your first level.,Termine ton premier niveau.
+trophy_first_steps_desc,Complete {0} levels.,Termine {0} niveaux.
 trophy_rising_star_name,Rising Star,Étoile montante
-trophy_rising_star_desc,Earn 3 stars on a single level.,Obtiens 3 étoiles sur un niveau.
+trophy_rising_star_desc,Earn 3 stars on {0} levels.,Obtiens 3 étoiles sur {0} niveaux.
 trophy_five_levels_name,Getting Warmed Up,Sur la lancée
 trophy_five_levels_desc,Complete {0} levels.,Termine {0} niveaux.
 trophy_helping_hand_name,Helping Hand,Coup de pouce
-trophy_helping_hand_desc,Use a hint for the first time.,Utilise un indice pour la première fois.
+trophy_helping_hand_desc,Use {0} hints.,Utilise {0} indices.
 trophy_chapter_one_name,Chapter Closed,Chapitre bouclé
-trophy_chapter_one_desc,Complete every level of a chapter.,Termine tous les niveaux d'un chapitre.
+trophy_chapter_one_desc,Complete {0} chapters.,Termine {0} chapitres.
 trophy_daily_first_name,Daily Habit,Rendez-vous du jour
-trophy_daily_first_desc,Win a daily challenge.,Réussis un défi du jour.
+trophy_daily_first_desc,Win {0} daily challenges.,Réussis {0} défis du jour.
 trophy_gift_opener_name,Gift Opener,Ouvre-cadeaux
 trophy_gift_opener_desc,Claim {0} chapter gifts.,Récupère {0} cadeaux de chapitre.
 trophy_fifty_stars_name,Star Collector,Collectionneur d'étoiles
@@ -278,7 +278,7 @@ trophy_fifty_stars_desc,Collect {0} stars in total.,Récolte {0} étoiles au tot
 trophy_flawless_five_name,Clean Sweep,Sans faute
 trophy_flawless_five_desc,Complete {0} levels with no hint and no wrong selection.,Termine {0} niveaux sans indice ni mauvaise sélection.
 trophy_final_challenge_name,Final Boss,Défi relevé
-trophy_final_challenge_desc,Complete a final challenge without using a hint.,Termine un défi final sans utiliser d'indice.
+trophy_final_challenge_desc,Complete {0} final challenges without using a hint.,Termine {0} défis finaux sans utiliser d'indice.
 trophy_daily_week_name,One Week Strong,Une semaine d'affilée
 trophy_daily_week_desc,Win the daily challenge {0} days in a row.,Réussis le défi du jour {0} jours de suite.
 trophy_perfect_five_name,On a Roll,En pleine série
@@ -288,7 +288,7 @@ trophy_hundred_stars_desc,Collect {0} stars in total.,Récolte {0} étoiles au t
 trophy_five_chapters_name,Seasoned Traveler,Grand voyageur
 trophy_five_chapters_desc,Complete {0} chapters.,Termine {0} chapitres.
 trophy_lightning_name,Lightning,Éclair
-trophy_lightning_desc,Complete a grid of 8×8 or larger in under 40 seconds.,Termine une grille d'au moins 8×8 en moins de 40 secondes.
+trophy_lightning_desc,Complete {0} grids of 8×8 or larger in under 30 seconds.,Termine {0} grilles d'au moins 8×8 en moins de 30 secondes.
 trophy_daily_fortnight_name,Fortnight Streak,Quinzaine parfaite
 trophy_daily_fortnight_desc,Win the daily challenge {0} days in a row.,Réussis le défi du jour {0} jours de suite.
 trophy_flawless_many_name,Eagle Eye,Œil de lynx
@@ -299,3 +299,12 @@ trophy_ten_chapters_name,Word Master,Maître des mots
 trophy_ten_chapters_desc,Complete {0} chapters.,Termine {0} chapitres.
 trophy_daily_month_name,Daily Legend,Légende du quotidien
 trophy_daily_month_desc,Win the daily challenge {0} days in a row.,Réussis le défi du jour {0} jours de suite.
+tutorial_hint_title,Need a hand?,Un coup de pouce ?
+tutorial_hint_body,"Tap Hint to light up the first letter of a word. Here is one on the house!","Touche Indice pour éclairer la première lettre d'un mot. Voici un indice offert !"
+tutorial_hint_skip,Maybe later,Plus tard
+result_double,Double it (+{0}) · ad,Doubler (+{0}) · pub
+home_double_title,Double your gift?,Doubler ton cadeau ?
+home_double_body_one,Watch a short ad to get {0} more hint.,Regarde une courte pub pour recevoir {0} indice de plus.
+home_double_body_other,Watch a short ad to get {0} more hints.,Regarde une courte pub pour recevoir {0} indices de plus.
+home_double_yes,Watch the ad,Regarder la pub
+home_double_no,No thanks,Non merci

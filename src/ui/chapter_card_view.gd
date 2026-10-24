@@ -1,6 +1,6 @@
 class_name ChapterCardView
 extends JuicyPressable
-## Carte d'un chapitre du carrousel : lèvre 3D, bandeau illustré (ruban, parallaxe) et corps (thème, niveau en cours,
+## Carte d'un chapitre du carrousel : lèvre 3D, bandeau illustré (parallaxe, sans bannière) et corps (thème, niveau en cours,
 ## étoiles, progression vers le trophée, action). La carte entière est le bouton : un seul geste, aucun faux bouton.
 
 signal claim_pressed()
@@ -95,7 +95,7 @@ func set_pager_offset(offset: float) -> void:
 func _build_band() -> Control:
 	var band := Control.new()
 	band.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	band.size_flags_stretch_ratio = 0.40
+	band.size_flags_stretch_ratio = 0.34
 	band.clip_contents = true
 	band.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var sky := ColorRect.new()
@@ -117,20 +117,7 @@ func _build_band() -> Control:
 	_illustration.offset_transform_scale = Vector2(1.25, 1.25)
 	band.add_child(_illustration)
 
-	var ribbon_name: String = _theme["ribbon"]
-	var ribbon: RibbonBanner
-	if _locked:
-		ribbon = RibbonBanner.create(Strings.t("home_chapter_title", [_card.index]), "purple", 48.0)
-		ribbon.set_palette(Wg.LOCKED_INK, Wg.LOCKED_DARK, Wg.LOCKED_INK)
-	else:
-		ribbon = RibbonBanner.create(Strings.t("home_chapter_title", [_card.index]), ribbon_name, 48.0)
-	ribbon.anchor_left = 0.08
-	ribbon.anchor_right = 0.92
-	ribbon.anchor_top = 1.0
-	ribbon.anchor_bottom = 1.0
-	ribbon.offset_top = -48.0 - 4.0
-	ribbon.offset_bottom = -4.0
-	band.add_child(ribbon)
+	# Plus de bannière sur l'illustration : « Chapitre N » est écrit en simple texte sur la bulle (voir _build_body).
 	# Résolution du chapitre (étoiles gagnées / possibles), en haut à droite de l'illustration
 	var badge := PercentBadge.create(_card.percent(), _theme["color"], _locked)
 	badge.anchor_left = 1.0
@@ -158,7 +145,7 @@ func _build_band() -> Control:
 func _build_body() -> Control:
 	var body := MarginContainer.new()
 	body.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	body.size_flags_stretch_ratio = 0.60
+	body.size_flags_stretch_ratio = 0.66
 	body.add_theme_constant_override("margin_left", 18)
 	body.add_theme_constant_override("margin_right", 18)
 	body.add_theme_constant_override("margin_top", 12)
@@ -171,8 +158,10 @@ func _build_body() -> Control:
 
 	# Titre : thème du chapitre (+ niveau en cours)
 	var title_block := VBoxContainer.new()
-	title_block.add_theme_constant_override("separation", 4)
+	title_block.add_theme_constant_override("separation", 2)
 	title_block.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var chapter_name := Wg.label(Strings.t("home_chapter_title", [_card.index]), 15.0, Wg.Weight.EXTRABOLD, Wg.LOCKED_INK if _locked else (_theme["dark"] as Color))
+	title_block.add_child(chapter_name)
 	var title := Wg.label(Language.pick(_card.theme, _language), 28.0, Wg.Weight.BLACK, Wg.LOCKED_INK if _locked else Wg.INK)
 	title_block.add_child(title)
 	var level := _card.current_level

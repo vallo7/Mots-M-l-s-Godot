@@ -85,6 +85,16 @@ func bubble_side() -> float:
 	return _side
 
 
+## Centre d'une case (colonne, ligne) dans le repère de la grille : le gant des tutoriels vise ces points.
+func cell_center(cell: Vector2i) -> Vector2:
+	return _dynamic.position + (Vector2(cell) + Vector2(0.5, 0.5)) * _cell_size
+
+
+## Côté d'une case (en dp).
+func cell_extent() -> float:
+	return _cell_size
+
+
 func _relayout() -> void:
 	_side = minf(size.x, size.y)
 	var inner := _side - PAD * 2.0

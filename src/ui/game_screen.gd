@@ -14,6 +14,8 @@ const BANNER_HEIGHT := 50.0
 static var _alive := 0
 var _banner_allowed := false
 const GRID_SIDE_MARGIN := 6
+## Micro-délai avant la cinématique de l'indice (laisse la page s'installer).
+const HINT_INTRO_DELAY := 0.7
 
 var controller: GameController
 
@@ -23,6 +25,9 @@ var _chips: Array[WordChip] = []
 var _hint_button: HintButton
 var _popup: PopupHost
 var _popup_kind: int = GameController.Dialog.NONE
+var _move_tutorial: MoveTutorial
+var _hint_intro: HintIntro
+var _tutorials_started := false
 var _last_found: Array[int] = [-1]  # valeur sentinelle : la première synchronisation initialise le moteur d'effets
 var _last_selection: Array[Vector2i] = []
 var _last_hints: Array[Vector2i] = []
@@ -130,12 +135,33 @@ func _ready() -> void:
 		_banner_allowed = true
 		_sync_banner()
 	_refresh()
+	if Wg.suppress_intro:
+		_start_tutorials()
 
 
-## La page est en place (fin de transition) : la bannière peut s'afficher.
+## La page est en place (fin de transition) : la bannière peut s'afficher et les tutoriels démarrent.
 func on_entered() -> void:
 	_banner_allowed = true
 	_sync_banner()
+	_start_tutorials()
+
+
+## Niveau 1 du chapitre 1 : le gant montre les tracés. Niveau 4 : la cinématique de l'indice (une seule fois, un indice offert).
+func _start_tutorials() -> void:
+	if _tutorials_started or _grid == null:
+		return
+	_tutorials_started = true
+	if controller.wants_move_tutorial():
+		_move_tutorial = MoveTutorial.attach(_grid, controller, _words)
+	elif TutorialRules.is_hint_intro_level(controller.level):
+		await get_tree().create_timer(HINT_INTRO_DELAY).timeout
+		if not is_inside_tree() or not is_instance_valid(controller) or controller.solved:
+			return
+		if controller.begin_hint_intro():  # offre l'indice (une seule fois) puis affiche la cinématique
+			_hint_intro = HintIntro.open(self, _hint_button)
+			controller.hint_revealed.connect(func(_cell: Vector2i) -> void:
+				if is_instance_valid(_hint_intro):
+					_hint_intro.close())
 
 
 ## La transition de sortie démarre : la bannière disparaît tout de suite.
@@ -169,9 +195,9 @@ func _gap(height: float) -> Control:
 
 func _build_top_bar(level: Level, language: int) -> Control:
 	var bar := MarginContainer.new()
-	bar.add_theme_constant_override("margin_left", int(Wg.SP_SM))
-	bar.add_theme_constant_override("margin_right", int(Wg.SP_SM))
-	bar.add_theme_constant_override("margin_top", int(Wg.SP_XS))
+	bar.add_theme_constant_override("margin_left", UiKit.edge(Wg.SP_SM))
+	bar.add_theme_constant_override("margin_right", UiKit.edge(Wg.SP_SM))
+	bar.add_theme_constant_override("margin_top", UiKit.edge(Wg.SP_XS))
 	bar.add_theme_constant_override("margin_bottom", int(Wg.SP_XS))
 	bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var row := HBoxContainer.new()

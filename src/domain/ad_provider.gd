@@ -14,6 +14,17 @@ func show_rewarded() -> RewardedAdResult:
 	return RewardedAdResult.unavailable(UnavailableReason.NOT_LOADED)
 
 
+## Vrai si une interstitielle (annonce plein écran entre deux niveaux) est prête à être affichée.
+func interstitial_ready() -> bool:
+	return false
+
+
+## Interstitielle entre deux niveaux. Asynchrone. Renvoie true si elle a effectivement été affichée (jamais d'erreur ni de blocage :
+## pas prête, hors ligne ou en échec -> false et le jeu continue).
+func show_interstitial_if_ready() -> bool:
+	return false
+
+
 ## Publicité de retour dans l'appli. Asynchrone. Renvoie true si elle a effectivement été affichée.
 func show_return_ad_if_ready() -> bool:
 	return false

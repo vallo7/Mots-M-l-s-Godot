@@ -21,7 +21,7 @@ Jeu de mots mêlés hors ligne (FR / EN), Android, portrait. Portage du projet K
 2. Lancer (F5) : la scène principale est `scenes/main.tscn`. Sur ordinateur, la fenêtre peut être redimensionnée ;
    la mise en page de référence est 360 × 800 dp.
 3. Export Android : *Projet > Exporter* avec le préréglage « Android » (déjà configuré : `com.motsmeles.game`,
-   arm64-v8a, version 1.2.1 / code 4, écran de démarrage Android blanc). Il faut que les modèles d'export de Godot 4.7.2, le SDK
+   arm64-v8a, version 1.3.0 / code 5, écran de démarrage Android blanc). Il faut que les modèles d'export de Godot 4.7.2, le SDK
    Android (platform-tools, build-tools), le JDK et la clé de debug soient configurés dans les *Paramètres de l'éditeur*.
    - **Préréglage « Android AdMob »** (Gradle + plugin, **vraies annonces de test Google**) : celui de la CI ; voir `docs/ADS.md`.
    - **Préréglage « Android »** (sans Gradle, modèle précompilé) : publicités de test **simulées** en debug, aucune en release.

@@ -45,6 +45,18 @@ func show_return_ad_if_ready() -> bool:
 	return true
 
 
+func interstitial_ready() -> bool:
+	return not _showing
+
+
+## Interstitielle simulée : même écran de test que l'annonce de retour (3 s, fermeture possible).
+func show_interstitial_if_ready() -> bool:
+	if _showing:
+		return false
+	await _show_overlay(false)
+	return true
+
+
 func is_full_screen_ad_showing() -> bool:
 	return _showing
 

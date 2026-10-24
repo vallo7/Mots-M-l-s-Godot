@@ -117,8 +117,8 @@ func test_settings_saved_before_the_music_option_default_to_music_on() -> void:
 	assert_bool(s.music_enabled).is_true()
 
 
-func test_sound_effects_volume_round_trips_and_defaults_to_full() -> void:
-	assert_float(AppSettings.new().sfx_volume).is_equal(1.0)
+func test_sound_effects_volume_round_trips_and_defaults_to_sixty_percent() -> void:
+	assert_float(AppSettings.new().sfx_volume).is_equal_approx(0.6, 0.001)
 	var custom := AppSettings.new()
 	custom.sfx_volume = 0.35
 	var back: AppSettings = SettingsJson.decode(SettingsJson.encode(custom)).value
@@ -132,7 +132,7 @@ func test_the_old_sound_switch_becomes_the_volume_and_a_stored_volume_wins() -> 
 	var off: AppSettings = SettingsJson.decode('{"schemaVersion":1,"sound":false}').value
 	assert_float(off.sfx_volume).is_equal(0.0)
 	var on: AppSettings = SettingsJson.decode('{"schemaVersion":1,"sound":true}').value
-	assert_float(on.sfx_volume).is_equal(1.0)
+	assert_float(on.sfx_volume).is_equal(AppSettings.DEFAULT_SFX_VOLUME)
 	var both: AppSettings = SettingsJson.decode('{"schemaVersion":1,"sound":false,"sfxVolume":0.5}').value
 	assert_float(both.sfx_volume).is_equal(0.5)
 	var wild: AppSettings = SettingsJson.decode('{"schemaVersion":1,"sfxVolume":7}').value
