@@ -14,6 +14,11 @@ func show_rewarded() -> RewardedAdResult:
 	return RewardedAdResult.unavailable(UnavailableReason.NOT_LOADED)
 
 
+## Hauteur réelle (dp) de la bannière publicitaire du bas : l'écran de jeu lui réserve exactement cette place.
+func banner_height() -> float:
+	return 50.0
+
+
 ## Vrai si une interstitielle (annonce plein écran entre deux niveaux) est prête à être affichée.
 func interstitial_ready() -> bool:
 	return false

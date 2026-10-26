@@ -1,5 +1,42 @@
 # Journal des modifications
 
+## 1.4.0
+
+**Navigation et fluidité**
+- **Défilement des listes** (niveaux, trophées, aide, défi du jour) : nouveau `SmoothScroll` à la place du ScrollContainer. Le contenu suit
+  le doigt 1:1 (sans à-coup au démarrage), la vitesse est mesurée sur les ~100 dernières ms, le lancer glisse avec une friction
+  exponentielle, les extrémités s'étirent avec une résistance élastique puis reviennent par un ressort amorti qui garde la vitesse du doigt.
+  Poser un doigt arrête l'élan. Molette de souris prise en charge.
+- **Carrousel de chapitres** (accueil) : même soin. La page suit le doigt sans à-coup, la page visée dépend de la distance ET de la vitesse
+  (un petit coup de doigt rapide suffit, jamais plus d'une page à la fois), le ressort de fin repart avec la vitesse du doigt, léger
+  « clic » haptique au changement de page, mise en page allégée (les pages ne sont plus redimensionnées à chaque image).
+- **Contrôles non recalés sur des pixels entiers** (`gui/common/snap_controls_to_pixels=false`) : sur un écran virtuel de 360 dp un pas
+  valait environ 3 pixels réels, d'où des marches d'escalier aux faibles vitesses ; défilements, carrousel et transitions avancent maintenant au pixel près.
+- **Transitions de pages** retravaillées : tous les éléments entrent et sortent un à un (l'écran de jeu et l'écran de victoire n'avaient
+  aucun groupe), courbes douces à décélération en quart de puissance, **plus aucun rebond**, durée d'image lissée sur 3 images et première
+  image (écran tout juste construit) comptée pour 1/60 s, échauffement de 3 images. L'iris (découpe de toute la page à chaque image, coûteux
+  sur mobile) est remplacé par une montée (entrée en jeu) et une descente (sortie du jeu) ; `PageTransition.USE_IRIS` permet de le rétablir.
+- Aucun fondu ni confetti nulle part : les tutoriels ouvrent/ferment un projecteur (iris du voile) et rétractent le tracé au lieu de s'effacer.
+
+**Tracé des mots**
+- Direction et longueur suivent la **position exacte du doigt** (angle par secteurs de 45° avec hystérésis, longueur projetée sur l'axe) au lieu de la
+  case sous le doigt : ligne stable, diagonales faciles, plus de sauts d'une direction à l'autre près des frontières.
+- **Gamme montante** : chaque lettre ajoutée joue une note plus haute (pentatonique, jusqu'à une octave et demie), la note redescend quand
+  on recule ; vibration légère à chaque lettre (inchangée).
+
+**Redémarrage** : le bouton restart fait **pivoter la grille d'un quart de tour, à gauche ou à droite au hasard** : mêmes mots, directions de tracé différentes.
+Les lettres glissent comme sur une courroie le long des carrés concentriques de la grille (aucun chevauchement, aucune lettre hors de la grille). L'orientation est
+mémorisée avec la partie en cours (reprise après interruption). Les indices visent le début du mot sur la grille tournée.
+
+**Tutoriel** : à la **toute première ouverture**, le gant tape en boucle sur « Jouer » de la bulle du chapitre 1 (depuis l'accueil), puis le tutoriel continue
+sur le niveau 1 (inchangé, sans texte) ; il suit la rotation si le joueur redémarre.
+
+**Interface**
+- **Liste des niveaux** : plus de bannière sur les illustrations ; le titre du chapitre est écrit **en bas de l'illustration** (blanc cerné de la couleur du chapitre).
+- **Bouton Indice** remonté : 22 dp au-dessus de la zone publicitaire, qui suit la vraie hauteur de la bannière adaptative (50 à 90 dp).
+
+**Tests** : 294 tests GdUnit4 (rotation, direction continue, défilement, carrousel, courroie, tutoriel d'accueil, sauvegarde de l'orientation).
+
 ## 1.3.0
 
 **Publicités et revenus** (détail : `docs/ADS.md`)

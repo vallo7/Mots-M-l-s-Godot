@@ -10,6 +10,17 @@ const HINT_INTRO_LEVEL := 4
 const HINT_INTRO_GIFT := 1
 
 
+## Vrai à la toute première ouverture du jeu : rien n'a encore été terminé, le niveau 1 du chapitre 1 reste à jouer. Le gant invite alors
+## le joueur, depuis l'écran d'accueil, à toucher « Jouer » sur la bulle du chapitre 1 (puis le tutoriel continue sur le niveau 1).
+static func home_intro_due(state: ProgressState, catalog: LevelCatalog) -> bool:
+	if catalog == null or not state.completed.is_empty():
+		return false
+	for level in catalog.levels:
+		if not level.is_daily() and level.chapter_index == 1 and level.number == 1:
+			return not state.completed.has(level.id)
+	return false
+
+
 static func is_first_level(level: Level) -> bool:
 	return level != null and not level.is_daily() and level.chapter_index == 1 and level.number == 1
 

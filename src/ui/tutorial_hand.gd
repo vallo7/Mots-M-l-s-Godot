@@ -33,6 +33,30 @@ static func draw(canvas: CanvasItem, tip: Vector2, press: float = 0.0, width: fl
 	canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 
+## Boucle « toucher » (1,75 s) : le gant arrive en arc depuis le bas à droite, appuie sur `rest_tip`, repart, marque une pause.
+## Renvoie {tip, press, shown}. Aucun fondu : le gant glisse jusqu'à sa cible et repart en glissant.
+const TAP_LOOP_SECONDS := 1.75
+const TAP_ENTER_OFFSET := Vector2(46.0, 60.0)
+
+
+static func tap_pose(time: float, rest_tip: Vector2) -> Dictionary:
+	var t := fposmod(time, TAP_LOOP_SECONDS)
+	var approach := 0.55
+	var tap := 0.28
+	var back := 0.3
+	var pose := {"tip": rest_tip, "press": 0.0, "shown": true}
+	if t < approach:
+		var u := Motion.ease_out_cubic(t / approach)
+		pose["tip"] = (rest_tip + TAP_ENTER_OFFSET).lerp(rest_tip, u) + Vector2(0.0, -12.0 * Motion.bump(u))
+	elif t < approach + tap:
+		pose["press"] = Motion.bump((t - approach) / tap)
+	elif t < approach + tap + back:
+		pose["tip"] = rest_tip.lerp(rest_tip + TAP_ENTER_OFFSET, Motion.ease_in_out_cubic((t - approach - tap) / back))
+	else:
+		pose["shown"] = false  # un temps de pause avant de recommencer
+	return pose
+
+
 ## Anneau de contact sous le doigt (visible pendant l'appui).
 static func draw_touch(canvas: CanvasItem, tip: Vector2, press: float, radius: float) -> void:
 	if press <= 0.01:

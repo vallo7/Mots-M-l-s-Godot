@@ -21,6 +21,15 @@ static func from_name(name_value: String) -> int:
 	return NAMES.find(name_value)
 
 
+## Direction obtenue en tournant `direction` de `turns` quarts de tour dans le sens horaire (négatif = antihoraire).
+## À l'écran (y vers le bas) un quart de tour horaire envoie E -> S -> W -> N -> E.
+static func rotate(direction: int, turns: int) -> int:
+	var v := VECTORS[direction]
+	for _i in range(posmod(turns, 4)):
+		v = Vector2i(-v.y, v.x)
+	return VECTORS.find(v)
+
+
 ## Direction du pas unitaire de `from` vers `to`, ou -1 si ce n'est pas un pas voisin.
 static func step_between(from: Vector2i, to: Vector2i) -> int:
 	return VECTORS.find(to - from)

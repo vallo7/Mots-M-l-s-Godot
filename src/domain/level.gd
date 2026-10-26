@@ -45,5 +45,19 @@ func daily_day() -> int:
 	return int(id.substr(6)) if is_daily() else -1
 
 
+var _rotated_cache := {}
+
+
 func variant(language: int) -> LevelVariant:
 	return variants[language]
+
+
+## Grille tournée de `turns` quarts de tour horaires (redémarrage). Calculée une fois puis gardée : l'état de jeu la demande souvent.
+func oriented_variant(language: int, turns: int) -> LevelVariant:
+	var t := posmod(turns, 4)
+	if t == 0:
+		return variant(language)
+	var key := language * 4 + t
+	if not _rotated_cache.has(key):
+		_rotated_cache[key] = variant(language).rotated(t)
+	return _rotated_cache[key]

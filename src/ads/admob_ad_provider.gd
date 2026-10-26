@@ -235,6 +235,15 @@ func show_return_ad_if_ready() -> bool:
 	return await _return_finished
 
 
+## La bannière adaptative fait 50 à 90 dp selon la largeur de l'écran : la zone réservée suit sa vraie hauteur.
+func banner_height() -> float:
+	if _can_request_ads and _initialized:
+		var banner_size := AdSize.get_current_orientation_anchored_adaptive_banner_ad_size(AdSize.FULL_WIDTH)
+		if banner_size.height > 0:
+			return float(banner_size.height)
+	return 50.0
+
+
 func interstitial_ready() -> bool:
 	return _can_request_ads and _initialized and _interstitial != null and not _is_interstitial_expired() and not _full_screen_showing
 

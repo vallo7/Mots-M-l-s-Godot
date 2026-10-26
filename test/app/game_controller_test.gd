@@ -12,7 +12,7 @@ func before_test() -> void:
 	_catalog = Fixtures.stub_catalog()
 	_repo = MemoryFakes.MemoryProgress.new()
 	_repo.state.hint_balance = 2
-	_events = {"found": [], "wrong": 0, "hint": [], "restarted": 0, "victory": [], "leave": 0, "messages": []}
+	_events = {"found": [], "wrong": 0, "hint": [], "restarted": 0, "turns": 0, "victory": [], "leave": 0, "messages": []}
 	_controller = _make_controller()
 
 
@@ -22,7 +22,9 @@ func _make_controller() -> GameController:
 	c.found.connect(func(i: int) -> void: _events["found"].append(i))
 	c.wrong.connect(func() -> void: _events["wrong"] += 1)
 	c.hint_revealed.connect(func(cell: Vector2i) -> void: _events["hint"].append(cell))
-	c.restarted.connect(func() -> void: _events["restarted"] += 1)
+	c.restarted.connect(func(turns: int) -> void:
+		_events["restarted"] += 1
+		_events["turns"] = turns)
 	c.victory.connect(func(r: VictoryResult) -> void: _events["victory"].append(r))
 	c.leave_requested.connect(func() -> void: _events["leave"] += 1)
 	c.message_requested.connect(func(key: String, _q: int, _p: bool) -> void: _events["messages"].append(key))
@@ -210,3 +212,43 @@ func test_arriving_at_level_four_for_the_first_time_offers_one_hint_once() -> vo
 	assert_bool(again.begin_hint_intro()).is_false()  # …et jamais plus (mémorisé dans la sauvegarde)
 	assert_int(_repo.state.hint_balance).is_equal(1)
 	again.free()
+
+
+# ---- Redémarrage : la grille pivote
+func test_restart_turns_the_grid_a_quarter_turn_left_or_right_and_the_same_words_are_still_findable() -> void:
+	_controller.turn_picker = func() -> int: return 1
+	var before := _controller.variant()
+	_controller.on_restart_requested()
+	assert_int(_events["turns"]).is_equal(1)
+	assert_int(_controller.state().orientation).is_equal(1)
+	var after := _controller.variant()
+	assert_array(Array(after.grid)).is_not_equal(Array(before.grid))
+	# Les mêmes mots, dans d'autres directions : on les trace sur la grille tournée.
+	for word in after.words:
+		_trace(word.cells)
+	assert_bool(_controller.state().is_solved()).is_true()
+
+
+func test_restart_picks_left_or_right_at_random_and_orientations_accumulate() -> void:
+	var picks: Array[int] = [1, 1, -1, -1, -1]
+	_controller.turn_picker = func() -> int: return picks.pop_front()
+	var seen: Array[int] = []
+	for i in picks.size():
+		_controller._last_restart_at = -1_000_000  # lève le verrou entre deux essais
+		_controller.on_restart_requested()
+		seen.append(_controller.state().orientation)
+	assert_array(seen).contains_exactly([1, 2, 1, 0, 3])
+
+
+func test_the_default_picker_only_ever_returns_a_left_or_right_turn() -> void:
+	var left := 0
+	var right := 0
+	for i in range(200):
+		var turn: int = _controller.turn_picker.call()
+		assert_bool(turn == 1 or turn == -1).is_true()
+		if turn == 1:
+			right += 1
+		else:
+			left += 1
+	assert_int(left).is_greater(40)
+	assert_int(right).is_greater(40)

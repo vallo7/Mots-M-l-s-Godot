@@ -34,6 +34,7 @@ var _shake := SpringValue.new(650.0, 0.2, 0.0)
 var _pointer_down := false
 var _gesture_start := Vector2i.ZERO
 var _gesture_path: Array[Vector2i] = []
+var _gesture_direction := -1
 var _restart_count := 0
 
 
@@ -145,12 +146,18 @@ func play_wrong() -> void:
 		_wake()
 
 
-func play_restart() -> void:
+## Redémarrage : la grille affichée devient `new_grid` (les mêmes lettres tournées de `turns` quarts de tour horaires) et les
+## lettres tournent jusqu'à leurs nouvelles cases.
+func play_restart(new_grid: PackedStringArray, turns: int) -> void:
 	if _fx == null:
 		return
+	grid = new_grid
+	selection = []
 	_restart_count += 1
-	_fx.input_locked_until = Time.get_ticks_msec() + GridFx.SHUFFLE_TOTAL_MS
-	_fx.on_restart(_restart_count)
+	_fx.input_locked_until = Time.get_ticks_msec() + (0 if Wg.reduce_motion else GridFx.SHUFFLE_TOTAL_MS)
+	_fx.on_restart(turns, _restart_count)
+	_dynamic.queue_redraw()
+	_wake()
 
 
 func _wake() -> void:
@@ -206,6 +213,7 @@ func _gui_input(event: InputEvent) -> void:
 			_pointer_down = true
 			_gesture_start = _cell_at(event.position)
 			_gesture_path = [_gesture_start] as Array[Vector2i]
+			_gesture_direction = -1
 			selection_started.emit(_gesture_start)
 			accept_event()
 		elif _pointer_down:
@@ -213,8 +221,12 @@ func _gui_input(event: InputEvent) -> void:
 			selection_ended.emit()
 			accept_event()
 	elif event is InputEventMouseMotion and _pointer_down:
-		var cell := _cell_at((event as InputEventMouseMotion).position)
-		var next := GridGeometry.snap_path(_gesture_start, cell, _n)
+		# Tracé « continu » : la direction et la longueur suivent la position exacte du doigt (angle par secteurs de 45° avec
+		# hystérésis, longueur projetée sur l'axe), pas la case sous le doigt : ligne stable, diagonales faciles, aucun saut.
+		var pointer := ((event as InputEventMouseMotion).position - _dynamic.position) / maxf(_cell_size, 1.0)
+		_gesture_direction = GridGeometry.direction_for(_gesture_start, pointer, _gesture_direction)
+		var length := GridGeometry.length_for(_gesture_start, pointer, _gesture_direction, _n) if _gesture_direction >= 0 else 0
+		var next := GridGeometry.path_along(_gesture_start, _gesture_direction, length, _n)
 		if next != _gesture_path:
 			_gesture_path = next
 			selection_changed.emit(next)

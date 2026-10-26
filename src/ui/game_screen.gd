@@ -9,6 +9,8 @@ extends Control
 ## (moins saturée, translucide : voir Wg.trace_tint) pour que les lettres restent lisibles.
 const WORD_COLORS: Array[Color] = [Wg.PINK, Wg.BLUE, Wg.GREEN, Wg.ORANGE, Wg.PURPLE, Wg.TEAL, Wg.RED, Wg.YELLOW_DARK]
 const BANNER_HEIGHT := 50.0
+## Écart entre le bouton Indice (ombre comprise) et la bannière publicitaire : le bouton ne la touche jamais.
+const HINT_BANNER_GAP := 22
 
 ## Nombre d'écrans de jeu vivants (2 un instant quand l'écran est reconstruit en place).
 static var _alive := 0
@@ -32,6 +34,12 @@ var _last_found: Array[int] = [-1]  # valeur sentinelle : la première synchroni
 var _last_selection: Array[Vector2i] = []
 var _last_hints: Array[Vector2i] = []
 var _words: Array[TargetWord]
+## Éléments qui entrent et sortent un à un lors des changements de page (voir transition_groups).
+var _g_top: Control
+var _g_badges: Control
+var _g_words: Control
+var _g_grid: Control
+var _g_hint: Control
 
 
 static func create(p_controller: GameController) -> GameScreen:
@@ -68,7 +76,8 @@ func _ready() -> void:
 	column.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	margin.add_child(column)
 
-	column.add_child(_build_top_bar(level, language))
+	_g_top = _build_top_bar(level, language)
+	column.add_child(_g_top)
 
 	var badge_row := HBoxContainer.new()
 	badge_row.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -77,9 +86,11 @@ func _ready() -> void:
 	badge_row.add_child(DifficultyBadge.create_for(DifficultyBand.of(level.number)))
 	badge_row.add_child(_build_timer_pill())
 	column.add_child(badge_row)
+	_g_badges = badge_row
 	column.add_child(_gap(Wg.SP_SM))
 
-	column.add_child(_build_words_panel())
+	_g_words = _build_words_panel()
+	column.add_child(_g_words)
 
 	var grid_holder := MarginContainer.new()
 	grid_holder.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -95,6 +106,7 @@ func _ready() -> void:
 	_grid.set("accessibility_name", Strings.t("game_grid_description", [level.grid_size]))
 	grid_holder.add_child(_grid)
 	column.add_child(grid_holder)
+	_g_grid = grid_holder
 
 	var hint_row := HBoxContainer.new()
 	hint_row.alignment = BoxContainer.ALIGNMENT_END
@@ -102,17 +114,18 @@ func _ready() -> void:
 	var hint_margin := MarginContainer.new()
 	hint_margin.add_theme_constant_override("margin_right", int(Wg.SP_MD))
 	hint_margin.add_theme_constant_override("margin_top", 4)
-	hint_margin.add_theme_constant_override("margin_bottom", 4)
+	hint_margin.add_theme_constant_override("margin_bottom", HINT_BANNER_GAP)
 	hint_margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_hint_button = HintButton.create()
 	_hint_button.activated.connect(controller.on_hint_requested)
 	hint_margin.add_child(_hint_button)
 	hint_row.add_child(hint_margin)
 	column.add_child(hint_row)
+	_g_hint = hint_row
 
 	var banner := ColorRect.new()  # zone réservée à la bannière : la grille ne bouge jamais
 	banner.color = Wg.BACKGROUND
-	banner.custom_minimum_size = Vector2(0.0, BANNER_HEIGHT)
+	banner.custom_minimum_size = Vector2(0.0, maxf(BANNER_HEIGHT, App.ads.banner_height()))
 	banner.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	column.add_child(banner)
 
@@ -124,7 +137,7 @@ func _ready() -> void:
 	controller.changed.connect(_refresh)
 	controller.found.connect(func(_i: int) -> void: pass)
 	controller.wrong.connect(_grid.play_wrong)
-	controller.restarted.connect(_grid.play_restart)
+	controller.restarted.connect(_on_restarted)
 	controller.ad_launching.connect(_hint_button.play_ad_launch)
 	controller.on_resume()
 	_alive += 1
@@ -137,6 +150,18 @@ func _ready() -> void:
 	_refresh()
 	if Wg.suppress_intro:
 		_start_tutorials()
+
+
+## Pour la chorégraphie de transition : barre du haut, pastilles (difficulté, chrono), mots, grille, bouton Indice.
+func transition_groups() -> Array:
+	return [[_g_top, "top"], [_g_badges, "top"], [_g_words, "center"], [_g_grid, "center"], [_g_hint, "bottom"]]
+
+
+## Redémarrage : la grille tourne d'un quart de tour (à gauche ou à droite) : mêmes mots, autres directions.
+func _on_restarted(turns: int) -> void:
+	var variant := controller.variant()
+	_words = variant.words
+	_grid.play_restart(variant.grid, turns)
 
 
 ## La page est en place (fin de transition) : la bannière peut s'afficher et les tutoriels démarrent.

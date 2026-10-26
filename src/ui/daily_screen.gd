@@ -4,7 +4,7 @@ extends Control
 ## la série (flamme, 7 derniers jours), le calendrier du mois et l'échelle des récompenses.
 
 var _top: Control
-var _scroll: ScrollContainer
+var _scroll: SmoothScroll
 var _content: VBoxContainer
 var _countdown: Label
 var _shown_day := -1
@@ -45,10 +45,8 @@ func _ready() -> void:
 	bar_margin.add_child(bar)
 	_top = bar_margin
 	column.add_child(bar_margin)
-	_scroll = ScrollContainer.new()
+	_scroll = SmoothScroll.new()
 	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_NEVER
 	_scroll.mouse_filter = Control.MOUSE_FILTER_PASS
 	column.add_child(_scroll)
 	var holder := MarginContainer.new()

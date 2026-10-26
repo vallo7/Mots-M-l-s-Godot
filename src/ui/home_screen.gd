@@ -18,6 +18,7 @@ var _banner_holder: Control
 var _daily_banner: DailyBanner
 var _chip: HintChip
 var _cards: Array[ChapterCardView] = []
+var _tutorial: HomeTutorial
 
 
 static func create() -> HomeScreen:
@@ -149,6 +150,17 @@ func _fit_pager() -> void:
 ## Pour la chorégraphie de transition : barre du haut, défi du jour, carrousel, trophées.
 func transition_groups() -> Array:
 	return [[_top_row, "top"], [_banner_holder, "top"], [_pager_holder, "center"], [_trophy_holder, "bottom"]]
+
+
+## Cadeau récupéré : si une pub récompensée est prête, le joueur peut choisir de le doubler (jamais imposé).
+## La page est en place (fin de transition) : à la toute première ouverture, le gant invite à toucher « Jouer ».
+func on_entered() -> void:
+	if _tutorial != null or _cards.is_empty() or not TutorialRules.home_intro_due(App.progress, App.catalog):
+		return
+	var first := _cards[0]
+	if first.play_button() == null:
+		return
+	_tutorial = HomeTutorial.open(self, _pager, func() -> Control: return first.play_button() if is_instance_valid(first) else null)
 
 
 ## Cadeau récupéré : si une pub récompensée est prête, le joueur peut choisir de le doubler (jamais imposé).

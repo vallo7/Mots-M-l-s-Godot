@@ -7,6 +7,11 @@ func play(_sound: int) -> void:
 	pass
 
 
+## Joue `sound` à la hauteur `pitch` (1 = normale, 2 = une octave plus haut) : l'échelle montante du tracé.
+func play_pitched(sound: int, _pitch: float) -> void:
+	play(sound)
+
+
 ## Joue le praise dans `language` ; repli sur Sound.SUCCESS_GENERIC si le fichier manque.
 func play_praise(_praise: int, _language: int) -> void:
 	pass

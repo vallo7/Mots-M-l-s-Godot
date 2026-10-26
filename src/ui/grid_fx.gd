@@ -22,11 +22,13 @@ const WAVE_STAGGER_MS := 42
 const LEAVE_MS := 260
 const FOUND_GROW_MS := 700
 const WRONG_WIGGLE_MS := 520
-const LEG1_MS := 330
-const LEG2_MS := 330
-const LEG3_MS := 520
-## Durée maximale du mélange : retard maximal par case (~220 ms) + trois étapes.
-const SHUFFLE_TOTAL_MS := 220 + LEG1_MS + LEG2_MS + LEG3_MS + 80
+## Redémarrage : chaque lettre tourne autour du centre de la grille jusqu'à sa nouvelle case (retard maximal par lettre, puis
+## ressort amorti qui se pose avec un léger dépassement).
+const SPIN_MAX_DELAY_MS := 190
+const SPIN_SETTLE_FREQUENCY := 11.0
+const SPIN_SETTLE_DAMPING := 0.62
+## Durée maximale de l'animation (le ressort est à moins de 1 % de sa cible) : verrou de saisie pendant ce temps.
+const SHUFFLE_TOTAL_MS := SPIN_MAX_DELAY_MS + 720
 ## Épaisseur d'une capsule, en fraction de la case.
 const CAPSULE_THICKNESS := 0.80
 
@@ -53,11 +55,8 @@ class Leaving:
 
 
 class Shuffle:
-	var perm1: PackedInt32Array
-	var perm2: PackedInt32Array
+	var turns: int  ## quarts de tour horaires de la grille (+1 droite, -1 gauche)
 	var delays: PackedInt32Array
-	var spins: PackedFloat32Array
-	var arcs: PackedFloat32Array
 	var start_ms: int = GridFx.UNSET
 
 
@@ -214,27 +213,59 @@ func on_hint_cells(cells: Array[Vector2i]) -> void:
 	_bump()
 
 
-## Redémarrage : les lettres se mélangent (deux arcs de permutation) puis se reposent avec un rebond.
-func on_restart(token: int) -> void:
-	if reduce_motion:
+## Position d'une lettre sur sa « couronne » : la grille est faite de carrés concentriques et un quart de tour fait avancer chaque
+## lettre de `quarter_turns` quarts de la couronne qui l'entoure (dans le sens horaire), comme une courroie : les lettres gardent
+## leur espacement, ne se chevauchent jamais et ne sortent jamais de la grille, même dans les coins. `v` : position de la lettre
+## relative au centre (en cases), `quarter_turns` : quarts de tour horaires restant à parcourir (fractionnaire, négatif = antihoraire).
+static func _ring_move(v: Vector2, quarter_turns: float) -> Vector2:
+	var rho := maxf(absf(v.x), absf(v.y))
+	if rho < 0.001:
+		return v  # la case centrale (grille impaire) ne bouge pas
+	var s := _ring_param(v, rho) + quarter_turns * 2.0 * rho  # un quart de tour = un quart du périmètre (8·rho)
+	return _ring_point(rho, fposmod(s, 8.0 * rho))
+
+
+## Abscisse curviligne d'un point de la couronne de demi-côté `rho` : 0 au coin haut-gauche, dans le sens horaire (0..8·rho).
+static func _ring_param(v: Vector2, rho: float) -> float:
+	if absf(v.y + rho) < 0.001:
+		return v.x + rho
+	if absf(v.x - rho) < 0.001:
+		return 2.0 * rho + (v.y + rho)
+	if absf(v.y - rho) < 0.001:
+		return 4.0 * rho + (rho - v.x)
+	return 6.0 * rho + (rho - v.y)
+
+
+static func _ring_point(rho: float, s: float) -> Vector2:
+	if s < 2.0 * rho:
+		return Vector2(-rho + s, -rho)
+	if s < 4.0 * rho:
+		return Vector2(rho, -rho + (s - 2.0 * rho))
+	if s < 6.0 * rho:
+		return Vector2(rho - (s - 4.0 * rho), rho)
+	return Vector2(-rho, rho - (s - 6.0 * rho))
+
+
+## Redémarrage : les lettres se mélangent en tournant autour du centre jusqu'à leur nouvelle case (`turns` quarts de tour
+## horaires : +1 vers la droite, -1 vers la gauche). La grille affichée est déjà la nouvelle : chaque lettre part de l'ancienne
+## position de sa case (la rotation inverse) et y revient en tournant, les plus proches du centre en premier, avec un léger
+## dépassement à l'arrivée. Aucun fondu, aucune particule.
+func on_restart(turns: int, _token: int) -> void:
+	if reduce_motion or turns == 0:
 		return
 	var total := n * n
-	var rnd := RandomNumberGenerator.new()
-	rnd.seed = token * 7919 + 13
-	var max_dist := Vector2(n / 2.0, n / 2.0).length()
+	var max_ring := n / 2.0
 	var s := Shuffle.new()
-	s.perm1 = _derangement(total, rnd)
-	s.perm2 = _derangement(total, rnd)
+	s.turns = signi(turns)
 	s.delays.resize(total)
-	s.spins.resize(total)
-	s.arcs.resize(total)
 	for i in total:
 		var dx := (i % n + 0.5) - n / 2.0
 		@warning_ignore("integer_division")
 		var dy := (i / n + 0.5) - n / 2.0
-		s.delays[i] = int(Vector2(dx, dy).length() / max_dist * 150.0 + rnd.randf() * 70.0)
-		s.spins[i] = (1.0 if rnd.randi() % 2 == 0 else -1.0) * (1 + rnd.randi() % 2) * 360.0
-		s.arcs[i] = (rnd.randf() * 2.0 - 1.0) * 1.4
+		# Même retard pour toutes les lettres d'une couronne (elles gardent leur espacement), les couronnes du centre partent
+		# les premières : le mouvement se propage vers l'extérieur sans qu'aucune lettre n'en chevauche une autre.
+		s.delays[i] = int(maxf(absf(dx), absf(dy)) / max_ring * float(SPIN_MAX_DELAY_MS))
+	s.start_ms = Time.get_ticks_msec()  # tout de suite : la nouvelle grille ne doit pas apparaître une image à sa place finale
 	_shuffle = s
 	_pending_release = NONE
 	_bump()
@@ -319,31 +350,6 @@ func _spawn_found(h: FoundHighlight) -> void:
 	_bump()
 
 
-func _derangement(size: int, rnd: RandomNumberGenerator) -> PackedInt32Array:
-	var p := PackedInt32Array()
-	p.resize(size)
-	for i in size:
-		p[i] = i
-	for attempt in range(8):
-		for i in range(size - 1, 0, -1):
-			var j := rnd.randi() % (i + 1)
-			var t := p[i]
-			p[i] = p[j]
-			p[j] = t
-		var fixed := false
-		for i in size:
-			if p[i] == i:
-				fixed = true
-				break
-		if not fixed:
-			return p
-	# Repli : décalage circulaire (aucune case ne reste en place).
-	for i in size:
-		@warning_ignore("integer_division")
-		p[i] = (i + 1 + size / 3) % size
-	return p
-
-
 func _center(c: Vector2i) -> Vector2:
 	return Vector2(c.x + 0.5, c.y + 0.5)
 
@@ -357,15 +363,6 @@ func _key(cells: Array[Vector2i]) -> String:
 func _slot(i: int) -> Vector2:
 	@warning_ignore("integer_division")
 	return Vector2(i % n + 0.5, i / n + 0.5)
-
-
-func _arc_point(a: Vector2, b: Vector2, arc: float, u: float) -> Vector2:
-	var mid := (a + b) / 2.0
-	var d := b - a
-	var length := maxf(0.001, d.length())
-	var cx := mid.x - d.y / length * arc * minf(length, 4.0)
-	var cy := mid.y + d.x / length * arc * minf(length, 4.0)
-	return Vector2(Motion.quad(a.x, cx, b.x, u), Motion.quad(a.y, cy, b.y, u))
 
 
 # =========================================================================== dessin
@@ -467,35 +464,18 @@ func _compute_letter_effects(now: int) -> void:
 			_touched[idx] = 1
 	if _shuffle != null and _shuffle.start_ms != UNSET:
 		var s := _shuffle
+		var center := Vector2(n / 2.0, n / 2.0)
 		for idx in total:
-			var t := now - s.start_ms - s.delays[idx]
-			if t <= 0:
-				continue
+			# Avant son retard, la lettre attend à son ancienne position (angle de départ) : jamais de saut.
+			var t := maxf(float(now - s.start_ms - s.delays[idx]), 0.0) / 1000.0
+			var settle := Motion.spring(t, SPIN_SETTLE_FREQUENCY, SPIN_SETTLE_DAMPING)  # 0 -> 1, léger dépassement
+			var remaining := -float(s.turns) * (1.0 - settle)  # quarts de tour horaires encore à parcourir (0 = arrivée)
+			var pull := Motion.bump(minf(t / 0.5, 1.0))
 			var home := _slot(idx)
-			var p1 := _slot(s.perm1[idx])
-			var p2 := _slot(s.perm2[idx])
-			var arc := s.arcs[idx]
-			var pos: Vector2
-			var lift: float
-			var rot := 0.0
-			if t < LEG1_MS:
-				var u := Motion.ease_in_out_cubic(t / float(LEG1_MS))
-				pos = _arc_point(home, p1, arc, u)
-				lift = Motion.bump(t / float(LEG1_MS))
-				rot = s.spins[idx] * 0.5 * u
-			elif t < LEG1_MS + LEG2_MS:
-				var u := Motion.ease_in_out_cubic((t - LEG1_MS) / float(LEG2_MS))
-				pos = _arc_point(p1, p2, -arc, u)
-				lift = Motion.bump((t - LEG1_MS) / float(LEG2_MS))
-				rot = s.spins[idx] * (0.5 + 0.5 * u)
-			else:
-				var u := (t - LEG1_MS - LEG2_MS) / 1000.0
-				var k := Motion.spring(u, 17.0, 0.5)
-				pos = p2 + (home - p2) * k
-				lift = 0.35 * (1.0 - minf(1.0, k))
-			_off[idx] = pos - home
-			_rot[idx] = rot
-			_scale[idx] *= 1.0 + 0.3 * lift
+			var spun := center + _ring_move(home - center, remaining)
+			_off[idx] = spun - home
+			_rot[idx] = remaining * 90.0 * 0.12  # une légère inclinaison dans le sens du mouvement
+			_scale[idx] *= 1.0 + 0.1 * pull
 			_touched[idx] = 1
 
 

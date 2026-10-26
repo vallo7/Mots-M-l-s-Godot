@@ -39,6 +39,10 @@ func play(sound: int) -> void:
 	audio.play(sound)
 
 
+func play_pitched(sound: int, pitch: float) -> void:
+	audio.play_pitched(sound, pitch)
+
+
 func play_praise(praise: int, language: int) -> void:
 	audio.play_praise(praise, language)
 

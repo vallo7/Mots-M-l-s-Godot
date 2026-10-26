@@ -2,24 +2,32 @@ class_name PageTransition
 extends RefCounted
 ## Chorégraphie d'un changement de page. Quatre styles, aucun ne fait jamais de fondu :
 ##   SLIDE   : « push » horizontal avec parallaxe (menus, aide, défi) ;
-##   IRIS    : disque qui s'ouvre (entrée en jeu) ou se referme (sortie de jeu) depuis le doigt ;
-##   RISE    : la page d'arrivée monte du bas (victoire) pendant que la précédente recule ;
-##   CURTAIN : la page de départ se lève comme un rideau (chargement -> accueil).
-## En plus du mouvement de la page, chaque écran peut déclarer des « groupes » (`transition_groups()`, liste de
-## [Control, côté]) : à l'arrivée ils entrent l'un après l'autre avec un petit rebond, au départ ils repartent en
-## sens inverse, plus vite. Piloté à la main par `step(dt)` : le temps avance d'au plus 1/30 s par image, donc une
-## image lente (construction d'un écran) fait attendre l'animation au lieu de lui faire sauter des étapes.
+##   RISE    : la page d'arrivée monte du bas (entrée en jeu, victoire) pendant que la précédente recule ;
+##   DROP    : l'inverse, la page du dessus redescend et révèle celle d'en dessous (sortie du jeu) ;
+##   CURTAIN : la page de départ se lève comme un rideau (chargement -> accueil) ;
+##   IRIS    : disque qui s'ouvre depuis le doigt (désactivé : voir USE_IRIS).
+## En plus du mouvement de la page, chaque écran déclare des « groupes » (`transition_groups()`, liste de [Control, côté]) :
+## à l'arrivée ils entrent l'un après l'autre en glissant, au départ ils repartent en sens inverse, plus vite. Mouvements en
+## courbes douces (décélération en quart de puissance), sans rebond et sans aucun fondu.
+## Piloté à la main par `step(dt)` : le temps avance d'au plus 1/30 s par image, lissé sur les 3 dernières images pour effacer
+## les à-coups, et la toute première image (celle où l'écran vient d'être construit) ne compte que pour 1/60 s : une image lente
+## fait attendre l'animation au lieu de lui faire sauter des étapes.
 
-enum Style { SLIDE, IRIS, RISE, CURTAIN }
+enum Style { SLIDE, IRIS, RISE, CURTAIN, DROP }
 
-const SLIDE_SECONDS := 0.46
+## Le disque d'iris masque toute la page à chaque image (découpe hors écran) : coûteux sur mobile. Remplacé par RISE / DROP, bien plus
+## fluides ; remettre `true` pour retrouver l'iris.
+const USE_IRIS := false
+
+const SLIDE_SECONDS := 0.44
 const IRIS_SECONDS := 0.56
 const RISE_SECONDS := 0.5
+const DROP_SECONDS := 0.42
 const CURTAIN_SECONDS := 0.55
 const PARALLAX := 0.28
-const ENTER_SECONDS := 0.36
+const ENTER_SECONDS := 0.42
 const EXIT_SECONDS := 0.24
-const STAGGER := 0.04
+const STAGGER := 0.045
 
 var style: int = Style.SLIDE
 var forward := true
@@ -31,6 +39,8 @@ var iris_origin := Vector2.ZERO
 var _host: Control
 var _pages: Control
 var _t := 0.0
+var _recent_dts: Array[float] = []
+var _first_step := true
 var _main_seconds := 0.5
 var _enter_start := 0.05
 var _items_in: Array[_Item] = []
@@ -88,10 +98,12 @@ static func style_for(from_kind: int, to_kind: int, is_forward: bool) -> int:
 	if from_kind < 0:
 		return Style.CURTAIN
 	var K := ScreenRoute.Kind
-	if to_kind == K.GAME or (from_kind == K.GAME and not is_forward):
-		return Style.IRIS
 	if from_kind == K.GAME and to_kind == K.RESULT:
 		return Style.RISE
+	if to_kind == K.GAME:
+		return Style.IRIS if USE_IRIS else Style.RISE
+	if from_kind == K.GAME and not is_forward:
+		return Style.IRIS if USE_IRIS else Style.DROP
 	return Style.SLIDE
 
 
@@ -111,6 +123,9 @@ func begin(host: Control, pages: Control, next: Control, previous: Control, is_f
 		Style.RISE:
 			_main_seconds = RISE_SECONDS
 			_enter_start = 0.14
+		Style.DROP:
+			_main_seconds = DROP_SECONDS
+			_enter_start = 0.12
 		Style.CURTAIN:
 			_main_seconds = CURTAIN_SECONDS
 			_enter_start = 0.16
@@ -177,6 +192,14 @@ func _setup_style() -> void:
 			_edge.size = Vector2(size.x, 34.0)
 			_pages.move_child(outgoing, 0)
 			_pages.move_child(incoming, _pages.get_child_count() - 1)
+		Style.DROP:
+			_edge = _Edge.new()
+			_edge.side = _Edge.Side.TOP
+			outgoing.add_child(_edge)
+			_edge.position = Vector2(0.0, -34.0)
+			_edge.size = Vector2(size.x, 34.0)
+			_pages.move_child(incoming, 0)
+			_pages.move_child(outgoing, _pages.get_child_count() - 1)
 		Style.CURTAIN:
 			_edge = _Edge.new()
 			_edge.side = _Edge.Side.BOTTOM
@@ -189,9 +212,23 @@ func _setup_style() -> void:
 
 ## Avance de `dt` secondes ; renvoie vrai quand la transition est terminée.
 func step(dt: float) -> bool:
-	_t = minf(duration, _t + minf(dt, 1.0 / 30.0))
+	_t = minf(duration, _t + _smoothed(dt))
 	_apply(_t)
 	return _t >= duration
+
+
+## Durée d'image lissée : la première image (écran à peine construit) vaut 1/60 s ; ensuite chaque durée est bornée à 1/30 s puis
+## moyennée avec les deux précédentes. Les pics isolés (ramasse-miettes, décodage d'une image) deviennent trois images régulières.
+func _smoothed(dt: float) -> float:
+	var d := 1.0 / 60.0 if _first_step else minf(dt, 1.0 / 30.0)
+	_first_step = false
+	_recent_dts.append(d)
+	if _recent_dts.size() > 3:
+		_recent_dts.remove_at(0)
+	var total := 0.0
+	for value in _recent_dts:
+		total += value
+	return total / float(_recent_dts.size())
 
 
 func _apply(t: float) -> void:
@@ -220,10 +257,15 @@ func _apply(t: float) -> void:
 			var s := 1.0 - 0.05 * e if forward else 0.95 + 0.05 * e
 			UiKit.transform_visual(under, Vector2.ZERO, Vector2(s, s))
 		Style.RISE:
-			var e := Motion.ease_out_cubic(m)
+			var e := 1.0 - pow(1.0 - m, 4.0)
 			incoming.position.y = size.y * (1.0 - e)
 			var s := 1.0 - 0.07 * e
 			UiKit.transform_visual(outgoing, Vector2(0.0, -34.0 * e), Vector2(s, s))
+		Style.DROP:
+			var e := Motion.ease_in_out_cubic(m)
+			outgoing.position.y = size.y * e
+			var s := 0.93 + 0.07 * e
+			UiKit.transform_visual(incoming, Vector2(0.0, -34.0 * (1.0 - e)), Vector2(s, s))
 		Style.CURTAIN:
 			var e := Motion.ease_in_out_cubic(m)
 			outgoing.position.y = -size.y * e
@@ -231,15 +273,15 @@ func _apply(t: float) -> void:
 			UiKit.transform_visual(incoming, Vector2.ZERO, Vector2(s, s))
 	for item in _items_in:
 		var p := clampf((t - item.delay) / ENTER_SECONDS, 0.0, 1.0)
-		var e := Motion.ease_out_back(p, 1.2)
+		var e := 1.0 - pow(1.0 - p, 4.0)  # décélération douce, sans rebond
 		var from := _enter_from(item.side)
-		var scale := lerpf(0.9, 1.0, e)
+		var scale := lerpf(0.94, 1.0, e)
 		UiKit.transform_visual(item.node, from * (1.0 - e), Vector2(scale, scale))
 	for item in _items_out:
 		var p := clampf((t - item.delay) / EXIT_SECONDS, 0.0, 1.0)
-		var e := p * p * p
+		var e := Motion.ease_in_cubic(p)
 		var to := _exit_to(item.side)
-		var scale := lerpf(1.0, 0.92, e)
+		var scale := lerpf(1.0, 0.94, e)
 		UiKit.transform_visual(item.node, to * e, Vector2(scale, scale))
 
 

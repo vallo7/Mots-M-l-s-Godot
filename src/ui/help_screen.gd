@@ -4,7 +4,7 @@ extends Control
 ## sont attribuées, comment fonctionnent les indices et toutes les façons d'en gagner (récompenses).
 
 var _top: Control
-var _scroll: ScrollContainer
+var _scroll: SmoothScroll
 
 
 static func create() -> HelpScreen:
@@ -43,10 +43,8 @@ func _ready() -> void:
 	_top = bar_margin
 	column.add_child(bar_margin)
 
-	_scroll = ScrollContainer.new()
+	_scroll = SmoothScroll.new()
 	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_NEVER
 	_scroll.mouse_filter = Control.MOUSE_FILTER_PASS
 	column.add_child(_scroll)
 	var holder := MarginContainer.new()

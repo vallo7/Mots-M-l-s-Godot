@@ -87,9 +87,17 @@ func preload_all(on_progress: Callable = Callable()) -> void:
 	_refresh_music()
 
 
+func play_pitched(sound: int, pitch: float) -> void:
+	var player: AudioStreamPlayer = _sound_players.get(sound)
+	if player != null:
+		player.pitch_scale = clampf(pitch, 0.5, 3.0)
+		player.play()
+
+
 func play(sound: int) -> void:
 	var player: AudioStreamPlayer = _sound_players.get(sound)
 	if player != null:
+		player.pitch_scale = 1.0
 		player.play()
 		if DUCKING_SOUNDS.has(sound):
 			duck_music(DUCK_JINGLE_SECONDS)

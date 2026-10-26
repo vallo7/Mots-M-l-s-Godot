@@ -1,7 +1,7 @@
 class_name MonumentScreen
 extends Control
 ## Monument des niveaux, dans le style de la maquette « liste de niveaux » : barre du haut (retour, progression
-## du chapitre en cours, indices), bandeau illustré par chapitre, puis dix pilules. Niveau terminé : étoiles + coche,
+## du chapitre en cours, indices), bandeau illustré par chapitre (titre écrit en bas de l'illustration), puis dix pilules. Niveau terminé : étoiles + coche,
 ## pas de relance. Niveau disponible : bouton lecture. Niveau verrouillé : cadenas. Le niveau 10 (défi final) est doré.
 
 
@@ -10,7 +10,7 @@ const UNROLL_MIN_SECONDS := 0.7
 const UNROLL_MAX_SECONDS := 1.5
 const UNROLL_PIXELS_PER_SECOND := 1500.0
 
-var _scroll: ScrollContainer
+var _scroll: SmoothScroll
 var _list: VBoxContainer
 var _top_bar_node: Control
 var _current_holder: Control
@@ -61,11 +61,9 @@ func _ready() -> void:
 	_top_bar_node = _top_bar(current_chapter, fraction)
 	column.add_child(_top_bar_node)
 
-	var scroll := ScrollContainer.new()
+	var scroll := SmoothScroll.new()
 	_scroll = scroll
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_NEVER
 	scroll.mouse_filter = Control.MOUSE_FILTER_PASS
 	column.add_child(scroll)
 	var list := VBoxContainer.new()
@@ -115,10 +113,10 @@ func on_entered() -> void:
 		_pulse_current()
 		return
 	_stop_unroll()
-	_scroll.scroll_vertical = 0
+	_scroll.scroll_position = 0.0
 	var seconds := clampf(float(target) / UNROLL_PIXELS_PER_SECOND, UNROLL_MIN_SECONDS, UNROLL_MAX_SECONDS)
 	_unroll = create_tween()
-	_unroll.tween_property(_scroll, "scroll_vertical", target, seconds).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	_unroll.tween_property(_scroll, "scroll_position", float(target), seconds).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
 	_unroll.tween_callback(_pulse_current)
 
 
@@ -140,7 +138,7 @@ func _jump_to_current() -> void:
 	if _scroll == null:
 		return
 	await get_tree().process_frame
-	_scroll.scroll_vertical = _target_scroll()
+	_scroll.scroll_position = float(_target_scroll())
 
 
 func _stop_unroll() -> void:
@@ -242,14 +240,25 @@ func _chapter_header(chapter: MonumentChapter) -> Control:
 	art.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	UiKit.full_rect(art)
 	band.add_child(art)
-	var ribbon := RibbonBanner.create(Strings.t("monument_chapter", [chapter.index, Language.pick(chapter.theme, App.language)]), palette["ribbon"])
-	ribbon.anchor_left = 0.05
-	ribbon.anchor_right = 0.95
-	ribbon.anchor_top = 1.0
-	ribbon.anchor_bottom = 1.0
-	ribbon.offset_top = -58.0 - 8.0
-	ribbon.offset_bottom = -8.0
-	band.add_child(ribbon)
+	# Plus de bannière sur l'illustration : le titre du chapitre est écrit en bas de l'illustration, en gras blanc cerné
+	# de la couleur du chapitre (lisible sur n'importe quel décor, sans voile ni fondu).
+	var title_text := Strings.t("monument_chapter", [chapter.index, Language.pick(chapter.theme, App.language)])
+	var title := Wg.label(title_text, 24.0, Wg.Weight.BLACK, Wg.WHITE)
+	title.add_theme_color_override("font_outline_color", palette["dark"])
+	title.add_theme_constant_override("outline_size", 9)
+	title.add_theme_color_override("font_shadow_color", Color(Wg.SHADOW, 0.35))
+	title.add_theme_constant_override("shadow_offset_y", 3)
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	title.anchor_left = 0.04
+	title.anchor_right = 0.96
+	title.anchor_top = 1.0
+	title.anchor_bottom = 1.0
+	title.offset_top = -46.0
+	title.offset_bottom = -8.0
+	title.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	UiKit.fit_font(title, 330.0, int(round(24.0 * Wg.text_scale)), 13)
+	band.add_child(title)
 	column.add_child(band)
 
 	var progress := MarginContainer.new()

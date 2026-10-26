@@ -9,7 +9,7 @@ const GAP := 10.0
 const SIDE_MARGIN := 16
 
 var _top_bar_node: Control
-var _scroll: ScrollContainer
+var _scroll: SmoothScroll
 var _summary: Control
 var _tiles: Array[TrophyTile] = []
 
@@ -62,11 +62,9 @@ func _ready() -> void:
 	_summary = _summary_row(unlocked, total)
 	column.add_child(_summary)
 
-	var scroll := ScrollContainer.new()
+	var scroll := SmoothScroll.new()
 	_scroll = scroll
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_NEVER
 	scroll.mouse_filter = Control.MOUSE_FILTER_PASS
 	column.add_child(scroll)
 	var pad := MarginContainer.new()

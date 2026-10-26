@@ -84,6 +84,15 @@ static func tilt_from_bottom(node: Control, scale_factor: float, rotation_degree
 	node.offset_transform_rotation = deg_to_rad(rotation_degrees)
 
 
+## Réduit la police de `label` (jusqu'à `min_size`) tant que son texte dépasse `max_width` : jamais de points de suspension.
+static func fit_font(label: Label, max_width: float, start_size: int, min_size: int = 12) -> void:
+	var font := label.get_theme_font("font")
+	var chosen := start_size
+	while chosen > min_size and font.get_string_size(label.text, HORIZONTAL_ALIGNMENT_LEFT, -1, chosen).x > max_width:
+		chosen -= 1
+	label.add_theme_font_size_override("font_size", chosen)
+
+
 ## Marge d'un bouton avec la zone sûre : la marge actuelle de l'écran, relevée à Wg.EDGE_GAP si elle était plus petite.
 static func edge(current: float) -> int:
 	return int(ceilf(maxf(current, Wg.EDGE_GAP)))

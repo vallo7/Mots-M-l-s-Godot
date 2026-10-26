@@ -201,6 +201,11 @@ func _ready() -> void:
 		_begin()
 
 
+## Pour la chorégraphie de transition : la carte de victoire, puis les boutons du bas.
+func transition_groups() -> Array:
+	return [[_card_wrap, "center"], [_buttons, "bottom"]]
+
+
 func _animated() -> bool:
 	return not (Wg.reduce_motion or Wg.suppress_intro)
 

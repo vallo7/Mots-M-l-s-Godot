@@ -55,3 +55,8 @@ static func bump(t: float) -> float:
 static func quad(a: float, control: float, b: float, t: float) -> float:
 	var u := 1.0 - t
 	return u * u * a + 2.0 * u * t * control + t * t * b
+
+
+static func ease_in_cubic(x: float) -> float:
+	var c := clampf(x, 0.0, 1.0)
+	return c * c * c

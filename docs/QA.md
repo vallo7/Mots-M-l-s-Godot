@@ -34,3 +34,9 @@ Automatisé (CI) : plus de 200 tests, compilation de tous les scripts, validatio
 - [ ] 1.3.0 — Accueil : défi du jour au-dessus des chapitres, « Chapitre N » en texte sur la bulle, bulles plus courtes ; aucun bouton collé à la zone sûre (encoche, barre de gestes, rotation).
 - [ ] 1.3.0 — Musique : ambiance discrète, boucle sans coupure, baisse pendant les voix de félicitation ; effets à 60 % par défaut.
 - [ ] 1.3.0 — Trophées : nouveaux objectifs (ex. « Premiers pas » = 3 niveaux, « Étoiles » = 150), textes corrects dans les deux langues.
+- [ ] 1.4.0 — Première ouverture : le gant tape sur « Jouer » (chapitre 1) ; il s'écarte quand on fait glisser le carrousel ; le tutoriel du niveau 1 enchaîne.
+- [ ] 1.4.0 — Carrousel et liste des niveaux : suivi du doigt sans à-coup, lancer qui ralentit naturellement, élasticité aux extrémités, un petit coup de doigt rapide change de page.
+- [ ] 1.4.0 — Restart : la grille pivote à gauche ou à droite (au hasard), mêmes mots, directions différentes ; aucune lettre ne sort de la grille ; reprise après interruption dans la bonne orientation.
+- [ ] 1.4.0 — Tracé : diagonales faciles, ligne stable près des frontières d'angle, notes qui montent à chaque lettre.
+- [ ] 1.4.0 — Transitions : tous les éléments entrent/sortent un à un (accueil, niveaux, jeu, victoire, aide, trophées, défi) sans fondu ni rebond ; bouton Indice à bonne distance de la bannière publicitaire.
+

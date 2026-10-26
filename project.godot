@@ -21,7 +21,7 @@ run/max_fps=60
 boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/show_image=false
 config/icon="res://assets/branding/app-logo.png"
-config/version="1.3.0"
+config/version="1.4.0"
 
 [autoload]
 
@@ -40,6 +40,7 @@ window/handheld/orientation=1
 
 theme/default_font_antialiasing=2
 common/drop_mouse_on_gui_input_disabled=true
+common/snap_controls_to_pixels=false
 
 
 [rendering]

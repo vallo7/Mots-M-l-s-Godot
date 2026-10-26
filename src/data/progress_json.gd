@@ -30,7 +30,7 @@ static func encode(state: ProgressState) -> String:
 		found.sort()
 		in_progress[key] = {
 			"found": found, "hinted": s.hinted_word_indices, "wrong": s.wrong_selections,
-			"elapsedMillis": s.elapsed_millis,
+			"elapsedMillis": s.elapsed_millis, "orientation": s.orientation,
 		}
 	var claimed := state.claimed_gift_chapters.duplicate()
 	claimed.sort()
@@ -122,7 +122,7 @@ static func _parse(json: Dictionary) -> ProgressState:
 						unique.append(index)
 				state.in_progress[String(key)] = GameSnapshot.new(
 					unique, JsonUtil.int_array(s.get("hinted")),
-					JsonUtil.get_int(s, "wrong", 0), JsonUtil.get_int(s, "elapsedMillis", 0)
+					JsonUtil.get_int(s, "wrong", 0), JsonUtil.get_int(s, "elapsedMillis", 0), JsonUtil.get_int(s, "orientation", 0)
 				)
 	var claimed := JsonUtil.int_array(json.get("claimedGiftChapters"))
 	for chapter_index in claimed:

@@ -72,8 +72,12 @@ func finish() -> int:
 	return _timer.stop()
 
 
-func restart() -> void:
+## Redémarre le niveau. `turns` : quarts de tour horaires ajoutés à l'orientation de la grille (+1 droite, -1 gauche) : les mêmes
+## mots, à retrouver dans d'autres directions.
+func restart(turns: int = 0) -> void:
+	var orientation := posmod(state.orientation + turns, 4)
 	state = GameEngine.new_game(level, language)
+	state.orientation = orientation
 	_timer.reset()
 
 
@@ -81,13 +85,14 @@ func snapshot() -> GameSnapshot:
 	var hinted: Array[int] = []
 	for hint in state.revealed_hints:
 		hinted.append(hint.word_index)
-	return GameSnapshot.new(state.found_word_indices.duplicate(), hinted, state.wrong_selections, _timer.elapsed_millis())
+	return GameSnapshot.new(state.found_word_indices.duplicate(), hinted, state.wrong_selections, _timer.elapsed_millis(), state.orientation)
 
 
 ## Restaure une sauvegarde ; ignore les indices invalides (sauvegarde d'une autre version du niveau).
 func restore(snapshot_value: GameSnapshot) -> void:
-	var words := state.variant().words
 	var restored := GameState.new(level, language)
+	restored.orientation = posmod(snapshot_value.orientation, 4)
+	var words := restored.variant().words
 	for index in snapshot_value.found_word_indices:
 		if index >= 0 and index < words.size() and not restored.found_word_indices.has(index):
 			restored.found_word_indices.append(index)

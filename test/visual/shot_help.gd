@@ -10,7 +10,7 @@ func run() -> void:
 		root().add_child(screen)
 		await wait(0.9)
 		await save("help_%s_top" % ("dark" if dark else "light"))
-		var scroll: ScrollContainer = screen._scroll
+		var scroll: SmoothScroll = screen._scroll
 		scroll.scroll_vertical = 700
 		await wait(0.3)
 		await save("help_%s_mid" % ("dark" if dark else "light"))

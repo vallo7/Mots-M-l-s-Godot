@@ -9,7 +9,7 @@ extends Control
 ## Changement de thème clair / sombre : une capture de l'ancien écran reste en dessous pendant que l'écran reconstruit
 ## apparaît dans un disque qui s'agrandit depuis l'interrupteur (aucun fondu).
 
-const WARMUP_FRAMES := 2
+const WARMUP_FRAMES := 3
 const THEME_REVEAL_SECONDS := 0.7
 ## Un appui plus ancien que cela n'est plus l'origine de l'iris (on retombe sur une origine par défaut).
 const PRESS_MEMORY_MS := 1800
@@ -46,6 +46,9 @@ class _ThemeReveal extends RefCounted:
 
 
 func _ready() -> void:
+	# Les contrôles ne sont plus recalés sur des pixels entiers de l'écran virtuel (360 dp ≈ 3 pixels réels) : défilements,
+	# carrousel et transitions avancent au pixel près, sans marches d'escalier visibles aux faibles vitesses.
+	get_viewport().gui_snap_controls_to_pixels = false
 	UiKit.full_rect(self)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_pages.mouse_filter = Control.MOUSE_FILTER_IGNORE

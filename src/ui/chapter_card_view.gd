@@ -5,6 +5,8 @@ extends JuicyPressable
 
 signal claim_pressed()
 
+var _play_node: Control  ## la pastille « Jouer » de la carte courante (cible du tutoriel d'accueil)
+
 const FACE_RADIUS := 34.0
 const LIP_DEPTH := 8.0
 
@@ -238,10 +240,16 @@ func _build_body() -> Control:
 	return body
 
 
+## La pastille « Jouer » (null sur une carte qui n'est pas la courante).
+func play_button() -> Control:
+	return _play_node
+
+
 ## Pastille « Jouer » de la carte courante : cerclée de blanc comme les autres boutons d'action. Purement visuelle :
 ## la carte entière est le bouton.
 func _play_pill(text: String) -> Control:
 	var pill := BubbleButton.new()
+	_play_node = pill
 	pill.ringed = true
 	pill.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	pill.focus_mode = Control.FOCUS_NONE

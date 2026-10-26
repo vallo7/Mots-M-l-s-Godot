@@ -105,8 +105,9 @@ func test_the_hand_image_is_imported() -> void:
 func test_transition_styles_match_the_pages() -> void:
 	var K := ScreenRoute.Kind
 	assert_int(PageTransition.style_for(-1, K.HOME, true)).is_equal(PageTransition.Style.CURTAIN)
-	assert_int(PageTransition.style_for(K.HOME, K.GAME, true)).is_equal(PageTransition.Style.IRIS)
-	assert_int(PageTransition.style_for(K.GAME, K.HOME, false)).is_equal(PageTransition.Style.IRIS)
+	assert_int(PageTransition.style_for(K.HOME, K.GAME, true)).is_equal(PageTransition.Style.RISE)  # l'iris, coûteux, est désactivé
+	assert_int(PageTransition.style_for(K.GAME, K.HOME, false)).is_equal(PageTransition.Style.DROP)
+	assert_int(PageTransition.style_for(K.RESULT, K.GAME, true)).is_equal(PageTransition.Style.RISE)
 	assert_int(PageTransition.style_for(K.GAME, K.RESULT, true)).is_equal(PageTransition.Style.RISE)
 	assert_int(PageTransition.style_for(K.HOME, K.MONUMENT, true)).is_equal(PageTransition.Style.SLIDE)
 	assert_int(PageTransition.style_for(K.HOME, K.HELP, true)).is_equal(PageTransition.Style.SLIDE)

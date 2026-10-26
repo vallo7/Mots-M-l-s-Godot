@@ -191,3 +191,14 @@ func test_doubling_grants_nothing_when_the_ad_is_closed_early_or_unavailable() -
 	var offline: RewardOutcome = await uc.watch_rewarded_bonus(2)
 	assert_int(offline.kind).is_equal(RewardOutcome.Kind.UNAVAILABLE)
 	assert_int(repo.state.hint_balance).is_equal(0)
+
+
+# ---- Tutoriel d'accueil (première ouverture)
+func test_the_home_tutorial_is_due_on_the_very_first_launch_only() -> void:
+	var catalog := AssetLevelRepository.new().load_catalog()
+	assert_bool(TutorialRules.home_intro_due(ProgressState.new(), catalog)).is_true()
+	var played := ProgressRules.complete_level(ProgressState.new(), "c1-l01", 3, 30000, Praise.NICE)
+	assert_bool(TutorialRules.home_intro_due(played, catalog)).is_false()  # niveau 1 déjà gagné
+	var elsewhere := ProgressRules.complete_level(ProgressState.new(), "c2-l01", 2, 30000, Praise.NICE)
+	assert_bool(TutorialRules.home_intro_due(elsewhere, catalog)).is_false()  # le joueur a déjà joué : ce n'est plus la première ouverture
+	assert_bool(TutorialRules.home_intro_due(ProgressState.new(), null)).is_false()

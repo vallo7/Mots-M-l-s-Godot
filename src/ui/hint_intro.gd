@@ -10,7 +10,8 @@ const DIM := Color(0.10, 0.09, 0.25, 0.70)
 const HOLE_PAD := 8.0
 const CARD_MAX_WIDTH := 330.0
 const CARD_GAP := 34.0  ## entre la carte et le bouton (la place du gant)
-const LOOP_SECONDS := 1.75
+const OPEN_SECONDS := 0.5
+const CLOSE_SECONDS := 0.28
 
 var _target: Control
 var _dims: Array[ColorRect] = []  ## quatre bandes invisibles qui bloquent le toucher autour du bouton
@@ -23,6 +24,8 @@ var _ring := StyleBoxFlat.new()
 var _hole := Rect2()
 var _time := 0.0
 var _closing := false
+var _open := 0.0  ## 0 = projecteur grand ouvert (écran entier), 1 = refermé sur le bouton ; animé à l'ouverture et à la fermeture
+var _open_t := 0.0
 
 
 static func open(parent: Control, target: Control) -> HintIntro:
@@ -126,19 +129,17 @@ func _build_card() -> Control:
 	return panel
 
 
-## Referme la cinématique (indice utilisé, « Plus tard » ou écran quitté).
+## Referme la cinématique (indice utilisé, « Plus tard » ou écran quitté) : le projecteur s'élargit jusqu'à l'écran entier et la
+## carte redescend. Aucun fondu.
 func close() -> void:
 	if _closing:
 		return
 	_closing = true
-	set_process(false)
 	finished.emit()
+	for dim in _dims:
+		dim.mouse_filter = Control.MOUSE_FILTER_IGNORE  # le joueur reprend la main tout de suite
 	if Wg.reduce_motion or not is_inside_tree():
 		queue_free()
-		return
-	var tween := create_tween()
-	tween.tween_property(self, "modulate:a", 0.0, 0.16)
-	tween.tween_callback(queue_free)
 
 
 func _process(delta: float) -> void:
@@ -146,6 +147,15 @@ func _process(delta: float) -> void:
 		close()
 		return
 	_time += delta
+	if _closing:
+		_open_t = maxf(_open_t - delta / CLOSE_SECONDS, 0.0)
+		_open = Motion.ease_in_cubic(_open_t)
+		if _open_t <= 0.0:
+			queue_free()
+			return
+	else:
+		_open_t = 1.0 if Wg.reduce_motion else minf(_open_t + delta / OPEN_SECONDS, 1.0)
+		_open = Motion.ease_out_cubic(_open_t)
 	_layout()
 	_fx.queue_redraw()
 
@@ -154,7 +164,9 @@ func _layout() -> void:
 	if size.x <= 0.0 or size.y <= 0.0:
 		return
 	var bounds := Rect2(Vector2.ZERO, size)
-	_hole = Rect2(_target.global_position - global_position, _target.size).grow(HOLE_PAD).intersection(bounds)
+	var target_hole := Rect2(_target.global_position - global_position, _target.size).grow(HOLE_PAD).intersection(bounds)
+	# Le projecteur s'ouvre depuis l'écran entier (il grossit de `(1 - _open)` écrans autour du bouton) : jamais de fondu.
+	_hole = target_hole.grow((1.0 - _open) * maxf(size.x, size.y))
 	var left_w := _hole.position.x
 	var right_w := size.x - _hole.end.x
 	_set_rect(_dims[0], Rect2(0.0, 0.0, size.x, _hole.position.y))
@@ -167,8 +179,9 @@ func _layout() -> void:
 	_stack.add_theme_constant_override("margin_left", int(side))
 	_stack.add_theme_constant_override("margin_right", int(side))
 	_stack.add_theme_constant_override("margin_top", int(insets.y) + UiKit.edge(0.0))
-	_stack.add_theme_constant_override("margin_bottom", int(maxf(size.y - _hole.position.y + CARD_GAP, 0.0)))
-	var radius := minf(_hole.size.y * 0.5, 40.0)
+	_stack.add_theme_constant_override("margin_bottom", int(maxf(size.y - target_hole.position.y + CARD_GAP, 0.0)))
+	UiKit.transform_visual(_card_column, Vector2(0.0, (1.0 - _open) * 150.0), Vector2.ONE)  # la carte monte depuis le bas
+	var radius := minf(_hole.size.y * 0.5, 40.0 + (1.0 - _open) * 200.0)
 	_ring.set_corner_radius_all(int(radius))
 	_veil_material.set_shader_parameter("area_size", size)
 	_veil_material.set_shader_parameter("hole", Vector4(_hole.position.x, _hole.position.y, _hole.size.x, _hole.size.y))
@@ -184,25 +197,14 @@ func _draw_fx() -> void:
 	if _hole.size.x <= 0.0:
 		return
 	var pulse := 0.0 if Wg.reduce_motion else 0.5 + 0.5 * sin(_time * TAU / 1.1)
-	_fx.draw_style_box(_ring, _hole.grow(2.0 + 4.0 * pulse))
-	var tip := Vector2(_hole.position.x + _hole.size.x * 0.34, _hole.position.y + _hole.size.y * 0.36)
-	var press := 0.0
-	var shown := true
-	if not Wg.reduce_motion:
-		var t := fposmod(_time, LOOP_SECONDS)
-		var approach := 0.55
-		var tap := 0.28
-		var back := 0.3
-		if t < approach:
-			var u := Motion.ease_out_cubic(t / approach)
-			tip = (tip + Vector2(46.0, 60.0)).lerp(tip, u) + Vector2(0.0, -12.0 * Motion.bump(u))
-		elif t < approach + tap:
-			press = Motion.bump((t - approach) / tap)
-		elif t < approach + tap + back:
-			var u := Motion.ease_in_out_cubic((t - approach - tap) / back)
-			tip = tip.lerp(tip + Vector2(46.0, 60.0), u)
-		else:
-			shown = false  # un temps de pause avant de recommencer
-	if shown:
-		TutorialHand.draw_touch(_fx, tip, press, 30.0)
-		TutorialHand.draw(_fx, tip, press, 92.0)
+	_fx.draw_style_box(_ring, _hole.grow(2.0 + 4.0 * pulse))  # l'anneau est le bord du projecteur
+	if _open < 0.999 or _closing:
+		return  # le gant n'apparaît qu'une fois le projecteur refermé sur le bouton
+	var rest_tip := Vector2(_hole.position.x + _hole.size.x * 0.34, _hole.position.y + _hole.size.y * 0.36)
+	if Wg.reduce_motion:
+		TutorialHand.draw(_fx, rest_tip, 0.0, 92.0)
+		return
+	var pose := TutorialHand.tap_pose(_time - OPEN_SECONDS, rest_tip)
+	if pose["shown"]:
+		TutorialHand.draw_touch(_fx, pose["tip"], float(pose["press"]), 30.0)
+		TutorialHand.draw(_fx, pose["tip"], float(pose["press"]), 92.0)

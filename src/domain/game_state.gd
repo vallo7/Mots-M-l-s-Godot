@@ -8,6 +8,8 @@ var language: int
 var found_word_indices: Array[int] = []
 var revealed_hints: Array[RevealedHint] = []
 var wrong_selections: int = 0
+## Quarts de tour horaires appliqués à la grille depuis le début du niveau (chaque redémarrage la fait pivoter, 0..3).
+var orientation: int = 0
 
 
 func _init(p_level: Level, p_language: int) -> void:
@@ -20,11 +22,13 @@ func copy() -> GameState:
 	c.found_word_indices = found_word_indices.duplicate()
 	c.revealed_hints = revealed_hints.duplicate()
 	c.wrong_selections = wrong_selections
+	c.orientation = orientation
 	return c
 
 
+## Grille et mots dans leur orientation actuelle (les indices des mots ne changent jamais, seules les positions).
 func variant() -> LevelVariant:
-	return level.variant(language)
+	return level.oriented_variant(language, orientation)
 
 
 func hints_used() -> int:

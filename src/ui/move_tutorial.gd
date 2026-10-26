@@ -20,6 +20,7 @@ const EXIT := 0.4
 var _grid: LetterGridView
 var _controller: GameController
 var _words: Array[TargetWord] = []
+var _orientation := 0  ## orientation de la grille : un redémarrage la fait pivoter, le gant reprend après l'animation
 var _target := -1
 var _time := 0.0
 var _wait := START_DELAY
@@ -31,6 +32,7 @@ static func attach(grid: LetterGridView, controller: GameController, words: Arra
 	tutorial._grid = grid
 	tutorial._controller = controller
 	tutorial._words = words
+	tutorial._orientation = controller.state().orientation
 	tutorial._wait = delay
 	tutorial.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	tutorial.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
@@ -72,6 +74,13 @@ func _process(delta: float) -> void:
 	if not is_instance_valid(_controller) or _controller.solved:
 		queue_free()
 		return
+	if _controller.state().orientation != _orientation:
+		# Redémarrage : la grille a tourné, les tracés à montrer ont changé de place. On repart après l'animation des lettres.
+		_orientation = _controller.state().orientation
+		_words = _controller.variant().words
+		_target = -1
+		_time = 0.0
+		_wait = float(GridFx.SHUFFLE_TOTAL_MS) / 1000.0 + RESUME_DELAY
 	var target := next_target(_controller.found_word_indices, _words.size())
 	if target < 0:
 		queue_free()
@@ -93,7 +102,7 @@ func _process(delta: float) -> void:
 	queue_redraw()
 
 
-## État du gant à l'instant `t` de la boucle : {tip, press, shown, trail_to (Vector2 ou null), trail_alpha}.
+## État du gant à l'instant `t` de la boucle : {tip, press, shown, trail_to (Vector2 ou null), retract (0..1)}.
 func pose(t: float, from_cell: Vector2, to_cell: Vector2, cell_count: int) -> Dictionary:
 	var drag := drag_seconds(cell_count)
 	var t_press := APPROACH
@@ -102,7 +111,7 @@ func pose(t: float, from_cell: Vector2, to_cell: Vector2, cell_count: int) -> Di
 	var t_release := t_hold + HOLD
 	var t_rest := t_release + RELEASE
 	var t_exit := t_rest + REST
-	var result := {"tip": from_cell, "press": 0.0, "shown": true, "trail_to": null, "trail_alpha": 1.0}
+	var result := {"tip": from_cell, "press": 0.0, "shown": true, "trail_to": null, "retract": 0.0}
 	if t < t_press:
 		var u := Motion.ease_out_cubic(t / APPROACH)
 		result["tip"] = (from_cell + ENTER_OFFSET).lerp(from_cell, u) + Vector2(0.0, -14.0 * Motion.bump(u))  # petit arc
@@ -125,7 +134,8 @@ func pose(t: float, from_cell: Vector2, to_cell: Vector2, cell_count: int) -> Di
 	elif t < t_exit:
 		result["tip"] = to_cell
 		result["trail_to"] = to_cell
-		result["trail_alpha"] = 1.0 - Motion.ease_in_out_cubic(clampf((t - (t_exit - 0.4)) / 0.4, 0.0, 1.0))
+		# Le tracé se rétracte vers la dernière lettre en s'amincissant (jamais de fondu).
+		result["retract"] = Motion.ease_in_out_cubic(clampf((t - (t_exit - 0.4)) / 0.4, 0.0, 1.0))
 	else:
 		var u := Motion.ease_in_out_cubic((t - t_exit) / EXIT)
 		result["tip"] = to_cell.lerp(to_cell + ENTER_OFFSET, u)
@@ -145,13 +155,15 @@ func _draw() -> void:
 	var state: Dictionary
 	if Wg.reduce_motion:
 		# Animations réduites : image fixe (le doigt posé sur la première lettre, le tracé complet dessiné).
-		state = {"tip": from_cell, "press": 0.6, "shown": true, "trail_to": to_cell, "trail_alpha": 1.0}
+		state = {"tip": from_cell, "press": 0.6, "shown": true, "trail_to": to_cell, "retract": 0.0}
 	else:
 		state = pose(_time, from_cell, to_cell, count)
 	var trail: Variant = state["trail_to"]
 	if trail != null:
 		var color := _grid.selection_color
-		color.a = clampf(color.a * 1.25, 0.0, 0.85) * float(state["trail_alpha"])
-		draw_colored_polygon(capsule_polygon(from_cell, trail as Vector2, _grid.cell_extent() * 0.39), color)
+		color.a = clampf(color.a * 1.25, 0.0, 0.85)
+		var retract := float(state["retract"])
+		var tail := from_cell.lerp(trail as Vector2, retract)
+		draw_colored_polygon(capsule_polygon(tail, trail as Vector2, _grid.cell_extent() * 0.39 * (1.0 - 0.85 * retract)), color)
 	TutorialHand.draw_touch(self, state["tip"], float(state["press"]), _grid.cell_extent() * 0.55)
 	TutorialHand.draw(self, state["tip"], float(state["press"]), width)

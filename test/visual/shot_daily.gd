@@ -13,7 +13,7 @@ func run() -> void:
 	App.open_daily()
 	await wait(1.2)
 	await save("daily_page_top")
-	var scroll: ScrollContainer = main._screen._scroll
+	var scroll: SmoothScroll = main._screen._scroll
 	scroll.scroll_vertical = 520
 	await wait(0.3)
 	await save("daily_page_mid")

@@ -10,7 +10,9 @@ const WIN_PAUSE_SECONDS := 0.45
 const MAX_SAVE_ATTEMPTS := 3
 const RETRY_DELAY_SECONDS := 0.8
 ## Durée du verrou après un redémarrage (≈ durée de l'animation de mélange).
-const RESTART_LOCK_MS := 900
+const RESTART_LOCK_MS := 950
+## Gamme pentatonique (demi-tons) du tracé : chaque nouvelle lettre sélectionnée monte d'une note, jusqu'à ≈ une octave et demie.
+const SELECT_SEMITONES: Array[int] = [0, 2, 4, 7, 9, 12, 14, 16]
 ## Micro-délai entre l'appui sur « Indice » (solde à zéro) et l'ouverture de la publicité : laisse jouer l'animation du bouton.
 const AD_LAUNCH_DELAY_SECONDS := 0.38
 
@@ -20,7 +22,8 @@ signal wrong()
 signal hint_revealed(cell: Vector2i)
 ## Solde à zéro : la publicité récompensée va se lancer (l'écran joue l'animation du bouton pendant le micro-délai).
 signal ad_launching()
-signal restarted()
+## `turns` : quarts de tour horaires de la grille (+1 vers la droite, -1 vers la gauche).
+signal restarted(turns: int)
 signal victory(result: VictoryResult)
 signal leave_requested()
 signal message_requested(key: String, quantity: int, plural: bool)
@@ -49,6 +52,8 @@ var _hint_intro_started := false
 var _ad_busy := false
 var _victory_failed := false
 var _last_restart_at: int = -1_000_000
+## Choix du sens de rotation au redémarrage : +1 (droite) ou -1 (gauche), au hasard. Remplaçable pour les tests.
+var turn_picker: Callable = func() -> int: return 1 if randi() % 2 == 0 else -1
 var _tick := 0.0
 
 
@@ -92,6 +97,11 @@ func state() -> GameState:
 	return _session.state
 
 
+## Grille et mots dans l'orientation actuelle (change à chaque redémarrage).
+func variant() -> LevelVariant:
+	return _session.state.variant()
+
+
 func _sync_from_session() -> void:
 	var s := _session.state
 	found_word_indices = s.found_word_indices.duplicate()
@@ -109,11 +119,17 @@ func can_interact() -> bool:
 
 
 # ---- Tracé
+## Hauteur du son de sélection quand le tracé compte `path_size` lettres : une gamme qui monte à chaque lettre ajoutée.
+static func select_pitch(path_size: int) -> float:
+	var step := SELECT_SEMITONES[clampi(path_size - 1, 0, SELECT_SEMITONES.size() - 1)]
+	return pow(2.0, float(step) / 12.0)
+
+
 func on_selection_start(cell: Vector2i) -> void:
 	if not can_interact():
 		return
 	_session.begin_interaction()
-	Feedback.play(Sound.SELECT_CELL)
+	Feedback.play_pitched(Sound.SELECT_CELL, select_pitch(1))
 	Feedback.perform(HapticEffect.SELECTION)
 	selection = [cell] as Array[Vector2i]
 	changed.emit()
@@ -123,8 +139,10 @@ func on_selection_change(path: Array[Vector2i]) -> void:
 	if not can_interact():
 		return
 	if path.size() > selection.size():
-		Feedback.play(Sound.SELECT_CELL)
+		Feedback.play_pitched(Sound.SELECT_CELL, select_pitch(path.size()))
 		Feedback.perform(HapticEffect.SELECTION)
+	elif path.size() < selection.size() and path.size() >= 1:
+		Feedback.play_pitched(Sound.SELECT_CELL, select_pitch(path.size()))  # on recule : la note redescend
 	selection = path
 	changed.emit()
 
@@ -270,21 +288,25 @@ func on_watch_ad() -> void:
 
 
 # ---- Redémarrage, sortie, dialogues
-## Redémarrage immédiat, sans fenêtre de confirmation : la grille rejoue un mélange animé de ses lettres.
+## Redémarrage immédiat, sans fenêtre de confirmation : les lettres se mélangent en faisant pivoter la grille d'un quart de tour,
+## à gauche ou à droite au hasard : ce sont les mêmes mots, mais à retrouver dans d'autres directions.
 ## Un court verrou évite les doubles déclenchements pendant l'animation.
 func on_restart_requested() -> void:
 	var now := Time.get_ticks_msec()
 	if not can_interact() or now - _last_restart_at < RESTART_LOCK_MS:
 		return
 	_last_restart_at = now
-	_session.restart()
+	var turns: int = clampi(int(turn_picker.call()), -1, 1)
+	if turns == 0:
+		turns = 1
+	_session.restart(turns)
 	Feedback.play(Sound.SHUFFLE)
 	Feedback.perform(HapticEffect.CONFIRM)
 	_sync_from_session()
 	selection = [] as Array[Vector2i]
 	elapsed_millis = 0
 	changed.emit()
-	restarted.emit()
+	restarted.emit(turns)
 	_use_cases.clear_snapshots(level)
 
 
